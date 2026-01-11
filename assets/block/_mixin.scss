@@ -1,0 +1,38 @@
+@mixin display() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin jet() {
+  font-family: "JetBrains Mono";
+}
+
+@mixin space() {
+  font-family: "Space Grotesk";
+}
+
+@mixin inter() {
+  font-family: "Inter";
+}
+
+@mixin box() {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid $light-border;
+  opacity: 0.5;
+}
+
+@mixin hoverWithBgtext() {
+  &:hover {
+    background-color: $header;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    background-color: rgba(207, 207, 210, 0.243) !important;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
