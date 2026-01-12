@@ -23,6 +23,12 @@
   opacity: 0.5;
 }
 
+@mixin standard-box-borders() {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.093);
+  border: 1px solid $text-light;
+}
+
 @mixin hoverWithBgtext() {
   &:hover {
     background-color: $header;
@@ -37,6 +43,13 @@
   }
 }
 
+@mixin hoverMainPart() {
+  &:hover {
+    background-color:rgba(52, 60, 75, 0.45) !important;
+    
+  }
+}
+
 @mixin hoverNavCards() {
   &:hover {
     border-left: 2px solid $dna-c !important;
@@ -48,3 +61,20 @@
     transform:translateX(-1px);
   }
 }
+
+@mixin animate-circle($color) {
+  animation-name: animate-circle-key;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  @keyframes animate-circle-key {
+    0%{
+      box-shadow: 0px 0px 10px 0px $color;
+    }50%{
+      box-shadow: 0px 0px 15px 1px $color;
+    }100%{
+      box-shadow: 0px 0px 10px 0px $color;
+    }
+  }
+}
+

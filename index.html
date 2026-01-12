@@ -237,6 +237,58 @@
           </div>
         </div>
       </section>
+      <section class="main-part">
+        <article class="main-part__kpi-cards">
+          <form class="main-part__wrap-form">
+            <div class="main-part__form">
+              <textarea
+              spellcheck="false"
+                placeholder="Write DNA / drop file"
+                class="main-part__txa"
+                name=""
+                id=""
+              ></textarea>
+            </div>
+            <div class="main-part__chart"><h2 class="main-part__chart-title">Waiting for DNA sequence input</h2></div>
+            <button type="submit" class="main-part__ts">
+                Analyze Sequence
+              </button>
+          </form>
+
+          <div class="main-part__kpis">
+            <div class="main-part__apart">
+              <p class="main-part__apart-kt">
+                Total Nucleotides:
+                <span class="main-part__apart-n apart-seq">109231281213</span>
+              </p>
+              <svg class="main-part__circles main-part__circles-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+            </div>
+            <div class="main-part__apart">
+              <p class="main-part__apart-kt">
+                G-C content: %<span class="main-part__apart-n apart-per"
+                  >0</span
+                >
+              </p>
+              <svg class="main-part__circles main-part__circles-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+            </div>
+            <div class="main-part__apart">
+              <p class="main-part__apart-kt">
+                A-T content: %<span class="main-part__apart-n apart-ratio"
+                  >0</span
+                >
+              </p>
+              <svg class="main-part__circles main-part__circles-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+            </div>
+            <div class="main-part__apart">
+              <p class="main-part__apart-kt">
+                Mol. weight:
+                <span class="main-part__apart-n apart-ratio">0</span>
+              </p>
+              <svg class="main-part__circles main-part__circles-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
