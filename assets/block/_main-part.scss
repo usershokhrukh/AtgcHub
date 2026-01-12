@@ -1,0 +1,237 @@
+.main-part {
+  flex-grow: 1;
+
+  &__kpi-cards {
+    @include display();
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 2% 14% 0% 1%;
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: end;
+    // max-width: 2440px;
+  }
+
+  &__wrap-form {
+    // @include display();
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 40px ;
+    gap: 10px;
+    width: 100%;
+    height: 300px;
+  }
+
+  &__form {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    width: 100%;
+  }
+
+  &__txa {
+    @include standard-box-borders();
+    @include jet();
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    font-size: 20px;
+    color: $text;
+    background-color: $header;
+    resize: none;
+    outline: none;
+    max-width: 100%;
+    color: #f8fafc;
+    resize: none;
+    text-transform: uppercase;
+    // SCSS da scrollbar dizayni
+    &::-webkit-scrollbar {
+      width: 6px; // Skrollbarni ingichka qilamiz
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; // Yo'lakcha (track) fon bilan bir xil bo'ladi
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(
+        255,
+        255,
+        255,
+        0.1
+      ); // Skrollning o'zi (tutqichi) xira oq
+      border-radius: 10px; // Burchaklarni yumaloq qilamiz
+
+      &:hover {
+        background: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); // Sichqoncha borganda bir oz yorishadi
+      }
+    }
+
+    // Firefox uchun (u hozircha faqat shu ikkitasini qo'llaydi)
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+
+  &__txa::placeholder {
+    opacity: 0.3;
+  }
+
+  &__chart {
+    @include display();
+    @include standard-box-borders();
+    grid-template: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+  
+    background-color: $border;
+    opacity: 0.8;
+  }
+
+  &__chart-title {
+    @include jet();
+    font-size: 16px;
+    color: gray;
+  }
+
+  &__ts {
+    @include inter();
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid rgba(0, 128, 0, 0.422);
+    background-color: rgba(8, 99, 8, 0.566);
+    box-shadow: 0px 0px 10px -4px green;
+    color: $text;
+    font-size: 20px;
+    height: 40px;
+    align-self: end;
+    &:hover {
+      background-color: rgba(30, 105, 30, 0.6);
+    }
+
+    &:active {
+      background-color: rgb(8, 99, 8);
+    }
+  }
+
+  &__kpis {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__apart-kt {
+    @include display();
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    width: 100%;
+    // color: $text-dark;
+    color: gray;
+    font-size: 12px;
+  }
+
+
+  &__apart {
+    @include display();
+    @include standard-box-borders();
+    @include inter();
+    position: relative;
+    justify-content: start;
+    padding: 8px 5px;
+    background-color: #1e293b;
+    font-weight: 500;
+    // opacity: 0.8 !important;
+    word-break: break-all;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  &__circles {
+    position: absolute;
+    width: 8px;
+    top: 6px;
+    right: 6px; 
+    opacity: 0.3;
+    background-color: transparent;
+    border-radius: 100%;
+
+
+  }
+
+  &__circles-1 {
+    @include animate-circle(rgba(217, 43, 217, 0.755));
+    color: rgb(118, 18, 118) !important;
+    background-color: rgb(118, 18, 118);
+  }
+
+  &__circles-2 {
+    @include animate-circle(rgb(77, 222, 77));
+    color: $dna-a;
+    background-color: $dna-a;
+  }
+
+  &__circles-3 {
+    @include animate-circle(rgb(255, 196, 21));
+    color: $dna-g;
+    background-color: $dna-g;
+  }
+  &__circles-4 {
+    @include animate-circle($dna-c);
+    color: $dna-c;
+    background-color: $dna-c
+  }
+
+  // &__apart:nth-child(1) {
+  //   background-color: rgb(118, 18, 118)
+  // }
+  // &__apart:nth-child(2) {
+  //   background-color: $dna-a;
+  // }
+  // &__apart:nth-child(3) {
+  //   background-color: $dna-g;
+  // }
+  // &__apart:nth-child(4) {
+  //   background-color: $dna-c;
+  // }
+
+  &__apart-n {
+    @include space();
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-part {
+    &__kpi-cards {
+      padding: 3% 14% 0% 3%;
+    }
+
+    &__ts {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+
+    &__txa {
+      max-width: 100%;
+      font-size: 10px;
+      height: 160px;
+    }
+
+    &__apart {
+      font-size: 9px;
+      padding: 5px;
+    }
+  }
+}

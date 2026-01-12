@@ -180,7 +180,8 @@
     }
 
     &__menu {
-      display: flex !important;
+      @include standard-box-borders();
+      // display: flex !important;
       position: absolute;
       background-color: $header;
       top: 55px;
