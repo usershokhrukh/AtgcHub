@@ -1,9 +1,10 @@
 .dashboard {
   @include display();
   width: 100%;
-  background-color: $header;
+  // background-color: $header;
+  background-color: #1117208e;
   padding: 15px 10%;
-
+  border-bottom: 1px solid $text-light;
   &__nav {
     @include display();
     width: 100%;
@@ -40,7 +41,7 @@
   &__header-input {
     @include inter();
     @include box();
-    padding: 6px 5px 6px 24px;
+    padding: 6px 5px 6px 27px;
     font-size: 14px;
     outline: none;
     // border: none;
@@ -96,7 +97,6 @@
     @include hover();
     position: relative;
     padding: 3px 5px;
-    // background-color: red;
   }
 
   &__pr-arr {
@@ -109,7 +109,6 @@
     @include display();
     position: relative;
     gap: 7px;
-    // background-color: red;
     padding: 0px 0px 0px 0px;
   }
 

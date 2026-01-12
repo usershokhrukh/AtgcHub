@@ -18,7 +18,15 @@ body {
   position: relative;
   flex-direction: column;
   min-height: 100vh;
-  background-color: $bg-main;
+  // background-color: #0f172a;
+  // background-color: rgb(20, 24, 40);
+  // background-color: #111827;
+  // background-color: #0b0f1a;
+  // background-color: #252b38;
+  // background-color: #222834;
+  background-color: #131920f1;
+
+
 }
 
 .choosed {
@@ -43,5 +51,4 @@ body {
 .main {
   display: flex;
   flex-grow: 1;
-  background-color: red;
 }
