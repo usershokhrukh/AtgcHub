@@ -359,7 +359,7 @@ body {
   padding: 8px;
   font-size: 20px;
   color: #F3F4F6;
-  background-color: #1f2835;
+  background-color: rgba(30, 41, 59, 0.2588235294);
   resize: none;
   outline: none;
   max-width: 100%;
@@ -368,6 +368,15 @@ body {
   text-transform: uppercase;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+.main-part__txa:hover {
+  border: 1px solid rgba(255, 255, 255, 0.209);
+}
+.main-part__txa:hover::-moz-placeholder {
+  opacity: 0.6;
+}
+.main-part__txa:hover::placeholder {
+  opacity: 0.6;
 }
 .main-part__txa::-webkit-scrollbar {
   width: 6px;
@@ -455,8 +464,8 @@ body {
   font-family: "Inter";
   position: relative;
   justify-content: start;
-  padding: 8px 5px;
-  background-color: #1e293b;
+  padding: 10px 15px;
+  background-color: rgba(30, 41, 59, 0.2196078431);
   font-weight: 500;
   word-break: break-all;
   max-width: 500px;

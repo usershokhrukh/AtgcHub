@@ -37,13 +37,20 @@
     padding: 8px;
     font-size: 20px;
     color: $text;
-    background-color: $header;
+    // background-color: $header;
+    background-color: #1e293b42;
     resize: none;
     outline: none;
     max-width: 100%;
     color: #f8fafc;
     resize: none;
     text-transform: uppercase;
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 0.209);
+      &::placeholder {
+        opacity: 0.6;
+      }
+    }
     // SCSS da scrollbar dizayni
     &::-webkit-scrollbar {
       width: 6px; // Skrollbarni ingichka qilamiz
@@ -147,8 +154,8 @@
     @include inter();
     position: relative;
     justify-content: start;
-    padding: 8px 5px;
-    background-color: #1e293b;
+    padding: 10px 15px;
+    background-color: #1e293b38;
     font-weight: 500;
     // opacity: 0.8 !important;
     word-break: break-all;
