@@ -7,7 +7,7 @@
     align-items: start;
     width: 100%;
     padding: 2% 1% 0% 1%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 10px;
     align-items: end;
     // max-width: 2440px;
@@ -21,6 +21,50 @@
     gap: 10px;
     width: 100%;
     height: 300px;
+  }
+
+  &__txt-stat {
+    @include display();
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+    grid-column: 1/3;
+    // background-color: rgba(255, 0, 0, 0.302);
+    grid-row: 4/5;
+    flex-wrap: wrap;
+  }
+
+  &__txt-stat-t {
+    @include inter();
+    @include display();
+    gap: 4px;
+    font-size: 13px;
+    color: $darkest-gray;
+  }
+
+  &__txt-stat-s-veri {
+    color: $dna-a;
+  }
+
+  &__txt-stat-s-ram,
+  &__txt-stat-s-v {
+    @include hoverLink();
+    color: $link;
+  }
+
+  &__txt-stat-cpu {
+    position: relative;
+    top: 1px;
+    left: -1px;
+    width: 12px;
+    opacity: 0.7;
+  }
+
+  &__txt-stat-dot {
+    width: 5px;
+    position: relative;
+    top: -2px;
+    color: $dna-a
   }
 
   &__form {
@@ -127,6 +171,7 @@
 
   &__chart-points {
     @include display();
+    position: relative;
     flex-direction: column;
     align-items: start;
     justify-content: end;
@@ -138,6 +183,22 @@
     border: 1px solid rgba(128, 128, 128, 0.14);
     border-radius: 8px;
     // background-color: red
+  }
+
+  &__chart-copy-t {
+    @include inter();
+    @include display();
+    @include hoverLink();
+    gap: 4px;
+    padding: 5px;
+    width: 100%;
+    justify-content: end;
+    color: $link;
+    font-size: 11px;
+  }
+
+  &__chart-copy-i {
+    width: 13px;
   }
 
   &__chart-title {
@@ -312,11 +373,19 @@
       padding: 3% 4% 0% 1%;
     }
 
+    &__txt-stat {
+      grid-row: 2/3;
+      grid-column: 1/5;
+      align-self: end;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
     &__ts {
       font-size: 12px;
       padding: 8px 10px;
       grid-column: 3/4;
-      grid-row: 3/4;
+      grid-row: 5/6;
       height: auto;
     }
 
@@ -327,14 +396,15 @@
 
     &__chart-live {
       grid-template: 4/5;
-      grid-row: 2/3;
+      grid-row: 3/4;
     }
 
     &__chart-points {
       grid-column: 4/5;
-      grid-row: 3/4;
+      grid-row: 4/5;
       justify-self: end;
       max-width: none;
+      // margin-top: 30px;
     }
 
     &__txa {
@@ -364,14 +434,14 @@
 
     &__wrap-form {
       grid-template-columns: auto auto auto auto !important;
-      grid-template-rows: auto auto auto !important;
+      grid-template-rows: auto auto auto auto auto !important;
       height: auto;
     }
 
     &__chart {
       grid-column: 1/4;
-      grid-row: 2/4;
-      height: 160px;
+      grid-row: 3/5;
+      // height: 180px;
       width: 100%;
       max-width: none;
     }
@@ -407,6 +477,10 @@
       z-index: 2;
       backdrop-filter: blur(5px);
       // display: none;
+    }
+
+    &__txt-stat {
+      display: none;
     }
 
     &__form {
