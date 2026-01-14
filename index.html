@@ -242,17 +242,51 @@
           <form class="main-part__wrap-form">
             <div class="main-part__form">
               <textarea
-              spellcheck="false"
+                spellcheck="false"
                 placeholder="Write DNA / drop file"
                 class="main-part__txa"
                 name=""
                 id=""
               ></textarea>
             </div>
-            <div class="main-part__chart"><h2 class="main-part__chart-title">Waiting for DNA sequence input</h2></div>
+            <div class="main-part__chart">
+              <h2 class="main-part__chart-title">
+                Waiting for DNA sequence input
+              </h2>
+            </div>
             <button type="submit" class="main-part__ts">
-                Analyze Sequence
-              </button>
+              Analyze Sequence
+            </button>
+            <div class="main-part__chart-live">
+              <p class="main-part__chart-live-t">
+                Live Analysis: 
+
+                <span>
+                  Active
+                  <svg
+                    class="main-part__chart-dot"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    ></path>
+                  </svg>
+                </span>
+              </p>
+            </div>
+            <div class="main-part__chart-points">
+              <p class="main-part__chart-pt">Type: <span class="main-part__chart-spt">dsDNA</span></p>
+              <p class="main-part__chart-pt">Runtime: <span class="main-part__chart-spt">0.004s</span></p>
+              <p class="main-part__chart-pt">Sequence Quality: <span class="main-part__chart-spt">99.9%</span></p>
+              <p class="main-part__chart-pt">Start/Stop Codons: <span class="main-part__chart-spt">4/9</span></p>
+              <p class="main-part__chart-pt"><span><span class="main-part__chart-nucs-a">A</span>denine <span class="main-part__chart-amount">34%:</span></span> <span class="main-part__chart-spt">89</span></p>
+              <p class="main-part__chart-pt"><span><span class="main-part__chart-nucs-t">T</span>hymine <span class="main-part__chart-amount">34%:</span></span> <span class="main-part__chart-spt">29</span></p>
+              <p class="main-part__chart-pt"><span><span class="main-part__chart-nucs-g">G</span>uanine <span class="main-part__chart-amount">34%:</span></span> <span class="main-part__chart-spt">69</span></p>
+              <p class="main-part__chart-pt"><span><span class="main-part__chart-nucs-c">C</span>ytosine <span class="main-part__chart-amount">34%:</span></span> <span class="main-part__chart-spt">39</span></p>
+
+            </div>
           </form>
 
           <div class="main-part__kpis">
@@ -261,7 +295,16 @@
                 Total Nucleotides:
                 <span class="main-part__apart-n apart-seq">109231281213</span>
               </p>
-              <svg class="main-part__circles main-part__circles-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+              <svg
+                class="main-part__circles main-part__circles-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                ></path>
+              </svg>
             </div>
             <div class="main-part__apart">
               <p class="main-part__apart-kt">
@@ -269,7 +312,16 @@
                   >0</span
                 >
               </p>
-              <svg class="main-part__circles main-part__circles-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+              <svg
+                class="main-part__circles main-part__circles-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                ></path>
+              </svg>
             </div>
             <div class="main-part__apart">
               <p class="main-part__apart-kt">
@@ -277,14 +329,32 @@
                   >0</span
                 >
               </p>
-              <svg class="main-part__circles main-part__circles-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+              <svg
+                class="main-part__circles main-part__circles-3"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                ></path>
+              </svg>
             </div>
             <div class="main-part__apart">
               <p class="main-part__apart-kt">
                 Mol. weight:
                 <span class="main-part__apart-n apart-ratio">0</span>
               </p>
-              <svg class="main-part__circles main-part__circles-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path></svg>
+              <svg
+                class="main-part__circles main-part__circles-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                ></path>
+              </svg>
             </div>
           </div>
         </article>
