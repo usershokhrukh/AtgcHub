@@ -9,7 +9,7 @@
   // display: none;
   &__left {
     @include display();
-    @include standard-box-borders();
+    // @include standard-box-borders();
     align-items: start;
     justify-content: start;
     flex-direction: column;
@@ -44,12 +44,17 @@
 
   &__left-top-tabs {
     @include inter();
-    @include hover();
     font-size: 14px;
     padding: 8px 10px;
     // border: 1px solid $darkest-gray;
     color: $darkest-gray;
     border-radius: 8px;
+    &:hover {
+      background-color: rgba(207, 207, 210, 0.243) !important;
+      opacity: 0.6;
+      color: white;
+      cursor: pointer;
+    }
   }
 
   &__terminal {
@@ -87,27 +92,40 @@
 
   &__current-line {
     @include display();
+    flex-wrap: wrap;
+    position: relative;
     justify-content: start;
-    align-items: start;
+    align-items: flex-start;
     gap: 5px;
   }
 
   &__prompt {
+    // position: absolute;
     color: rgb(92, 247, 92);
     word-break: normal;
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   &__input {
+    display: inline-block;
     outline: none;
-    background-color: red;
     max-width: 1000px;
     word-break: break-all;
     flex-grow: 1;
   }
+
+  &__terminal::selection {
+    background-color: rgba(255, 255, 255, 0.606);
+    color: rgb(70, 70, 70);
+  }
+
+  &__history {
+    color: #e6edf3 !important;
+  }
 }
 @media (max-width: 1125px) {
-  .main-t{
+  .main-t {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
 
@@ -132,6 +150,18 @@
 
     &__terminal {
       font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main-t {
+    &__terminal {
+      font-size: 10px;
+    }
+
+    &__left-top-tabs {
+      font-size: 10px;
     }
   }
 }

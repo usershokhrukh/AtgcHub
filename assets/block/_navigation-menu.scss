@@ -34,7 +34,7 @@
 
   &__cards-i {
     color: $text;
-    flex-shrink: 0
+    flex-shrink: 0;
   }
 
   &__cards-t {
@@ -51,8 +51,7 @@
 
 @media (max-width: 900px) {
   .navigation-menu {
-    width: 100px !important;
-    max-width: 100px !important;
+    width: 60px;
     &__cards {
       justify-content: center;
     }
