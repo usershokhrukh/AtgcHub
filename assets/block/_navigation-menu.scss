@@ -51,7 +51,8 @@
 
 @media (max-width: 900px) {
   .navigation-menu {
-
+    width: 100px !important;
+    max-width: 100px !important;
     &__cards {
       justify-content: center;
     }
