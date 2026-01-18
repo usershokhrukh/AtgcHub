@@ -1,15 +1,20 @@
 .main-part {
+  @include display();
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
   flex-grow: 1;
-
+  padding: 2% 1% 0% 1%;  
   &__kpi-cards {
     @include display();
     justify-content: space-between;
     align-items: start;
     width: 100%;
-    padding: 2% 1% 0% 1%;
+    // padding: 2% 1% 0% 1%;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     align-items: end;
+    // background-color: rgb(103, 49, 49);
     // max-width: 2440px;
   }
 
@@ -17,8 +22,8 @@
     // @include display();
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto 40px;
-    gap: 10px;
+    grid-template-rows: 15px auto  40px;
+    gap: 20px;
     width: 100%;
     height: 300px;
   }
@@ -30,7 +35,7 @@
     gap: 15px;
     grid-column: 1/3;
     // background-color: rgba(255, 0, 0, 0.302);
-    grid-row: 4/5;
+    grid-row: 3/4;
     flex-wrap: wrap;
   }
 
@@ -69,7 +74,7 @@
 
   &__form {
     grid-column: 1/3;
-    grid-row: 1/4;
+    grid-row: 1/3;
     width: 100%;
   }
 
@@ -82,7 +87,8 @@
     font-size: 20px;
     color: $text;
     // background-color: $header;
-    background-color: #1e293b42;
+    // background-color: #1e293b42;
+    background-color: #1e1e1e;
     resize: none;
     outline: none;
     max-width: 100%;
@@ -90,7 +96,7 @@
     resize: none;
     text-transform: uppercase;
     &:hover {
-      border: 1px solid rgba(30, 157, 231, 0.785);
+      border: 1px solid rgba(158, 163, 166, 0.589);
       &::placeholder {
         opacity: 0.6;
         color: rgba(30, 157, 231, 0.292);
@@ -138,7 +144,7 @@
     @include display();
     @include standard-box-borders();
     grid-template: 2/3;
-    grid-row: 1/4;
+    grid-row: 1/3;
     height: 100%;
 
     background-color: $border;
@@ -243,7 +249,7 @@
   &__ts {
     @include inter();
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: 3/4;
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: 500;
@@ -267,7 +273,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
   }
 
   &__apart-kt {
@@ -369,9 +375,7 @@
 
 @media (min-width: 500px) and (max-width: 1125px) {
   .main-part {
-    &__kpi-cards {
-      padding: 3% 4% 0% 1%;
-    }
+    padding: 3% 4% 0% 1%;
 
     &__txt-stat {
       grid-row: 2/3;
@@ -384,7 +388,7 @@
     &__ts {
       font-size: 12px;
       padding: 8px 10px;
-      grid-column: 3/4;
+      grid-column: 1/4;
       grid-row: 5/6;
       height: auto;
     }
@@ -401,7 +405,7 @@
 
     &__chart-points {
       grid-column: 4/5;
-      grid-row: 4/5;
+      grid-row: 4/6;
       justify-self: end;
       max-width: none;
       // margin-top: 30px;
@@ -463,9 +467,7 @@
 
 @media (max-width: 500px) {
   .main-part {
-    &__kpi-cards {
-      padding: 3% 3% 0% 2%;
-    }
+    padding: 3% 3% 0% 2%;
 
     &__ts {
       position: fixed;
