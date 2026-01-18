@@ -1,0 +1,103 @@
+.main-t {
+  width: 100%;
+  height: auto;
+  // background-color: rgb(63, 49, 49);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding: 20px 0px 0px 0px;
+  // max-width: 4000px;
+  &__left {
+    @include display();
+    @include standard-box-borders();
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    height: 100%;
+    background-color: $black;
+    min-height: 350px;
+    max-height: 350px;
+    border-radius: 8px;
+    opacity: 0.8;
+  }
+
+  &__right {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    height: 70%;
+    // background-color: red;
+  }
+
+  &__left-top {
+    @include display();
+    justify-content: start;
+    // background-color: red;
+    width: 100%;
+    border-bottom: 1px solid $darkest-gray;
+    padding: 5px;
+    gap: 3px;
+  }
+
+  &__left-top-tabs {
+    @include inter();
+    @include hover();
+    font-size: 14px;
+    padding: 8px 10px;
+    // border: 1px solid $darkest-gray;
+    color: $darkest-gray;
+    border-radius: 8px;
+  }
+
+  &__terminal {
+    background-color: red;
+    flex-grow: 1;
+    width: 100%;
+    max-height: 305px;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #0d1117;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    color: #c9d1d9;
+    font-family: "JetBrains Mono", monospace;
+
+    /* Scrollbar dizayni */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #0d1117;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #30363d;
+      border-radius: 10px;
+      border: 2px solid #0d1117;
+
+      &:hover {
+        background: #484f58;
+      }
+    }
+  }
+
+  &__current-line {
+    @include display();
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+  }
+
+  &__prompt {
+    color: rgb(92, 247, 92);
+  }
+
+  &__input {
+    outline: none;
+    // background-color: red;
+    flex-grow: 1;
+  }
+}
