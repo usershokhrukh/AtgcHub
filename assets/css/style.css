@@ -314,6 +314,10 @@ body {
 }
 
 @media (max-width: 900px) {
+  .navigation-menu {
+    width: 100px !important;
+    max-width: 100px !important;
+  }
   .navigation-menu__cards {
     justify-content: center;
   }
@@ -330,6 +334,8 @@ body {
   gap: 20px;
   flex-grow: 1;
   padding: 2% 1% 0% 1%;
+  max-width: 2000px;
+  margin: 0px auto;
 }
 .main-part__kpi-cards {
   display: flex;
@@ -887,6 +893,8 @@ body {
   max-height: 350px;
   border-radius: 8px;
   opacity: 0.8;
+  max-width: 1300px;
+  width: 100%;
 }
 .main-t__right {
   grid-column: 4/5;
@@ -916,7 +924,6 @@ body {
   cursor: pointer;
 }
 .main-t__terminal {
-  background-color: red;
   flex-grow: 1;
   width: 100%;
   max-height: 305px;
@@ -954,8 +961,38 @@ body {
 }
 .main-t__prompt {
   color: rgb(92, 247, 92);
+  word-break: normal;
+  white-space: nowrap;
 }
 .main-t__input {
   outline: none;
+  background-color: red;
+  max-width: 1000px;
+  word-break: break-all;
   flex-grow: 1;
+}
+
+@media (max-width: 1125px) {
+  .main-t {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .main-t__left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-t__right {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-t__left-top-tabs {
+    font-size: 12px;
+    padding: 5px;
+  }
+  .main-t__left-top {
+    flex-wrap: wrap;
+  }
+  .main-t__terminal {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

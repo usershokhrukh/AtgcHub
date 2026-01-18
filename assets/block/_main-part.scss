@@ -5,6 +5,8 @@
   gap: 20px;
   flex-grow: 1;
   padding: 2% 1% 0% 1%;  
+  max-width: 2000px;
+  margin: 0px auto;
   &__kpi-cards {
     @include display();
     justify-content: space-between;
