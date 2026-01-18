@@ -16,7 +16,7 @@
   font-family: "Inter";
 }
 
-@mixin hoverLink(){ 
+@mixin hoverLink() {
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -25,7 +25,7 @@
 
 @mixin box() {
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid $light-border;
   opacity: 0.5;
 }
@@ -52,8 +52,7 @@
 
 @mixin hoverMainPart() {
   &:hover {
-    background-color:rgba(52, 60, 75, 0.45) !important;
-    
+    background-color: rgba(52, 60, 75, 0.45) !important;
   }
 }
 
@@ -65,7 +64,7 @@
   &:active {
     transition: all 0s ease-in-out;
     border-left: 2px solid transparent !important;
-    transform:translateX(-1px);
+    transform: translateX(-1px);
   }
 }
 
@@ -75,13 +74,14 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   @keyframes animate-circle-key {
-    0%{
+    0% {
       box-shadow: 0px 0px 10px 0px $color;
-    }50%{
+    }
+    50% {
       box-shadow: 0px 0px 15px 1px $color;
-    }100%{
+    }
+    100% {
       box-shadow: 0px 0px 10px 0px $color;
     }
   }
 }
-

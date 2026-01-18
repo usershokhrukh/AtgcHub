@@ -4,7 +4,7 @@
   justify-content: start;
   gap: 20px;
   flex-grow: 1;
-  padding: 2% 1% 0% 1%;  
+  padding: 2% 1% 0% 1%;
   max-width: 2000px;
   margin: 0px auto;
   &__kpi-cards {
@@ -24,7 +24,7 @@
     // @include display();
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 15px auto  40px;
+    grid-template-rows: 15px auto 40px;
     gap: 20px;
     width: 100%;
     height: 300px;
@@ -71,7 +71,7 @@
     width: 5px;
     position: relative;
     top: -2px;
-    color: $dna-a
+    color: $dna-a;
   }
 
   &__form {
@@ -81,7 +81,7 @@
   }
 
   &__txa {
-    @include standard-box-borders();
+    // @include standard-box-borders();
     @include jet();
     width: 100%;
     height: 100%;
@@ -90,7 +90,12 @@
     color: $text;
     // background-color: $header;
     // background-color: #1e293b42;
-    background-color: #1e1e1e;
+    // background-color: #1e1e1e;
+    background-color: #0d1117;
+    // background-color: #000000;
+    border-radius: 8px;
+    // border: 1px solid #30363d;
+    border: 1px solid #1f1f1f;
     resize: none;
     outline: none;
     max-width: 100%;
@@ -98,7 +103,9 @@
     resize: none;
     text-transform: uppercase;
     &:hover {
-      border: 1px solid rgba(158, 163, 166, 0.589);
+      // border: 1px solid rgba(158, 163, 166, 0.589);
+      border: 1px solid #58a6ff;
+      background-color: #161b22;
       &::placeholder {
         opacity: 0.6;
         color: rgba(30, 157, 231, 0.292);
@@ -175,6 +182,21 @@
     position: relative;
     top: -2px;
     width: 4px;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   &__chart-points {
@@ -255,19 +277,20 @@
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: 500;
-    border: 1px solid rgba(0, 128, 0, 0.422);
-    background-color: rgba(8, 99, 8, 0.566);
-    box-shadow: 0px 0px 10px -4px green;
+    border: 1px solid rgba(0, 246, 0, 0.422);
+    // background-color: rgba(8, 99, 8, 0.566);
+    background-color: #238636;
+    box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
     color: $text;
     font-size: 20px;
     height: 40px;
     align-self: end;
-    &:hover {
-      background-color: rgba(30, 105, 30, 0.6);
-    }
-
+    opacity: 0.9;
     &:active {
-      background-color: rgb(8, 99, 8);
+      opacity: 1;
+    }
+    &:hover {
+      background-color: #2d9d43;
     }
   }
 
@@ -296,7 +319,8 @@
     position: relative;
     justify-content: start;
     padding: 10px 15px;
-    background-color: #1e293b38;
+    background-color: #3f516d38;
+    // background-color: #1e293b38;
     font-weight: 500;
     // opacity: 0.8 !important;
     word-break: break-all;
