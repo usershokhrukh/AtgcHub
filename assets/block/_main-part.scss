@@ -46,7 +46,7 @@
     @include display();
     gap: 4px;
     font-size: 13px;
-    color: $darkest-gray;
+    color: $secondary-color
   }
 
   &__txt-stat-s-veri {
@@ -87,7 +87,7 @@
     height: 100%;
     padding: 8px;
     font-size: 20px;
-    color: $text;
+    color: $text-color;
     // background-color: $header;
     // background-color: #1e293b42;
     // background-color: #1e1e1e;
@@ -95,7 +95,7 @@
     // background-color: #000000;
     border-radius: 8px;
     // border: 1px solid #30363d;
-    border: 1px solid #1f1f1f;
+    border: 1px solid $text-light;
     resize: none;
     outline: none;
     max-width: 100%;
@@ -210,7 +210,8 @@
     width: 100%;
     // background-color: red;
     max-width: 195px;
-    border: 1px solid rgba(128, 128, 128, 0.14);
+    // border: 1px solid rgba(128, 128, 128, 0.14);
+    border: 1px solid $text-light;
     border-radius: 8px;
     // background-color: red
   }
@@ -234,7 +235,7 @@
   &__chart-title {
     @include jet();
     font-size: 16px;
-    color: gray;
+    color: $text-color;
   }
 
   &__chart-pt {
@@ -242,14 +243,16 @@
     @include display();
     align-items: start;
     justify-content: space-between;
-    border-top: 1px solid rgba(128, 128, 128, 0.14);
+    // border-top: 1px solid rgba(128, 128, 128, 0.14);
+    border-top: 1px solid $text-light;
     font-size: 13px;
     width: 100%;
     // background-color: red;
     padding: 3px;
     overflow: auto;
     gap: 5px;
-    color: rgba(167, 171, 171, 0.475);
+    // color: rgba(167, 171, 171, 0.475);
+    color: $text-color;
     font-weight: 300;
     flex-grow: 1;
     // word-break: break-all;
@@ -281,7 +284,7 @@
     // background-color: rgba(8, 99, 8, 0.566);
     background-color: #238636;
     box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
-    color: $text;
+    color: $text-color;
     font-size: 20px;
     height: 40px;
     align-self: end;
@@ -298,7 +301,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     width: 100%;
-    gap: 20px;
+    gap: 5px;
   }
 
   &__apart-kt {
@@ -308,7 +311,8 @@
     justify-content: space-between;
     width: 100%;
     // color: $text-dark;
-    color: gray;
+    // color: gray;
+    color: $text-color;
     font-size: 12px;
   }
 
@@ -319,8 +323,13 @@
     position: relative;
     justify-content: start;
     padding: 10px 15px;
-    background-color: #3f516d38;
+    // background-color: #3f516d38;
     // background-color: #1e293b38;
+    background-color: #12171f;
+    // background-color: #1117205e;
+    // border: 1px solid #30363d;
+    border: 1px solid $text-light;
+    box-shadow: 0px 0px 10px 0px rgba(56, 55, 55, 0.259);
     font-weight: 500;
     // opacity: 0.8 !important;
     word-break: break-all;
@@ -493,8 +502,8 @@
 
 @media (max-width: 500px) {
   .main-part {
-    padding: 3% 3% 0% 2%;
-
+    padding: 3% 15px 0% 15px;
+    width: 100%;
     &__ts {
       position: fixed;
       font-size: 10px;

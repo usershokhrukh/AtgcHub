@@ -36,11 +36,6 @@
   border: 1px solid $text-light;
 }
 
-@mixin hoverWithBgtext() {
-  &:hover {
-    background-color: $header;
-  }
-}
 
 @mixin hover() {
   &:hover {
@@ -50,11 +45,6 @@
   }
 }
 
-@mixin hoverMainPart() {
-  &:hover {
-    background-color: rgba(52, 60, 75, 0.45) !important;
-  }
-}
 
 @mixin hoverNavCards() {
   &:hover {
