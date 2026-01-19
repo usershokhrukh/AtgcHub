@@ -17,7 +17,7 @@ body {
   position: relative;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #161b22;
+  background-color: #1e242d;
 }
 
 .choosed {
@@ -54,7 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgba(17, 23, 32, 0.5568627451);
+  background-color: rgba(13, 17, 23, 0.6941176471);
   padding: 15px 10%;
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
 }
@@ -432,7 +432,7 @@ body {
   padding: 8px;
   font-size: 20px;
   color: rgba(230, 237, 243, 0.8274509804);
-  background-color: #0d1117;
+  background-color: rgba(18, 24, 34, 0.5137254902);
   border-radius: 8px;
   border: 1px solid rgba(75, 87, 103, 0.3725490196);
   resize: none;
@@ -644,7 +644,7 @@ body {
   position: relative;
   justify-content: start;
   padding: 10px 15px;
-  background-color: #12171f;
+  background-color: rgba(18, 23, 31, 0.5882352941);
   border: 1px solid rgba(75, 87, 103, 0.3725490196);
   box-shadow: 0px 0px 10px 0px rgba(56, 55, 55, 0.259);
   font-weight: 500;
@@ -944,7 +944,7 @@ body {
   width: 100%;
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
   padding: 5px;
-  gap: 3px;
+  gap: 13px;
 }
 .main-t__left-top-tabs {
   font-family: "Inter";
@@ -952,7 +952,7 @@ body {
   padding: 5px 8px;
   color: rgba(230, 237, 243, 0.8274509804);
   border-radius: 6px;
-  background-color: #161b22;
+  background-color: #1e242d;
   opacity: 0.8;
 }
 .main-t__left-top-tabs:hover {
