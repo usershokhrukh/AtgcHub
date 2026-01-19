@@ -262,10 +262,11 @@ body {
   justify-content: center;
   align-items: start;
   padding: 3% 1%;
-  width: 15vw;
+  width: 12vw;
   background-color: rgba(17, 23, 32, 0.368627451);
   min-height: 90vh;
   border-right: 1px solid rgba(75, 87, 103, 0.3725490196);
+  border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
 }
 .navigation-menu__boxes {
   display: flex;
@@ -608,10 +609,9 @@ body {
   font-size: 20px;
   height: 40px;
   align-self: end;
-  opacity: 0.9;
 }
 .main-part__ts:active {
-  opacity: 1;
+  opacity: 0.9;
 }
 .main-part__ts:hover {
   background-color: #2d9d43;
@@ -928,13 +928,151 @@ body {
   max-height: 350px;
   border-radius: 8px;
   opacity: 0.8;
-  max-width: 1300px;
   width: 100%;
 }
 .main-t__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
   grid-column: 4/5;
   grid-row: 1/2;
-  height: 70%;
+  min-height: 70%;
+  height: auto;
+  gap: 10px;
+  max-width: 370px;
+}
+.main-t__right-l {
+  width: 100%;
+}
+.main-t__right-boxes {
+  width: 100%;
+}
+.main-t__right-boxes-t {
+  font-family: "Inter";
+  font-size: 15px;
+  color: rgba(167, 171, 171, 0.475);
+}
+.main-t__right-boxes-a {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 10px 0px;
+  gap: 10px;
+}
+.main-t__right-a-txt {
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.093);
+  border: 1px solid rgba(75, 87, 103, 0.3725490196);
+  font-size: 14px;
+  color: rgba(230, 237, 243, 0.8274509804);
+  background-color: #1f2835;
+  padding: 15px 5px;
+}
+.main-t__right-a-txt:hover {
+  background-color: #238636;
+  border: 1px solid rgb(28, 177, 28);
+  cursor: pointer;
+}
+.main-t__right-a-i {
+  position: relative;
+  top: 1px;
+  width: 15px;
+}
+.main-t__right-a-txt:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-t__right-a-txt:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.main-t__right-a-txt:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.main-t__right-a-txt:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.main-t__right-boxes-n {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.main-t__right-boxes-nucs {
+  font-family: "JetBrains Mono";
+  min-width: 14px;
+  height: 30px;
+  font-size: 20px;
+  color: rgba(230, 237, 243, 0.8274509804);
+}
+.main-t__right-nucs-a {
+  border-bottom: 2px solid #4caf50;
+  color: #4caf50;
+  flex-grow: 2;
+}
+.main-t__right-nucs-t {
+  border-bottom: 2px solid #f44336;
+  color: #f44336;
+  flex-grow: 1;
+}
+.main-t__right-nucs-g {
+  border-bottom: 2px solid #ff9800;
+  color: #ff9800;
+  flex-grow: 1;
+}
+.main-t__right-nucs-c {
+  border-bottom: 2px solid #2196f3;
+  color: #2196f3;
+  flex-grow: 3;
+}
+.main-t__right-boxes-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  width: auto;
+}
+.main-t__right-boxes-st {
+  font-family: "Inter";
+  font-size: 15px;
+  background-color: #4caf50;
+  color: rgba(230, 237, 243, 0.8274509804);
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid green;
+  box-shadow: 0 0 10px rgba(35, 134, 54, 0.3);
+}
+.main-t__right-meta-given {
+  font-family: "Inter";
+  color: rgba(230, 237, 243, 0.8274509804);
+  opacity: 0.5;
+  font-size: 15px;
+}
+.main-t__right-meta-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-family: "Inter";
+}
+.main-t__right-meta-st {
+  opacity: 0.4;
 }
 .main-t__left-top {
   display: flex;
@@ -989,6 +1127,32 @@ body {
 .main-t__terminal::-webkit-scrollbar-thumb:hover {
   background: #484f58;
 }
+.main-t__right-meta-data {
+  max-width: 200px;
+  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  /* Scrollbar uslubi (Chrome, Safari, Edge uchun) */
+  /* Firefox uchun */
+  scrollbar-width: thin;
+  scrollbar-color: #238636 rgba(255, 255, 255, 0.05);
+}
+.main-t__right-meta-data::-webkit-scrollbar {
+  height: 2px;
+}
+.main-t__right-meta-data::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.main-t__right-meta-data::-webkit-scrollbar-thumb {
+  background: #238636;
+  border-radius: 10px;
+}
+.main-t__right-meta-data::-webkit-scrollbar-thumb:hover {
+  background: #2ea043;
+}
 .main-t__current-line {
   display: flex;
   align-items: center;
@@ -1031,11 +1195,40 @@ body {
   }
   .main-t__left {
     grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-t__right-l {
+    width: 100%;
+  }
+  .main-t__right-l:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-t__right-l:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    flex-grow: 1;
+  }
+  .main-t__right-boxes-meta {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .main-t__right-boxes-deg {
+    grid-column: 1/3;
     grid-row: 2/3;
   }
   .main-t__right {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    max-width: none;
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   .main-t__left-top-tabs {
     font-size: 12px;
@@ -1051,6 +1244,29 @@ body {
 @media (max-width: 500px) {
   .main-t__terminal {
     font-size: 10px;
+  }
+  .main-t__right-l {
+    width: 100%;
+  }
+  .main-t__right-l:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-t__right-l:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-t__right-boxes-meta {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .main-t__right-boxes-deg {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .main-t__right {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
   }
   .main-t__left-top-tabs {
     font-size: 10px;

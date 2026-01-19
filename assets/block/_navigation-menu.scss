@@ -3,11 +3,12 @@
   // position: fixed;
   align-items: start;
   padding: 3% 1%;
-  width: 15vw;
+  width: 12vw;
   // background-color: $sidebar-dark;
   background-color: #1117205e;
   min-height: 90vh;
   border-right: 1px solid $text-light;
+  border-bottom: 1px solid $text-light;
 
   &__boxes {
     @include display();
