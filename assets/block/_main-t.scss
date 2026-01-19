@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0px 20px 0px;
   // display: none;
   &__left {
     @include display();
@@ -17,7 +17,7 @@
     grid-row: 1/2;
     height: 100%;
     background-color: $black;
-    min-height: 350px;
+    // min-height: 350px;
     max-height: 350px;
     border-radius: 8px;
     opacity: 0.8;
@@ -37,7 +37,8 @@
     justify-content: start;
     // background-color: red;
     width: 100%;
-    border-bottom: 1px solid $darkest-gray;
+    // border-bottom: 1px solid $darkest-gray;
+    border-bottom: 1px solid $text-light;
     padding: 5px;
     gap: 3px;
   }
@@ -45,10 +46,14 @@
   &__left-top-tabs {
     @include inter();
     font-size: 14px;
-    padding: 8px 10px;
+    padding: 5px 8px;
     // border: 1px solid $darkest-gray;
-    color: $darkest-gray;
-    border-radius: 8px;
+    // color: $darkest-gray;
+    color: $text-color;
+    border-radius: 6px;
+    // background-color: rgba(128, 128, 128, 0.091);
+    background-color: $main-color-bg;
+    opacity: 0.8;
     &:hover {
       background-color: rgba(207, 207, 210, 0.243) !important;
       opacity: 0.6;
