@@ -23,7 +23,7 @@
   &__wrap-form {
     // @include display();
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 35% auto auto auto auto;
     grid-template-rows: 15px auto 20px 40px;
     gap: 15px;
     width: 100%;
@@ -32,8 +32,11 @@
 
   &__txt-stat-db {
     @include display();
-    justify-content: start;
-    gap: 5px;
+    justify-content: end;
+    gap: 10px;
+
+    grid-column: 3/4;
+    grid-row: 3/4;
   }
 
   &__txt-stat-di {
@@ -42,17 +45,15 @@
     top: 2px;
     left: 2px;
     color: $text-color;
-    grid-column: 1/2;
-    grid-row: 4/5;
   }
 
   &__txt-stat-d {
     @include display();
     @include inter();
-
+    gap: 5px;
     font-size: 12px;
     background-color: rgba(28, 106, 195, 0.686);
-    width: 125px;
+    // width: 125px;
     padding: 0px 5px;
     height: 28px;
     border-radius: 8px;
@@ -71,7 +72,7 @@
     align-items: start;
     justify-content: start;
     gap: 15px;
-    grid-column: 1/3;
+    grid-column: 1/2;
     // background-color: rgba(255, 0, 0, 0.302);
     grid-row: 3/4;
     flex-wrap: wrap;
@@ -111,7 +112,7 @@
   }
 
   &__form {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 1/3;
     width: 100%;
   }
@@ -190,7 +191,7 @@
   &__chart {
     @include display();
     @include standard-box-borders();
-    grid-template: 2/3;
+    grid-template: 4/5;
     grid-row: 1/4;
     height: 100%;
 
@@ -204,7 +205,7 @@
     justify-content: start;
     padding: 0px;
     // background-color: red;
-    grid-column: 4/5;
+    grid-column: 5/6;
     grid-row: 1/2;
   }
 
@@ -313,7 +314,7 @@
 
   &__ts {
     @include inter();
-    grid-column: 3/4;
+    grid-column: 4/5;
     grid-row: 4/5;
     padding: 8px 20px;
     border-radius: 8px;
@@ -462,29 +463,29 @@
     &__ts {
       font-size: 12px;
       padding: 8px 10px;
-      grid-column: 1/4;
+      grid-column: 1/5;
       grid-row: 5/6;
       height: auto;
       align-self: flex-start;
     }
 
     &__txt-stat-db {
-      grid-column: 4/5;
+      grid-column: 5/6;
       grid-row: 2/3;
     }
 
     &__form {
-      grid-column: 1/5;
+      grid-column: 1/6;
       grid-row: 1/2;
     }
 
     &__chart-live {
-      grid-template: 4/5;
+      grid-template: 5/6 !important;
       grid-row: 3/4;
     }
 
     &__chart-points {
-      grid-column: 4/5;
+      grid-column: 5/6;
       grid-row: 4/6;
       justify-self: end;
       max-width: none;
@@ -523,7 +524,7 @@
     }
 
     &__chart {
-      grid-column: 1/4;
+      grid-column: 1/5;
       grid-row: 3/5;
       // height: 180px;
       width: 100%;
@@ -604,7 +605,7 @@
 
     &__wrap-form {
       grid-template-columns: auto !important;
-      grid-template-rows: auto auto auto auto!important;
+      grid-template-rows: auto auto auto auto !important;
       height: auto;
     }
 
