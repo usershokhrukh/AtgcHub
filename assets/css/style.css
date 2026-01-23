@@ -41,6 +41,7 @@ body {
 }
 .main {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -55,7 +56,7 @@ body {
   justify-content: center;
   width: 100%;
   background-color: rgba(13, 17, 23, 0.6941176471);
-  padding: 15px 10%;
+  padding: 15px 2%;
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
 }
 .dashboard__nav {
@@ -186,7 +187,7 @@ body {
 
 @media (max-width: 900px) {
   .dashboard {
-    padding: 10px 10%;
+    padding: 10px 4%;
   }
   .dashboard__header-input {
     display: none;
@@ -261,10 +262,9 @@ body {
   align-items: center;
   justify-content: center;
   align-items: start;
-  padding: 3% 1%;
-  width: 12vw;
+  padding: 0px 1%;
+  width: 100%;
   background-color: rgba(17, 23, 32, 0.368627451);
-  min-height: 90vh;
   border-right: 1px solid rgba(75, 87, 103, 0.3725490196);
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
 }
@@ -272,42 +272,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   align-items: start;
-  gap: 15px;
+  justify-content: start;
+  gap: 30px;
   width: 100%;
+}
+.navigation-menu__cards-w {
+  padding: 10px 5px;
+  border-bottom: 1px solid transparent;
+}
+.navigation-menu__cards-w:hover {
+  border-bottom: 1px solid #ff9800;
+  cursor: pointer;
 }
 .navigation-menu__cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(243, 244, 246, 0.5725490196);
-  opacity: 0.5;
   gap: 10px;
   padding: 5px;
-  width: 100%;
   justify-content: start;
   border: none !important;
   height: 40px;
   border-left: 2px solid transparent !important;
+  border-radius: 8px;
 }
 .navigation-menu__cards:hover {
-  background-color: rgba(207, 207, 210, 0.243) !important;
-  opacity: 0.6;
-  cursor: pointer;
-}
-.navigation-menu__cards:hover {
-  border-left: 2px solid #2196f3 !important;
-}
-.navigation-menu__cards:active {
-  transition: all 0s ease-in-out;
-  border-left: 2px solid transparent !important;
-  transform: translateX(-1px);
+  background-color: rgba(75, 87, 103, 0.3725490196);
 }
 .navigation-menu__cards-i {
-  color: rgba(230, 237, 243, 0.8274509804);
+  color: rgba(167, 171, 171, 0.475);
   flex-shrink: 0;
   width: 30px;
 }
@@ -324,7 +318,7 @@ body {
 
 @media (max-width: 900px) {
   .navigation-menu {
-    width: 60px;
+    width: 100%;
   }
   .navigation-menu__cards {
     justify-content: center;
@@ -337,7 +331,7 @@ body {
   .navigation-menu {
     width: 100%;
     min-height: 0px;
-    padding: 3% 4%;
+    padding: 0% 4%;
   }
   .navigation-menu__boxes {
     flex-direction: row;
@@ -359,7 +353,8 @@ body {
   gap: 20px;
   flex-grow: 1;
   padding: 2% 5% 0% 2%;
-  max-width: 2000px;
+  max-width: 1600px;
+  width: 100%;
   margin: 0px auto;
 }
 .main-part__kpi-cards {
@@ -940,6 +935,7 @@ body {
     grid-template-columns: auto !important;
     grid-template-rows: auto auto auto auto !important;
     height: auto;
+    width: 100%;
   }
   .main-part__chart {
     grid-column: 1/5;
