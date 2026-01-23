@@ -6,7 +6,8 @@
   gap: 20px;
   flex-grow: 1;
   padding: 2% 5% 0% 2%;
-  max-width: 2000px;
+  max-width: 1600px;
+  width: 100%;
   margin: 0px auto;
   &__kpi-cards {
     @include display();
@@ -619,6 +620,7 @@
       grid-template-columns: auto !important;
       grid-template-rows: auto auto auto auto !important;
       height: auto;
+      width: 100%;
     }
 
     &__chart {

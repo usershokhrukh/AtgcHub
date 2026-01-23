@@ -5,7 +5,7 @@
   // background-color: #1117208e;
   background-color: #0d1117b1;
   // background-color: ;
-  padding: 15px 10%;
+  padding: 15px 2%;
   border-bottom: 1px solid $text-light;
   &__nav {
     @include display();
@@ -126,7 +126,7 @@
 
 @media (max-width: 900px) {
   .dashboard {
-    padding: 10px 10%;
+    padding: 10px 4%;
     &__header-input {
       display: none;
     }

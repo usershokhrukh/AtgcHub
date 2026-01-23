@@ -2,39 +2,53 @@
   @include display();
   // position: fixed;
   align-items: start;
-  padding: 3% 1%;
-  width: 12vw;
+  padding: 0px 1%;
+  // width: 12vw;
+  width: 100%;
   // background-color: $sidebar-dark;
   background-color: #1117205e;
-  min-height: 90vh;
+  // min-height: 90vh;
   border-right: 1px solid $text-light;
   border-bottom: 1px solid $text-light;
 
   &__boxes {
     @include display();
-    flex-direction: column;
+    // flex-direction: column;
     align-items: start;
-    gap: 15px;
+    justify-content: start;
+    gap: 30px;
     width: 100%;
+  }
+  &__cards-w {
+    padding: 10px 5px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid $dna-g;
+      cursor: pointer;
+    }
   }
 
   &__cards {
     @include display();
-    @include box();
-    @include hover();
-    @include hoverNavCards();
+    // @include box();
+    // @include hover();
+    // @include hoverNavCards();
     gap: 10px;
     // opacity: 1 !important;
     padding: 5px;
-    width: 100%;
+    // width: 100%;
     justify-content: start;
     border: none !important;
     height: 40px;
     border-left: 2px solid transparent !important;
+    border-radius: 8px;
+    &:hover {
+      background-color: $text-light;
+    }
   }
 
   &__cards-i {
-    color: $text-color;
+    color: $secondary-color;
     flex-shrink: 0;
     width: 30px;
   }
@@ -54,7 +68,8 @@
 
 @media (max-width: 900px) {
   .navigation-menu {
-    width: 60px;
+    // width: 60px;
+    width: 100%;
     &__cards {
       justify-content: center;
     }
@@ -69,7 +84,7 @@
   .navigation-menu {
     width: 100%;
     min-height: 0px;
-    padding: 3% 4%;
+    padding: 0% 4%;
 
     &__boxes {
       flex-direction: row;
