@@ -14,7 +14,7 @@
     @include display();
     flex-direction: column;
     align-items: start;
-    gap: 5px;
+    gap: 15px;
     width: 100%;
   }
 
@@ -36,6 +36,7 @@
   &__cards-i {
     color: $text-color;
     flex-shrink: 0;
+    width: 30px;
   }
 
   &__cards-t {
@@ -43,6 +44,7 @@
     color: $text-color;
     overflow-y: auto;
     padding: 3px 0px;
+    font-size: 20px;
   }
 
   &__cards-t::-webkit-scrollbar {

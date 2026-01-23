@@ -319,7 +319,20 @@
             </div>
             <div class="main-part__chart">
               <h2 class="main-part__chart-title">
-                Waiting for <span class="main-part__chart-s-tit">DNA</span> sequence input
+                <svg class="main-part__chart-svg" width="auto" height="auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30 20C30 20 70 35 70 50C70 65 30 80 30 80" stroke="#4FD1C5" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/>
+                  
+                  <path d="M70 20C70 20 30 35 30 50C30 65 70 80 70 80" stroke="#63B3ED" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/>
+                  
+                  <line x1="35" y1="30" x2="65" y2="30" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
+                  <line x1="32" y1="40" x2="68" y2="40" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
+                  <line x1="32" y1="60" x2="68" y2="60" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
+                  <line x1="35" y1="70" x2="65" y2="70" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
+                  
+                  <circle cx="50" cy="50" r="3" fill="#4FD1C5">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                </svg>
               </h2>
             </div>
             <button type="submit" class="main-part__ts">
@@ -442,10 +455,8 @@
             </div>
             <div class="main-part__txt-stat-db">
               <p class="main-part__txt-stat-d">Download .fasta <span>
-<svg class="main-part__txt-stat-di" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
-
+                <svg class="main-part__txt-stat-di" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
               </span></p>
-              
             </div>
           </form>
         </article>
@@ -473,7 +484,7 @@
             </div>
           </div>
           <div class="main-t__right">
-            <div class="main-t__right-l">
+            <div class="main-t__right-l main-t__right-act">
               <div class="main-t__right-boxes">
               <h2 class="main-t__right-boxes-t">Quick Actions</h2>
               <div class="main-t__right-boxes-a">
@@ -486,7 +497,7 @@
               </div>
               
             </div>
-            <div class="main-t__right-l">
+            <div class="main-t__right-l main-t__right-nuc">
                 <div class="main-t__right-boxes">
                   <h2 class="main-t__right-boxes-t">Nucleotide Distribution</h2>
                   <div class="main-t__right-boxes-n">
@@ -500,7 +511,7 @@
             </div>  
             <div class="main-t__right-boxes main-t__right-boxes-deg">
                   <p class="main-t__right-boxes-st"><span class="main-t__right-st-d">60%</span> <span class="main-t__right-stable-st">Stable</span></p>
-                </div>
+            </div>
             <div class="main-t__right-boxes main-t__right-boxes-meta">
               <h2 class="main-t__right-boxes-t">Sequence Metadata</h2>
               <p class="main-t__right-meta-given">Not Given</p>
