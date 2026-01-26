@@ -37,9 +37,9 @@
     // @include box();
     // @include hover();
     // @include hoverNavCards();
-    gap: 8px;
+    gap: 6px;
     // opacity: 1 !important;
-    padding: 5px;
+    padding: 6px 5px;
     // width: 100%;
     justify-content: start;
     border: none !important;
@@ -53,10 +53,11 @@
   }
 
   &__cards-i {
-    color: $secondary-color;
+    color: $text-color;
     flex-shrink: 0;
     width: 25px;
-    height: 25px;
+    height: 20px;
+    opacity: 0.7;
   }
 
   &__cards-t {
@@ -64,7 +65,7 @@
     color: $text-color;
     overflow-y: auto;
     padding: 0px 0px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   &__cards-t::-webkit-scrollbar {
