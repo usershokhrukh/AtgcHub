@@ -63,7 +63,7 @@
     padding: 8px;
     border-radius: 8px;
 
-    &:hover {
+    &:active {
       background-color: rgba(207, 207, 210, 0.243);
       opacity: 0.6;
     }
@@ -77,6 +77,7 @@
     display: flex;
     @include box();
     @include hover();
+    @include hoverCursor();
     padding: 5px 5px 5px 6px;
     color: $text-color;
     // width: 30px;
@@ -99,6 +100,7 @@
     @include inter();
     @include box();
     @include hover();
+    @include hoverCursor();
     position: relative;
     padding: 3px 5px;
   }
@@ -136,6 +138,7 @@
       display: flex;
       @include box();
       @include hover();
+      @include hoverCursor();
       padding: 5px 5px 5px 6px;
       color: $text-color;
       // width: 30px;
@@ -146,6 +149,7 @@
       // display: flex;
       @include box();
       @include hover();
+      @include hoverCursor();
       padding: 7px;
       color: $text-color;
     }
@@ -199,3 +203,30 @@
     }
   }
 }
+
+// @media (hover: hover) {
+//   .dashboard {
+//     &__links {
+//         &:hover {
+//         background-color: rgba(207, 207, 210, 0.243);
+//         opacity: 0.6;
+//       }
+//     }
+//     &__set,
+//     &__lan,
+//     &__not,
+//     &__info,
+//     &__br {
+//       @include hover();
+//     }
+//     &__pr-more {
+//       @include hover();
+//     }
+//     &__search {
+//       @include hover();
+//     }
+//     &__search-o {
+//       @include hover();
+//     }
+//   }
+// }

@@ -17,10 +17,13 @@
 }
 
 @mixin hoverLink() {
-  &:hover {
+  &:active {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+@mixin hoverCursor() {
+  cursor: pointer;
 }
 
 @mixin box() {
@@ -38,7 +41,7 @@
 
 
 @mixin hover() {
-  &:hover {
+  &:active {
     background-color: rgba(207, 207, 210, 0.243) !important;
     opacity: 0.6;
     cursor: pointer;
@@ -47,14 +50,8 @@
 
 
 @mixin hoverNavCards() {
-  &:hover {
-    border-left: 2px solid $dna-c !important;
-  }
-
   &:active {
-    transition: all 0s ease-in-out;
-    border-left: 2px solid transparent !important;
-    transform: translateX(-1px);
+    border-left: 2px solid $dna-c !important;
   }
 }
 
