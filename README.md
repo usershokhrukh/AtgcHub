@@ -14,7 +14,7 @@ AtgcHub is a **high-performance** web tool designed for genomic researchers. It 
 * 🛠 **Rosalind Integrated:** Solving complex bioinformatics problems.
 
 ### 🛠 Tech Stack
-![HTML5] ![CSS3] ![JavaScript] ![Python]
+HTML5 CSS3 JavaScript Python
 
 ---
 *Created with ❤️ by Ashurov Shokhrukh*
