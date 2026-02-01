@@ -5,8 +5,8 @@
   align-items: start;
   gap: 20px;
   flex-grow: 1;
-  padding: 2% 8% 0% 10%;
-  max-width: 1800px;
+  padding: 2% 11% 0% 13%;
+  max-width: 1900px;
   width: 100%;
   margin: 0px auto;
   // min-width: 800px;
@@ -210,7 +210,8 @@
     grid-template: 4/5;
     grid-row: 1/4;
     height: 100%;
-
+    // width: 420px;
+    // width: 100%;
     background-color: $border;
     opacity: 0.8;
   }
@@ -389,7 +390,8 @@
     padding: 10px 15px;
     // background-color: #3f516d38;
     // background-color: #1e293b38;
-    background-color: #12171f96;
+    // background-color: #12171f96;
+    background-color: #12171f0e;
     // background-color: #1117205e;
     // border: 1px solid #30363d;
     border: 1px solid $text-light;
@@ -457,11 +459,66 @@
     color: $dna-c;
     opacity: 0.6;
   }
+
+
+  &__sc {
+    @include display();
+    // background-color: red;
+    gap: 8px;
+    height: 100%
+  }
+
+  &__sct {
+    @include display();
+    @include hoverCursor();
+    @include inter();
+    @include box();
+    // background-color: blue;
+    padding: 5px;
+    gap: 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    // border: 1px solid $dna-a;
+    // background-color: #307832;
+    background-color: #248527ca;
+    border: 1px solid #28a72cca;
+    color: $text-color;
+    // font-weight: 500;
+    opacity: 1 ;
+  }
+
+  &__sci {
+    position: relative;
+    // top: 2px;
+    width: 13px;
+  }
+
+  &__sct-save {
+    @include box();
+    @include hover();
+    background-color: $text-light;
+    opacity: 1;
+    border: 1px solid $text-lightS;
+
+    & svg {
+      top: 2px;
+    }
+  }
+
+  &__scb {
+    @include display();
+    justify-content: end;
+    // background-color: red;
+    padding: 0px 0px 15px 0px;
+    width: 100%;
+    border-bottom: 1px solid $text-light;
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 2000px) and (max-width: 10000px) {
   .main-part {
-    padding: 3% 2% 0% 2% !important;
+    padding: 3% 5% 0% 5% !important;
   }
 }
 
@@ -580,6 +637,15 @@
       z-index: 2;
       backdrop-filter: blur(5px);
       // display: none;
+    }
+
+    &__sct {
+      font-size: 11px;
+      padding: 3px 3px;
+    }
+
+    &__sci {
+      width: 12px;
     }
 
     &__txt-stat-db {
