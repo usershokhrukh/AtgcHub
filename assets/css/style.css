@@ -58,7 +58,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgba(18, 20, 28, 0.7254901961);
+  background-color: rgba(14, 16, 22, 0.6431372549);
   padding: 15px 2%;
 }
 .dashboard__nav {
@@ -289,7 +289,7 @@ body {
   align-items: start;
   padding: 0px 1%;
   width: 100%;
-  background-color: rgba(18, 20, 28, 0.7254901961);
+  background-color: rgba(14, 16, 22, 0.6431372549);
   border-right: 1px solid rgba(75, 87, 103, 0.3725490196);
   border-bottom: 1px solid rgba(112, 112, 112, 0.5725490196);
 }
