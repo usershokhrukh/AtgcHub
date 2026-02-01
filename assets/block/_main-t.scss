@@ -30,7 +30,7 @@
   &__right {
     // @include display();
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     // flex-direction: column;
     // align-items: start;
@@ -44,6 +44,10 @@
     // background-color: red;
     gap: 30px;
     // width: 90%;
+  }
+
+  &__right-boxes-nd {
+    min-width: 180px;
   }
 
   &__right-act {
@@ -142,7 +146,6 @@
     font-size: 20px;
     color: $text-color;
   }
-
 
   &__right-nucs-a {
     // background-color: blue !important;
@@ -249,6 +252,7 @@
     height: 300px;
     overflow-y: auto;
     color: #c9d1d9;
+    // max-width: 1900px !important;
     font-family: "JetBrains Mono", monospace;
 
     /* Scrollbar dizayni */
@@ -282,20 +286,20 @@
 
     /* Scrollbar uslubi (Chrome, Safari, Edge uchun) */
     &::-webkit-scrollbar {
-        height: 2px; // Scrollbarning qalinligi
+      height: 2px; // Scrollbarning qalinligi
     }
 
     &::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.05); // Yo'lakcha rangi
-        border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05); // Yo'lakcha rangi
+      border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #238636; // Terminalingizdagi yashil rang bilan bir xil
-        border-radius: 10px;
-        &:active {
-            background: #2ea043; // Ustiga borganda biroz yorqinlashadi
-        }
+      background: #238636; // Terminalingizdagi yashil rang bilan bir xil
+      border-radius: 10px;
+      &:active {
+        background: #2ea043; // Ustiga borganda biroz yorqinlashadi
+      }
     }
 
     /* Firefox uchun */
@@ -312,29 +316,60 @@
   // }
 
   &__current-line {
-    @include display();
-    // flex-wrap: wrap;
-    position: relative;
-    justify-content: start;
-    align-items: flex-start;
-    gap: 5px;
+    display: block;
+    // @include display();
+    // justify-content: center;
+    // display: grid;
+    // grid-template-columns: auto 1fr;
+    // grid-template-rows: auto auto;
+    // background-color: blue;
+    // word-break: break-all;
   }
 
   &__prompt {
-    // position: absolute;
     color: rgb(92, 247, 92);
-    word-break: normal;
-    white-space: nowrap;
-    flex-shrink: 0;
+    word-break: break-all;
+    // white-space: nowrap;
+    // grid-column: 1/2;
+    // grid-row: 1/2;
+    // display: inline !important;
+    float: left;
+    margin-right: 10px;
   }
 
   &__input {
-    display: inline-block;
     outline: none;
-    // max-width: 1000px;
     word-break: break-all;
-    flex-grow: 1;
     font-size: 14px;
+    padding: 0px 10px 0px 0px;
+
+    &:hover {
+      cursor:text;
+    }
+  }
+
+  &__input:empty::before {
+    content: "|";
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    width: 50%;
+    height: 1em;
+    vertical-align: middle;
+    animation: blink 0.9s infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   &__terminal::selection {
@@ -382,15 +417,14 @@
       grid-row: 2/3;
     }
 
-
     &__right {
       display: grid;
-      grid-template-columns: auto  1fr;
+      grid-template-columns: auto 1fr;
       grid-template-rows: auto auto auto;
       margin: auto;
       justify-content: center;
-      
-      width: 100% ;
+
+      width: 100%;
       gap: 20px;
       max-width: none;
       grid-column: 1/2;
