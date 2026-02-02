@@ -716,13 +716,15 @@ body {
   position: relative;
   justify-content: start;
   padding: 10px 15px;
-  background-color: rgba(18, 23, 31, 0.0549019608);
   border: 1px solid rgba(75, 87, 103, 0.3725490196);
   box-shadow: 0px 0px 10px 0px rgba(56, 55, 55, 0.259);
   font-weight: 500;
   word-break: break-all;
   max-width: 500px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.03); /* Shaffof fon */
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
 }
 .main-part__circles {
   position: absolute;
@@ -1081,12 +1083,12 @@ body {
   flex-direction: column;
   grid-column: 1/5;
   grid-row: 2/3;
-  height: 100%;
   background-color: rgb(13, 12, 12);
-  max-height: 350px;
   border-radius: 8px;
   opacity: 0.8;
   width: 100%;
+  margin-bottom: 5%;
+  transition: all 0.3s ease-in-out;
 }
 .main-t__right {
   display: grid;
@@ -1273,7 +1275,6 @@ body {
 .main-t__terminal {
   flex-grow: 1;
   width: 100%;
-  max-height: 305px;
   overflow: auto;
   overflow-x: hidden;
   background-color: #0d1117;
@@ -1281,6 +1282,8 @@ body {
   height: 300px;
   overflow-y: auto;
   color: #c9d1d9;
+  transition: all 0.3s ease-in-out;
+  max-height: 700px;
   font-family: "JetBrains Mono", monospace;
   /* Scrollbar dizayni */
 }
@@ -1297,6 +1300,12 @@ body {
 }
 .main-t__terminal::-webkit-scrollbar-thumb:active {
   background: #484f58;
+}
+.main-t .max-terminal {
+  height: 70vh !important;
+}
+.main-t .max-left-t {
+  transform: scale(1.03) translateY(10px);
 }
 .main-t__right-meta-data {
   max-width: 200px;
@@ -1343,7 +1352,7 @@ body {
   cursor: text;
 }
 .main-t__input:empty::before {
-  content: "|";
+  content: "/";
   position: relative;
   top: -4px;
   display: inline-block;
@@ -1375,6 +1384,35 @@ body {
 .main-t__history {
   color: #e6edf3 !important;
   font-size: 14px;
+}
+.main-t__header {
+  position: relative;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+.main-t__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+.main-t__red {
+  background: #ff5f56;
+}
+.main-t__yellow {
+  background: #ffbd2e;
+}
+.main-t__green {
+  background: #27c93f;
+}
+.main-t__terminal-title {
+  font-family: "Inter";
+  color: #a0aec0;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 @media (max-width: 1125px) {

@@ -575,7 +575,15 @@
             </form>
           </article>
           <article class="main-t">
-            <div class="main-t__left">
+            <div class="main-t__left max-left-t">
+              <div class="main-t__header">
+                <div class="main-t__dots">
+                  <span class="main-t__dot main-t__red"></span>
+                  <span class="main-t__dot main-t__yellow"></span>
+                  <span class="main-t__dot main-t__green"></span>
+                </div>
+                <div class="main-t__terminal-title">bash — atgc-lab</div>
+              </div>
               <div class="main-t__left-top">
                 <p class="main-t__left-top-tabs">Help</p>
                 <p class="main-t__left-top-tabs">Presets</p>
@@ -583,19 +591,16 @@
                 <p class="main-t__left-top-tabs">Clear</p>
                 <p class="main-t__left-top-tabs">Expand</p>
               </div>
-              <div class="main-t__terminal">
+              <div class="main-t__terminal max-terminal">
                 <div class="main-t__history">[atgc-user@lab]:~$ somdveo</div>
                 <div class="main-t__current-line">
-                  <p class="main-t__prompt"
-                    >[atgc-user@lab]:~$
-                  </p>
+                  <p class="main-t__prompt">[atgc-user@lab]:~$</p>
                   <span
-                      placeholder="some"
-                      class="main-t__input"
-                      contenteditable="true"
-                      spellcheck="false"
-                      ></span
-                    >
+                    placeholder="some"
+                    class="main-t__input"
+                    contenteditable="true"
+                    spellcheck="false"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -714,7 +719,6 @@
           </article>
         </section>
       </section>
-      <section class=""></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>

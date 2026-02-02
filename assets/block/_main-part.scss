@@ -388,12 +388,6 @@
     position: relative;
     justify-content: start;
     padding: 10px 15px;
-    // background-color: #3f516d38;
-    // background-color: #1e293b38;
-    // background-color: #12171f96;
-    background-color: #12171f0e;
-    // background-color: #1117205e;
-    // border: 1px solid #30363d;
     border: 1px solid $text-light;
     box-shadow: 0px 0px 10px 0px rgba(56, 55, 55, 0.259);
     font-weight: 500;
@@ -401,6 +395,9 @@
     word-break: break-all;
     max-width: 500px;
     width: 100%;
+    // .main-part__kpi-card {
+    background: rgba(255, 255, 255, 0.03); /* Shaffof fon */
+    backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
   }
 
   &__circles {
