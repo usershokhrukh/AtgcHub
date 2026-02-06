@@ -862,8 +862,8 @@ body {
   opacity: 1;
 }
 .main-part__scon {
-  background-color: rgb(98, 13, 98);
-  border: 1px solid rgb(151, 2, 151);
+  background-color: rgba(161, 10, 161, 0.763);
+  border: 1px solid rgb(175, 3, 175);
 }
 .main-part__sci {
   position: relative;
