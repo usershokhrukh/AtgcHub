@@ -511,6 +511,12 @@
     border-bottom: 1px solid $text-light;
     margin-bottom: 15px;
   }
+
+  &__ls {
+    @include inter();
+    font-size: 13px;
+    color: $secondary-color
+  }
 }
 
 @media (min-width: 2000px) and (max-width: 10000px) {
@@ -643,6 +649,10 @@
 
     &__sci {
       width: 12px;
+    }
+
+    &__ls {
+      font-size: 11px;
     }
 
     &__txt-stat-db {

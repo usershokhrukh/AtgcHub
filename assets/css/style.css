@@ -890,6 +890,11 @@ body {
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
   margin-bottom: 15px;
 }
+.main-part__ls {
+  font-family: "Inter";
+  font-size: 13px;
+  color: rgb(205, 205, 205);
+}
 
 @media (min-width: 2000px) and (max-width: 10000px) {
   .main-part {
@@ -999,6 +1004,9 @@ body {
   }
   .main-part__sci {
     width: 12px;
+  }
+  .main-part__ls {
+    font-size: 11px;
   }
   .main-part__txt-stat-db {
     grid-column: 1/5;
