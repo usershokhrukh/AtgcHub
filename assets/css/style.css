@@ -379,8 +379,8 @@ body {
   align-items: start;
   gap: 20px;
   flex-grow: 1;
-  padding: 2% 11% 0% 13%;
-  max-width: 1900px;
+  padding: 1% 8% 0% 10%;
+  max-width: 1800px;
   width: 100%;
   margin: 0px auto;
 }
@@ -837,6 +837,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   gap: 8px;
   height: 100%;
 }
@@ -850,7 +852,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
   opacity: 0.5;
-  padding: 5px;
+  padding: 5px 12px;
   gap: 6px;
   border-radius: 8px;
   font-size: 13px;
@@ -859,8 +861,13 @@ body {
   color: white;
   opacity: 1;
 }
+.main-part__scon {
+  background-color: rgb(98, 13, 98);
+  border: 1px solid rgb(151, 2, 151);
+}
 .main-part__sci {
   position: relative;
+  top: 2px;
   width: 13px;
 }
 .main-part__sct-save {
@@ -890,15 +897,24 @@ body {
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
   margin-bottom: 15px;
 }
+.main-part__lsi {
+  font-style: italic;
+  font-weight: 600;
+}
 .main-part__ls {
   font-family: "Inter";
+  padding: 5px 12px;
+  border-radius: 8px;
+  background-color: rgba(75, 87, 103, 0.3725490196);
   font-size: 13px;
-  color: rgb(205, 205, 205);
+  color: white;
+  border: 1px solid rgba(71, 79, 88, 0.9176470588);
 }
 
 @media (min-width: 2000px) and (max-width: 10000px) {
   .main-part {
     padding: 3% 5% 0% 5% !important;
+    max-width: 2000px;
   }
 }
 @media (min-width: 500px) and (max-width: 1125px) {
