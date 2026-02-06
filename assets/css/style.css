@@ -464,7 +464,7 @@ body {
 }
 .main-part__txt-stat-s-ram, .main-part__txt-stat-s-v {
   cursor: pointer;
-  color: rgba(37, 70, 191, 0.764);
+  color: rgb(46, 85, 226);
 }
 .main-part__txt-stat-s-ram:active, .main-part__txt-stat-s-v:active {
   text-decoration: underline;
@@ -623,7 +623,7 @@ body {
   padding: 5px;
   width: 100%;
   justify-content: end;
-  color: rgba(37, 70, 191, 0.764);
+  color: rgb(46, 85, 226);
   font-size: 11px;
 }
 .main-part__chart-copy-t:active {
@@ -862,8 +862,8 @@ body {
   opacity: 1;
 }
 .main-part__scon {
-  background-color: rgba(161, 10, 161, 0.763);
-  border: 1px solid rgb(175, 3, 175);
+  background-color: #4c1d95;
+  border: 1px solid #6d28d9;
 }
 .main-part__sci {
   position: relative;

@@ -488,8 +488,14 @@
   &__scon {
     // background-color: rgb(98, 13, 98);
     // border: 1px solid rgb(151, 2, 151);
-    background-color: rgba(161, 10, 161, 0.763);
-    border: 1px solid rgb(175, 3, 175);
+    // background-color: rgba(161, 10, 161, 0.763);
+    // background-color: #0d1117;
+    // border: 1px solid rgb(175, 3, 175);
+    // border: 1.5px solid $text-lightS
+    // background-color:#6d28d9;
+    // border: 1px solid  #4c1d95
+    background-color: #4c1d95;
+    border: 1px solid #6d28d9
   }
 
   &__sci {
