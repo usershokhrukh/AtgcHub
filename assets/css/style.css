@@ -898,7 +898,6 @@ body {
   margin-bottom: 15px;
 }
 .main-part__lsi {
-  font-style: italic;
   font-weight: 600;
 }
 .main-part__ls {
@@ -1137,9 +1136,28 @@ body {
   grid-row: 1/2;
 }
 .main-t__right-boxes-deg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
   grid-column: 2/3;
   grid-row: 2/3;
   max-width: 550px;
+}
+.main-t__right-binfo {
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  justify-content: start;
+  font-size: 13px;
+  color: rgb(205, 205, 205);
+}
+.main-t__right-binsp {
+  font-weight: 600;
 }
 .main-t__right-l {
   width: 100%;
@@ -1246,6 +1264,7 @@ body {
 }
 .main-t__right-boxes-st {
   font-family: "Inter";
+  width: 100%;
   font-size: 15px;
   background-color: #4caf50;
   color: white;
