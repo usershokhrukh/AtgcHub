@@ -21,6 +21,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: rgba(28, 35, 43, 0.9764705882);
+  -webkit-overflow-scrolling: touch;
+}
+
+button, a, input, div, p [role=button] {
+  -webkit-tap-highlight-color: transparent !important; /* Mobil brauzerlar uchun */
+  -webkit-user-select: none; /* Matnni tasodifan belgilab olmaslik uchun */
+  outline: none !important; /* Fokus bo'lgandagi chiziqni yo'qotadi */
 }
 
 .choosed {
@@ -1016,12 +1023,22 @@ body {
   .main-part__sct {
     font-size: 11px;
     padding: 3px 3px;
+    width: 40%;
+    flex-grow: 1;
+    border-radius: 5px;
+    white-space: nowrap;
+    min-width: 140px;
   }
-  .main-part__sci {
+  sq .main-part__sci {
     width: 12px;
   }
   .main-part__ls {
     font-size: 11px;
+    flex-grow: 1;
+    max-width: none;
+    border-radius: 5px;
+    border: none;
+    white-space: nowrap;
   }
   .main-part__txt-stat-db {
     grid-column: 1/5;
