@@ -28,9 +28,13 @@ body {
   // background-color: #131920f1;
     // background-color: #161b22;
     background-color: $main-color-bg;
+-webkit-overflow-scrolling: touch;
+}
 
-
-
+button, a, input, div, p [role="button"] {
+    -webkit-tap-highlight-color: transparent !important; /* Mobil brauzerlar uchun */
+    -webkit-user-select: none; /* Matnni tasodifan belgilab olmaslik uchun */
+    outline: none !important; /* Fokus bo'lgandagi chiziqni yo'qotadi */
 }
 
 .choosed {

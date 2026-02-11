@@ -670,14 +670,31 @@
     &__sct {
       font-size: 11px;
       padding: 3px 3px;
+      width: 40%;
+      flex-grow: 1;
+      border-radius: 5px;
+      white-space: nowrap;
+      min-width: 140px;
     }
-
+sq
     &__sci {
       width: 12px;
     }
 
     &__ls {
       font-size: 11px;
+      flex-grow: 1;
+      max-width: none;
+      // background-color: blue;
+      border-radius: 5px;
+      // background-color: transparent;
+      border: none;
+      // min-width: 200px;
+      white-space: nowrap;
+    }
+
+    &__scb {
+      // background-color: red;
     }
 
     &__txt-stat-db {
