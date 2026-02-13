@@ -1049,7 +1049,7 @@ button, a, input, div, p [role=button] {
     white-space: nowrap;
     min-width: 140px;
   }
-  sq .main-part__sci {
+  .main-part__sci {
     width: 12px;
   }
   .main-part__ls {
