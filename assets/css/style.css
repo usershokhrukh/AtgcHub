@@ -143,15 +143,17 @@ button, a, input, div, p [role=button] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
   opacity: 0.5;
-  cursor: pointer;
-  opacity: 0.8;
-  padding: 5px 5px 5px 6px;
-  color: white;
 }
 .dashboard__set:active, .dashboard__lan:active, .dashboard__not:active, .dashboard__info:active, .dashboard__br:active {
   background-color: rgba(207, 207, 210, 0.243) !important;
   opacity: 0.6;
   cursor: pointer;
+}
+.dashboard__set, .dashboard__lan, .dashboard__not, .dashboard__info, .dashboard__br {
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 5px 5px 5px 6px;
+  color: white;
 }
 .dashboard__pr {
   display: flex;
@@ -174,16 +176,18 @@ button, a, input, div, p [role=button] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
   opacity: 0.5;
-  cursor: pointer;
-  position: relative;
-  padding: 3px 5px;
-  color: white !important;
-  opacity: 0.8;
 }
 .dashboard__pr-more:active {
   background-color: rgba(207, 207, 210, 0.243) !important;
   opacity: 0.6;
   cursor: pointer;
+}
+.dashboard__pr-more {
+  cursor: pointer;
+  position: relative;
+  padding: 3px 5px;
+  color: white !important;
+  opacity: 0.8;
 }
 .dashboard__pr-arr {
   position: relative;
@@ -227,14 +231,16 @@ button, a, input, div, p [role=button] {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(243, 244, 246, 0.5725490196);
     opacity: 0.5;
-    cursor: pointer;
-    padding: 5px 5px 5px 6px;
-    color: white;
   }
   .dashboard__search:active {
     background-color: rgba(207, 207, 210, 0.243) !important;
     opacity: 0.6;
     cursor: pointer;
+  }
+  .dashboard__search {
+    cursor: pointer;
+    padding: 5px 5px 5px 6px;
+    color: white;
   }
   .dashboard__search-o {
     position: static;
@@ -242,15 +248,17 @@ button, a, input, div, p [role=button] {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(243, 244, 246, 0.5725490196);
     opacity: 0.5;
-    cursor: pointer;
-    padding: 7px;
-    color: white;
-    opacity: 0.8;
   }
   .dashboard__search-o:active {
     background-color: rgba(207, 207, 210, 0.243) !important;
     opacity: 0.6;
     cursor: pointer;
+  }
+  .dashboard__search-o {
+    cursor: pointer;
+    padding: 7px;
+    color: white;
+    opacity: 0.8;
   }
   .dashboard__navbar-options {
     gap: 10px;
@@ -469,13 +477,13 @@ button, a, input, div, p [role=button] {
 .main-part__txt-stat-s-veri {
   color: #4caf50;
 }
-.main-part__txt-stat-s-ram, .main-part__txt-stat-s-v {
-  cursor: pointer;
-  color: rgb(46, 85, 226);
-}
 .main-part__txt-stat-s-ram:active, .main-part__txt-stat-s-v:active {
   text-decoration: underline;
   cursor: pointer;
+}
+.main-part__txt-stat-s-ram, .main-part__txt-stat-s-v {
+  cursor: pointer;
+  color: rgb(46, 85, 226);
 }
 .main-part__txt-stat-cpu {
   position: relative;
@@ -512,8 +520,6 @@ button, a, input, div, p [role=button] {
   color: #f8fafc;
   resize: none;
   text-transform: uppercase;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 .main-part__txa:active {
   border: 1px solid #58a6ff;
@@ -541,6 +547,10 @@ button, a, input, div, p [role=button] {
 }
 .main-part__txa::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.2);
+}
+.main-part__txa {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 .main-part__txa::-moz-placeholder {
   opacity: 0.3;
@@ -625,6 +635,12 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main-part__chart-copy-t:active {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.main-part__chart-copy-t {
   cursor: pointer;
   gap: 4px;
   padding: 5px;
@@ -632,10 +648,6 @@ button, a, input, div, p [role=button] {
   justify-content: end;
   color: rgb(46, 85, 226);
   font-size: 11px;
-}
-.main-part__chart-copy-t:active {
-  text-decoration: underline;
-  cursor: pointer;
 }
 .main-part__chart-copy-i {
   width: 13px;
@@ -730,8 +742,7 @@ button, a, input, div, p [role=button] {
   max-width: 500px;
   width: 100%;
   background: rgba(255, 255, 255, 0.03); /* Shaffof fon */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
+  backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
 }
 .main-part__circles {
   position: absolute;
@@ -747,8 +758,6 @@ button, a, input, div, p [role=button] {
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  color: rgb(118, 18, 118) !important;
-  background-color: rgb(118, 18, 118);
 }
 @keyframes animate-circle-key {
   0% {
@@ -761,13 +770,15 @@ button, a, input, div, p [role=button] {
     box-shadow: 0px 0px 10px 0px rgba(217, 43, 217, 0.755);
   }
 }
+.main-part__circles-1 {
+  color: rgb(118, 18, 118) !important;
+  background-color: rgb(118, 18, 118);
+}
 .main-part__circles-2 {
   animation-name: animate-circle-key;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  color: #4caf50;
-  background-color: #4caf50;
 }
 @keyframes animate-circle-key {
   0% {
@@ -780,13 +791,15 @@ button, a, input, div, p [role=button] {
     box-shadow: 0px 0px 10px 0px rgb(77, 222, 77);
   }
 }
+.main-part__circles-2 {
+  color: #4caf50;
+  background-color: #4caf50;
+}
 .main-part__circles-3 {
   animation-name: animate-circle-key;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  color: #ff9800;
-  background-color: #ff9800;
 }
 @keyframes animate-circle-key {
   0% {
@@ -799,13 +812,15 @@ button, a, input, div, p [role=button] {
     box-shadow: 0px 0px 10px 0px rgb(255, 196, 21);
   }
 }
+.main-part__circles-3 {
+  color: #ff9800;
+  background-color: #ff9800;
+}
 .main-part__circles-4 {
   animation-name: animate-circle-key;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  color: #2196f3;
-  background-color: #2196f3;
 }
 @keyframes animate-circle-key {
   0% {
@@ -817,6 +832,10 @@ button, a, input, div, p [role=button] {
   100% {
     box-shadow: 0px 0px 10px 0px #2196f3;
   }
+}
+.main-part__circles-4 {
+  color: #2196f3;
+  background-color: #2196f3;
 }
 .main-part__apart-n {
   font-family: "Space Grotesk";
@@ -882,14 +901,16 @@ button, a, input, div, p [role=button] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
   opacity: 0.5;
-  background-color: rgba(75, 87, 103, 0.3725490196);
-  opacity: 1;
-  border: 1px solid rgba(71, 79, 88, 0.9176470588);
 }
 .main-part__sct-save:active {
   background-color: rgba(207, 207, 210, 0.243) !important;
   opacity: 0.6;
   cursor: pointer;
+}
+.main-part__sct-save {
+  background-color: rgba(75, 87, 103, 0.3725490196);
+  opacity: 1;
+  border: 1px solid rgba(71, 79, 88, 0.9176470588);
 }
 .main-part__sct-save svg {
   top: 2px;
@@ -1017,8 +1038,7 @@ button, a, input, div, p [role=button] {
     bottom: 10px;
     right: 10px;
     z-index: 2;
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
   }
   .main-part__sct {
     font-size: 11px;
@@ -1133,24 +1153,26 @@ button, a, input, div, p [role=button] {
 .main-t__right {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
   align-items: start;
   grid-column: 1/5;
   grid-row: 1/2;
   min-height: 70%;
   height: auto;
   gap: 30px;
+  border-top: 1px solid rgba(75, 87, 103, 0.3725490196);
+  padding: 10px;
 }
 .main-t__right-boxes-nd {
   min-width: 180px;
 }
 .main-t__right-act {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 .main-t__right-nuc {
   grid-column: 1/2;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 .main-t__right-boxes-deg {
   display: flex;
@@ -1160,7 +1182,7 @@ button, a, input, div, p [role=button] {
   gap: 10px;
   align-items: start;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 3/4;
   max-width: 550px;
 }
 .main-t__right-binfo {
@@ -1273,7 +1295,7 @@ button, a, input, div, p [role=button] {
   align-items: center;
   justify-content: center;
   grid-column: 1/2;
-  grid-row: 2/3;
+  grid-row: 3/4;
   flex-direction: column;
   align-items: start;
   gap: 10px;
@@ -1300,9 +1322,11 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Inter";
   gap: 8px;
   color: white;
-  font-family: "Inter";
+  border-top: 1px solid rgba(75, 87, 103, 0.3725490196);
+  padding: 5px 0px;
 }
 .main-t__right-meta-st {
   opacity: 0.4;
@@ -1368,6 +1392,11 @@ button, a, input, div, p [role=button] {
   transform: scale(1.03) translateY(10px);
 }
 .main-t__right-meta-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5px;
   max-width: 200px;
   overflow: auto;
   overflow-y: hidden;
@@ -1375,9 +1404,6 @@ button, a, input, div, p [role=button] {
   white-space: nowrap;
   padding-bottom: 8px;
   /* Scrollbar uslubi (Chrome, Safari, Edge uchun) */
-  /* Firefox uchun */
-  scrollbar-width: thin;
-  scrollbar-color: #238636 rgba(255, 255, 255, 0.05);
 }
 .main-t__right-meta-data::-webkit-scrollbar {
   height: 2px;
@@ -1392,6 +1418,11 @@ button, a, input, div, p [role=button] {
 }
 .main-t__right-meta-data::-webkit-scrollbar-thumb:active {
   background: #2ea043;
+}
+.main-t__right-meta-data {
+  /* Firefox uchun */
+  scrollbar-width: thin;
+  scrollbar-color: #238636 rgba(255, 255, 255, 0.05);
 }
 .main-t__current-line {
   display: block;
@@ -1474,6 +1505,22 @@ button, a, input, div, p [role=button] {
   font-size: 12px;
   margin-left: 10px;
 }
+.main-t__right-cp {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.main-t__right-cpt {
+  font-family: "Inter";
+}
+.main-t__right-cpt:active {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.main-t__right-cpt {
+  font-size: 13px;
+  color: rgb(46, 85, 226);
+  max-width: 100px;
+}
 
 @media (max-width: 1125px) {
   .main-t {
@@ -1499,16 +1546,28 @@ button, a, input, div, p [role=button] {
   }
   .main-t__right-boxes-meta {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 5/6;
   }
   .main-t__right-boxes-deg {
-    grid-column: 1/3;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .main-t__right-act {
+    grid-column: 1/2 !important;
+    grid-row: 2/3 !important;
+  }
+  .main-t__right-nuc {
+    grid-row: 3/4 !important;
+    grid-column: 1/2 !important;
+  }
+  .main-t__right-cp {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
   .main-t__right {
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     margin: auto;
     justify-content: center;
     width: 100%;
@@ -1543,17 +1602,29 @@ button, a, input, div, p [role=button] {
     grid-column: 1/2;
     grid-row: 2/3;
   }
+  .main-t__right-cp {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .main-t__right-act {
+    grid-column: 1/2 !important;
+    grid-row: 2/3 !important;
+  }
+  .main-t__right-nuc {
+    grid-row: 3/4 !important;
+    grid-column: 1/2 !important;
+  }
   .main-t__right-boxes-meta {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
   .main-t__right-boxes-deg {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 4/5;
   }
   .main-t__right {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
   }
   .main-t__left-top-tabs {
     font-size: 10px;
