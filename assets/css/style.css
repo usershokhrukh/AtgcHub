@@ -1161,7 +1161,7 @@ button, a, input, div, p [role=button] {
   height: auto;
   gap: 30px;
   border-top: 1px solid rgba(75, 87, 103, 0.3725490196);
-  padding: 10px;
+  padding: 10px 0px;
 }
 .main-t__right-boxes-nd {
   min-width: 180px;
