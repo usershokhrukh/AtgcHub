@@ -518,11 +518,37 @@
 
   &__scb {
     @include display();
-    justify-content: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 0px 0px 15px 0px;
     width: 100%;
     border-bottom: 1px solid $text-light;
     margin-bottom: 15px;
+  }
+
+  &__scr {
+    @include display();
+    gap: 3px;
+    word-wrap: nowrap;
+    overflow-y: auto;
+    &::placeholder {
+      display: none;
+    }
+  }
+  &__scrl {
+    @include inter();
+    font-size: 13px;
+    color: white;
+    word-wrap: nowrap;
+    &:active {
+      color: $link;
+    }
+  }
+  &__scrs {
+    @include display();
+    gap: 3px;
+    color: white;
   }
 
   &__lsi {
