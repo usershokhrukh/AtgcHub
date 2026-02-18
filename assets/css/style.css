@@ -65,8 +65,8 @@ button, a, input, div, p [role=button] {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgba(14, 16, 22, 0.6431372549);
-  padding: 15px 20px;
+  background-color: rgba(12, 16, 26, 0.5176470588);
+  padding: 10px 20px;
 }
 .dashboard__nav {
   display: flex;
@@ -304,7 +304,7 @@ button, a, input, div, p [role=button] {
   align-items: start;
   padding: 0px 5px;
   width: 100%;
-  background-color: rgba(14, 16, 22, 0.6431372549);
+  background-color: rgba(12, 16, 26, 0.5176470588);
   border-right: 1px solid rgba(75, 87, 103, 0.3725490196);
   border-bottom: 1px solid rgba(112, 112, 112, 0.5725490196);
 }
@@ -314,8 +314,9 @@ button, a, input, div, p [role=button] {
   justify-content: center;
   align-items: start;
   justify-content: start;
-  gap: 0px;
+  gap: 10px;
   width: 100%;
+  padding: 2px 0px;
 }
 .navigation-menu__cards-w {
   padding: 3px 5px;
@@ -330,7 +331,7 @@ button, a, input, div, p [role=button] {
   justify-content: center;
   cursor: pointer;
   gap: 6px;
-  padding: 6px 5px;
+  padding: 8px 5px;
   justify-content: start;
   border: none !important;
   border-left: 2px solid transparent !important;
@@ -352,7 +353,7 @@ button, a, input, div, p [role=button] {
   color: white;
   overflow-y: auto;
   padding: 0px 0px;
-  font-size: 15px;
+  font-size: 13px;
 }
 .navigation-menu__cards-t::-webkit-scrollbar {
   display: none;
@@ -412,9 +413,9 @@ button, a, input, div, p [role=button] {
 .main-part__wrap-form {
   display: grid;
   grid-template-columns: 35% auto auto auto auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: 15px;
-  width: 95%;
+  width: 100%;
 }
 .main-part__txt-stat-db {
   display: flex;
@@ -424,7 +425,7 @@ button, a, input, div, p [role=button] {
   align-items: start;
   gap: 10px;
   grid-column: 3/4;
-  grid-row: 4/5;
+  grid-row: 5/6;
 }
 .main-part__txt-stat-di {
   width: 16px;
@@ -462,7 +463,7 @@ button, a, input, div, p [role=button] {
   justify-content: start;
   gap: 10px;
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 5/6;
   flex-wrap: wrap;
 }
 .main-part__txt-stat-t {
@@ -500,7 +501,7 @@ button, a, input, div, p [role=button] {
 }
 .main-part__form {
   grid-column: 1/4;
-  grid-row: 1/4;
+  grid-row: 2/5;
   width: 100%;
 }
 .main-part__txa {
@@ -566,7 +567,7 @@ button, a, input, div, p [role=button] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.093);
   border: 1px solid rgba(75, 87, 103, 0.3725490196);
   grid-template: 4/5;
-  grid-row: 1/4;
+  grid-row: 2/5;
   height: 100%;
   background-color: rgba(112, 112, 112, 0.5725490196);
   opacity: 0.8;
@@ -585,7 +586,7 @@ button, a, input, div, p [role=button] {
   justify-content: start;
   padding: 0px;
   grid-column: 5/6;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 .main-part__chart-live-t {
   display: flex;
@@ -623,7 +624,7 @@ button, a, input, div, p [role=button] {
   flex-direction: column;
   align-items: start;
   justify-content: end;
-  grid-row: 2/5;
+  grid-row: 3/6;
   width: 100%;
   max-width: 195px;
   max-height: 292px;
@@ -689,7 +690,7 @@ button, a, input, div, p [role=button] {
 .main-part__ts {
   font-family: "Inter";
   grid-column: 4/5;
-  grid-row: 4/5;
+  grid-row: 5/6;
   padding: 8px 20px;
   border-radius: 8px;
   font-weight: 500;
@@ -969,6 +970,40 @@ button, a, input, div, p [role=button] {
   color: white;
   border: 1px solid rgba(71, 79, 88, 0.9176470588);
 }
+.main-part__wft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: end;
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+.main-part__fti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.main-part__ftri {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.093);
+  border: 1px solid rgba(75, 87, 103, 0.3725490196);
+  border: 1px solid rgba(75, 87, 103, 0.3725490196);
+  background-color: rgba(75, 87, 103, 0.3725490196);
+  background-color: rgba(75, 87, 103, 0.1294117647);
+  padding: 4px 5px 4px 30px;
+  font-size: 15px;
+  color: white;
+  width: 100%;
+}
+.main-part__fti-sli {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 17px;
+  height: 17px;
+  color: rgba(112, 112, 112, 0.5725490196);
+}
 
 @media (min-width: 2000px) and (max-width: 10000px) {
   .main-part {
@@ -981,7 +1016,7 @@ button, a, input, div, p [role=button] {
     padding: 2% 5% 0% 5%;
   }
   .main-part__txt-stat {
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 1/4;
     align-self: end;
     flex-wrap: wrap;
@@ -992,25 +1027,25 @@ button, a, input, div, p [role=button] {
     font-size: 12px;
     padding: 8px 10px;
     grid-column: 1/5;
-    grid-row: 5/6;
+    grid-row: 6/7;
     height: auto;
     align-self: flex-start;
   }
   .main-part__txt-stat-db {
     grid-column: 5/6;
-    grid-row: 2/3;
+    grid-row: 3/4;
   }
   .main-part__form {
     grid-column: 1/6;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   .main-part__chart-live {
     grid-template: 5/6 !important;
-    grid-row: 3/4;
+    grid-row: 4/5;
   }
   .main-part__chart-points {
     grid-column: 5/6;
-    grid-row: 4/6;
+    grid-row: 5/7;
     justify-self: end;
     max-width: none;
   }
@@ -1036,13 +1071,13 @@ button, a, input, div, p [role=button] {
   }
   .main-part__wrap-form {
     grid-template-columns: auto auto auto auto !important;
-    grid-template-rows: auto auto auto auto 40px auto !important;
+    grid-template-rows: auto auto auto auto auto 40px auto !important;
     height: auto;
     width: 100%;
   }
   .main-part__chart {
     grid-column: 1/5;
-    grid-row: 3/5;
+    grid-row: 4/6;
     width: 100%;
     max-width: none;
   }
@@ -1055,6 +1090,10 @@ button, a, input, div, p [role=button] {
   }
   .main-part__chart-title {
     font-size: 10px;
+  }
+  .main-part__wft {
+    grid-row: 1/2;
+    grid-column: 1/6;
   }
 }
 @media (max-width: 500px) {
@@ -1093,8 +1132,8 @@ button, a, input, div, p [role=button] {
     white-space: nowrap;
   }
   .main-part__txt-stat-db {
-    grid-column: 1/5;
-    grid-row: 5/6;
+    grid-column: 1/2;
+    grid-row: 6/7;
   }
   .main-part__txt-stat-d {
     width: 100%;
@@ -1104,11 +1143,14 @@ button, a, input, div, p [role=button] {
     display: none;
   }
   .main-part__form {
-    grid-column: 1/4;
-    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0px !important;
+    width: 100%;
   }
   .main-part__txa {
-    display: none;
+    width: 100% !important;
+    max-width: none !important;
   }
   .main-part__apart {
     font-size: 9px;
@@ -1128,13 +1170,13 @@ button, a, input, div, p [role=button] {
   }
   .main-part__wrap-form {
     grid-template-columns: auto !important;
-    grid-template-rows: auto auto auto auto !important;
+    grid-template-rows: auto auto auto auto auto auto !important;
     height: auto;
     width: 100%;
   }
   .main-part__chart {
-    grid-column: 1/5;
-    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-row: 3/4;
     height: 160px;
   }
   .main-part__apart-n {
@@ -1149,12 +1191,16 @@ button, a, input, div, p [role=button] {
   }
   .main-part__chart-live {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 4/5;
   }
   .main-part__chart-points {
-    grid-column: 1/5;
+    grid-column: 1/2;
     max-width: none;
-    grid-row: 3/4;
+    grid-row: 5/6;
+  }
+  .main-part__wft {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
 }
 .main-t {

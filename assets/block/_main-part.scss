@@ -28,10 +28,10 @@
     // @include display();
     display: grid;
     grid-template-columns: 35% auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     gap: 15px;
     // background-color: red;
-    width: 95%;
+    width: 100%;
     // height: 300px;
     // max-width: 1500px;
   }
@@ -43,7 +43,7 @@
     gap: 10px;
 
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
 
   &__txt-stat-di {
@@ -82,7 +82,7 @@
     gap: 10px;
     grid-column: 1/2;
     // background-color: rgba(255, 0, 0, 0.302);
-    grid-row: 4/5;
+    grid-row: 5/6;
     flex-wrap: wrap;
     // height: 100px;
   }
@@ -124,7 +124,7 @@
 
   &__form {
     grid-column: 1/4;
-    grid-row: 1/4;
+    grid-row: 2/5;
     width: 100%;
     // height: 250px
   }
@@ -208,7 +208,7 @@
     @include display();
     @include standard-box-borders();
     grid-template: 4/5;
-    grid-row: 1/4;
+    grid-row: 2/5;
     height: 100%;
     // width: 420px;
     // width: 100%;
@@ -230,7 +230,7 @@
     padding: 0px;
     // background-color: red;
     grid-column: 5/6;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
 
   &__chart-live-t {
@@ -269,7 +269,7 @@
     align-items: start;
     justify-content: end;
     // grid-column: 4/5;
-    grid-row: 2/5;
+    grid-row: 3/6;
     width: 100%;
     // background-color: red;
     max-width: 195px;
@@ -341,7 +341,7 @@
   &__ts {
     @include inter();
     grid-column: 4/5;
-    grid-row: 4/5;
+    grid-row: 5/6;
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: 500;
@@ -567,6 +567,38 @@
     border: 1px solid $text-lightS;
     // opacity: 0.6;
   }
+
+  &__wft {
+    @include display();
+    justify-content: end;
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
+
+  &__fti {
+    @include display();
+    position: relative;
+  }
+  &__ftri{
+    @include standard-box-borders();
+    border: 1px solid $text-light;
+    background-color: $text-light;
+    background-color: #4b576721;
+    padding: 4px 5px 4px 30px;
+    font-size: 15px;
+    // border: none;
+    color: $text-color;
+    width: 100%;
+  }
+
+  &__fti-sli {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 17px;
+    height: 17px;
+    color: $border;
+  }
 }
 
 @media (min-width: 2000px) and (max-width: 10000px) {
@@ -582,7 +614,7 @@
   padding: 2% 5% 0% 5%;
 
     &__txt-stat {
-      grid-row: 2/3;
+      grid-row: 3/4;
       grid-column: 1/4;
       align-self: end;
       flex-wrap: wrap;
@@ -594,29 +626,29 @@
       font-size: 12px;
       padding: 8px 10px;
       grid-column: 1/5;
-      grid-row: 5/6;
+      grid-row: 6/7;
       height: auto;
       align-self: flex-start;
     }
 
     &__txt-stat-db {
       grid-column: 5/6;
-      grid-row: 2/3;
+      grid-row: 3/4;
     }
 
     &__form {
       grid-column: 1/6;
-      grid-row: 1/2;
+      grid-row: 2/3;
     }
 
     &__chart-live {
       grid-template: 5/6 !important;
-      grid-row: 3/4;
+      grid-row: 4/5;
     }
 
     &__chart-points {
       grid-column: 5/6;
-      grid-row: 4/6;
+      grid-row: 5/7;
       justify-self: end;
       max-width: none;
       // margin-top: 30px;
@@ -649,14 +681,14 @@
 
     &__wrap-form {
       grid-template-columns: auto auto auto auto !important;
-      grid-template-rows: auto auto auto auto 40px auto !important;
+      grid-template-rows:auto auto auto auto auto 40px auto !important;
       height: auto;
       width: 100%;
     }
 
     &__chart {
       grid-column: 1/5;
-      grid-row: 3/5;
+      grid-row: 4/6;
       // height: 180px;
       width: 100%;
       max-width: none;
@@ -673,6 +705,11 @@
 
     &__chart-title {
       font-size: 10px;
+    }
+
+    &__wft {
+      grid-row: 1/2;
+      grid-column: 1/6;
     }
   }
 }
@@ -719,8 +756,8 @@
     }
 
     &__txt-stat-db {
-      grid-column: 1/5;
-      grid-row: 5/6;
+      grid-column: 1/2;
+      grid-row: 6/7;
     }
     &__txt-stat-d {
       width: 100%;
@@ -731,12 +768,16 @@
     }
 
     &__form {
-      grid-column: 1/4;
-      grid-row: 1/2;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      padding: 0px !important;
+      width: 100%;
     }
 
     &__txa {
-      display: none;
+      // display: none;
+      width: 100% !important;
+      max-width: none !important;
     }
 
     &__apart {
@@ -761,15 +802,16 @@
 
     &__wrap-form {
       grid-template-columns: auto !important;
-      grid-template-rows: auto auto auto auto !important;
+      grid-template-rows:auto auto auto auto auto auto !important;
       height: auto;
       width: 100%;
     }
 
     &__chart {
-      grid-column: 1/5;
-      grid-row: 1/2;
+      grid-column: 1/2;
+      grid-row: 3/4;
       height: 160px;
+      // display: none;
     }
 
     &__apart-n {
@@ -787,13 +829,17 @@
 
     &__chart-live {
       grid-column: 1/2;
-      grid-row: 2/3;
+      grid-row: 4/5;
     }
 
     &__chart-points {
-      grid-column: 1/5;
+      grid-column: 1/2;
       max-width: none;
-      grid-row: 3/4;
+      grid-row: 5/6;
+    }
+    &__wft {
+      grid-row: 1/2;
+      grid-column: 1/2;
     }
   }
 }
