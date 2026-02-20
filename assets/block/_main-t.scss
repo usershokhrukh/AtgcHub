@@ -438,6 +438,7 @@
   &__right-cpt {
     @include inter();
     @include hoverLink();
+    @include hoverCursor();
     font-size: 13px;
     color: $link;
     max-width: 100px;

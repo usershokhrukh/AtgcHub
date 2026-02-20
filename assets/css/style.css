@@ -451,7 +451,7 @@ button, a, input, div, p [role=button] {
   font-weight: 600;
   opacity: 0.8;
 }
-.main-part__txt-stat-d:hover, .main-part__txt-stat-d:active {
+.main-part__txt-stat-d:active {
   cursor: pointer;
   opacity: 1;
 }
@@ -689,6 +689,7 @@ button, a, input, div, p [role=button] {
 }
 .main-part__ts {
   font-family: "Inter";
+  cursor: pointer;
   grid-column: 4/5;
   grid-row: 5/6;
   padding: 8px 20px;
@@ -1595,6 +1596,7 @@ button, a, input, div, p [role=button] {
   cursor: pointer;
 }
 .main-t__right-cpt {
+  cursor: pointer;
   font-size: 13px;
   color: rgb(46, 85, 226);
   max-width: 100px;
