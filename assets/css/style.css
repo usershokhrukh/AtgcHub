@@ -979,6 +979,7 @@ button, a, input, div, p [role=button] {
   grid-row: 1/2;
   grid-column: 1/4;
   gap: 12px;
+  flex-wrap: wrap-reverse;
 }
 .main-part__fti {
   display: flex;
@@ -1024,7 +1025,7 @@ button, a, input, div, p [role=button] {
   padding: 0px 5px;
   border: none;
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 13px;
   border-radius: 8px;
   font-weight: 600;
   background-color: #1f2835;
@@ -1086,7 +1087,7 @@ button, a, input, div, p [role=button] {
     max-width: none;
   }
   .main-part__txa {
-    font-size: 10px;
+    font-size: 20px;
     height: 160px;
   }
   .main-part__apart {

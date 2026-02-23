@@ -458,13 +458,12 @@
     opacity: 0.6;
   }
 
-
   &__sc {
     @include display();
     flex-wrap: wrap;
     justify-content: start;
     gap: 8px;
-    height: 100%
+    height: 100%;
   }
 
   &__sct {
@@ -483,7 +482,7 @@
     border: 1px solid #28a72cca;
     color: $text-color;
     // font-weight: 500;
-    opacity: 1 ;
+    opacity: 1;
   }
 
   &__scon {
@@ -496,7 +495,7 @@
     // background-color:#6d28d9;
     // border: 1px solid  #4c1d95
     background-color: #4c1d95;
-    border: 1px solid #6d28d9
+    border: 1px solid #6d28d9;
   }
 
   &__sci {
@@ -575,13 +574,14 @@
     grid-row: 1/2;
     grid-column: 1/4;
     gap: 12px;
+    flex-wrap: wrap-reverse;
   }
 
   &__fti {
     @include display();
     position: relative;
   }
-  &__ftri{
+  &__ftri {
     @include standard-box-borders();
     border: 1px solid $text-lightS;
     background-color: #4b576721;
@@ -606,7 +606,7 @@
     color: $border;
   }
 
-  &__wfti{
+  &__wfti {
     position: relative;
     top: 1px;
     width: 14px;
@@ -619,7 +619,7 @@
     padding: 0px 5px;
     border: none;
     @include inter();
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 8px;
     font-weight: 600;
     // background-color: rgba(255, 255, 255, 0.05);
@@ -634,7 +634,7 @@
 
     &:active {
       opacity: 1;
-      color: $text-color
+      color: $text-color;
     }
   }
 }
@@ -649,7 +649,7 @@
 @media (min-width: 500px) and (max-width: 1125px) {
   .main-part {
     // padding: 3% 2% 0% 2%;
-  padding: 2% 5% 0% 5%;
+    padding: 2% 5% 0% 5%;
 
     &__txt-stat {
       grid-row: 3/4;
@@ -693,7 +693,7 @@
     }
 
     &__txa {
-      font-size: 10px;
+      font-size: 20px;
       height: 160px;
     }
 
@@ -719,7 +719,7 @@
 
     &__wrap-form {
       grid-template-columns: auto auto auto auto !important;
-      grid-template-rows:auto auto auto auto auto 40px auto !important;
+      grid-template-rows: auto auto auto auto auto 40px auto !important;
       height: auto;
       width: 100%;
     }
@@ -840,7 +840,7 @@
 
     &__wrap-form {
       grid-template-columns: auto !important;
-      grid-template-rows:auto auto auto auto auto auto !important;
+      grid-template-rows: auto auto auto auto auto auto !important;
       height: auto;
       width: 100%;
     }
