@@ -395,8 +395,8 @@ button, a, input, div, p [role=button] {
   align-items: start;
   gap: 20px;
   flex-grow: 1;
-  padding: 1% 8% 0% 10%;
-  max-width: 1800px;
+  padding: 30px 3% 0px 4%;
+  max-width: 1600px;
   width: 100%;
   margin: 0px auto;
 }
@@ -700,7 +700,6 @@ button, a, input, div, p [role=button] {
   box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
   color: white;
   font-size: 15px;
-  height: 40px;
   align-self: flex-start;
 }
 .main-part__ts:active {
@@ -1040,6 +1039,37 @@ button, a, input, div, p [role=button] {
   opacity: 1;
   color: white;
 }
+.main-part__sum {
+  grid-row: 1/2;
+  grid-column: 4/6;
+}
+.main-part__sumt {
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  font-size: 13px;
+  gap: 5px;
+  color: white;
+}
+.main-part__sumarr {
+  cursor: pointer;
+}
+.main-part__sumarr:active {
+  background-color: rgba(207, 207, 210, 0.243) !important;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.main-part__sumarr {
+  position: relative;
+  top: 2px;
+  width: 15px;
+  background-color: rgba(75, 87, 103, 0.3725490196);
+  border-radius: 2px;
+  color: white;
+  border: 1px solid rgba(71, 79, 88, 0.9176470588);
+}
 
 @media (min-width: 2000px) and (max-width: 10000px) {
   .main-part {
@@ -1052,7 +1082,7 @@ button, a, input, div, p [role=button] {
     padding: 2% 5% 0% 5%;
   }
   .main-part__txt-stat {
-    grid-row: 3/4;
+    grid-row: 4/5;
     grid-column: 1/4;
     align-self: end;
     flex-wrap: wrap;
@@ -1063,25 +1093,25 @@ button, a, input, div, p [role=button] {
     font-size: 12px;
     padding: 8px 10px;
     grid-column: 1/5;
-    grid-row: 6/7;
+    grid-row: 7/8;
     height: auto;
     align-self: flex-start;
   }
   .main-part__txt-stat-db {
     grid-column: 5/6;
-    grid-row: 3/4;
+    grid-row: 4/5;
   }
   .main-part__form {
     grid-column: 1/6;
-    grid-row: 2/3;
+    grid-row: 3/4;
   }
   .main-part__chart-live {
     grid-template: 5/6 !important;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
   .main-part__chart-points {
     grid-column: 5/6;
-    grid-row: 5/7;
+    grid-row: 6/8;
     justify-self: end;
     max-width: none;
   }
@@ -1107,13 +1137,13 @@ button, a, input, div, p [role=button] {
   }
   .main-part__wrap-form {
     grid-template-columns: auto auto auto auto !important;
-    grid-template-rows: auto auto auto auto auto 40px auto !important;
+    grid-template-rows: auto auto auto auto auto auto 40px auto !important;
     height: auto;
     width: 100%;
   }
   .main-part__chart {
     grid-column: 1/5;
-    grid-row: 4/6;
+    grid-row: 5/7;
     width: 100%;
     max-width: none;
   }
@@ -1130,6 +1160,13 @@ button, a, input, div, p [role=button] {
   .main-part__wft {
     grid-row: 1/2;
     grid-column: 1/6;
+  }
+  .main-part__sum {
+    grid-row: 2/3;
+    grid-column: 1/6;
+  }
+  .main-part__sumt {
+    justify-content: end;
   }
 }
 @media (max-width: 500px) {
@@ -1169,7 +1206,7 @@ button, a, input, div, p [role=button] {
   }
   .main-part__txt-stat-db {
     grid-column: 1/2;
-    grid-row: 6/7;
+    grid-row: 7/8;
   }
   .main-part__txt-stat-d {
     width: 100%;
@@ -1180,7 +1217,7 @@ button, a, input, div, p [role=button] {
   }
   .main-part__form {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 3/4;
     padding: 0px !important;
     width: 100%;
   }
@@ -1206,13 +1243,13 @@ button, a, input, div, p [role=button] {
   }
   .main-part__wrap-form {
     grid-template-columns: auto !important;
-    grid-template-rows: auto auto auto auto auto auto !important;
+    grid-template-rows: auto auto auto auto auto auto auto !important;
     height: auto;
     width: 100%;
   }
   .main-part__chart {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 4/5;
     height: 160px;
   }
   .main-part__apart-n {
@@ -1227,16 +1264,27 @@ button, a, input, div, p [role=button] {
   }
   .main-part__chart-live {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
   .main-part__chart-points {
     grid-column: 1/2;
     max-width: none;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
   .main-part__wft {
     grid-row: 1/2;
     grid-column: 1/2;
+  }
+  .main-part__sum {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .main-part__sumt {
+    justify-content: end;
+    align-items: start;
+  }
+  .main-part__sumbr {
+    word-break: break-all;
   }
 }
 .main-t {
