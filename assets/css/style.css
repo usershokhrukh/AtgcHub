@@ -366,9 +366,6 @@ button, a, input, div, p [role=button] {
   .navigation-menu__cards {
     justify-content: center;
   }
-  .navigation-menu__cards-t {
-    display: none;
-  }
 }
 @media (max-width: 500px) {
   .navigation-menu {
@@ -379,11 +376,14 @@ button, a, input, div, p [role=button] {
   .navigation-menu__boxes {
     flex-direction: row;
     justify-content: start;
-    gap: 20px;
+    gap: 3px;
   }
   .navigation-menu__cards {
     width: auto;
     padding: 5px 10px;
+  }
+  .navigation-menu__cards-t {
+    display: none;
   }
 }
 .main-part {
@@ -865,9 +865,23 @@ button, a, input, div, p [role=button] {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: end;
   gap: 8px;
   height: 100%;
+}
+.main-part__scrto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.main-part__scrbo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: end;
+  gap: 8px;
+  flex-grow: 1;
 }
 .main-part__sct {
   display: flex;
@@ -921,6 +935,7 @@ button, a, input, div, p [role=button] {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  align-items: start;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0px 0px 15px 0px;
@@ -934,12 +949,10 @@ button, a, input, div, p [role=button] {
   justify-content: center;
   gap: 3px;
   word-wrap: nowrap;
-  overflow-y: auto;
+  overflow-x: auto;
+  justify-content: space-between;
 }
-.main-part__scr::-moz-placeholder {
-  display: none;
-}
-.main-part__scr::placeholder {
+.main-part__scr::-webkit-scrollbar {
   display: none;
 }
 .main-part__scrl {
@@ -971,20 +984,22 @@ button, a, input, div, p [role=button] {
   border: 1px solid rgba(71, 79, 88, 0.9176470588);
 }
 .main-part__wft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: end;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
   grid-row: 1/2;
-  grid-column: 1/4;
+  grid-column: 1/6;
+  justify-content: start;
+  align-items: start;
   gap: 12px;
-  flex-wrap: wrap-reverse;
+  max-width: 1132px;
 }
 .main-part__fti {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 300px;
 }
 .main-part__ftri {
   border-radius: 8px;
@@ -998,6 +1013,8 @@ button, a, input, div, p [role=button] {
   width: 100%;
   height: 27px;
   opacity: 0.6;
+  grid-row: 1/2;
+  grid-column: 2/3;
 }
 .main-part__ftri:focus {
   opacity: 1;
@@ -1041,7 +1058,7 @@ button, a, input, div, p [role=button] {
 }
 .main-part__sum {
   grid-row: 1/2;
-  grid-column: 4/6;
+  grid-column: 3/4;
 }
 .main-part__sumt {
   font-family: "Inter";
@@ -1069,6 +1086,15 @@ button, a, input, div, p [role=button] {
   border-radius: 2px;
   color: white;
   border: 1px solid rgba(71, 79, 88, 0.9176470588);
+}
+.main-part__wftto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  grid-row: 1/2;
+  grid-column: 1/2;
 }
 
 @media (min-width: 2000px) and (max-width: 10000px) {
@@ -1124,15 +1150,17 @@ button, a, input, div, p [role=button] {
     padding: 5px;
   }
   .main-part__kpis {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
   .main-part__apart {
     padding: 10px 25px;
     max-width: none;
+    align-items: start;
   }
   .main-part__apart-kt {
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: start;
     flex-wrap: wrap;
   }
   .main-part__wrap-form {
@@ -1160,13 +1188,33 @@ button, a, input, div, p [role=button] {
   .main-part__wft {
     grid-row: 1/2;
     grid-column: 1/6;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: end;
+  }
+  .main-part__wftto {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-content: end;
   }
   .main-part__sum {
-    grid-row: 2/3;
-    grid-column: 1/6;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .main-part__ftri {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
   .main-part__sumt {
     justify-content: end;
+  }
+  .main-part__ls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 12px;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 500px) {
@@ -1184,14 +1232,38 @@ button, a, input, div, p [role=button] {
     z-index: 2;
     backdrop-filter: blur(5px);
   }
+  .main-part__fti {
+    width: 100% !important;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    max-width: none;
+  }
+  .main-part__ftri {
+    width: 100% !important;
+    max-width: none;
+    flex-grow: 1;
+  }
+  .main-part__wftto {
+    grid-row: 3/4;
+    flex-grow: 1;
+    gap: 5px;
+  }
+  .main-part__wftto::-webkit-scrollbar {
+    display: none;
+  }
+  .main-part__wftbs {
+    flex-grow: 1;
+    text-wrap: nowrap;
+  }
   .main-part__sct {
     font-size: 11px;
     padding: 3px 3px;
-    width: 40%;
     flex-grow: 1;
     border-radius: 5px;
     white-space: nowrap;
-    min-width: 140px;
+  }
+  .main-part__scrbo {
+    flex-wrap: wrap;
   }
   .main-part__sci {
     width: 12px;
@@ -1199,10 +1271,15 @@ button, a, input, div, p [role=button] {
   .main-part__ls {
     font-size: 11px;
     flex-grow: 1;
-    max-width: none;
     border-radius: 5px;
-    border: none;
     white-space: nowrap;
+    opacity: 0.8;
+  }
+  .main-part__scrto {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 5px;
   }
   .main-part__txt-stat-db {
     grid-column: 1/2;
@@ -1225,21 +1302,36 @@ button, a, input, div, p [role=button] {
     width: 100% !important;
     max-width: none !important;
   }
+  .main-part__kpis {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
   .main-part__apart {
     font-size: 9px;
-    padding: 5px;
-  }
-  .main-part__kpis {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
-  }
-  .main-part__apart {
-    padding: 10px 25px;
+    padding: 10px 14px;
     max-width: none;
+    width: auto;
+  }
+  .main-part__apart:nth-child(1) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .main-part__apart:nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .main-part__apart:nth-child(3) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .main-part__apart:nth-child(4) {
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
   .main-part__apart-kt {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
   }
   .main-part__wrap-form {
     grid-template-columns: auto !important;
@@ -1274,6 +1366,10 @@ button, a, input, div, p [role=button] {
   .main-part__wft {
     grid-row: 1/2;
     grid-column: 1/2;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    width: 100% !important;
+    justify-content: none;
   }
   .main-part__sum {
     grid-row: 2/3;
@@ -1692,7 +1788,7 @@ button, a, input, div, p [role=button] {
   }
   .main-t__left {
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   .main-t__right-l {
     width: 100%;
@@ -1728,6 +1824,8 @@ button, a, input, div, p [role=button] {
     grid-column: 1/2;
   }
   .main-t__right {
+    grid-row: 1/2;
+    grid-column: 1/2;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -1736,8 +1834,6 @@ button, a, input, div, p [role=button] {
     width: 100%;
     gap: 20px;
     max-width: none;
-    grid-column: 1/2;
-    grid-row: 2/3;
   }
   .main-t__left-top-tabs {
     font-size: 12px;
@@ -1751,6 +1847,10 @@ button, a, input, div, p [role=button] {
   }
 }
 @media (max-width: 500px) {
+  .main-t {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
   .main-t__terminal {
     font-size: 10px;
   }
@@ -1788,8 +1888,14 @@ button, a, input, div, p [role=button] {
   .main-t__right {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
   .main-t__left-top-tabs {
     font-size: 10px;
+  }
+  .main-t__left {
+    grid-row: 2/3;
+    grid-column: 1/2;
   }
 }/*# sourceMappingURL=style.css.map */
