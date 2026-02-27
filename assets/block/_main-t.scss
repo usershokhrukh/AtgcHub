@@ -450,7 +450,7 @@
     grid-template-rows: auto auto;
     &__left {
       grid-column: 1/2;
-      grid-row: 1/2;
+      grid-row: 2/3;
     }
 
     &__right-l {
@@ -494,6 +494,8 @@
     }
 
     &__right {
+      grid-row: 1/2;
+      grid-column: 1/2;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto auto;
@@ -503,8 +505,6 @@
       width: 100%;
       gap: 20px;
       max-width: none;
-      grid-column: 1/2;
-      grid-row: 2/3;
     }
 
     &__left-top-tabs {
@@ -524,6 +524,9 @@
 
 @media (max-width: 500px) {
   .main-t {
+    // background-color: red;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     &__terminal {
       font-size: 10px;
     }
@@ -569,10 +572,18 @@
     &__right {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto auto;
+      grid-row: 1/2;
+      grid-column: 1/2;
     }
 
     &__left-top-tabs {
       font-size: 10px;
+    }
+
+    &__left{
+      grid-row: 2/3;
+      grid-column: 1/2;
+      // background-color: blue;
     }
   }
 }
