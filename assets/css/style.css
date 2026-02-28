@@ -978,10 +978,11 @@ button, a, input, div, p [role=button] {
   font-family: "Inter";
   padding: 5px 12px;
   border-radius: 8px;
-  background-color: rgba(75, 87, 103, 0.3725490196);
+  background-color: #1f2835;
   font-size: 13px;
   color: white;
   border: 1px solid rgba(71, 79, 88, 0.9176470588);
+  opacity: 0.8;
 }
 .main-part__wft {
   display: grid;
@@ -1037,15 +1038,21 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main-part__wftbs:active {
+  background-color: rgba(207, 207, 210, 0.243) !important;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.main-part__wftbs {
   gap: 5px;
   padding: 0px 5px;
   border: none;
   font-family: "Inter";
   font-size: 13px;
   border-radius: 8px;
-  background-color: #1f2835;
+  background-color: rgba(75, 87, 103, 0.3725490196);
   color: white;
-  opacity: 0.7;
   border: 1px solid rgba(71, 79, 88, 0.9176470588);
   height: 27px;
 }
@@ -1053,7 +1060,6 @@ button, a, input, div, p [role=button] {
   cursor: pointer;
 }
 .main-part__wftbs:active {
-  opacity: 1;
   color: white;
 }
 .main-part__sum {
