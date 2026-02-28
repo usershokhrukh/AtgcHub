@@ -556,10 +556,11 @@
     @include inter();
     padding: 5px 12px;
     border-radius: 8px;
-    background-color: $text-light;
+    background-color: $header;
     font-size: 13px;
     color: $text-color;
     border: 1px solid $text-lightS;
+    opacity: 0.8;
   }
 
   &__wft {
@@ -617,15 +618,15 @@
 
   &__wftbs {
     @include display();
+    @include hover();
     gap: 5px;
     padding: 0px 5px;
     border: none;
     @include inter();
     font-size: 13px;
     border-radius: 8px;
-    background-color: $header;
+    background-color: $text-light;
     color: $text-color;
-    opacity: 0.7;
     border: 1px solid $text-lightS;
     height: 27px;
     &:hover {
@@ -633,7 +634,6 @@
     }
 
     &:active {
-      opacity: 1;
       color: $text-color;
     }
   }
