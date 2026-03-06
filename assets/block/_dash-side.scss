@@ -185,12 +185,14 @@
 @media (max-width: 1125px) {
   .dash-side {
     position: absolute;
+    top: 0px;
     background-color: $main-color-bg;
     min-width: 0px;
     width: 90%;
     border-top-right-radius: 15px;
-    border-top-bottom-radius: 15px;
-
+    border-bottom-right-radius: 15px;
+    box-shadow: 2px 8px 10px 3px $header;
+    backdrop-filter: blur(2px);
     &__exit {
       display: block;
     }

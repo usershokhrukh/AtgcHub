@@ -1927,7 +1927,6 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
   align-items: start;
   justify-content: start;
@@ -2124,11 +2123,14 @@ button, a, input, div, p [role=button] {
 @media (max-width: 1125px) {
   .dash-side {
     position: absolute;
+    top: 0px;
     background-color: rgba(28, 35, 43, 0.9764705882);
     min-width: 0px;
     width: 90%;
     border-top-right-radius: 15px;
-    border-top-bottom-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 2px 8px 10px 3px #1f2835;
+    backdrop-filter: blur(2px);
   }
   .dash-side__exit {
     display: block;
