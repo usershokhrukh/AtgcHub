@@ -1927,6 +1927,7 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   align-items: start;
   justify-content: start;
@@ -1939,15 +1940,17 @@ button, a, input, div, p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   padding: 40px 20px;
-  gap: 10px;
+  gap: 9px;
   border-right: 1px solid rgba(71, 79, 88, 0.9176470588);
   height: 100%;
   flex-grow: 1;
   max-width: 290px;
+  min-width: 290px;
 }
 .dash-side__top {
   display: flex;
@@ -1958,6 +1961,9 @@ button, a, input, div, p [role=button] {
   justify-content: start;
   width: 100%;
   margin-bottom: 10px;
+}
+.dash-side__exit {
+  display: none;
 }
 .dash-side__prtop {
   font-family: "Inter";
@@ -1970,7 +1976,7 @@ button, a, input, div, p [role=button] {
   font-size: 13px;
   color: white;
   padding: 5px 8px;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 50%;
   opacity: 1 !important;
 }
@@ -1984,23 +1990,27 @@ button, a, input, div, p [role=button] {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .dash-side__repoform {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  border: 1px solid rgba(71, 79, 88, 0.9176470588);
+  border-radius: 6px;
 }
 .dash-side__reposr {
   font-family: "Inter";
-  border: 1px solid rgba(71, 79, 88, 0.9176470588);
-  padding: 6px 6px 8px 6px;
-  border-radius: 6px;
+  padding: 5px 4px 7px 4px;
   color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(44, 52, 61, 0.2117647059);
+  border-top: 1px solid rgba(12, 16, 26, 0.5176470588);
   background-color: transparent;
   font-size: 12px;
   width: 100%;
-  background-color: rgba(75, 87, 103, 0.1725490196);
+  background-color: rgba(44, 52, 61, 0.2117647059);
 }
 .dash-side__reposr::-moz-placeholder {
   color: rgba(243, 244, 246, 0.5725490196);
@@ -2010,6 +2020,23 @@ button, a, input, div, p [role=button] {
 }
 .dash-side__reposr:focus {
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
+}
+.dash-side__replf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-grow: 1;
+  justify-content: start;
+}
+.dash-side__repcir {
+  width: 8px;
+}
+.dash-side__repcirsp:nth-child(1) {
+  color: #ff9800;
+}
+.dash-side__repcirsp:nth-child(2) {
+  color: #ff9800;
 }
 .dash-side__repos {
   display: flex;
@@ -2032,6 +2059,10 @@ button, a, input, div, p [role=button] {
   width: 100%;
   justify-content: start;
   gap: 8px;
+  overflow: auto;
+}
+.dash-side__repmain::-webkit-scrollbar {
+  display: none;
 }
 .dash-side__repli {
   font-family: "Inter";
@@ -2043,9 +2074,9 @@ button, a, input, div, p [role=button] {
 }
 .dash-side__reponew {
   border: none;
-  padding: 5px 5px 0px 5px;
+  padding: 6px 5px 0px 5px;
   font-size: 11px;
-  box-shadow: 0px 2px 2px 0px rgb(22, 22, 22);
+  box-shadow: 0px 1px 3px 1px rgba(22, 22, 22, 0.658);
 }
 .dash-side__reponew:active {
   background-color: rgba(82, 180, 85, 0.7921568627);
@@ -2082,7 +2113,27 @@ button, a, input, div, p [role=button] {
   font-size: 12px;
   color: white;
 }
+.dash-side__exit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: rgba(243, 244, 246, 0.5725490196);
+  width: 20px;
+}
 
+@media (max-width: 1125px) {
+  .dash-side {
+    position: absolute;
+    background-color: rgba(28, 35, 43, 0.9764705882);
+    min-width: 0px;
+    width: 90%;
+    border-top-right-radius: 15px;
+    border-top-bottom-radius: 15px;
+  }
+  .dash-side__exit {
+    display: block;
+  }
+}
 .dash-main {
   display: flex;
   align-items: center;

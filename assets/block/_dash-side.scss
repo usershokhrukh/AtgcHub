@@ -1,14 +1,16 @@
 .dash-side {
   @include display();
+  position: relative;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   padding: 40px 20px;
-  gap: 10px;
+  gap: 9px;
   border-right: 1px solid $text-lightS;
   height: 100%;
   flex-grow: 1;
   max-width: 290px;
+  min-width: 290px;
   &__top {
     @include display();
     gap: 10px;
@@ -19,13 +21,17 @@
     // background-color: red;
   }
 
+  &__exit {
+    display: none;
+  }
+
   &__prtop {
     @include inter();
     @include hoverNormal();
     font-size: 13px;
     color: $text-color;
     padding: 5px 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 50%;
     opacity: 1 !important;
   }
@@ -39,24 +45,28 @@
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   &__repoform {
     @include display();
     width: 100%;
     // background-color: red;
+    border: 1px solid $text-lightS;
+    border-radius: 6px;
   }
 
   &__reposr {
     @include inter();
-    border: 1px solid $text-lightS;
-    padding: 6px 6px 8px 6px;
-    border-radius: 6px;
+    padding: 5px 4px 7px 4px;
     color: $text-color;
+    border-radius: 5px;
+    border: 1px solid #2c343d36;
+    border-top: 1px solid $bg-dark-blue;
     background-color: transparent;
     font-size: 12px;
     width: 100%;
-    background-color: #4b57672c;
+    background-color: #2c343d36;
 
     &::placeholder {
       color: $light-border;
@@ -65,6 +75,24 @@
     &:focus {
       border: 1px solid $light-border;
     }
+  }
+
+  &__replf {
+    @include display();
+    gap: 8px;
+    flex-grow: 1;
+    justify-content: start;
+  }
+
+  &__repcir {
+    width: 8px;
+  }
+
+  &__repcirsp:nth-child(1) {
+    color: $dna-g;
+  }
+  &__repcirsp:nth-child(2) {
+    color: $dna-g;
   }
 
   &__repos {
@@ -85,6 +113,11 @@
     width: 100%;
     justify-content: start;
     gap: 8px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__repli {
@@ -99,9 +132,9 @@
 
   &__reponew {
     border: none;
-    padding: 5px 5px 0px 5px;
+    padding: 6px 5px 0px 5px;
     font-size: 11px;
-    box-shadow: 0px 2px 2px 0px rgb(22, 22, 22);
+    box-shadow: 0px 1px 3px 1px rgba(22, 22, 22, 0.658);
     &:active {
       background-color: #52b455ca;
     }
@@ -138,5 +171,28 @@
     @include inter();
     font-size: 12px;
     color: $text-color;
+  }
+
+  &__exit {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: $light-border;
+    width: 20px;
+  }
+}
+
+@media (max-width: 1125px) {
+  .dash-side {
+    position: absolute;
+    background-color: $main-color-bg;
+    min-width: 0px;
+    width: 90%;
+    border-top-right-radius: 15px;
+    border-top-bottom-radius: 15px;
+
+    &__exit {
+      display: block;
+    }
   }
 }
