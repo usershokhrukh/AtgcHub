@@ -1,0 +1,21 @@
+.lab-view {
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  flex-grow: 1
+}
+
+.lab-dash {
+  @include display();
+  // flex-direction: column;
+  width: 100%;
+  align-items: start;
+  // flex-grow: 1;
+  justify-content: start;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  // background-color: red;
+  // background-color: #0c101a84;
+}

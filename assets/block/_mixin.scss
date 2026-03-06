@@ -48,6 +48,13 @@
   }
 }
 
+@mixin hoverNormal() {
+  &:active {
+    background-color: rgba(207, 207, 210, 0.082) !important;
+    cursor: pointer;
+  }
+}
+
 
 @mixin hoverNavCards() {
   &:active {

@@ -1,0 +1,142 @@
+.dash-side {
+  @include display();
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 40px 20px;
+  gap: 10px;
+  border-right: 1px solid $text-lightS;
+  height: 100%;
+  flex-grow: 1;
+  max-width: 290px;
+  &__top {
+    @include display();
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 10px;
+    // background-color: red;
+  }
+
+  &__prtop {
+    @include inter();
+    @include hoverNormal();
+    font-size: 13px;
+    color: $text-color;
+    padding: 5px 8px;
+    border-radius: 8px;
+    width: 50%;
+    opacity: 1 !important;
+  }
+
+  &__primg {
+    border-radius: 50px;
+  }
+
+  &__repo-box {
+    @include display();
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__repoform {
+    @include display();
+    width: 100%;
+    // background-color: red;
+  }
+
+  &__reposr {
+    @include inter();
+    border: 1px solid $text-lightS;
+    padding: 6px 6px 8px 6px;
+    border-radius: 6px;
+    color: $text-color;
+    background-color: transparent;
+    font-size: 12px;
+    width: 100%;
+    background-color: #4b57672c;
+
+    &::placeholder {
+      color: $light-border;
+    }
+
+    &:focus {
+      border: 1px solid $light-border;
+    }
+  }
+
+  &__repos {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    margin-top: 10px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  &__repmimg {
+    width: 25px;
+    border-radius: 50px;
+  }
+  &__repmain {
+    @include display();
+    width: 100%;
+    justify-content: start;
+    gap: 8px;
+  }
+
+  &__repli {
+    @include inter();
+    font-size: 13px;
+    color: $text-color;
+
+    &:hover {
+      color: $link;
+    }
+  }
+
+  &__reponew {
+    border: none;
+    padding: 5px 5px 0px 5px;
+    font-size: 11px;
+    box-shadow: 0px 2px 2px 0px rgb(22, 22, 22);
+    &:active {
+      background-color: #52b455ca;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include display();
+    @include hoverCursor();
+    @include inter();
+    align-items: start;
+    gap: 5px;
+    border-radius: 5px;
+    background-color: #359638ca;
+    border: 1px solid #308f33ca;
+    color: $text-color;
+    opacity: 1;
+    // font-weight: 500;
+  }
+
+  &__repbtnsp {
+    position: relative;
+    top: -1px;
+  }
+
+  &__reposvg {
+    position: relative;
+    left: 1px;
+    top: -2px;
+    width: 16px;
+  }
+
+  &__repot {
+    @include inter();
+    font-size: 12px;
+    color: $text-color;
+  }
+}
