@@ -1,16 +1,40 @@
 .dash-side {
   @include display();
-  position: relative;
+  // position: relative;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  padding: 40px 20px;
+  padding: 0px 20px 40px 20px;
   gap: 9px;
   border-right: 1px solid $text-lightS;
   height: 100%;
   flex-grow: 1;
   max-width: 290px;
   min-width: 290px;
+  overflow: auto;
+  position: sticky;
+  top: 99px;
+  background-color: $main-color-bg;
+  min-width: 300px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  /* Sidebar scrollbar-ni chiroyli qilish */
+  &::-webkit-scrollbar {
+    width: 5px; /* Juda ingichka */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Yo'lak ko'rinmasin */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #30363d; /* Sidebar border rangi bilan bir xil */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #238636; /* AtgcHub yashil rangi - hover bo'lganda yonsin */
+  }
   &__top {
     @include display();
     gap: 10px;
@@ -19,10 +43,6 @@
     width: 100%;
     margin-bottom: 10px;
     // background-color: red;
-  }
-
-  &__exit {
-    display: none;
   }
 
   &__prtop {
@@ -102,6 +122,11 @@
     margin-top: 10px;
     gap: 8px;
     width: 100%;
+    overflow: auto;
+    flex-grow: 1;
+    justify-content: start;
+    // background-color: red;
+    min-height: 500px;
   }
 
   &__repmimg {
@@ -176,15 +201,27 @@
   &__exit {
     position: absolute;
     top: 8px;
-    right: 8px;
+    right: -8px;
     color: $light-border;
     width: 20px;
+    display: none;
+  }
+
+  &__repo-top {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    padding: 40px 0px 10px 0px;
   }
 }
 
 @media (max-width: 1125px) {
   .dash-side {
-    position: absolute;
+    position: fixed;
     top: 0px;
     background-color: $main-color-bg;
     min-width: 0px;
@@ -195,6 +232,11 @@
     backdrop-filter: blur(2px);
     &__exit {
       display: block;
+    }
+
+    &__repo-top {
+      background-color: $main-color-bg;
+      backdrop-filter: blur(1px);
     }
   }
 }
