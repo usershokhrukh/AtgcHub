@@ -1,24 +1,23 @@
 .dash-side {
   @include display();
-  // position: relative;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  padding: 0px 20px 40px 20px;
+  padding: 0px 15px 40px 15px;
   gap: 9px;
   border-right: 1px solid $text-lightS;
-  height: 100%;
-  flex-grow: 1;
-  max-width: 290px;
-  min-width: 290px;
-  overflow: auto;
-  position: sticky;
-  top: 99px;
-  background-color: $main-color-bg;
+  max-width: 300px;
   min-width: 300px;
-  grid-row: 1/2;
+  overflow: auto;
+  background-color: $main-color-bg;
+  // min-width: 290px;
+  grid-row: 3/4;
   grid-column: 1/2;
-  /* Sidebar scrollbar-ni chiroyli qilish */
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  min-height: 300px;
+  z-index: 3;
   &::-webkit-scrollbar {
     width: 5px; /* Juda ingichka */
   }
@@ -226,6 +225,11 @@
     background-color: $main-color-bg;
     min-width: 0px;
     width: 90%;
+    max-width: 290px;
+    // height: calc(100vh - 105px);
+    height: 100vh;
+    // width: 10px !important;
+    // width: 80%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 2px 8px 10px 3px $header;
