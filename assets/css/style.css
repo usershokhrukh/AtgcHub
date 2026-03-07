@@ -17,14 +17,13 @@ li {
 
 body {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  position: relative;
-  min-height: 100vh;
-  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
   background-color: rgba(28, 35, 43, 0.9764705882);
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth; /* Silliq scroll uchun */
+  min-height: 100vh;
   /* Scroll to'xtaganda "vaxshiy" effekt berish uchun */
   scroll-snap-type: y proximity;
 }
@@ -59,10 +58,12 @@ p [role=button] {
   }
 }
 .main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  min-height: 500px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  grid-row: 2/3;
+  grid-column: 1/2;
 }
 
 @media (max-width: 500px) {
@@ -82,6 +83,9 @@ p [role=button] {
   background-color: rgba(12, 16, 26, 0.5176470588);
   padding: 10px 20px;
   position: sticky;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  height: auto;
 }
 .dashboard__nav {
   display: flex;
@@ -90,9 +94,6 @@ p [role=button] {
   width: 100%;
   justify-content: space-between;
   gap: 20px;
-  grid-row: 1/2;
-  grid-column: 1/3;
-  background-color: red;
 }
 .dashboard__nav-left {
   display: flex;
@@ -323,12 +324,11 @@ p [role=button] {
   padding: 0px 5px;
   width: 100%;
   background-color: rgba(12, 16, 26, 0.5176470588);
-  grid-row: 2/3;
+  grid-row: 1/2;
   grid-column: 1/3;
   border-right: 1px solid rgba(75, 87, 103, 0.3725490196);
   border-bottom: 1px solid rgba(112, 112, 112, 0.5725490196);
-  grid-column: 1/2;
-  grid-row: 1/2;
+  height: auto;
 }
 .navigation-menu__boxes {
   display: flex;
@@ -421,7 +421,7 @@ p [role=button] {
   max-width: 1600px;
   width: 100%;
   margin: 0px auto;
-  grid-row: 3/4;
+  grid-row: 2/3;
   grid-column: 1/3;
 }
 .main-part__kpi-cards {
@@ -1940,14 +1940,19 @@ p [role=button] {
 }
 
 .lab-dash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto;
-  height: 100%;
-  grid-column: 1/3;
   grid-row: 3/4;
+  grid-column: 2/3;
   flex-grow: 1;
+  height: calc(100vh - 105px);
+  min-height: 300px;
+  height: 100vh;
 }
 
 .dash-side {
@@ -1957,21 +1962,20 @@ p [role=button] {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  padding: 0px 20px 40px 20px;
+  padding: 0px 15px 40px 15px;
   gap: 9px;
   border-right: 1px solid rgba(71, 79, 88, 0.9176470588);
-  height: 100%;
-  flex-grow: 1;
-  max-width: 290px;
-  min-width: 290px;
-  overflow: auto;
-  position: sticky;
-  top: 99px;
-  background-color: rgba(28, 35, 43, 0.9764705882);
+  max-width: 300px;
   min-width: 300px;
-  grid-row: 1/2;
+  overflow: auto;
+  background-color: rgba(28, 35, 43, 0.9764705882);
+  grid-row: 3/4;
   grid-column: 1/2;
-  /* Sidebar scrollbar-ni chiroyli qilish */
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  min-height: 300px;
+  z-index: 3;
 }
 .dash-side::-webkit-scrollbar {
   width: 5px; /* Juda ingichka */
@@ -2176,6 +2180,8 @@ p [role=button] {
     background-color: rgba(28, 35, 43, 0.9764705882);
     min-width: 0px;
     width: 90%;
+    max-width: 290px;
+    height: 100vh;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 2px 8px 10px 3px #1f2835;
@@ -2196,6 +2202,5 @@ p [role=button] {
   height: 100%;
   flex-grow: 1 !important;
   background-color: rgba(12, 16, 26, 0.5176470588);
-  grid-row: 1/2;
-  grid-column: 2/3;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

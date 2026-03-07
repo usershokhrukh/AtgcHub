@@ -16,12 +16,11 @@ li {
 body {
   // display: flex;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
   // flex-direction: column;
-  min-height: 100vh;
-  position: relative;
+  // min-height: 100vh;
   // background-color: #0f172a;
   // background-color: rgb(20, 24, 40);
   // background-color: #111827;
@@ -33,7 +32,7 @@ body {
   background-color: $main-color-bg;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth; /* Silliq scroll uchun */
-
+  min-height: 100vh;
   /* Scroll to'xtaganda "vaxshiy" effekt berish uchun */
   scroll-snap-type: y proximity;
 }
@@ -69,10 +68,13 @@ p [role="button"] {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  min-height: 500px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  // min-height: 500px;
+  grid-row: 2/3;
+  grid-column: 1/2;
 }
 
 @media (max-width: 500px) {
