@@ -16,6 +16,7 @@
   grid-row: 1/2;
   grid-column: 1/3;
   height: auto;
+  z-index: 3;
   // top: 0px;
   // border-bottom: 1px solid $text-light;
   &__nav {
@@ -108,7 +109,15 @@
     gap: 5px;
     height: 30px;
     opacity: 0.8;
-    padding: 0px 0px 0px 0px;
+    // padding: 5px 5px 5px 6px;
+    padding: 0px;
+    // background-color: red
+  }
+
+  &__prav {
+    width: 33px;
+    @include hover();
+    border-radius: 50px;
   }
 
   &__pr-more {
@@ -120,7 +129,15 @@
     position: relative;
     padding: 3px 5px;
     color: white !important;
-    opacity: 0.8;
+    opacity: 1;
+    font-size: 14px;
+  }
+
+  &__pr-more-t {
+    max-width: 70px;
+    overflow: hidden;
+    // white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__pr-arr {
@@ -143,11 +160,35 @@
   &__menu {
     display: none;
   }
+
+  &__prarr {
+    @include hover();
+    display: none;
+    width: 22px;
+    height: 100%;
+    // background-color: red;
+    padding: 0px 3px 0px 3px;
+    border-left: 1px solid $light-border;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+  }
 }
 
 @media (max-width: 900px) {
   .dashboard {
-    padding: 10px 4%;
+    // padding: 10px 4%;
+    &__nav {
+      // flex-wrap: wrap;
+      justify-content: end;
+      align-items: end;
+    }
+
+    &__nav-left {
+      flex-grow: 1;
+      justify-content: start;
+      // flex-wrap: wrap-reverse;
+      gap: 10px;
+    }
     &__header-input {
       display: none;
     }
@@ -162,6 +203,31 @@
 
     &__sci {
       width: 13px;
+    }
+
+    &__pr {
+      // display: flex;
+      @include box();
+      // @include hover();
+      @include hoverCursor();
+      opacity: 0.8;
+      padding: 0px 3px 0px 6px;
+      padding: 0;
+      gap: 0px;
+      // color: $text-color;
+    }
+
+    &__prarr {
+      display: block;
+    }
+
+    &__prav {
+      width: 30px;
+      padding: 0px 3px 0px 6px;
+      height: 100%;
+      border-radius: 0px;
+      border-bottom-left-radius: 7px;
+      border-top-left-radius: 7px;
     }
 
     &__search {
@@ -190,7 +256,7 @@
     }
 
     &__title {
-      font-size: 15px;
+      font-size: 100%;
     }
 
     &__set,
@@ -220,7 +286,7 @@
 
     &__menu {
       @include standard-box-borders();
-      // display: flex !important;
+      display: flex !important;
       position: absolute;
       background-color: $header;
       top: 55px;
@@ -231,10 +297,25 @@
       width: 80vw; // Ekran kengligining 80 foizi
       max-width: 280px;
       right: 10px;
+      box-shadow: 0px 0px 10px 0px $black;
+      // box-shadow: 2px 8px 20px 3px $header;
     }
   }
 }
 
+@media (max-width: 320px) {
+  .dashboard {
+    &__nav-left {
+      flex-direction: column-reverse;
+      align-items: start;
+      // background-color: red;
+    }
+
+    &__menu {
+      top: 80px;
+    }
+  }
+}
 // @media (hover: hover) {
 //   .dashboard {
 //     &__links {

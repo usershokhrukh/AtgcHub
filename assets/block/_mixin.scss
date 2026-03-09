@@ -39,6 +39,9 @@
   border: 1px solid $text-light;
 }
 
+@mixin buttonShadow() {
+  box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
+}
 
 @mixin hover() {
   &:active {
@@ -54,7 +57,6 @@
     cursor: pointer;
   }
 }
-
 
 @mixin hoverNavCards() {
   &:active {
