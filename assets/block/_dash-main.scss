@@ -1,18 +1,297 @@
 .dash-main {
   @include display();
-  // width: 100%;
-  // height: 200vh;
-  // background-color: red;
   flex-grow: 1 !important;
   background-color: $bg-dark-blue;
-  // background-color: red;
   width: 100%;
   border-left: 1px solid $text-lightS;
+  justify-content: start;
+  align-items: center;
+  padding: 3% 15px 3% 15px;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 200vh;
+  // background-color: red;
+
+  &__wr {
+    @include display();
+    // position: relative;
+    // right: 30px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    // max-width: 900px;
+    padding: 0% 10% 0% 320px;
+    // margin-left: 320px
+    // background-color: red
+  }
+  &__top {
+    @include display();
+    justify-content: start;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+
+  &__toitl {
+    @include inter();
+    font-size: 18px;
+    color: $secondary-color;
+    font-weight: 800;
+  }
+
+  &__tlast {
+    @include inter();
+    position: relative;
+    top: 1px;
+    font-size: 15px;
+    color: $border;
+  }
+
+  &__tcar {
+    // @include display();
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    // align-items: start;
+    max-width: 1000px;
+  }
+
+  &__tcarsvg {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 20px;
+    color: $border;
+  }
+
+  &__carbasq {
+    @include inter();
+    font-size: 14px;
+    // background-color: $black;
+    padding: 3px;
+    border-radius: 8px;
+    color: $dna-a;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px $dna-a;
+    // border: 1px solid $dna-a;
+  }
+
+  &__casqsp {
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__casqtx {
+    @include inter();
+    font-size: 15px;
+    color: $secondary-color;
+  }
+
+  &__tcarb {
+    @include display();
+    position: relative;
+    flex-direction: column;
+    // background-color: red;
+    align-items: start;
+    gap: 5px;
+    border-radius: 8px;
+    border: 1px solid $text-light;
+    background-color: $dash-side;
+    padding: 20px;
+    flex-grow: 1;
+    min-width: 280px;
+    height: 100%;
+    justify-content: start;
+    // max-height: 100px;
+  }
+
+  &__tcarb:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  &__tcarb:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  &__tcarb:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  &__tcarb:nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  &__cpetx {
+    @include inter();
+    font-size: 13px;
+    color: $light-border;
+  }
+
+  &__tcarbtx {
+    @include inter();
+    font-size: 14px;
+    color: $secondary-color;
+    font-weight: 500;
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  &__carbrs {
+    @include display();
+    // background-color: red;
+    width: 100%;
+    justify-content: start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__carbrstx {
+    @include inter();
+    font-size: 15px;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__crslbo {
+    @include display();
+    flex-grow: 1;
+    border-radius: 8px;
+    background-color: $border;
+    justify-content: start;
+    min-width: 40px;
+  }
+
+  &__crslhr {
+    width: 100%;
+    border: none;
+    height: 3px;
+    background-color: $dna-a;
+    width: 25%;
+    border-radius: 8px;
+  }
+
+  &__cdslbo {
+    @include display();
+    flex-grow: 1;
+    border-radius: 8px;
+    background-color: $border;
+    justify-content: start;
+    min-width: 40px;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  &__cdslhr {
+    width: 100%;
+    border: none;
+    height: 3px;
+    background-color: $dna-g;
+    width: 25%;
+    border-radius: 8px;
+  }
+
+  &__tcarbotx {
+    border-bottom: 1px solid $dna-t;
+    padding: 0px 0px 5px 0px;
+    opacity: 0.6;
+  }
+
+  &__tasqbotx {
+    border-bottom: 1px solid $dna-c;
+    padding: 0px 0px 5px 0px;
+    opacity: 0.6;
+  }
+
+  &__tpebotx {
+    border-bottom: 1px solid $dna-g;
+    padding: 0px 0px 5px 0px;
+    opacity: 0.6;
+  }
+
+  &__trsbotx {
+    border-bottom: 1px solid $dna-a;
+    padding: 0px 0px 5px 0px;
+    opacity: 0.6;
+  }
+
+  &__cbottx {
+    @include inter();
+    font-size: 14px;
+    color: $light-border;
+  }
+
+  &__carbds {
+    @include inter();
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__cdshi {
+    @include inter();
+    font-size: 12px;
+    color: $dna-t;
+    font-weight: 500;
+  }
 }
 
-
 @media (max-width: 1125px) {
-  .dash-main{
+  .dash-main {
     border-left: none;
+    padding: 3% 15px 3% 15px;
+
+    &__wr {
+      padding: 0px;
+    }
+
+    &__tcarb {
+      min-width: 0px !important;
+      height: auto;
+      // width: 30px;
+    }
+
+    &__tcar {
+      display: flex;
+    }
+    &__tcarbtx {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .dash-main {
+    &__tcar {
+      display: flex;
+    }
+    &__tcarbtx {
+      font-size: 12px;
+    }
+
+    &__carbrstx{
+      font-size: 12px;
+    }
+
+    &__cbottx {
+      font-size: 12px;
+    }
+
+    &__casqtx {
+      font-size: 12px;
+    }
+
+    &__carbds {
+      font-size: 13px;
+    }
+
+    &__cpetx {
+      font-size: 12px;
+    }
   }
 }
