@@ -239,6 +239,126 @@
     color: $dna-t;
     font-weight: 500;
   }
+
+  &__centwr {
+    @include display();
+    justify-content: start;
+    align-items: start;
+    // background-color: red;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 1000px;
+    gap: 20px;
+    // height: 100%;
+  }
+
+  &__actions {
+    background-color: red;
+    flex-grow: 1;
+  }
+
+  &__recent {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    // background-color: red;
+    padding: 20px;
+    // gap: 20px;
+    border-radius: 8px;
+    background-color: $dash-side;
+    border: 1px solid $text-light;
+  }
+
+  &__recbox {
+    // background-color: blue;
+    width: 100%;
+  }
+
+  &__rectit {
+    @include inter();
+    font-size: 18px;
+    color: $secondary-color;
+    margin-bottom: 20px;
+  }
+
+  &__recitems {
+    // @include display();
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    // gap: 10px;
+    // height: 100px;
+    // flex-direction: column;
+    align-items: start;
+    // background-color: red;
+    max-width: 300px;
+    // border-bottom: 1px solid sred
+  }
+
+  &__reclineb{
+    @include display();
+    flex-direction: column;
+    justify-content: start;
+   height: 100%;
+   grid-row: 1/2;
+   grid-column: 1/2;
+  //  background-color: red;
+  }
+
+  &__reccircle{
+    position: relative;
+    // left: -3%;
+    z-index: 2;
+    width: 10px;  
+    color: $text-lightS
+  }
+  &__recline {
+    position: relative;
+    // top: -4px;
+    width: 1px;
+    // left: -1px;
+    flex-grow: 1;
+    z-index: 1;
+    min-height: 30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: $text-lightS;
+  }
+
+  &__rectext {
+    @include inter();
+    font-size: 12px;
+    color: $secondary-color;
+    opacity: 0.7;
+  }
+
+  &__recmtxt {
+    @include inter();
+    font-size: 15px;
+    color: $text-color;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+
+  &__rectime {
+    @include inter();
+    // font-size: 14px;
+    color: $secondary-color
+  }
+
+  &__recbot {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    // background-color: red;
+    margin-bottom: 10px;
+    // border-bottom: 1px solid $text-lightS;
+    padding: 0px 10px 0px 10px
+  }
 }
 
 @media (max-width: 1125px) {
