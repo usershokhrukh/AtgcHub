@@ -19,7 +19,8 @@
   height: 100vh;
   z-index: 3;
   scroll-timeline: --page-scroll block;
-  border-right: 1px solid $text-lightS;
+  border-right: 1px solid #70707082;
+
   &::-webkit-scrollbar {
     width: 5px; /* Juda ingichka */
   }
