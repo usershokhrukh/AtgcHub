@@ -1212,7 +1212,7 @@
           </div>
         </div>
       </section>
-      <section class="main-part none">
+      <section class="main-part">
         <article class="main-part__scb">
           <div class="main-part__scr">
             <span class="main-part__scrs"
@@ -1922,10 +1922,103 @@
                 <p class="dash-main__cpetx">Optimized (Big O: N)</p>
               </div>
             </div>
-            <div class="dash-main__centwr">
-              <div class="dash-main__actions">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, laboriosam.
+            <div class="dash-main__actions">
+              <button class="dash-main__actbtn dash-main__actjump">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M8 18.3915V5.60846L18.2264 12L8 18.3915ZM6 3.80421V20.1957C6 20.9812 6.86395 21.46 7.53 21.0437L20.6432 12.848C21.2699 12.4563 21.2699 11.5436 20.6432 11.152L7.53 2.95621C6.86395 2.53993 6 3.01878 6 3.80421Z"
+                    ></path></svg></span
+                >Jump to Last Active
+              </button>
+              <button class="dash-main__actbtn dash-main__actcompare">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M21 15L15 20.996L4.00221 21C3.4487 21 3 20.5551 3 20.0066V3.9934C3 3.44476 3.44495 3 3.9934 3H20.0066C20.5552 3 21 3.45576 21 4.00247V15ZM19 5H5V19H13V14C13 13.4872 13.386 13.0645 13.8834 13.0067L14 13L19 12.999V5ZM18.171 14.999L15 15V18.169L18.171 14.999Z"
+                    ></path>
+                  </svg>
+                </span>
+                Compare Sequences
+              </button>
+              <button class="dash-main__actbtn dash-main__actreport">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"
+                    ></path>
+                  </svg>
+                </span>
+                Export Lab Report
+              </button>
+              <button class="dash-main__actbtn dash-main__actterminal">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10.9999 12L3.92886 19.0711L2.51465 17.6569L8.1715 12L2.51465 6.34317L3.92886 4.92896L10.9999 12ZM10.9999 19H20.9999V21H10.9999V19Z"
+                    ></path>
+                  </svg>
+                </span>
+                System Terminal
+              </button>
+              <button class="dash-main__actbtn dash-main__actquick">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z"
+                    ></path>
+                  </svg>
+                </span>
+                Quick Note
+              </button>
+            </div>
+            <div class="dash-main__current">
+              <div class="dash-main__currentxt">
+                <p>Current Repository:</p>
+
+                <div class="dash-main__curtxtsp ">
+                  <p class="dash-main__curtxtm">
+                    <span class="dash-main__curtxtmsp">
+                      Human_Genome_v2.fasta-shokh
+                    </span>
+                  </p>
+                  <span
+                    ><svg
+                      class="dash-main__curtxtsp-i"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 14L8 10H16L12 14Z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <p>
+                  Status: <span class="dash-main__curst">Analyzing...</span>
+                </p>
               </div>
+            </div>
+            <div class="dash-main__centwr">
               <div class="dash-main__recent">
                 <div class="dash-main__recbox">
                   <h2 class="dash-main__rectit">Recent Activity</h2>
@@ -1972,6 +2065,42 @@
                       <span class="dash-main__rectime">2 days ago</span>
                     </p>
                     <p class="dash-main__recmtxt">Chr21_region_alpha</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dash-main__health">
+                <div class="dash-main__healtht">
+                  <h2 class="dash-main__healthtit">System Health</h2>
+                  <span
+                    ><svg
+                      class="main-part__chart-dot dash-main__healthdot"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                      ></path></svg>
+                  </span>
+                </div>
+                <div class="dash-main__healthbot">
+                  <div class="dash-main__healthbox">
+                    <p class="dash-main__healthbtit">CPU:</p>
+                    <div class="dash-main__healthbar">
+                      <p class="dash-main__hbartxt">42.5%</p>
+                      <div class="dash-main__hlineb">
+                        <hr class="dash-main__hline dash-main__hlinecpu" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dash-main__healthbox">
+                    <p class="dash-main__healthbtit">RAM:</p>
+                    <div class="dash-main__healthbar">
+                      <p class="dash-main__hbartxt">1.8GB / 4.0GB</p>
+                      <div class="dash-main__hlineb">
+                        <hr class="dash-main__hline dash-main__hlineram" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

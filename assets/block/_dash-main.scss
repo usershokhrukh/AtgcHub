@@ -60,6 +60,8 @@
     flex-wrap: wrap;
     // align-items: start;
     max-width: 1000px;
+    // background-color: red;
+    margin-bottom: 10px;
   }
 
   &__tcarsvg {
@@ -101,7 +103,7 @@
     align-items: start;
     gap: 5px;
     border-radius: 8px;
-    border: 1px solid $text-light;
+    border: 1px solid $text-lightS;
     background-color: $dash-side;
     padding: 20px;
     flex-grow: 1;
@@ -175,6 +177,7 @@
     background-color: $dna-a;
     width: 25%;
     border-radius: 8px;
+    opacity: 0.5;
   }
 
   &__cdslbo {
@@ -197,29 +200,29 @@
     border-radius: 8px;
   }
 
-  &__tcarbotx {
-    border-bottom: 1px solid $dna-t;
-    padding: 0px 0px 5px 0px;
-    opacity: 0.6;
-  }
+  // &__tcarbotx {
+  //   border-bottom: 1px solid $dna-t;
+  //   padding: 0px 0px 5px 0px;
+  //   opacity: 0.6;
+  // }
 
-  &__tasqbotx {
-    border-bottom: 1px solid $dna-c;
-    padding: 0px 0px 5px 0px;
-    opacity: 0.6;
-  }
+  // &__tasqbotx {
+  //   border-bottom: 1px solid $dna-c;
+  //   padding: 0px 0px 5px 0px;
+  //   opacity: 0.6;
+  // }
 
-  &__tpebotx {
-    border-bottom: 1px solid $dna-g;
-    padding: 0px 0px 5px 0px;
-    opacity: 0.6;
-  }
+  // &__tpebotx {
+  //   border-bottom: 1px solid $dna-g;
+  //   padding: 0px 0px 5px 0px;
+  //   opacity: 0.6;
+  // }
 
-  &__trsbotx {
-    border-bottom: 1px solid $dna-a;
-    padding: 0px 0px 5px 0px;
-    opacity: 0.6;
-  }
+  // &__trsbotx {
+  //   border-bottom: 1px solid $dna-a;
+  //   padding: 0px 0px 5px 0px;
+  //   opacity: 0.6;
+  // }
 
   &__cbottx {
     @include inter();
@@ -242,19 +245,146 @@
 
   &__centwr {
     @include display();
-    justify-content: start;
+    justify-content: end;
     align-items: start;
     // background-color: red;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     max-width: 1000px;
     gap: 20px;
+    flex-wrap: wrap-reverse;
     // height: 100%;
   }
 
+  &__current {
+    @include display();
+    justify-content: start;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid $text-lightS;
+    background-color: $dash-side;
+    margin-top: 10px;
+    padding: 3px 20px;
+    border-radius: 8px;
+  }
+
+  &__currentxt {
+    @include display();
+    align-items: center;
+    gap: 2px;
+    @include inter();
+    color: $secondary-color;
+    opacity: 0.9;
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 100%;
+  }
+
+  &__curtxtsp {
+    @include display();
+    // @include buttonShadow();
+    justify-content: end;
+    position: relative;
+    opacity: 1;
+    top: 2px;
+    color: $text-color;
+    padding: 7px 30px 7px 7px;
+    border-radius: 8px;
+    font-size: 14px;
+    // flex-grow: 1;
+    max-width: 100%;
+    // text-align: end;
+  }
+
+  &__curst{
+    color: $dna-a;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+
+  &__curtxtm {
+    width: 100%;
+  }
+
+  &__curtxtmsp {
+    // @include display();
+    width: 100%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    // display: none;
+  }
+
+  &__curtxtsp-i {
+    @include hoverCursor();
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    width: 25px;
+    // height: 100%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-radius: 7px;
+    // border-left: 1px solid $text-lightS;
+    &:active {
+      background-color: $text-light;
+    }
+  }
+
   &__actions {
-    background-color: red;
-    flex-grow: 1;
+    @include display();
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+
+  &__actbtn {
+    @include inter();
+    @include display();
+    @include hoverCursor();
+    @include buttonShadow();
+
+    outline: none;
+    padding: 10px;
+    height: 100%;
+    max-height: 45px;
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 5px;
+    color: $text-color;
+    border: 1px solid $text-lightS;
+    background-color: $dash-side;
+    color: $secondary-color;
+    & svg {
+      width: 18px;
+      color: $secondary-color;
+      opacity: 0.6;
+    }
+    &:active {
+      background-color: $text-light;
+    }
+  }
+
+  &__actjump {
+    // @include buttonShadow();
+    background-color: #359638ca;
+    border: 1px solid #308f33ca;
+    color: $text-color;
+    opacity: 0.8;
+    & svg {
+      position: relative;
+      top: 1px;
+      color: $text-color;
+      opacity: 1;
+    }
+
+    &:active {
+      background-color: #52b455ca;
+      opacity: 1;
+    }
   }
 
   &__recent {
@@ -266,7 +396,7 @@
     // gap: 20px;
     border-radius: 8px;
     background-color: $dash-side;
-    border: 1px solid $text-light;
+    border: 1px solid $text-lightS;
   }
 
   &__recbox {
@@ -276,9 +406,10 @@
 
   &__rectit {
     @include inter();
-    font-size: 18px;
+    font-size: 14px;
     color: $secondary-color;
     margin-bottom: 20px;
+    // background-color: red;
   }
 
   &__recitems {
@@ -292,26 +423,29 @@
     // flex-direction: column;
     align-items: start;
     // background-color: red;
+    width: 100%;
     max-width: 300px;
-    // border-bottom: 1px solid sred
+    // border-bottom: 1px solid red
   }
 
-  &__reclineb{
+  &__reclineb {
     @include display();
+    position: relative;
+    top: 2px;
     flex-direction: column;
     justify-content: start;
-   height: 100%;
-   grid-row: 1/2;
-   grid-column: 1/2;
-  //  background-color: red;
+    height: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    //  background-color: red;
   }
 
-  &__reccircle{
+  &__reccircle {
     position: relative;
     // left: -3%;
     z-index: 2;
-    width: 10px;  
-    color: $text-lightS
+    width: 10px;
+    color: $text-lightS;
   }
   &__recline {
     position: relative;
@@ -320,31 +454,43 @@
     // left: -1px;
     flex-grow: 1;
     z-index: 1;
-    min-height: 30px;
+    // min-height: 30px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: $text-lightS;
   }
 
   &__rectext {
+    @include display();
+    gap: 3px;
+    flex-wrap: wrap;
+    justify-content: start;
     @include inter();
     font-size: 12px;
     color: $secondary-color;
     opacity: 0.7;
+    // background-color: red;
+    flex-grow: 1;
   }
 
   &__recmtxt {
+    @include display();
+    justify-content: start;
     @include inter();
     font-size: 15px;
     color: $text-color;
     font-weight: 300;
     opacity: 0.9;
+    width: 100%;
+    // text-wrap: wrap
+    word-break: break-all
   }
 
   &__rectime {
     @include inter();
+    @include display();
     // font-size: 14px;
-    color: $secondary-color
+    color: $secondary-color;
   }
 
   &__recbot {
@@ -355,9 +501,102 @@
     grid-row: 1/2;
     grid-column: 2/3;
     // background-color: red;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     // border-bottom: 1px solid $text-lightS;
-    padding: 0px 10px 0px 10px
+    padding: 0px 0px 0px 10px;
+  }
+
+  &__health {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    background-color: red;
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid $text-lightS;
+    background-color: $dash-side;
+    min-width: 250px;
+  }
+
+  &__healtht {
+    @include display();
+    justify-content: start;
+    // background-color: red;
+    width: 100%;
+    gap: 5px;
+  }
+
+  &__healthdot {
+    color: $dna-a
+  }
+
+  &__healthbot {
+    @include display();
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__healthbox{ 
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 1px;
+    width: 100%;
+    // background-color: red
+  }
+
+  &__healthtit {
+    @include inter();
+    font-size: 14px;
+    color: $secondary-color
+  }
+
+  &__healthbtit {
+    @include inter();
+    font-size: 13px;
+    color: $secondary-color;
+    opacity: 0.7;
+  }
+
+  &__healthbar {
+    @include display();
+    // background-color: red;
+    width: 100%;
+    justify-content: start;
+    gap: 5px;
+  }
+
+  &__hbartxt {
+    @include inter();
+    color: $secondary-color;
+    font-size: 13px
+  }
+
+  &__hlineb {
+    @include display();
+    flex-grow: 1;
+    background-color: $border;
+    height: 1.5px;
+    border-radius: 8px;
+    justify-content: start;
+  }
+
+  &__hline {
+    width: 25%;
+    border-radius: 8px;
+    border: none;
+    height: 100%;
+  }
+  
+  &__hlinecpu {
+    background-color: $dna-c;
+  }
+
+  &__hlineram {
+    background-color: rgb(163, 18, 163);
   }
 }
 
@@ -412,6 +651,10 @@
 
     &__cpetx {
       font-size: 12px;
+    }
+
+    &__health{
+      min-width: 0px;
     }
   }
 }
