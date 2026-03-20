@@ -35,7 +35,9 @@ body {
   min-height: 100vh;
   /* Scroll to'xtaganda "vaxshiy" effekt berish uchun */
   scroll-snap-type: y proximity;
+  touch-action: manipulation;
 }
+
 
 button,
 a,

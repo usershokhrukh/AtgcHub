@@ -112,25 +112,26 @@
   }
 
   &__right-a-txt {
-    @include inter();
-    @include display();
-    justify-content: center;
-    gap: 10px;
-    @include hoverCursor();
-    @include standard-box-borders();
-    // @include hoverNavCards();
-    font-size: 14px;
-    // background-color: $text-color;
-    color: $text-color;
-    background-color: $header;
-    // border-bottom: 1px solid $text-color;
+    // @include inter();
+    // @include display();
+    // justify-content: center;
+    // gap: 10px;
+    // @include hoverCursor();
+    // @include standard-box-borders();
+    // // @include hoverNavCards();
+    // font-size: 14px;
+    // // background-color: $text-color;
+    // color: $text-color;
+    // background-color: $header;
+    // // border-bottom: 1px solid $text-color;
     padding: 15px 5px;
 
-    &:active {
-      background-color: #238636;
-      border: 1px solid rgb(28, 177, 28);
-      cursor: pointer;
-    }
+    // &:active {
+    //   background-color: #238636;
+    //   border: 1px solid rgb(28, 177, 28);
+    //   cursor: pointer;
+    // }
+    @include grayButtons();
   }
 
   &__right-a-i {

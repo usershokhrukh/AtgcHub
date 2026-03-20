@@ -277,7 +277,7 @@
     opacity: 0.9;
     font-size: 14px;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: start;
     width: 100%;
   }
 
@@ -297,7 +297,7 @@
     // text-align: end;
   }
 
-  &__curst{
+  &__curst {
     color: $dna-a;
     font-weight: 400;
     opacity: 0.9;
@@ -342,49 +342,31 @@
   }
 
   &__actbtn {
-    @include inter();
-    @include display();
-    @include hoverCursor();
-    @include buttonShadow();
-
-    outline: none;
+    @include grayButtons();
     padding: 10px;
-    height: 100%;
-    max-height: 45px;
-    border-radius: 8px;
-    font-size: 14px;
-    gap: 5px;
-    color: $text-color;
-    border: 1px solid $text-lightS;
-    background-color: $dash-side;
-    color: $secondary-color;
     & svg {
-      width: 18px;
+      width: 17px;
       color: $secondary-color;
       opacity: 0.6;
-    }
-    &:active {
-      background-color: $text-light;
     }
   }
 
   &__actjump {
-    // @include buttonShadow();
-    background-color: #359638ca;
-    border: 1px solid #308f33ca;
-    color: $text-color;
-    opacity: 0.8;
-    & svg {
-      position: relative;
-      top: 1px;
-      color: $text-color;
-      opacity: 1;
-    }
+    @include greenButtons();
+    // background-color: #359638a8;
+    // border: 1px solid #42c05f75;
+    // color: $text-color;
+    // & svg {
+    //   color: $text-color;
+    //   opacity: 1;
+    // }
 
-    &:active {
-      background-color: #52b455ca;
-      opacity: 1;
-    }
+    // &:active {
+    //   opacity: 1;
+    // }
+    // &:hover {
+    //   background-color: #359638a8;
+    // }
   }
 
   &__recent {
@@ -483,7 +465,7 @@
     opacity: 0.9;
     width: 100%;
     // text-wrap: wrap
-    word-break: break-all
+    word-break: break-all;
   }
 
   &__rectime {
@@ -529,7 +511,7 @@
   }
 
   &__healthdot {
-    color: $dna-a
+    color: $dna-a;
   }
 
   &__healthbot {
@@ -539,7 +521,7 @@
     width: 100%;
   }
 
-  &__healthbox{ 
+  &__healthbox {
     @include display();
     flex-direction: column;
     align-items: start;
@@ -551,7 +533,7 @@
   &__healthtit {
     @include inter();
     font-size: 14px;
-    color: $secondary-color
+    color: $secondary-color;
   }
 
   &__healthbtit {
@@ -572,14 +554,14 @@
   &__hbartxt {
     @include inter();
     color: $secondary-color;
-    font-size: 13px
+    font-size: 13px;
   }
 
   &__hlineb {
     @include display();
     flex-grow: 1;
     background-color: $border;
-    height: 1.5px;
+    height: 2px;
     border-radius: 8px;
     justify-content: start;
   }
@@ -588,9 +570,10 @@
     width: 25%;
     border-radius: 8px;
     border: none;
+    opacity: 0.7;
     height: 100%;
   }
-  
+
   &__hlinecpu {
     background-color: $dna-c;
   }
@@ -653,8 +636,60 @@
       font-size: 12px;
     }
 
-    &__health{
+    &__health {
       min-width: 0px;
     }
+    &__currentxt {
+      justify-content: end;
+    }
   }
+}
+
+@media (hover: hover) {
+  .greenButtons:hover {
+    background-color: #36b33aa8 !important;
+  }
+
+  .grayButtons:hover {
+    background-color: $text-light;
+    opacity: 0.8;
+  }
+  .purpleButtons:hover {
+    background-color: #4c1d95;
+    opacity: 1;
+  }
+  .blueButtons:hover {
+    background-color: rgba(24, 102, 190, 0.767);
+
+    opacity: 1;
+  }
+}
+
+.grayButtons:active {
+  opacity: 1;
+  background-color: $text-light;
+}
+
+.greenButtons:active {
+  opacity: 1;
+}
+
+.grayButtons,
+.greenButtons,
+.purpleButtons {
+  opacity: 0.9;
+}
+
+.purpleButtons:active {
+  background-color: #5c26ad;
+  opacity: 1;
+}
+
+.greenButtons:hover {
+  background-color: #359638a8;
+}
+
+.blueButtons:active {
+  opacity: 1;
+  background-color: rgba(26, 111, 207, 0.815);
 }
