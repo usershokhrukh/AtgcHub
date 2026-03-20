@@ -160,30 +160,31 @@
   }
 
   &__reponew {
-    @include buttonShadow();
-    border: none;
-    padding: 6px 5px 0px 5px;
-    font-size: 11px;
-    // box-shadow: 0px 2px 4px 1px rgba(22, 22, 22, 0.658);
-    // box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
-    &:active {
-      background-color: #52b455ca;
-    }
-    &:hover {
-      cursor: pointer;
-    }
+    // @include buttonShadow();
+    // border: none;
+    padding: 6px 5px 5px 5px;
+    // font-size: 11px;
+    // // box-shadow: 0px 2px 4px 1px rgba(22, 22, 22, 0.658);
+    // // box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
+    // &:active {
+    //   background-color: #52b455ca;
+    // }
+    // &:hover {
+    //   cursor: pointer;
+    // }
 
-    @include display();
-    @include hoverCursor();
-    @include inter();
-    align-items: start;
-    gap: 5px;
-    border-radius: 5px;
-    background-color: #359638ca;
-    border: 1px solid #308f33ca;
-    color: $text-color;
-    opacity: 1;
-    // font-weight: 500;
+    // @include display();
+    // @include hoverCursor();
+    // @include inter();
+    // align-items: start;
+    // gap: 5px;
+    // border-radius: 5px;
+    // background-color: #359638ca;
+    // border: 1px solid #42c05f75;
+    // color: $text-color;
+    // opacity: 1;
+    //  font-weight: 500;
+    @include greenButtons();
   }
 
   &__repbtnsp {

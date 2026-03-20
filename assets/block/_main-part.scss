@@ -59,24 +59,25 @@
   }
 
   &__txt-stat-d {
-    @include display();
-    @include inter();
-    @include hoverCursor();
-    gap: 5px;
-    font-size: 12px;
-    background-color: $buttons-bg;
-    // width: 125px;
+    // @include display();
+    // @include inter();
+    // @include hoverCursor();
+    // gap: 5px;
+    // font-size: 12px;
+    // background-color: $buttons-bg;
+    // // width: 125px;
     padding: 0px 5px;
-    height: 28px;
-    border-radius: 8px;
-    color: $text-color;
-    border: 1px solid rgba(28, 106, 195, 0.686);
-    font-weight: 600;
-    opacity: 0.8;
-    &:active {
-      cursor: pointer;
-      opacity: 1;
-    }
+    height: 28px !important;
+    // border-radius: 8px;
+    // color: $text-color;
+    // border: 1px solid rgba(28, 106, 195, 0.686);
+    // font-weight: 600;
+    // opacity: 0.8;
+    // &:active {
+    //   cursor: pointer;
+    //   opacity: 1;
+    // }
+    @include blueButtons();
   }
 
   &__txt-stat {
@@ -335,28 +336,30 @@
   }
 
   &__ts {
-    @include inter();
-    @include hoverCursor();
+    // @include inter();
+    // @include hoverCursor();
     grid-column: 4/5;
     grid-row: 5/6;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-weight: 500;
-    // border: 1px solid rgba(0, 246, 0, 0.422);
-    // background-color: #238636;
-    background-color: #359638ca;
-    border: 1px solid #308f33ca;
-    box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
-    color: $text-color;
-    font-size: 15px;
-    // height: 40px;
-    align-self: flex-start;
-    &:active {
-      opacity: 0.9;
-    }
-    &:active {
-      background-color: #52b455ca;
-    }
+    // padding: 8px 20px;
+    // border-radius: 8px;
+    // font-weight: 500;
+    // // border: 1px solid rgba(0, 246, 0, 0.422);
+    // // background-color: #238636;
+    // background-color: #359638ca;
+    // border: 1px solid #42c05f75;
+
+    // box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
+    // color: $text-color;
+    // font-size: 15px;
+    height: 35px !important;
+    // align-self: flex-start;
+    // &:active {
+    //   opacity: 0.9;
+    // }
+    // &:active {
+    //   background-color: #52b455ca;
+    // }
+    @include greenButtons();
   }
 
   &__kpis {
@@ -469,27 +472,30 @@
   }
 
   &__sct {
-    @include display();
-    @include hoverCursor();
-    @include inter();
-    @include box();
-    @include buttonShadow();
+    // @include display();
+    // @include hoverCursor();
+    // @include inter();
+    // @include box();
+    // @include buttonShadow();
     padding: 5px 12px;
-    gap: 6px;
-    border-radius: 8px;
-    font-size: 13px;
-    // flex-grow: 1;
-    // background-color: #248527ca;
-    // border: 1px solid #28a72cca;
-    background-color: #359638ca;
-    border: 1px solid #308f33ca;
-    color: $text-color;
-    // font-weight: 500;
-    opacity: 1;
+    // gap: 6px;
+    // border-radius: 8px;
+    // font-size: 13px;
+    // // flex-grow: 1;
+    // // background-color: #248527ca;
+    // // border: 1px solid #28a72cca;
+    // background-color: #359638ca;
+    // border: 1px solid #42c05f75;
 
-    &:active {
-      background-color: #52b455ca;
-    }
+    // color: $text-color;
+    // // font-weight: 500;
+    // opacity: 1;
+
+    // &:active {
+    //   background-color: #52b455ca;
+    // }
+
+    @include greenButtons();
   }
 
   &__scon {
@@ -512,15 +518,16 @@
   }
 
   &__sct-save {
-    @include box();
-    @include hover();
-    background-color: $text-light;
-    opacity: 1;
-    border: 1px solid $text-lightS;
+    // @include box();
+    // @include hover();
+    // background-color: $text-light;
+    // opacity: 1;
+    // border: 1px solid $text-lightS;
 
-    & svg {
-      top: 2px;
-    }
+    // & svg {
+    //   top: 2px;
+    // }
+    @include grayButtons();
   }
 
   &__scb {
@@ -629,25 +636,26 @@
   }
 
   &__wftbs {
-    @include display();
-    @include hover();
-    gap: 5px;
-    padding: 0px 5px;
-    border: none;
-    @include inter();
-    font-size: 13px;
-    border-radius: 8px;
-    background-color: $text-light;
-    color: $text-color;
-    border: 1px solid $text-lightS;
-    height: 27px;
-    &:hover {
-      cursor: pointer;
-    }
+    // @include display();
+    // @include hover();
+    // gap: 5px;
+    padding: 0px 7px;
+    // border: none;
+    // @include inter();
+    // font-size: 13px;
+    // border-radius: 8px;
+    // background-color: $text-light;
+    // color: $text-color;
+    // border: 1px solid $text-lightS;
+    // height: 27px;
+    // &:hover {
+    //   cursor: pointer;
+    // }
 
-    &:active {
-      color: $text-color;
-    }
+    // &:active {
+    //   color: $text-color;
+    // }
+    @include grayButtons();
   }
 
   &__sum {
@@ -667,15 +675,15 @@
   }
 
   &__sumarr {
-    @include hoverCursor();
-    @include hover();
-    position: relative;
-    top: 2px;
-    width: 15px;
-    background-color: $text-light;
-    border-radius: 2px;
-    color: white;
-    border: 1px solid $text-lightS;
+    // @include hoverCursor();
+    // @include hover();
+    // top: 2px;
+    width: 18px;
+    // background-color: $text-light;
+    // border-radius: 2px;
+    // color: white;
+    // border: 1px solid $text-lightS;
+    @include grayButtons();
   }
   &__wftto {
     @include display();
