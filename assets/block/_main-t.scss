@@ -51,6 +51,11 @@
   }
 
   &__right-boxes-nd {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
     min-width: 180px;
   }
 
@@ -96,6 +101,7 @@
     @include inter();
     font-size: 15px;
     color: $secondary-color;
+    // padding: 10px;
   }
 
   &__right-boxes-a {
@@ -203,6 +209,8 @@
     align-items: start;
     gap: 10px;
     width: auto;
+    border: 1px solid $text-lightS;
+    border-radius: 8px;
   }
 
   &__right-boxes-st {
@@ -222,6 +230,7 @@
     color: $text-color;
     opacity: 0.5;
     font-size: 15px;
+    padding: 3px 5px;
   }
 
   &__right-meta-txt {
@@ -230,7 +239,11 @@
     gap: 8px;
     color: white;
     border-top: 1px solid $text-light;
-    padding: 5px  0px;
+    padding: 3px 5px;
+    width: 100%;
+    justify-content: start;
+    gap: 3%;
+    flex-wrap: wrap;
   }
 
   &__right-meta-st {
@@ -425,10 +438,17 @@
     background: #27c93f;
   }
   &__terminal-title {
+    @include display();
     @include inter();
     color: #a0aec0;
     font-size: 12px;
     margin-left: 10px;
+    gap: 4px;
+  }
+  
+  &__terminal-lv {
+    position: relative;
+    top: 2px;
   }
 
   &__right-cp {

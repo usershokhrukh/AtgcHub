@@ -82,7 +82,7 @@
 
   &__txt-stat {
     @include display();
-    align-items: start;
+    align-items: center;
     justify-content: start;
     gap: 10px;
     grid-column: 1/2;
@@ -103,6 +103,15 @@
 
   &__txt-stat-s-veri {
     color: $dna-a;
+  }
+
+  &__txt-stat-s-ty {
+    font-weight: 600;
+    color: $secondary-color;
+    background-color: $text-lightS;
+    padding: 3px 5px;
+    border-radius: 8px;
+    border: 1px solid $text-lightS;
   }
 
   &__txt-stat-s-ram,
@@ -137,6 +146,7 @@
   &__txa {
     // @include standard-box-borders();
     @include jet();
+    @include display();
     // @include hoverCursor();
     width: 100%;
     height: 100%;
@@ -169,6 +179,15 @@
         opacity: 0.6;
         color: rgba(30, 157, 231, 0.292);
       }
+    }
+
+    &::placeholder{
+      @include display();
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
     }
     // SCSS da scrollbar dizayni
     &::-webkit-scrollbar {
@@ -248,6 +267,7 @@
 
   &__chart-dot {
     position: relative;
+    color: $dna-a;
     top: -2px;
     width: 4px;
     animation-name: pulse;
@@ -323,6 +343,10 @@
     }
   }
 
+  &__chart-pt-sst{
+    background-color: $text-light;
+  }
+
   &__chart-amount {
     color: rgba(63, 234, 237, 0.475);
   }
@@ -333,6 +357,10 @@
 
   &__chart-pt:nth-child(1) {
     border-top: none;
+  }
+
+  &__chart-pt:nth-child(10) {
+    border-radius: 0px 0px 7px 7px;
   }
 
   &__ts {
@@ -527,7 +555,7 @@
     // & svg {
     //   top: 2px;
     // }
-    @include grayButtons();
+    @include greenButtons();
   }
 
   &__scb {
@@ -569,6 +597,10 @@
 
   &__lsi {
     font-weight: 600;
+  }
+
+  &__lsienbl {
+    color: $dna-a;
   }
 
   &__ls {
