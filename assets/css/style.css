@@ -567,7 +567,7 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   justify-content: start;
   gap: 10px;
   grid-column: 1/2;
@@ -585,6 +585,14 @@ p [role=button] {
 }
 .main-part__txt-stat-s-veri {
   color: #4caf50;
+}
+.main-part__txt-stat-s-ty {
+  font-weight: 600;
+  color: rgb(205, 205, 205);
+  background-color: rgba(58, 66, 75, 0.7019607843);
+  padding: 3px 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
 }
 .main-part__txt-stat-s-ram:active, .main-part__txt-stat-s-v:active {
   text-decoration: underline;
@@ -614,6 +622,9 @@ p [role=button] {
 }
 .main-part__txa {
   font-family: "JetBrains Mono";
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   min-height: 300px;
@@ -641,6 +652,26 @@ p [role=button] {
 .main-part__txa:active::placeholder {
   opacity: 0.6;
   color: rgba(30, 157, 231, 0.292);
+}
+.main-part__txa::-moz-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.main-part__txa::placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 .main-part__txa::-webkit-scrollbar {
   cursor: pointer;
@@ -707,6 +738,7 @@ p [role=button] {
 }
 .main-part__chart-dot {
   position: relative;
+  color: #4caf50;
   top: -2px;
   width: 4px;
   animation-name: pulse;
@@ -786,6 +818,9 @@ p [role=button] {
 .main-part__chart-pt::-webkit-scrollbar {
   display: none;
 }
+.main-part__chart-pt-sst {
+  background-color: rgba(75, 87, 103, 0.3725490196);
+}
 .main-part__chart-amount {
   color: rgba(63, 234, 237, 0.475);
 }
@@ -794,6 +829,9 @@ p [role=button] {
 }
 .main-part__chart-pt:nth-child(1) {
   border-top: none;
+}
+.main-part__chart-pt:nth-child(10) {
+  border-radius: 0px 0px 7px 7px;
 }
 .main-part__ts {
   grid-column: 4/5;
@@ -1053,6 +1091,13 @@ p [role=button] {
   color: rgb(205, 205, 205);
   text-transform: capitalize;
   opacity: 0.9;
+  background-color: rgba(53, 150, 56, 0.6588235294);
+  border: 1px solid rgba(66, 192, 95, 0.4588235294);
+  color: white;
+}
+.main-part__sct-save svg {
+  color: white;
+  opacity: 1;
 }
 .main-part__scb {
   display: flex;
@@ -1097,6 +1142,9 @@ p [role=button] {
 }
 .main-part__lsi {
   font-weight: 600;
+}
+.main-part__lsienbl {
+  color: #4caf50;
 }
 .main-part__ls {
   font-family: "Inter";
@@ -1547,6 +1595,13 @@ p [role=button] {
   padding: 10px 0px;
 }
 .main-t__right-boxes-nd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
   min-width: 180px;
 }
 .main-t__right-act {
@@ -1682,6 +1737,8 @@ p [role=button] {
   align-items: start;
   gap: 10px;
   width: auto;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  border-radius: 8px;
 }
 .main-t__right-boxes-st {
   font-family: "Inter";
@@ -1699,6 +1756,7 @@ p [role=button] {
   color: white;
   opacity: 0.5;
   font-size: 15px;
+  padding: 3px 5px;
 }
 .main-t__right-meta-txt {
   display: flex;
@@ -1708,7 +1766,11 @@ p [role=button] {
   gap: 8px;
   color: white;
   border-top: 1px solid rgba(75, 87, 103, 0.3725490196);
-  padding: 5px 0px;
+  padding: 3px 5px;
+  width: 100%;
+  justify-content: start;
+  gap: 3%;
+  flex-wrap: wrap;
 }
 .main-t__right-meta-st {
   opacity: 0.4;
@@ -1882,10 +1944,18 @@ p [role=button] {
   background: #27c93f;
 }
 .main-t__terminal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter";
   color: #a0aec0;
   font-size: 12px;
   margin-left: 10px;
+  gap: 4px;
+}
+.main-t__terminal-lv {
+  position: relative;
+  top: 2px;
 }
 .main-t__right-cp {
   grid-row: 1/2;
@@ -2893,6 +2963,9 @@ p [role=button] {
     background-color: rgba(24, 102, 190, 0.767);
     opacity: 1;
   }
+  .chart-pt-h:hover {
+    background-color: rgba(58, 66, 75, 0.7019607843);
+  }
 }
 .grayButtons:active {
   opacity: 1;
@@ -2921,4 +2994,125 @@ p [role=button] {
 .blueButtons:active {
   opacity: 1;
   background-color: rgba(26, 111, 207, 0.815);
+}
+
+.chart-pt-h {
+  opacity: 0.8;
+}
+
+.chart-pt-h:active {
+  background-color: rgba(58, 66, 75, 0.7019607843);
+  opacity: 1;
+}
+
+.linear-chart-bg {
+  box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background: rgba(34, 43, 51, 0.862745098);
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  justify-content: start;
+  padding: 5px;
+}
+
+.bar-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+  position: relative;
+  padding: 0px 5px;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  opacity: 0.7;
+  min-width: 60px;
+}
+
+#bar-line-a {
+  background: #4caf50;
+}
+
+#bar-line-t {
+  background: #f44336;
+}
+
+#bar-line-g {
+  background: #ff9800;
+}
+
+#bar-line-c {
+  background: #2196f3;
+}
+
+#bar-a {
+  padding: 0px !important;
+}
+
+#bar-c {
+  padding: 0px !important;
+}
+
+#bar-t {
+  padding: 0px 0px 0px 5px !important;
+}
+
+.nuc-labels {
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  gap: 20px;
+  color: rgb(205, 205, 205);
+  font-size: 13px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.distribution-container {
+  width: 100%;
+}
+
+.bar-line {
+  width: 100%;
+  height: 5px;
+  border-radius: 8px;
+}
+
+.a-label {
+  color: #4caf50;
+}
+
+.t-label {
+  color: #f44336;
+}
+
+.g-label {
+  color: #ff9800;
+}
+
+.c-label {
+  color: #2196f3;
+}
+
+@media (max-width: 500px) {
+  .bar-segment {
+    gap: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .nuc-labels {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

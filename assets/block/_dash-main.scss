@@ -663,7 +663,12 @@
 
     opacity: 1;
   }
+
+  .chart-pt-h:hover {
+    background-color: $text-lightS;
+  }
 }
+
 
 .grayButtons:active {
   opacity: 1;
@@ -692,4 +697,13 @@
 .blueButtons:active {
   opacity: 1;
   background-color: rgba(26, 111, 207, 0.815);
+}
+
+.chart-pt-h {
+  opacity: 0.8;
+}
+
+.chart-pt-h:active{
+  background-color: $text-lightS;
+  opacity: 1;
 }

@@ -1,0 +1,111 @@
+.linear-chart-bg {
+  @include buttonShadow();
+  @include display();
+  flex-wrap: wrap;
+  width: 100%;
+  // height: 5px;
+  background: $dash-side;
+  border-radius: 8px;
+  display: flex; // Segmentlarni yonma-yon qo'yish uchun
+  overflow: hidden;
+  margin-top: 10px;
+  // padding: 5px;
+  border: 1px solid $text-lightS;
+  justify-content: start;
+  padding: 5px;
+  // gap: 5px;
+}
+
+.bar-segment {
+  @include display();
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+  position: relative;
+  // background-color: $text-lightS !important;
+  padding: 0px 5px;
+  height: 100%;
+  transition: width 0.5s ease-in-out; // Animatsiya bilan o'zgarishi uchun
+  // border-radius: 8px;
+  opacity: 0.7;
+  min-width: 60px;
+}
+
+#bar-line-a {
+  background: $dna-a;
+  // border-radius: 8px 0px 0px 8px;
+}
+#bar-line-t {
+  background: $dna-t;
+}
+#bar-line-g {
+  background: $dna-g;
+}
+#bar-line-c {
+  background: $dna-c;
+  // border-radius: 0px 8px 8px 0px;
+
+}
+
+#bar-a {
+  // border-radius: 8px 0px 0px 8px;
+  padding: 0px !important;
+}
+#bar-c {
+  // border-radius: 0px 8px 8px 0px;
+  padding: 0px !important;
+}
+
+#bar-t{
+  padding: 0px 0px 0px 5px !important; 
+}
+
+.nuc-labels {
+  @include inter();
+  @include display();
+  justify-content: start;
+  gap: 20px;
+  color: $secondary-color;
+  // position: absolute;
+  // top: -10px;
+  font-size: 13px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.distribution-container {
+  width: 100%;
+}
+
+.bar-line {
+  width: 100%;
+  height: 5px;
+  border-radius: 8px;
+}
+
+
+.a-label{
+  color: $dna-a
+}
+.t-label{
+  color: $dna-t
+}.g-label{
+  color: $dna-g
+}.c-label{
+  color: $dna-c
+}
+
+@media (max-width: 500px) {
+  .bar-segment {
+    gap: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+
+  .nuc-labels{
+    font-size: 12px;
+  }
+}
