@@ -1643,6 +1643,7 @@ p [role=button] {
   font-family: "Inter";
   font-size: 15px;
   color: rgb(205, 205, 205);
+  padding: 10px 5px 0px 5px;
 }
 .main-t__right-boxes-a {
   display: flex;
