@@ -6,7 +6,7 @@
   gap: 20px;
   flex-grow: 1;
   // padding: 1% 8% 0% 10%;
-  padding: 30px 3% 0px 4%;
+  padding: 30px 7% 0px 5%;
   max-width: 1600px;
   width: 100%;
   margin: 0px auto;
@@ -16,16 +16,44 @@
   // z-index: -1;
   &__kpi-cards {
     @include display();
-    justify-content: space-between;
     align-items: start;
+    justify-content: space-between;
+    // @include display();
+    // justify-content: space-between;
+    // align-items: start;
     width: 100%;
     // padding: 2% 1% 0% 1%;
-    flex-direction: column;
-    gap: 20px;
+    // flex-direction: column;
+    // column-gap: 50px;
+    gap: 50px;
+    // row-gap: 20px;
     // align-items: end;
     // background-color: rgb(103, 49, 49);
     // max-width: 2440px;
     // min-width: 1000px;
+    // background-color: red;
+    justify-content: center;
+    // max-width: 1300px;
+    flex-wrap: wrap
+  }
+
+  &__kpi-cards-w {
+    @include display();
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 4;
+  }
+
+  &__chart-results{
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    // grid-row: 1/3;
+    gap: 10px;
+    flex-grow: 1;
+    // max-width: 305px;;
+    // width: 100%;
   }
 
   &__wrap-form {
@@ -38,6 +66,9 @@
     width: 100%;
     // height: 300px;
     // max-width: 1500px;
+    // grid-column: 1/2;
+    // grid-row: 2/3;
+    // max-width: 1100px;
   }
 
   &__txt-stat-db {
@@ -231,7 +262,7 @@
   &__chart {
     @include display();
     @include standard-box-borders();
-    grid-template: 4/5;
+    grid-column: 4/6;
     grid-row: 2/5;
     height: 100%;
     // width: 420px;
@@ -295,8 +326,8 @@
     justify-content: end;
     grid-row: 3/6;
     width: 100%;
-    max-width: 195px;
-    max-height: 292px;
+    // max-width: 195px;
+    // max-height: 292px;
     border: 1px solid $text-light;
     border-radius: 8px;
   }
@@ -330,10 +361,11 @@
     align-items: start;
     justify-content: space-between;
     border-top: 1px solid $text-light;
-    font-size: 13px;
+    font-size: 15px;
     width: 100%;
-    padding: 3px;
+    padding: 8px 8px;
     overflow: auto;
+    overflow-y: hidden;
     gap: 5px;
     color: $text-color;
     font-weight: 300;
@@ -341,6 +373,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    text-wrap: nowrap;
   }
 
   &__chart-pt-sst{
@@ -366,7 +399,7 @@
   &__ts {
     // @include inter();
     // @include hoverCursor();
-    grid-column: 4/5;
+    grid-column: 4/6;
     grid-row: 5/6;
     // padding: 8px 20px;
     // border-radius: 8px;
@@ -392,9 +425,12 @@
 
   &__kpis {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     width: 100%;
     gap: 5px;
+    // grid-column: 1/2;
+    // grid-row: 1/2;
+    // max-width: 1100px;
   }
 
   &__apart-kt {
@@ -738,7 +774,7 @@
     padding: 2% 5% 0% 5%;
 
     &__txt-stat {
-      grid-row: 4/5;
+      grid-row: 3/4;
       grid-column: 1/4;
       align-self: end;
       flex-wrap: wrap;
@@ -749,20 +785,20 @@
     &__ts {
       font-size: 12px;
       padding: 8px 10px;
-      grid-column: 1/5;
-      grid-row: 7/8;
+      grid-column: 5/6;
+      grid-row: 5/6;
       height: auto;
       align-self: flex-start;
     }
 
     &__txt-stat-db {
       grid-column: 5/6;
-      grid-row: 4/5;
+      grid-row: 3/4;
     }
 
     &__form {
       grid-column: 1/6;
-      grid-row: 3/4;
+      grid-row: 2/3;
     }
 
     &__chart-live {
@@ -807,14 +843,14 @@
 
     &__wrap-form {
       grid-template-columns: auto auto auto auto !important;
-      grid-template-rows: auto auto auto auto auto auto 40px auto !important;
+      grid-template-rows: auto auto  auto auto auto !important;
       height: auto;
       width: 100%;
     }
 
     &__chart {
-      grid-column: 1/5;
-      grid-row: 5/7;
+      grid-column: 1/6;
+      grid-row: 4/5;
       width: 100%;
       max-width: none;
     }
@@ -949,7 +985,7 @@
 
     &__txt-stat-db {
       grid-column: 1/2;
-      grid-row: 7/8;
+      grid-row: 4/5;
     }
     &__txt-stat-d {
       width: 100%;
@@ -961,7 +997,7 @@
 
     &__form {
       grid-column: 1/2;
-      grid-row: 3/4;
+      grid-row: 2/3;
       padding: 0px !important;
       width: 100%;
     }
@@ -1008,14 +1044,14 @@
 
     &__wrap-form {
       grid-template-columns: auto !important;
-      grid-template-rows: auto auto auto auto auto auto auto !important;
+      grid-template-rows: auto auto auto auto !important;
       height: auto;
       width: 100%;
     }
 
     &__chart {
       grid-column: 1/2;
-      grid-row: 4/5;
+      grid-row: 3/4;
       height: 160px;
       // display: none;
     }

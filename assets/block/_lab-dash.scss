@@ -8,16 +8,15 @@
 .lab-dash {
   @include display();
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: start;
-  width: 100%;
+  width: auto;
   grid-row: 3/4;
-  grid-column: 1/3;
+  grid-column: 2/3;
   flex-grow: 1;
-  // height: calc(100vh - 110px);
   min-height: 300px;
   height: 100%;
-  // height: 200vh;
-  // height: 200vh !important;
-  // background-color: red
+  padding: 3% 15px 3% 15px;
+  width: 100%;
+  background-color: $bg-dark-blue;
 }
