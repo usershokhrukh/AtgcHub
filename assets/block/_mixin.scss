@@ -118,3 +118,16 @@
   border: 1px solid rgba(28, 106, 195, 0.686);
   color: $text-color;
 }
+
+
+@mixin maxOverflow($px){
+  // width: 100%;
+  width: $px;
+  max-width: $px !important;
+  overflow: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
