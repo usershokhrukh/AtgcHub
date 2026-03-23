@@ -139,7 +139,7 @@ p [role=button] {
   border: 1px solid rgba(243, 244, 246, 0.5725490196);
   opacity: 0.5;
   padding: 6px 5px 6px 27px;
-  font-size: 14px;
+  font-size: 12px;
   outline: none;
   color: white;
   background: rgba(255, 255, 255, 0.1);
@@ -148,7 +148,7 @@ p [role=button] {
 }
 .dashboard__links {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   display: none;
   height: 100%;
@@ -221,7 +221,7 @@ p [role=button] {
   padding: 3px 5px;
   color: white !important;
   opacity: 1;
-  font-size: 14px;
+  font-size: 12px;
 }
 .dashboard__pr-more-t {
   max-width: 70px;
@@ -355,7 +355,7 @@ p [role=button] {
   }
   .dashboard__set-menu, .dashboard__lan-menu, .dashboard__info-menu {
     font-family: "Inter";
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     gap: 4px;
     border: none !important;
@@ -571,7 +571,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -599,7 +599,7 @@ p [role=button] {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  font-size: 13px;
+  font-size: 12px;
   color: rgb(205, 205, 205);
 }
 .main-part__txt-stat-s-veri {
@@ -648,7 +648,7 @@ p [role=button] {
   height: 100%;
   min-height: 300px;
   padding: 8px;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   background-color: rgba(18, 24, 34, 0.5137254902);
   border-radius: 8px;
@@ -753,7 +753,7 @@ p [role=button] {
   font-family: "Inter";
   gap: 5px;
   color: #4caf50;
-  font-size: 12px;
+  font-size: 11px;
 }
 .main-part__chart-dot {
   position: relative;
@@ -812,7 +812,7 @@ p [role=button] {
 }
 .main-part__chart-title {
   font-family: "JetBrains Mono";
-  font-size: 16px;
+  font-size: 14px;
   color: white;
 }
 .main-part__chart-pt {
@@ -823,7 +823,7 @@ p [role=button] {
   align-items: start;
   justify-content: space-between;
   border-top: 1px solid rgba(75, 87, 103, 0.3725490196);
-  font-size: 15px;
+  font-size: 13px;
   width: 100%;
   padding: 8px 8px;
   overflow: auto;
@@ -857,6 +857,7 @@ p [role=button] {
 .main-part__ts {
   grid-column: 4/6;
   grid-row: 5/6;
+  font-size: 14px !important;
   height: 35px !important;
   font-family: "Inter";
   display: flex;
@@ -868,7 +869,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -882,6 +883,9 @@ p [role=button] {
 .main-part__ts svg {
   color: white;
   opacity: 1;
+}
+.main-part__ts {
+  box-shadow: 0px 0px 10px -4px rgba(66, 192, 95, 0.8);
 }
 .main-part__kpis {
   display: grid;
@@ -898,7 +902,7 @@ p [role=button] {
   justify-content: space-between;
   width: 100%;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
 }
 .main-part__apart {
   display: flex;
@@ -1016,7 +1020,7 @@ p [role=button] {
 .main-part__apart-n {
   font-family: "Space Grotesk";
   color: #ffffff;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
 }
 .main-part__chart-nucs-a {
@@ -1070,7 +1074,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -1105,7 +1109,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -1147,7 +1151,7 @@ p [role=button] {
 }
 .main-part__scrl {
   font-family: "Inter";
-  font-size: 13px;
+  font-size: 12px;
   color: white;
   word-wrap: nowrap;
 }
@@ -1172,7 +1176,7 @@ p [role=button] {
   padding: 5px 12px;
   border-radius: 8px;
   background-color: #1f2835;
-  font-size: 13px;
+  font-size: 12px;
   color: white;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   opacity: 0.8;
@@ -1202,7 +1206,7 @@ p [role=button] {
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(75, 87, 103, 0.1294117647);
   padding: 4px 5px 4px 30px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   width: 100%;
   height: 27px;
@@ -1239,13 +1243,14 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
   color: rgb(205, 205, 205);
   text-transform: capitalize;
   opacity: 0.9;
+  font-size: 13px;
 }
 .main-part__sum {
   grid-row: 1/2;
@@ -1257,7 +1262,7 @@ p [role=button] {
   align-items: center;
   justify-content: center;
   justify-content: start;
-  font-size: 13px;
+  font-size: 12px;
   gap: 5px;
   color: white;
 }
@@ -1273,7 +1278,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -1310,7 +1315,7 @@ p [role=button] {
     gap: 5px;
   }
   .main-part__ts {
-    font-size: 12px;
+    font-size: 11px;
     padding: 8px 10px;
     grid-column: 5/6;
     grid-row: 5/6;
@@ -1336,11 +1341,11 @@ p [role=button] {
     max-width: none;
   }
   .main-part__txa {
-    font-size: 20px;
+    font-size: 18px;
     height: 160px;
   }
   .main-part__apart {
-    font-size: 9px;
+    font-size: 8px;
     padding: 5px;
   }
   .main-part__kpis {
@@ -1370,7 +1375,7 @@ p [role=button] {
     max-width: none;
   }
   .main-part__apart-n {
-    font-size: 20px;
+    font-size: 19px;
     overflow: auto;
   }
   .main-part__apart-kt {
@@ -1407,7 +1412,7 @@ p [role=button] {
     align-items: center;
     justify-content: center;
     gap: 4px;
-    font-size: 12px;
+    font-size: 10px;
     flex-wrap: wrap;
   }
 }
@@ -1449,8 +1454,13 @@ p [role=button] {
     flex-grow: 1;
     text-wrap: nowrap;
   }
+  .main-part__sumarr {
+    width: 20px;
+    position: relative;
+    top: -3px;
+  }
   .main-part__sct {
-    font-size: 11px;
+    font-size: 13px;
     padding: 3px 3px;
     flex-grow: 1;
     border-radius: 5px;
@@ -1463,7 +1473,7 @@ p [role=button] {
     width: 12px;
   }
   .main-part__ls {
-    font-size: 11px;
+    font-size: 10px;
     flex-grow: 1;
     border-radius: 5px;
     white-space: nowrap;
@@ -1501,7 +1511,7 @@ p [role=button] {
     grid-template-rows: auto auto;
   }
   .main-part__apart {
-    font-size: 9px;
+    font-size: 8px;
     padding: 10px 14px;
     max-width: none;
     width: auto;
@@ -1539,7 +1549,7 @@ p [role=button] {
     height: 160px;
   }
   .main-part__apart-n {
-    font-size: 20px;
+    font-size: 18px;
     overflow: auto;
   }
   .main-part__apart-kt {
@@ -1654,7 +1664,7 @@ p [role=button] {
   justify-content: center;
   gap: 5px;
   justify-content: start;
-  font-size: 13px;
+  font-size: 12px;
   color: rgb(205, 205, 205);
 }
 .main-t__right-binsp {
@@ -1665,7 +1675,7 @@ p [role=button] {
 }
 .main-t__right-boxes-t {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 13px;
   color: rgb(205, 205, 205);
   padding: 10px 5px 0px 5px;
 }
@@ -1690,7 +1700,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -1768,7 +1778,7 @@ p [role=button] {
 .main-t__right-boxes-st {
   font-family: "Inter";
   width: 100%;
-  font-size: 15px;
+  font-size: 13px;
   background-color: #4caf50;
   color: white;
   padding: 3px;
@@ -1780,7 +1790,7 @@ p [role=button] {
   font-family: "Inter";
   color: white;
   opacity: 0.5;
-  font-size: 15px;
+  font-size: 13px;
   padding: 3px 5px;
 }
 .main-t__right-meta-txt {
@@ -1799,6 +1809,7 @@ p [role=button] {
 }
 .main-t__right-meta-st {
   opacity: 0.4;
+  font-size: 14px;
 }
 .main-t__left-top {
   display: flex;
@@ -1812,7 +1823,7 @@ p [role=button] {
 }
 .main-t__left-top-tabs {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 12px;
   padding: 5px 8px;
   color: white;
   border-radius: 6px;
@@ -1872,6 +1883,7 @@ p [role=button] {
   overflow-x: auto;
   white-space: nowrap;
   padding-bottom: 8px;
+  font-size: 13.5px;
   /* Scrollbar uslubi (Chrome, Safari, Edge uchun) */
 }
 .main-t__right-meta-data::-webkit-scrollbar {
@@ -1901,11 +1913,12 @@ p [role=button] {
   word-break: break-all;
   float: left;
   margin-right: 10px;
+  font-size: 12px;
 }
 .main-t__input {
   outline: none;
   word-break: break-all;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0px 10px 0px 0px;
 }
 .main-t__input:hover {
@@ -1943,7 +1956,7 @@ p [role=button] {
 }
 .main-t__history {
   color: #e6edf3 !important;
-  font-size: 14px;
+  font-size: 12px;
 }
 .main-t__header {
   position: relative;
@@ -1974,13 +1987,13 @@ p [role=button] {
   justify-content: center;
   font-family: "Inter";
   color: #a0aec0;
-  font-size: 12px;
+  font-size: 11px;
   margin-left: 10px;
   gap: 4px;
 }
 .main-t__terminal-lv {
   position: relative;
-  top: 2px;
+  top: 0.5px;
 }
 .main-t__right-cp {
   grid-row: 1/2;
@@ -1995,7 +2008,7 @@ p [role=button] {
 }
 .main-t__right-cpt {
   cursor: pointer;
-  font-size: 13px;
+  font-size: 11px;
   color: rgb(46, 85, 226);
   max-width: 100px;
 }
@@ -2055,14 +2068,14 @@ p [role=button] {
     max-width: none;
   }
   .main-t__left-top-tabs {
-    font-size: 12px;
+    font-size: 11px;
     padding: 5px;
   }
   .main-t__left-top {
     flex-wrap: wrap;
   }
   .main-t__terminal {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 500px) {
@@ -2111,7 +2124,7 @@ p [role=button] {
     grid-column: 1/2;
   }
   .main-t__left-top-tabs {
-    font-size: 10px;
+    font-size: 14px;
   }
   .main-t__left {
     grid-row: 2/3;
@@ -2309,7 +2322,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -2436,7 +2449,7 @@ p [role=button] {
 }
 .dash-main__toitl {
   font-family: "Inter";
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(205, 205, 205);
   font-weight: 800;
 }
@@ -2444,7 +2457,7 @@ p [role=button] {
   font-family: "Inter";
   position: relative;
   top: 1px;
-  font-size: 15px;
+  font-size: 13px;
   color: rgba(112, 112, 112, 0.5725490196);
 }
 .dash-main__tcar {
@@ -2466,7 +2479,7 @@ p [role=button] {
 }
 .dash-main__carbasq {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 12px;
   padding: 3px;
   border-radius: 8px;
   color: #4caf50;
@@ -2479,7 +2492,7 @@ p [role=button] {
 }
 .dash-main__casqtx {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 13px;
   color: rgb(205, 205, 205);
 }
 .dash-main__tcarb {
@@ -2517,12 +2530,12 @@ p [role=button] {
 }
 .dash-main__cpetx {
   font-family: "Inter";
-  font-size: 13px;
+  font-size: 12px;
   color: rgba(243, 244, 246, 0.5725490196);
 }
 .dash-main__tcarbtx {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(205, 205, 205);
   font-weight: 500;
   margin-bottom: 14px;
@@ -2539,7 +2552,7 @@ p [role=button] {
 }
 .dash-main__carbrstx {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   font-weight: 500;
 }
@@ -2584,7 +2597,7 @@ p [role=button] {
 }
 .dash-main__cbottx {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(243, 244, 246, 0.5725490196);
 }
 .dash-main__carbds {
@@ -2632,10 +2645,11 @@ p [role=button] {
   font-family: "Inter";
   color: rgb(205, 205, 205);
   opacity: 0.9;
-  font-size: 14px;
+  font-size: 12px;
   flex-wrap: wrap;
-  justify-content: start;
-  width: 100%;
+  justify-content: end;
+  width: auto;
+  flex-grow: 1;
 }
 .dash-main__curtxtsp {
   display: flex;
@@ -2648,9 +2662,10 @@ p [role=button] {
   color: white;
   padding: 7px 30px 7px 7px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 13px;
   flex-grow: 1;
   max-width: 100%;
+  text-align: end;
 }
 .dash-main__curst {
   color: #4caf50;
@@ -2706,7 +2721,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -2731,7 +2746,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -2762,7 +2777,7 @@ p [role=button] {
 }
 .dash-main__rectit {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(205, 205, 205);
   margin-bottom: 20px;
 }
@@ -2810,7 +2825,7 @@ p [role=button] {
   flex-wrap: wrap;
   justify-content: start;
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 11px;
   color: rgb(205, 205, 205);
   opacity: 0.7;
   flex-grow: 1;
@@ -2821,7 +2836,7 @@ p [role=button] {
   justify-content: center;
   justify-content: start;
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   font-weight: 300;
   opacity: 0.9;
@@ -2854,7 +2869,6 @@ p [role=button] {
   flex-direction: column;
   align-items: start;
   gap: 10px;
-  background-color: red;
   flex-grow: 1;
   padding: 20px;
   border-radius: 8px;
@@ -2892,12 +2906,12 @@ p [role=button] {
 }
 .dash-main__healthtit {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(205, 205, 205);
 }
 .dash-main__healthbtit {
   font-family: "Inter";
-  font-size: 13px;
+  font-size: 12px;
   color: rgb(205, 205, 205);
   opacity: 0.7;
 }
@@ -2972,7 +2986,7 @@ p [role=button] {
 }
 .dash-main__tUS {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: white;
   max-width: 100px;
@@ -3034,7 +3048,7 @@ p [role=button] {
 }
 .dash-main__tdTI {
   font-family: "Inter";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
   color: rgb(205, 205, 205);
   opacity: 0.8;
@@ -3048,7 +3062,7 @@ p [role=button] {
 }
 .dash-main__tdRBtx {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 13px;
   color: white;
 }
 .dash-main__tdRBbo {
@@ -3083,7 +3097,7 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   color: white;
   gap: 3px;
   flex-grow: 1;
@@ -3113,7 +3127,7 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   font-weight: 300;
   gap: 7px;
@@ -3135,7 +3149,7 @@ p [role=button] {
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   gap: 8px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   background-color: rgba(34, 43, 51, 0.862745098);
@@ -3158,8 +3172,11 @@ p [role=button] {
 .dash-main__tdWtx {
   color: #d4af37;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
+}
+.dash-main__carbds {
+  font-size: 13px;
 }
 
 @media (max-width: 1125px) {
@@ -3209,6 +3226,20 @@ p [role=button] {
   }
   .dash-main__currentxt {
     justify-content: end;
+  }
+  .dash-main__curtxtsp-i {
+    position: relative;
+    margin-left: 6px;
+    width: 35px;
+  }
+  .dash-main__curtxtsp {
+    padding: 0px;
+  }
+  .dash-main__current {
+    padding: 5px 10px;
+  }
+  .dash-main__currentxt {
+    gap: 5px;
   }
 }
 @media (max-width: 1560px) {

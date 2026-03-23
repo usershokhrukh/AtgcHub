@@ -34,7 +34,7 @@
     // background-color: red;
     justify-content: center;
     // max-width: 1300px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
 
   &__kpi-cards-w {
@@ -44,7 +44,7 @@
     flex-grow: 4;
   }
 
-  &__chart-results{
+  &__chart-results {
     @include display();
     flex-direction: column;
     align-items: start;
@@ -127,9 +127,8 @@
     @include inter();
     @include display();
     gap: 4px;
-    font-size: 13px;
+    font-size: 12px;
     color: $secondary-color;
-    // opacity: 0.5;
   }
 
   &__txt-stat-s-veri {
@@ -184,7 +183,7 @@
     min-height: 300px;
     // height: 300px;
     padding: 8px;
-    font-size: 20px;
+    font-size: 18px;
     color: $text-color;
     // background-color: $header;
     // background-color: #1e293b42;
@@ -212,7 +211,7 @@
       }
     }
 
-    &::placeholder{
+    &::placeholder {
       @include display();
       position: absolute;
       top: 50%;
@@ -293,7 +292,7 @@
     @include inter();
     gap: 5px;
     color: $dna-a;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   &__chart-dot {
@@ -351,7 +350,7 @@
 
   &__chart-title {
     @include jet();
-    font-size: 16px;
+    font-size: 14px;
     color: $text-color;
   }
 
@@ -361,7 +360,7 @@
     align-items: start;
     justify-content: space-between;
     border-top: 1px solid $text-light;
-    font-size: 15px;
+    font-size: 13px;
     width: 100%;
     padding: 8px 8px;
     overflow: auto;
@@ -376,7 +375,7 @@
     text-wrap: nowrap;
   }
 
-  &__chart-pt-sst{
+  &__chart-pt-sst {
     background-color: $text-light;
   }
 
@@ -411,7 +410,7 @@
 
     // box-shadow: 0px 0px 10px -4px rgb(22, 22, 22);
     // color: $text-color;
-    // font-size: 15px;
+    font-size: 14px !important;
     height: 35px !important;
     // align-self: flex-start;
     // &:active {
@@ -421,6 +420,7 @@
     //   background-color: #52b455ca;
     // }
     @include greenButtons();
+    box-shadow: 0px 0px 10px -4px #42c05fcc;
   }
 
   &__kpis {
@@ -440,7 +440,7 @@
     justify-content: space-between;
     width: 100%;
     color: $text-color;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   &__apart {
@@ -496,7 +496,7 @@
   &__apart-n {
     @include space();
     color: #ffffff;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
   }
 
@@ -618,7 +618,7 @@
   }
   &__scrl {
     @include inter();
-    font-size: 13px;
+    font-size: 12px;
     color: white;
     word-wrap: nowrap;
     &:active {
@@ -644,7 +644,7 @@
     padding: 5px 12px;
     border-radius: 8px;
     background-color: $header;
-    font-size: 13px;
+    font-size: 12px;
     color: $text-color;
     border: 1px solid $text-lightS;
     opacity: 0.8;
@@ -675,7 +675,8 @@
     border: 1px solid $text-lightS;
     background-color: #4b576721;
     padding: 4px 5px 4px 30px;
-    font-size: 15px;
+    font-size: 13px;
+    // background-color: red;
     color: $text-color;
     width: 100%;
     height: 27px;
@@ -710,7 +711,6 @@
     padding: 0px 7px;
     // border: none;
     // @include inter();
-    // font-size: 13px;
     // border-radius: 8px;
     // background-color: $text-light;
     // color: $text-color;
@@ -724,6 +724,7 @@
     //   color: $text-color;
     // }
     @include grayButtons();
+    font-size: 13px;;
   }
 
   &__sum {
@@ -737,7 +738,7 @@
     @include inter();
     @include display();
     justify-content: start;
-    font-size: 13px;
+    font-size: 12px;
     gap: 5px;
     color: $text-color;
   }
@@ -783,7 +784,7 @@
     }
 
     &__ts {
-      font-size: 12px;
+      font-size: 11px;
       padding: 8px 10px;
       grid-column: 5/6;
       grid-row: 5/6;
@@ -814,12 +815,12 @@
     }
 
     &__txa {
-      font-size: 20px;
+      font-size: 18px;
       height: 160px;
     }
 
     &__apart {
-      font-size: 9px;
+      font-size: 8px;
       padding: 5px;
     }
 
@@ -843,7 +844,7 @@
 
     &__wrap-form {
       grid-template-columns: auto auto auto auto !important;
-      grid-template-rows: auto auto  auto auto auto !important;
+      grid-template-rows: auto auto auto auto auto !important;
       height: auto;
       width: 100%;
     }
@@ -856,16 +857,19 @@
     }
 
     &__apart-n {
-      font-size: 20px;
+      font-size: 19px;
       overflow: auto;
+      // background-color: red;
     }
 
     &__apart-kt {
       font-size: 10px;
+      // background-color: red;
     }
 
     &__chart-title {
       font-size: 10px;
+      // background-color: red;
     }
 
     &__wft {
@@ -901,8 +905,9 @@
     &__ls {
       @include display();
       gap: 4px;
-      font-size: 12px;
+      font-size: 10px;
       flex-wrap: wrap;
+      // background-color: red;
     }
   }
 }
@@ -947,8 +952,14 @@
       text-wrap: nowrap;
     }
 
+    &__sumarr {
+      width: 20px;
+      position: relative;
+      top: -3px;
+    }
+
     &__sct {
-      font-size: 11px;
+      font-size: 13px;
       padding: 3px 3px;
       // width: 30px;
       flex-grow: 1;
@@ -956,6 +967,7 @@
       white-space: nowrap;
       // min-width: 140px;
       // max-width: 140px;
+      // background-color: red;
     }
     &__scrbo {
       flex-wrap: wrap;
@@ -965,12 +977,13 @@
     }
 
     &__ls {
-      font-size: 11px;
+      font-size: 10px;
       flex-grow: 1;
       // max-width: 200px;
       border-radius: 5px;
       white-space: nowrap;
       opacity: 0.8;
+      // background-color: red;
     }
     &__scrto {
       // flex-wrap: wrap;
@@ -1013,10 +1026,11 @@
     }
 
     &__apart {
-      font-size: 9px;
+      font-size: 8px;
       padding: 10px 14px;
       max-width: none;
       width: auto;
+      // background-color: red;
     }
 
     &__apart:nth-child(1) {
@@ -1057,8 +1071,9 @@
     }
 
     &__apart-n {
-      font-size: 20px;
+      font-size: 18px;
       overflow: auto;
+      // background-color: red;
     }
 
     &__apart-kt {
