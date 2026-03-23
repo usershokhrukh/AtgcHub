@@ -30,16 +30,17 @@
 
   &__toitl {
     @include inter();
-    font-size: 18px;
+    font-size: 16px;
     color: $secondary-color;
     font-weight: 800;
+    // background-color: red
   }
 
   &__tlast {
     @include inter();
     position: relative;
     top: 1px;
-    font-size: 15px;
+    font-size: 13px;
     color: $border;
   }
 
@@ -67,7 +68,7 @@
 
   &__carbasq {
     @include inter();
-    font-size: 14px;
+    font-size: 12px;
     // background-color: $black;
     padding: 3px;
     border-radius: 8px;
@@ -75,6 +76,7 @@
     font-weight: 400;
     text-shadow: 0px 0px 10px $dna-a;
     // border: 1px solid $dna-a;
+    // background-color: red;
   }
 
   &__casqsp {
@@ -84,8 +86,9 @@
 
   &__casqtx {
     @include inter();
-    font-size: 15px;
+    font-size: 13px;
     color: $secondary-color;
+    // background-color: red
   }
 
   &__tcarb {
@@ -125,17 +128,19 @@
 
   &__cpetx {
     @include inter();
-    font-size: 13px;
+    font-size: 12px;
     color: $light-border;
+    // background-color: red
   }
 
   &__tcarbtx {
     @include inter();
-    font-size: 14px;
+    font-size: 12px;
     color: $secondary-color;
     font-weight: 500;
     margin-bottom: 14px;
     width: 100%;
+    // background-color: red
   }
 
   &__carbrs {
@@ -149,9 +154,10 @@
 
   &__carbrstx {
     @include inter();
-    font-size: 15px;
+    font-size: 13px;
     color: $text-color;
     font-weight: 500;
+    // background-color: red
   }
 
   &__crslbo {
@@ -195,8 +201,9 @@
 
   &__cbottx {
     @include inter();
-    font-size: 14px;
+    font-size: 12px;
     color: $light-border;
+    // background-color: red
   }
 
   &__carbds {
@@ -210,6 +217,7 @@
     font-size: 12px;
     color: $dna-t;
     font-weight: 500;
+    // background-color: red
   }
 
   &__centwr {
@@ -244,10 +252,12 @@
     @include inter();
     color: $secondary-color;
     opacity: 0.9;
-    font-size: 14px;
+    font-size: 12px;
     flex-wrap: wrap;
-    justify-content: start;
-    width: 100%;
+    justify-content: end;
+    width: auto;
+    flex-grow: 1;
+    // background-color: red
   }
 
   &__curtxtsp {
@@ -274,10 +284,10 @@
     color: $text-color;
     padding: 7px 30px 7px 7px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     flex-grow: 1;
     max-width: 100%;
-    // text-align: end;
+    text-align: end;
     // background-color: red;
   }
 
@@ -374,7 +384,7 @@
 
   &__rectit {
     @include inter();
-    font-size: 14px;
+    font-size: 13px;
     color: $secondary-color;
     margin-bottom: 20px;
     // background-color: red;
@@ -434,7 +444,7 @@
     flex-wrap: wrap;
     justify-content: start;
     @include inter();
-    font-size: 12px;
+    font-size: 11px;
     color: $secondary-color;
     opacity: 0.7;
     // background-color: red;
@@ -445,13 +455,14 @@
     @include display();
     justify-content: start;
     @include inter();
-    font-size: 15px;
+    font-size: 14px;
     color: $text-color;
     font-weight: 300;
     opacity: 0.9;
     width: 100%;
     // text-wrap: wrap
     word-break: break-all;
+    // background-color: red
   }
 
   &__rectime {
@@ -479,7 +490,7 @@
     flex-direction: column;
     align-items: start;
     gap: 10px;
-    background-color: red;
+    // background-color: red;
     flex-grow: 1;
     padding: 20px;
     border-radius: 8px;
@@ -518,15 +529,17 @@
 
   &__healthtit {
     @include inter();
-    font-size: 14px;
+    font-size: 13px;
     color: $secondary-color;
+    // background-color: red
   }
 
   &__healthbtit {
     @include inter();
-    font-size: 13px;
+    font-size: 12px;
     color: $secondary-color;
     opacity: 0.7;
+    // background-color: red
   }
 
   &__healthbar {
@@ -541,6 +554,7 @@
     @include inter();
     color: $secondary-color;
     font-size: 13px;
+    // background-color: red
   }
 
   &__hlineb {
@@ -612,7 +626,7 @@
   &__tUS {
     @include inter();
     // @include maxOverflow(80px);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: $text-color;
     // background-color: red;
@@ -624,6 +638,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    // background-color: red
   }
 
   &__tTI {
@@ -648,6 +663,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    // background-color: red;
   }
 
   &__tdSLsp {
@@ -670,6 +686,7 @@
     opacity: 0.8;
     padding: 0px 5px 0px 5px;
     border-right: 1px solid $border;
+    // background-color: red
   }
 
   &__tSO {
@@ -692,11 +709,12 @@
 
   &__tdTI {
     @include inter();
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 200;
     color: $secondary-color;
     opacity: 0.8;
     text-wrap: nowrap;
+    // background-color: red
   }
 
   &__tdRBtbo {
@@ -706,8 +724,9 @@
 
   &__tdRBtx {
     @include inter();
-    font-size: 14px;
+    font-size: 13px;
     color: $text-color;
+    // background-color: red
   }
 
   &__tdRBbo {
@@ -743,12 +762,13 @@
   &__tdSLtx {
     @include inter();
     @include display();
-    font-size: 14px;
+    font-size: 13px;
     color: $text-color;
     gap: 3px;
     flex-grow: 1;
     justify-content: end;
     align-items: start;
+    // background-color: red
   }
 
   &__tD-recom {
@@ -770,11 +790,12 @@
   &__tdREtx {
     @include inter();
     @include display();
-    font-size: 16px;
+    font-size: 14px;
     color: $text-color;
     // font-style: italic;
     font-weight: 300;
     gap: 7px;
+    // background-color: red;
   }
 
   &__tdIStx {
@@ -798,9 +819,13 @@
     // border: 1px solid $dna-g;
     border-radius: 8px;
     // opacity: 0.4;
-    font-size: 16px;
+    font-size: 14px;
     // background-color: $war-bg;
     font-style: normal;
+  }
+  &__carbds{
+    font-size: 13px;
+    // background-color: red;
   }
 }
 
@@ -826,6 +851,7 @@
     }
     &__tcarbtx {
       font-size: 12px;
+      // background-color: red;
     }
   }
 }
@@ -864,6 +890,24 @@
     }
     &__currentxt {
       justify-content: end;
+    }
+
+    &__curtxtsp-i {
+      position: relative;
+      margin-left: 6px;
+      width: 35px;
+    }
+
+    &__curtxtsp {
+      padding: 0px;
+    }
+
+    &__current {
+      padding: 5px 10px;
+    }
+
+    &__currentxt {
+      gap: 5px;
     }
   }
 }

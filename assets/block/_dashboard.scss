@@ -63,7 +63,7 @@
     @include inter();
     @include box();
     padding: 6px 5px 6px 27px;
-    font-size: 14px;
+    font-size: 12px;
     outline: none;
     // border: none;
     color: white;
@@ -74,7 +74,7 @@
 
   &__links {
     @include inter();
-    font-size: 15px;
+    font-size: 13px;
     color: $text-color;
     display: none;
     height: 100%;
@@ -131,7 +131,7 @@
     padding: 3px 5px;
     color: white !important;
     opacity: 1;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &__pr-more-t {
@@ -275,7 +275,7 @@
     &__lan-menu,
     &__info-menu {
       @include inter();
-      font-size: 14px;
+      font-size: 12px;
       display: flex;
       gap: 4px;
       border: none !important;
