@@ -7,92 +7,11 @@
   // flex-direction: column;
   gap: 20px;
   margin-left: auto;
-  margin-right: calc(((100% - 1100px) / 2) + 100px);
+  margin-right: calc(((100% - 1100px) / 2) + 25px);
   min-width: fit-content;
   max-width: 1100px;
   // background-color: red;
   width: 100%;
-
-  // .storage-hierarchy {
-  //   @include grayButtons();
-  //   // display: block;
-  //   flex-direction: column;
-  //   align-items: start;
-  //   justify-content: start;
-  //   // padding: 20px;
-  //   // min-height: 10px;
-  //   // margin-top: 15px;
-  //   .hierarchy-bar {
-  //     // display: flex;
-  //     height: 5px;
-  //     background: rgba(255, 255, 255, 0.05);
-  //     border-radius: 10px;
-  //     // overflow: hidden; // Burchaklarni kesib turadi
-  //     // margin-bottom: 10px;
-  //     width: 100%;
-  //     height: 10px;
-  //     .segment {
-
-  //       height: 100%;
-  //       flex-grow: 1;
-  //       transition: width 0.5s ease-in-out;
-  //       width: 100px;
-  //       // border-radius: 10px;
-  //       &.fasta {
-  //         background: $dna-a;
-  //       } // Sening yashil rangging
-  //       &.cache {
-  //         background: $dna-c;
-  //       } // Moviy (CPU bar kabi)
-  //       &.metadata {
-  //         background: $dna-g;
-  //       } // Binafsha (RAM bar kabi)
-  //     }
-  //   }
-
-  //   .hierarchy-legend {
-  //     display: flex;
-  //     // gap: 15px;
-  //     justify-content: space-between;
-  //     gap: 5px;
-  //     flex-wrap: wrap;
-  //     background-color: red;
-  //     .legend-item {
-  //       @include inter();
-  //       display: flex;
-  //       align-items: center;
-  //       font-size: 11px;
-  //       color: #888;
-  //       gap: 5px;
-
-  //       .dot {
-  //         width: 6px;
-  //         height: 6px;
-  //         border-radius: 50%;
-
-  //         &.fasta {
-  //           background: $dna-a;
-  //         }
-  //         &.cache {
-  //           background: $dna-c;
-  //         }
-  //         &.metadata {
-  //           background: $dna-g;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
-  &__storage-hierarchy {
-    // @include display();
-    flex-direction: column;
-    @include grayButtons();
-    padding: 20px !important;
-    height: auto !important;
-    align-items: start;
-    // height: 300px;
-  }
 
   &__sylbar {
     @include display();
@@ -162,7 +81,7 @@
     @include display();
     align-items: start;
     width: 100%;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     max-width: 1000px;
     flex-direction: column;
@@ -172,20 +91,21 @@
   &__syltit {
     @include inter();
     font-size: 13px;
+    // color: red
   }
 
   &__sy-left {
     // background-color: red;
     // min-width: 200px;
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
     // flex-grow: 1
     // display: none;
   }
 
   &__toitl {
     @include inter();
-    font-size: 16px;
+    font-size: 19px;
     color: $secondary-color;
     font-weight: 800;
     // background-color: red
@@ -195,7 +115,7 @@
     @include inter();
     position: relative;
     top: 1px;
-    font-size: 13px;
+    font-size: 14px;
     color: $border;
   }
 
@@ -1074,7 +994,7 @@
     @include grayButtons();
     padding: 5px;
     // color: $dna-a;
-    opacity: 0.6;
+    // opacity: 0.6;
     border: 1px solid $dna-a;
   }
 
@@ -1083,6 +1003,549 @@
     position: relative;
     top: 0px;
     left: 1px;
+  }
+
+  &__sy-chart {
+    @include display();
+    position: relative;
+    // @include grayButtons();
+    // background-color: red;
+    padding: 10px 0px 60px 0px;
+    // display: block;
+    height: auto;
+    max-height: fit-content;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    width: 100%;
+    // background-color: red;
+    flex-grow: 1;
+    border-bottom: 1px solid $text-lightS;
+  }
+
+  &__sy-title {
+    @include inter();
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+
+  &__sy-bar {
+    @include display();
+    height: 6px;
+    width: 100%;
+    background-color: $bg-dark-blue;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0.8;
+  }
+
+  &__sy-line {
+    height: 100%;
+  }
+
+  &__sy-line:nth-child(1) {
+    @include charOrder(35%, 35);
+    background-color: $dna-g;
+  }
+  &__sy-line:nth-child(2) {
+    @include charOrder(14%, 14);
+    width: 14%;
+    background-color: $dna-a;
+  }
+  &__sy-line:nth-child(3) {
+    @include charOrder(52%, 52);
+    width: 52%;
+    background-color: $dna-c;
+  }
+
+  &__sy-stat {
+    @include display();
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: start;
+  }
+
+  &__sy-statxt {
+    @include inter();
+    @include display();
+    gap: 4px;
+    color: $secondary-color;
+    font-size: 12px;
+    // padding: 0px 15px;
+    // border-right: 1px solid $border;
+    margin-bottom: 6px;
+    margin-right: 8px;
+    word-break: break-all;
+  }
+
+  &__sy-mang {
+    @include inter();
+    @include hoverLink();
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    color: $link;
+  }
+
+  &__sy-stattsp {
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 50px;
+  }
+
+  &__sy-stattsp-data {
+    background-color: $dna-g;
+  }
+
+  &__sy-stattsp-fasta {
+    background-color: $dna-a;
+  }
+
+  &__sy-stattsp-cashe {
+    background-color: $dna-c;
+  }
+
+  &__sy-data {
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  &__sy-progs {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    padding: 25px 0px;
+    // margin-top: 15px;
+    gap: 10px;
+    // display: none;
+  }
+
+  &__sy-progstit {
+    @include inter();
+    @include display();
+    font-size: 14px;
+    color: $secondary-color;
+    position: relative;
+    & span {
+      display: inline-block;
+    }
+    width: 100%;
+    justify-content: start;
+  }
+
+  &__sy-progsbod {
+    @include display();
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    // background-color: $bg-dark-blue;
+    width: 100%;
+    // border-radius: 8px;
+    // overflow: hidden;
+    // display: none;
+  }
+
+  &__sy-progsbopl {
+    position: relative;
+    width: 24px;
+    // top: 3px;
+    left: 7px;
+    color: $buttons-bg;
+    @include grayButtons();
+    padding: 4px;
+  }
+
+  &__sy-progs-in {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    // background-color: $black;
+    width: 100%;
+    padding: 10px 0px 15px 0px;
+    gap: 8px;
+    // display: none;
+    // border-bottom: 1px solid $text-lightS
+  }
+
+  &__sy-progs-intop {
+    @include display();
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  &__sy-progs-intit {
+    @include inter();
+    font-size: 12px;
+    color: $text-color;
+    flex-grow: 1;
+    // background-color: blue;
+    word-break: break-all;
+    overflow: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  &__sy-progs-inbar {
+    @include display();
+    justify-content: start;
+    height: 3px;
+    width: 100%;
+    background-color: $border;
+    margin-top: 4px;
+    opacity: 0.8;
+  }
+
+  &__sy-progs-inbline {
+    height: 100%;
+    width: 39%;
+    background-color: $dna-a;
+  }
+
+  &__sy-progs-inbot {
+    @include display();
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  &__sy-progs-incurr {
+    @include inter();
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    color: $secondary-color;
+    opacity: 0.8;
+  }
+
+  &__sy-progs-inper {
+    @include inter();
+    font-size: 12px;
+    color: $dna-a;
+
+    &:hover + .dash-main__sy-progs-inact {
+      display: flex;
+    }
+  }
+
+  &__sy-progs-inbpaus{
+    width: 15px;
+    color: $secondary-color;
+    opacity: 0.6;
+  }
+
+  &__sy-progs-inact {
+    @include display();
+    flex-direction: column;
+    // width: 70px;
+    padding: 5px;
+    background-color: $dash-side;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 3;
+    right: 0px;
+    bottom: -70px;
+    gap: 3px;
+    border-radius: 8px;
+    // display: none;
+  }
+
+
+  
+
+  &__sy-progs-inbuttons{
+    @include display();
+    // @include grayButtons();
+    width: 100%;
+    padding: 5px;
+    background-color: transparent !important;
+    border-radius: 8px;
+    border: none;
+    gap: 5px;
+    color: $text-color;
+    border: 1px solid $text-lightS;
+  }
+
+  &__sy-progs-intie {
+    @include inter();
+    font-size: 12px;
+    color: $secondary-color;
+    opacity: 0.8;
+  }
+
+  &__sy-progs-done {
+    @include display();
+    width: 100%;
+    justify-content: space-between;
+    background-color: $black;
+    padding: 10px;
+    // border-radius: 8px;
+    border: 1px solid $text-lightS;
+  }
+
+  &__sy-progs-wait {
+    @include display();
+    width: 100%;
+    justify-content: space-between;
+    background-color: $black;
+    padding: 10px;
+    // border-radius: 8px;
+    border: 1px solid $text-lightS;
+  }
+
+  &__sy-progs-dntxt {
+    @include inter();
+    font-size: 13px;
+    color: $text-color;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  &__sy-progs-wtst {
+    @include inter();
+    font-size: 12px;
+    color: $border;
+  }
+
+  &__sy-progs-dnst {
+    @include inter();
+    font-size: 12px;
+    color: $dna-c;
+  }
+
+  &__sy-progs {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 15px;
+    width: 100%;
+  }
+
+  &__sy-progstit {
+    @include inter();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    // text-transform: uppercase;
+    // letter-spacing: 1px;
+    color: $text-color;
+    margin-bottom: 10px;
+    opacity: 0.8;
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__sy-progsbod {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 15px; // Chapdagi chiziq uchun joy
+
+    // Markaziy bog'lovchi chiziq
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      background: linear-gradient(to bottom, $dna-a 0%, $border 100%);
+      opacity: 0.3;
+    }
+  }
+
+  &__sy-progs-in {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+    // background-color: red;
+    // Active nuqta
+    &::before {
+      content: "";
+      position: absolute;
+      left: -18px; // Chiziq ustiga tushishi uchun
+      top: 4px;
+      width: 7px;
+      height: 7px;
+      background: $dna-a;
+      border-radius: 50%;
+      box-shadow: 0 0 10px $dna-a;
+    }
+  }
+
+  &__sy-progs-intop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__sy-progs-intit {
+    @include inter();
+    font-size: 12px;
+    font-weight: 600;
+    color: $text-color;
+    letter-spacing: 0.5px;
+  }
+
+  &__sy-progs-inbar {
+    height: 4px;
+    width: 100%;
+    background: rgba($border, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 5px 0;
+  }
+
+  &__sy-progs-inbline {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, $dna-a, lighten($dna-a, 15%));
+    box-shadow: 0 0 8px rgba($dna-a, 0.4);
+    // Bu yerda width HTML dagi inline style dan keladi
+  }
+
+  &__sy-progs-inbot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+
+    .dash-main__sy-progs-incurr {
+      font-size: 11px;
+      color: $secondary-color;
+      opacity: 0.6;
+    }
+
+    .dash-main__sy-progs-intie {
+      font-size: 11px;
+      font-family: monospace;
+      color: $dna-a;
+    }
+  }
+
+  // Done va Wait bloklari uchun umumiy stil
+  &__sy-progs-done,
+  &__sy-progs-wait {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background: transparent; // Orqa fonni olib tashladik
+    border: none;
+    border-bottom: 1px solid rgba($border, 0.1);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -17px;
+      top: 15px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $border;
+    }
+  }
+
+  &__sy-progs-done {
+    &::before {
+      background: $dna-c;
+    } // Done bo'lganda rang o'zgaradi
+    .dash-main__sy-progs-dnst {
+      color: $dna-c;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__sy-progs-wait {
+    opacity: 0.5; // Kutish rejimini xiraroq qilamiz
+    .dash-main__sy-progs-wtst {
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__sy-progs-dntxt {
+    @include inter();
+    font-size: 12px;
+    color: $text-color;
+    opacity: 0.8;
+  }
+
+  // Log xabarlari uchun yangi stil
+  &__sy-progs-log {
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      @include inter(); // Yoki monospace bo'lsa yanada yaxshi
+      font-size: 11px;
+      color: $secondary-color;
+      opacity: 0.6;
+      letter-spacing: 0.3px;
+
+      .log-ok {
+        color: $dna-c;
+        font-weight: bold;
+        margin-right: 5px;
+      } // Done rangi
+      .log-run {
+        color: $dna-a;
+        font-weight: bold;
+        margin-right: 5px;
+      } // Active rangi
+      .log-user {
+        color: #8e44ad;
+        font-weight: bold;
+        margin-right: 5px;
+      } // Foydalanuvchi binafsha
+    }
+  }
+
+  // Asosiy progressga "Pulse" effektini beramiz (tirikligini bildirish uchun)
+  &__sy-progs-in.active-monitor {
+    background: rgba($dna-a, 0.02);
+    border-left: 2px solid $dna-a;
+    padding-left: 10px;
+    margin: 10px 0;
+
+    .dash-main__sy-progs-inbline {
+      box-shadow: 0 0 10px rgba($dna-a, 0.5);
+      animation: progress-glow 2s infinite alternate;
+    }
+  }
+
+  @keyframes progress-glow {
+    from {
+      opacity: 0.6;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 
