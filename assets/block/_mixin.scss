@@ -82,6 +82,11 @@
   }
 }
 
+@mixin charOrder($per, $ord){
+  width: $per;
+  order: -$ord;
+}
+
 @mixin grayButtons() {
   @include inter();
   @include display();

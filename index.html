@@ -208,7 +208,7 @@
       </nav>
     </header>
     <main class="main">
-      <aside class="dash-side none">
+      <aside class="dash-side">
         <div class="dash-side__repo-top">
           <span>
             <svg
@@ -375,7 +375,7 @@
           </div>
         </div>
       </section>
-      <section class="main-part">
+      <section class="main-part none">
         <article class="main-part__scb">
           <div class="main-part__scr">
             <span class="main-part__scrs"
@@ -1551,25 +1551,129 @@
             </div>
           </div>
           <div class="dash-main__sy-left">
-            <div class="dash-main__storage-hierarchy">
-              <h2 class="dash-main__syltit">System hierarchy</h2>
-              <div class="dash-main__sylbar">
-                <div class="dash-main__sylbline dash-main__sylbline-f"></div>
-                <div class="dash-main__sylbline dash-main__sylbline-c"></div>
-                <div class="dash-main__sylbline dash-main__sylbline-m"></div>
+            <div class="dash-main__sy-chart">
+              <h2 class="dash-main__sy-title">Storage Hierarchy</h2>
+              <div class="dash-main__sy-bar">
+                <span class="dash-main__sy-line"></span>
+                <span class="dash-main__sy-line"></span>
+                <span class="dash-main__sy-line"></span>
               </div>
-              <!-- <div class="hierarchy-legend">
-                <div class="legend-item">
-                  <span class="dot fasta"></span> FASTA
+              <div class="dash-main__sy-stat">
+                <p class="dash-main__sy-statxt">
+                  <span
+                    class="dash-main__sy-stattsp dash-main__sy-stattsp-data"
+                  ></span
+                  >Genomic Data <span class="dash-main__sy-data">34MB</span>
+                </p>
+                <p class="dash-main__sy-statxt">
+                  <span
+                    class="dash-main__sy-stattsp dash-main__sy-stattsp-fasta"
+                  ></span
+                  >FASTA files <span class="dash-main__sy-data">17MB</span>
+                </p>
+                <p class="dash-main__sy-statxt">
+                  <span
+                    class="dash-main__sy-stattsp dash-main__sy-stattsp-cashe"
+                  ></span
+                  >Cashe <span class="dash-main__sy-data">67MB</span>
+                </p>
+              </div>
+
+              <p class="dash-main__sy-mang">
+                manage storage
+                <span
+                  ><svg
+                    class="dash-main__cbotvi-i"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M1.99974 13.0001L1.9996 11.0002L18.1715 11.0002L14.2218 7.05044L15.636 5.63623L22 12.0002L15.636 18.3642L14.2218 16.9499L18.1716 13.0002L1.99974 13.0001Z"
+                    ></path>
+                  </svg>
+                </span>
+              </p>
+            </div>
+            <div class="dash-main__sy-progs">
+              <h2 class="dash-main__sy-progstit">
+                Recent Progress
+                <span>
+                  <svg
+                    class="dash-main__sy-progsbopl grayButtons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M19.376 12.4161L8.77735 19.4818C8.54759 19.635 8.23715 19.5729 8.08397 19.3432C8.02922 19.261 8 19.1645 8 19.0658V4.93433C8 4.65818 8.22386 4.43433 8.5 4.43433C8.59871 4.43433 8.69522 4.46355 8.77735 4.5183L19.376 11.584C19.6057 11.7372 19.6678 12.0477 19.5146 12.2774C19.478 12.3323 19.4309 12.3795 19.376 12.4161Z"
+                    ></path>
+                  </svg>
+                </span>
+              </h2>
+              <div class="dash-main__sy-progsbod">
+                <div class="dash-main__sy-progs-log">
+                  <p>
+                    <span class="log-ok">[OK]</span> Database handshake
+                    established
+                  </p>
+                  <p>
+                    <span class="log-run">[RUN]</span> Scanning internal
+                    cache...
+                  </p>
                 </div>
-                <div class="legend-item">
-                  <span class="dot cache"></span> Cache
+                <div class="dash-main__sy-progs-in active-monitor">
+                  <div class="dash-main__sy-progs-intop">
+                    <p class="dash-main__sy-progs-intit">GENOME_MAPPING_V2</p>
+                    <p class="dash-main__sy-progs-inper">84.2%</p>
+                    <!-- <div class="dash-main__sy-progs-inact">
+                      <button class="dash-main__sy-progs-inbuttons grayButtons">
+                        Pause
+                        <span
+                          ><svg
+                            class="dash-main__sy-progs-inbpaus"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M6 5H8V19H6V5ZM16 5H18V19H16V5Z"
+                            ></path></svg>
+                        </span>
+                      </button>
+                      <button class="dash-main__sy-progs-inbuttons grayButtons">
+                        Delete
+                        <span
+                          ><svg class="dash-main__sy-progs-inbpaus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path></svg>
+                        </span>
+                      </button>
+                    </div> -->
+                  </div>
+                  <div class="dash-main__sy-progs-inbar">
+                    <span class="dash-main__sy-progs-inbline"></span>
+                  </div>
+                  <div class="dash-main__sy-progs-inbot">
+                    <p class="dash-main__sy-progs-incurr">
+                      Processing Chromosome 22...
+                    </p>
+                    <p class="dash-main__sy-progs-intie">03:04s</p>
+                  </div>
                 </div>
-                <div class="legend-item">
-                  <span class="dot metadata"></span> Meta
+                <div class="dash-main__sy-progs-log">
+                  <p>
+                    <span class="log-user">[USER]</span> Requesting access to
+                    AtgcHub_db
+                  </p>
                 </div>
-                some
-              </div> -->
+                <div class="dash-main__sy-progs-done">
+                  <p class="dash-main__sy-progs-dntxt">DATA_INDEXING</p>
+                  <p class="dash-main__sy-progs-dnst">[DONE]</p>
+                </div>
+                <div class="dash-main__sy-progs-done dash-main__sy-progs-wait">
+                  <p class="dash-main__sy-progs-dntxt">SEQUENCE FOLDING</p>
+                  <p class="dash-main__sy-progs-wtst">[WAIT]</p>
+                </div>
+              </div>
             </div>
           </div>
         </aside>
