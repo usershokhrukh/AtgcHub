@@ -522,7 +522,8 @@ p [role=button] {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  flex-grow: 4;
+  width: 75%;
+  flex-grow: 1;
 }
 .main-part__chart-results {
   display: flex;
@@ -533,6 +534,18 @@ p [role=button] {
   justify-content: start;
   gap: 10px;
   flex-grow: 1;
+}
+.main-part__apart-kt-mwi {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 2px;
+  opacity: 0.8;
+  color: white;
+  border-radius: 8px;
 }
 .main-part__wrap-form {
   display: grid;
@@ -889,9 +902,12 @@ p [role=button] {
 }
 .main-part__kpis {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 5px;
+  justify-content: start;
+  padding: 10px !important;
+  gap: 10px;
 }
 .main-part__apart-kt {
   display: flex;
@@ -903,6 +919,7 @@ p [role=button] {
   width: 100%;
   color: white;
   font-size: 11px;
+  text-align: center;
 }
 .main-part__apart {
   display: flex;
@@ -914,13 +931,12 @@ p [role=button] {
   font-family: "Inter";
   position: relative;
   justify-content: start;
+  align-items: start;
   padding: 10px 15px;
   border: 1px solid rgba(75, 87, 103, 0.3725490196);
   box-shadow: 0px 0px 10px 0px rgba(56, 55, 55, 0.259);
   font-weight: 500;
   word-break: break-all;
-  max-width: 500px;
-  width: 100%;
   background: rgba(255, 255, 255, 0.03); /* Shaffof fon */
   backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
 }
@@ -1018,10 +1034,45 @@ p [role=button] {
   background-color: #2196f3;
 }
 .main-part__apart-n {
+  display: inline-block;
   font-family: "Space Grotesk";
   color: #ffffff;
   font-size: 26px;
   font-weight: bold;
+  width: 100%;
+}
+.main-part__apart-n span {
+  display: inline-block;
+}
+.main-part__apart-n {
+  max-height: 100px;
+  overflow: auto;
+  /* Scrollbar asosi (yo'lakcha) */
+}
+.main-part__apart-n::-webkit-scrollbar {
+  width: 6px; /* Juda ixsham kenglik */
+  height: 6px; /* Gorizontal scroll uchun */
+}
+.main-part__apart-n {
+  /* Scrollbarning harakatlanuvchi qismi (thumb) */
+}
+.main-part__apart-n::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1); /* Yarim shaffof oq */
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-part__apart-n {
+  /* Ustiga borganda biroz yorqinlashadi */
+}
+.main-part__apart-n::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 184, 148, 0.5); /* Sening yashil rangiga yaqinroq tus */
+}
+.main-part__apart-n {
+  /* Scrollbar orqasidagi yo'l */
+}
+.main-part__apart-n::-webkit-scrollbar-track {
+  background: transparent; /* Orqa fon bilan uyg'unlashib ketadi */
 }
 .main-part__chart-nucs-a {
   color: #4caf50;
@@ -1344,24 +1395,6 @@ p [role=button] {
     font-size: 18px;
     height: 160px;
   }
-  .main-part__apart {
-    font-size: 8px;
-    padding: 5px;
-  }
-  .main-part__kpis {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-  }
-  .main-part__apart {
-    padding: 10px 25px;
-    max-width: none;
-    align-items: start;
-  }
-  .main-part__apart-kt {
-    flex-direction: column;
-    justify-content: start;
-    flex-wrap: wrap;
-  }
   .main-part__wrap-form {
     grid-template-columns: auto auto auto auto !important;
     grid-template-rows: auto auto auto auto auto !important;
@@ -1374,12 +1407,18 @@ p [role=button] {
     width: 100%;
     max-width: none;
   }
-  .main-part__apart-n {
-    font-size: 19px;
-    overflow: auto;
+  .main-part__kpis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .main-part__apart-kt {
-    font-size: 10px;
+  .main-part__apart {
+    padding: 10px 24px;
+    flex-grow: 1;
+    width: 25%;
+  }
+  .main-part__apart-n {
+    font-size: 17px;
   }
   .main-part__chart-title {
     font-size: 10px;
@@ -1507,35 +1546,16 @@ p [role=button] {
     max-width: none !important;
   }
   .main-part__kpis {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .main-part__apart {
-    font-size: 8px;
-    padding: 10px 14px;
-    max-width: none;
-    width: auto;
+    flex-grow: 1;
+    width: 25%;
   }
-  .main-part__apart:nth-child(1) {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
-  .main-part__apart:nth-child(2) {
-    grid-row: 1/2;
-    grid-column: 2/3;
-  }
-  .main-part__apart:nth-child(3) {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-  .main-part__apart:nth-child(4) {
-    grid-row: 2/3;
-    grid-column: 2/3;
-  }
-  .main-part__apart-kt {
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
+  .main-part__apart-n {
+    font-size: 15px;
   }
   .main-part__wrap-form {
     grid-template-columns: auto !important;
@@ -1547,13 +1567,6 @@ p [role=button] {
     grid-column: 1/2;
     grid-row: 3/4;
     height: 160px;
-  }
-  .main-part__apart-n {
-    font-size: 18px;
-    overflow: auto;
-  }
-  .main-part__apart-kt {
-    font-size: 10px;
   }
   .main-part__chart-title {
     font-size: 10px;
