@@ -660,6 +660,10 @@
     border: 1px solid #6d28d9;
   }
 
+  &__scomp{
+    @include grayButtons();
+  }
+
   &__sci {
     position: relative;
     top: 2px;
@@ -746,7 +750,11 @@
     justify-content: start;
     align-items: start;
     gap: 12px;
-    max-width: 1132px;
+    // max-width: 1132px;
+    flex-wrap: wrap;
+    @include display();
+    justify-content: start;
+    // background-color: red;
     // flex-wrap: wrap-reverse;
   }
 
@@ -754,7 +762,8 @@
     @include display();
     position: relative;
     max-width: 300px;
-  }
+    flex-grow: 1
+  } 
   &__ftri {
     @include standard-box-borders();
     border: 1px solid $text-lightS;
@@ -845,6 +854,7 @@
     flex-wrap: wrap;
     grid-row: 1/2;
     grid-column: 1/2;
+    justify-content: start;
   }
 }
 
