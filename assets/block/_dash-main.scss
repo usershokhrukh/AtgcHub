@@ -76,6 +76,7 @@
     gap: 10px;
     // width: 100%;
     // flex-grow: 1
+    max-width: 800px;
   }
   &__top {
     @include display();
@@ -1014,7 +1015,7 @@
     position: relative;
     top: 0px;
     left: 1px;
-    margin-right: 5px
+    margin-right: 5px;
   }
 
   &__sy-chart {
@@ -1871,7 +1872,7 @@
     color: $link;
   }
 
-  &__asosp{
+  &__asosp {
     @include display();
     gap: 4px;
     @include inter();
@@ -1883,10 +1884,10 @@
     margin-left: 5px;
   }
 
-  &__sy-progs-mobile{
+  &__sy-progs-mobile {
     padding: 20px;
     gap: 0px !important;
-    &::before{
+    &::before {
       display: none;
     }
     border: 1px solid $text-lightS;
@@ -1894,15 +1895,15 @@
     display: none;
   }
 
-  &__sy-progs-incurrmob{
+  &__sy-progs-incurrmob {
     font-size: 12px !important;
   }
 
-  &__sy-progs-initemob{
+  &__sy-progs-initemob {
     font-size: 13px !important;
   }
 
-  &__sy-progs-vap{
+  &__sy-progs-vap {
     @include inter();
     @include display();
     @include hoverLink();
@@ -1911,12 +1912,222 @@
     width: 100%;
     justify-content: end;
     gap: 4px;
-    & svg{
+    & svg {
       width: 13px;
       position: relative;
       top: 1px;
     }
     color: $link !important;
+  }
+
+  &__feed {
+    @include display();
+    flex-direction: column;
+    // background-color: red;
+    width: 100%;
+    gap: 16px;
+    justify-content: space-between;
+
+    max-height: 800px; // Dashboardni itarib yubormaslik uchun cheklov
+    overflow-y: auto; // Ichki scroll
+    // padding-right: 5px; // Scrollbar uchun joy
+    padding: 10px 10px 10px 0px;
+    // Scrollbarni chiroyli qilish
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $text-lightS;
+      border-radius: 10px;
+    }
+    &-tms {
+      @include buttonShadow();
+      @include display();
+      flex-direction: column;
+      // background-color: blue;
+      align-items: start;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid $text-lightS;
+      background-color: $dash-side;
+      gap: 20px;
+      width: 100%;
+      word-break: break-all;
+    }
+
+    &-ttop {
+      @include display();
+      align-items: start;
+      gap: 10px;
+      flex-wrap: wrap;
+      // text-wrap: nowrap
+    }
+
+    &-ttopl {
+      @include display();
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-ttoplimg {
+      @include buttonShadow();
+      // width: 40px;
+      border-radius: 50%;
+      border: 1px solid $text-lightS;
+    }
+
+    &-ttopr {
+      @include display();
+      align-items: start;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    &-ttoprtp {
+      @include display();
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    &-ttoprtit {
+      @include inter();
+      @include hoverLink();
+      font-size: 16px;
+      color: $text-color;
+      opacity: 0.8;
+    }
+
+    &-ttoprst {
+      @include inter();
+      font-size: 13px;
+      color: $secondary-color;
+      opacity: 0.7;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+    }
+
+    &-ttoprdy {
+      @include inter();
+      font-size: 13px;
+      color: $secondary-color;
+      opacity: 0.7;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+    }
+
+    &-tbot {
+      @include display();
+      align-items: start;
+      padding: 10px 20px;
+      background-color: $feed-items;
+      gap: 10px;
+      width: 100%;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
+
+    &-tbotltit {
+      @include inter();
+      font-size: 15px;
+      color: $text-color;
+      opacity: 0.8;
+      @include hoverLink();
+    }
+
+    &-tbotlforktit {
+      @include hoverLink();
+    }
+
+    &-tbotl {
+      @include display();
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    &-tbotlab {
+      @include inter();
+      font-size: 13px;
+      color: $text-color;
+      opacity: 0.8;
+    }
+
+    &-tbotlabst {
+      @include display();
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+
+    &-tbotlastxt {
+      @include inter();
+      font-size: 13px;
+      color: $secondary-color;
+      opacity: 0.6;
+    }
+
+    &-tbotrbtn {
+      @include display();
+      border: 1px solid $text-lightS;
+      border-radius: 4px;
+      padding: 6px 13px;
+      background-color: transparent;
+      color: $text-color;
+      @include hoverCursor();
+      font-size: 11px;
+      font-weight: 300;
+      gap: 5px;
+
+      // &:hover &-i-star{
+      //   display: none
+      //   // background-color: $dna-g;
+      // }
+
+      // &:hover &-i-starred{
+      //   display: block;
+      // }
+    }
+
+    &-tbotrbtn-i-star {
+      width: 15px;
+      color: $text-color;
+      opacity: 0.7;
+      height: 18px;
+    }
+
+    &-tbotrbtn-i-starred {
+      width: 15px;
+      color: $dna-g;
+      opacity: 1;
+      display: none;
+      height: 19px;
+      // background-color: red;
+    }
+
+    &-not-starred {
+      .dash-main__feed-tbotrbtn-i-star {
+        display: flex;
+      }
+
+      .dash-main__feed-tbotrbtn-i-starred {
+        display: none;
+      }
+    }
+
+    &-starred {
+      .dash-main__feed-tbotrbtn-i-star {
+        display: none;
+      }
+
+      .dash-main__feed-tbotrbtn-i-starred {
+        display: flex;
+      }
+    }
+
+    &-mobile {
+      display: none;
+    }
   }
 }
 
@@ -1931,7 +2142,7 @@
       padding: 0px;
     }
 
-    &__sy-progs-mobile{
+    &__sy-progs-mobile {
       display: flex;
     }
 
@@ -1959,6 +2170,13 @@
     &__asosp {
       display: flex;
     }
+    &__feed {
+      display: none;
+    }
+
+    &__feed-mobile {
+      display: flex;
+    }
   }
 }
 
@@ -1966,6 +2184,10 @@
   .dash-main {
     &__tcar {
       display: flex;
+    }
+
+    &__feed-ttopr {
+      align-items: center;
     }
     &__tcarbtx {
       font-size: 12px;

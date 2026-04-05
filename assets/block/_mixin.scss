@@ -17,9 +17,17 @@
 }
 
 @mixin hoverLink() {
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: $link;
+    }
+  }
   &:active {
     text-decoration: underline;
-    cursor: pointer;
+    cursor:pointer;
+    color: $link;
   }
 }
 @mixin hoverCursor() {
@@ -82,7 +90,7 @@
   }
 }
 
-@mixin charOrder($per, $ord){
+@mixin charOrder($per, $ord) {
   width: $per;
   order: -$ord;
 }
@@ -124,15 +132,14 @@
   color: $text-color;
 }
 
-
-@mixin maxOverflow($px){
+@mixin maxOverflow($px) {
   // width: 100%;
   width: $px;
   max-width: $px !important;
   overflow: auto;
   overflow-y: hidden;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 }
