@@ -109,7 +109,7 @@
     @include inter();
     font-size: 13px;
     color: $secondary-color;
-    padding: 10px 5px 0px 5px;
+    padding: 10px 10px 0px 10px;
     // background-color: red
   }
 
@@ -234,10 +234,13 @@
   &__right-meta-given {
     @include inter();
     color: $text-color;
-    opacity: 0.5;
+    opacity: 0.3;
     font-size: 13px;
     padding: 3px 5px;
-    // background-color: red
+    // background-color: red;
+    background-color: $border;
+    margin-left: 10px;
+    border-radius: 3px
   }
 
   &__right-meta-txt {
@@ -246,7 +249,7 @@
     gap: 8px;
     color: white;
     border-top: 1px solid $text-light;
-    padding: 3px 5px;
+    padding: 3px 10px;
     width: 100%;
     justify-content: start;
     gap: 3%;
@@ -290,6 +293,7 @@
   }
 
   &__terminal {
+    @include jet();
     flex-grow: 1;
     width: 100%;
     // max-height: 305px;
@@ -302,7 +306,7 @@
     color: #c9d1d9;
     transition: all 0.3s ease-in-out;
     max-height: 700px;
-    font-family: "JetBrains Mono", monospace;
+    // font-family: "JetBrains Mono", monospace;
     /* Scrollbar dizayni */
     &::-webkit-scrollbar {
       width: 8px;
