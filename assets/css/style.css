@@ -262,7 +262,7 @@ p [role=button] {
   border-top-right-radius: 7px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1125px) {
   .dashboard__nav {
     justify-content: end;
     align-items: end;
@@ -271,9 +271,6 @@ p [role=button] {
     flex-grow: 1;
     justify-content: start;
     gap: 10px;
-  }
-  .dashboard__header-input {
-    display: none;
   }
   .dashboard__sctt {
     display: none !important;
@@ -284,62 +281,8 @@ p [role=button] {
   .dashboard__sci {
     width: 13px;
   }
-  .dashboard__pr {
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(243, 244, 246, 0.5725490196);
-    opacity: 0.5;
-    cursor: pointer;
-    opacity: 0.8;
-    padding: 0px 3px 0px 6px;
-    padding: 0;
-    gap: 0px;
-  }
   .dashboard__prarr {
     display: block;
-  }
-  .dashboard__prav {
-    width: 30px;
-    padding: 0px 3px 0px 6px;
-    height: 100%;
-    border-radius: 0px;
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
-  }
-  .dashboard__search {
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(243, 244, 246, 0.5725490196);
-    opacity: 0.5;
-  }
-  .dashboard__search:active {
-    background-color: rgba(207, 207, 210, 0.243) !important;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-  .dashboard__search {
-    cursor: pointer;
-    padding: 5px 5px 5px 6px;
-    color: white;
-  }
-  .dashboard__search-o {
-    position: static;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(243, 244, 246, 0.5725490196);
-    opacity: 0.5;
-  }
-  .dashboard__search-o:active {
-    background-color: rgba(207, 207, 210, 0.243) !important;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-  .dashboard__search-o {
-    cursor: pointer;
-    padding: 7px;
-    color: white;
-    opacity: 0.8;
   }
   .dashboard__navbar-options {
     gap: 10px;
@@ -378,6 +321,29 @@ p [role=button] {
     max-width: 280px;
     right: 10px;
     box-shadow: 0px 0px 10px 0px rgb(13, 12, 12);
+  }
+}
+@media (max-width: 500px) {
+  .dashboard__header-input {
+    display: none;
+  }
+  .dashboard__search-o {
+    position: static;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(243, 244, 246, 0.5725490196);
+    opacity: 0.5;
+  }
+  .dashboard__search-o:active {
+    background-color: rgba(207, 207, 210, 0.243) !important;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  .dashboard__search-o {
+    cursor: pointer;
+    padding: 7px;
+    color: white;
+    opacity: 0.8;
   }
 }
 @media (max-width: 320px) {
