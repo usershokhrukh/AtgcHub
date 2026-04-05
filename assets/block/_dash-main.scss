@@ -4,28 +4,23 @@
   width: auto;
   justify-content: center;
   align-items: start;
-  // flex-direction: column;
   gap: 20px;
   margin-left: auto;
   margin-right: calc(((100% - 1100px) / 2) + 14px);
   min-width: fit-content;
   max-width: 1100px;
-  // background-color: red;
   width: 100%;
 
   &__sylbar {
     @include display();
     width: 100%;
     height: 5px;
-    // background-color: red;
     border-radius: 8px;
-    // overflow: hidden;
   }
 
   &__sylbline {
     height: 100%;
     flex-grow: 1;
-    // background-color: $dna-a;
     height: 5px;
     border-radius: 8px;
   }
@@ -74,8 +69,6 @@
     justify-content: start;
     align-items: center;
     gap: 10px;
-    // width: 100%;
-    // flex-grow: 1
     max-width: 800px;
   }
   &__top {
@@ -86,25 +79,19 @@
     flex-wrap: wrap;
     max-width: 1000px;
     flex-direction: column;
-    // flex-grow: 1;
   }
 
   &__syltit {
     @include inter();
     font-size: 13px;
-    // color: red
   }
 
   &__sy-left {
     @include display();
     flex-direction: column;
     gap: 20px;
-    // background-color: red;
-    // min-width: 200px;
     width: 100%;
     max-width: 280px;
-    // flex-grow: 1
-    // display: none;
   }
 
   &__toitl {
@@ -112,7 +99,6 @@
     font-size: 19px;
     color: $secondary-color;
     font-weight: 800;
-    // background-color: red
   }
 
   &__tlast {
@@ -124,16 +110,13 @@
   }
 
   &__tcar {
-    // @include display();
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     width: 100%;
     gap: 10px;
     flex-wrap: wrap;
-    // align-items: start;
     max-width: 1000px;
-    // background-color: red;
     margin-bottom: 10px;
   }
 
@@ -148,14 +131,11 @@
   &__carbasq {
     @include inter();
     font-size: 12px;
-    // background-color: $black;
     padding: 3px;
     border-radius: 8px;
     color: $dna-a;
     font-weight: 400;
     text-shadow: 0px 0px 10px $dna-a;
-    // border: 1px solid $dna-a;
-    // background-color: red;
   }
 
   &__casqsp {
@@ -167,14 +147,12 @@
     @include inter();
     font-size: 13px;
     color: $secondary-color;
-    // background-color: red
   }
 
   &__tcarb {
     @include display();
     position: relative;
     flex-direction: column;
-    // background-color: red;
     align-items: start;
     gap: 5px;
     border-radius: 8px;
@@ -182,10 +160,8 @@
     background-color: $dash-side;
     padding: 20px;
     flex-grow: 1;
-    // min-width: 280px;
     height: 100%;
     justify-content: start;
-    // max-height: 100px;
   }
 
   &__tcarb:nth-child(1) {
@@ -210,7 +186,6 @@
     @include inter();
     font-size: 12px;
     color: $light-border;
-    // background-color: red
   }
 
   &__tcarbtx {
@@ -220,12 +195,10 @@
     font-weight: 500;
     margin-bottom: 14px;
     width: 100%;
-    // background-color: red
   }
 
   &__carbrs {
     @include display();
-    // background-color: red;
     width: 100%;
     justify-content: start;
     gap: 10px;
@@ -237,7 +210,6 @@
     font-size: 13px;
     color: $text-color;
     font-weight: 500;
-    // background-color: red
   }
 
   &__crslbo {
@@ -281,26 +253,21 @@
 
   &__cbottx {
     @include inter();
-    // @include display();
     align-items: start;
     font-size: 12px;
     color: $light-border;
-    // background-color: red;
     max-width: 200px;
     vertical-align: top;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     gap: 4px;
-    // text-wrap: nowrap;
   }
 
   &__cbottx-br {
-    // display: inline-block;
     max-width: 100px;
     text-wrap: nowrap;
     overflow: auto;
-    // padding: 1px 0px;
 
     /* Umumiy scrollbar uslubi (Chrome, Edge, Safari) */
     &::-webkit-scrollbar {
@@ -343,20 +310,17 @@
     font-size: 12px;
     color: $dna-t;
     font-weight: 500;
-    // background-color: red
   }
 
   &__centwr {
     @include display();
     justify-content: end;
     align-items: start;
-    // background-color: red;
     width: 100%;
     margin-top: 10px;
     max-width: 1000px;
     gap: 20px;
     flex-wrap: wrap-reverse;
-    // height: 100%;
   }
 
   &__current {
@@ -383,26 +347,10 @@
     justify-content: end;
     width: auto;
     flex-grow: 1;
-    // background-color: red
   }
 
   &__curtxtsp {
-    // @include display();
-    // // @include buttonShadow();
-    // justify-content: end;
-    // position: relative;
-    // opacity: 1;
-    // top: 2px;
-    // color: $text-color;
-    // padding: 7px 30px 7px 7px;
-    // border-radius: 8px;
-    // font-size: 14px;
-    // // flex-grow: 1;
-    // max-width: 100%;
-    // // text-align: end;
-
     @include display();
-    // @include buttonShadow();
     justify-content: end;
     position: relative;
     opacity: 1;
@@ -414,7 +362,6 @@
     flex-grow: 1;
     max-width: 100%;
     text-align: end;
-    // background-color: red;
   }
 
   &__curst {
@@ -445,11 +392,9 @@
     top: 3px;
     right: 0px;
     width: 25px;
-    // height: 100%;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     border-radius: 7px;
-    // border-left: 1px solid $text-lightS;
     &:active {
       background-color: $text-light;
     }
@@ -476,29 +421,13 @@
 
   &__actjump {
     @include greenButtons();
-    // background-color: #359638a8;
-    // border: 1px solid #42c05f75;
-    // color: $text-color;
-    // & svg {
-    //   color: $text-color;
-    //   opacity: 1;
-    // }
-
-    // &:active {
-    //   opacity: 1;
-    // }
-    // &:hover {
-    //   background-color: #359638a8;
-    // }
   }
 
   &__recent {
     @include display();
     flex-direction: column;
     align-items: start;
-    // background-color: red;
     padding: 20px;
-    // gap: 20px;
     border-radius: 8px;
     flex-grow: 1;
     width: 100%;
@@ -507,7 +436,6 @@
   }
 
   &__recbox {
-    // background-color: blue;
     width: 100%;
   }
 
@@ -516,23 +444,16 @@
     font-size: 13px;
     color: $secondary-color;
     margin-bottom: 20px;
-    // background-color: red;
   }
 
   &__recitems {
-    // @include display();
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     position: relative;
-    // gap: 10px;
-    // height: 100px;
-    // flex-direction: column;
     align-items: start;
-    // background-color: red;
     width: 100%;
     max-width: 300px;
-    // border-bottom: 1px solid red
   }
 
   &__reclineb {
@@ -544,24 +465,19 @@
     height: 100%;
     grid-row: 1/2;
     grid-column: 1/2;
-    //  background-color: red;
   }
 
   &__reccircle {
     position: relative;
-    // left: -3%;
     z-index: 2;
     width: 10px;
     color: $text-lightS;
   }
   &__recline {
     position: relative;
-    // top: -4px;
     width: 1px;
-    // left: -1px;
     flex-grow: 1;
     z-index: 1;
-    // min-height: 30px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: $text-lightS;
@@ -576,7 +492,6 @@
     font-size: 11px;
     color: $secondary-color;
     opacity: 0.7;
-    // background-color: red;
     flex-grow: 1;
   }
 
@@ -589,15 +504,12 @@
     font-weight: 300;
     opacity: 0.9;
     width: 100%;
-    // text-wrap: wrap
     word-break: break-all;
-    // background-color: red
   }
 
   &__rectime {
     @include inter();
     @include display();
-    // font-size: 14px;
     color: $secondary-color;
   }
 
@@ -608,9 +520,7 @@
     gap: 3px;
     grid-row: 1/2;
     grid-column: 2/3;
-    // background-color: red;
     margin-bottom: 25px;
-    // border-bottom: 1px solid $text-lightS;
     padding: 0px 0px 0px 10px;
   }
 
@@ -619,20 +529,17 @@
     flex-direction: column;
     align-items: start;
     gap: 10px;
-    // background-color: red;
     flex-grow: 1;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid $text-lightS;
     background-color: $dash-side;
     width: 100%;
-    // min-width: 250px;
   }
 
   &__healtht {
     @include display();
     justify-content: start;
-    // background-color: red;
     width: 100%;
     gap: 5px;
   }
@@ -654,14 +561,12 @@
     align-items: start;
     gap: 1px;
     width: 100%;
-    // background-color: red
   }
 
   &__healthtit {
     @include inter();
     font-size: 13px;
     color: $secondary-color;
-    // background-color: red
   }
 
   &__healthbtit {
@@ -669,12 +574,10 @@
     font-size: 12px;
     color: $secondary-color;
     opacity: 0.7;
-    // background-color: red
   }
 
   &__healthbar {
     @include display();
-    // background-color: red;
     width: 100%;
     justify-content: start;
     gap: 5px;
@@ -684,7 +587,6 @@
     @include inter();
     color: $secondary-color;
     font-size: 13px;
-    // background-color: red
   }
 
   &__hlineb {
@@ -713,17 +615,10 @@
   }
 
   &__table {
-    // @include display();
-    // flex-direction: column !important;
-    // align-items: start;
-    // background-color: red;
-    // justify-content: start;
     width: 100%;
     max-width: 1000px;
     border-collapse: collapse;
     border-radius: 8px;
-    // border: 1px solid $text-lightS;
-    // background-color: red
   }
 
   &__tDW {
@@ -735,7 +630,6 @@
     padding: 10px;
     align-items: start;
     flex-wrap: wrap;
-    // display: none;
   }
 
   &__tDW-h {
@@ -755,45 +649,30 @@
 
   &__tUS {
     @include inter();
-    // @include maxOverflow(80px);
     font-size: 13px;
     font-weight: 500;
     color: $text-color;
-    // background-color: red;
-    // flex-grow: 1;
-    // width: 50px;
     max-width: 100px;
     text-wrap: nowrap;
     overflow: auto;
     &::-webkit-scrollbar {
       display: none;
     }
-    // background-color: red
   }
 
   &__tTI {
     @include inter();
-    // @include maxOverflow(80px);
     font-size: 13px;
     color: $secondary-color;
-    // background-color: $bg-dark-blue;
-    // padding: 6px 8px;
-    // border-radius: 5px;
-    // border: 1px solid $text-lightS;
-    // opacity: 0.8;
     font-weight: 500;
-    // width: 150px;
-    // background-color: red;
     text-wrap: nowrap;
     width: 80px;
     flex-grow: 0.9 !important;
-    // width: 50%;
     overflow: auto;
     max-width: 500px;
     &::-webkit-scrollbar {
       display: none;
     }
-    // background-color: red;
   }
 
   &__tdSLsp {
@@ -803,7 +682,6 @@
 
   &__tRBO {
     @include display();
-    // gap: 10px;
     flex-wrap: wrap;
     justify-content: start;
   }
@@ -816,7 +694,6 @@
     opacity: 0.8;
     padding: 0px 5px 0px 5px;
     border-right: 1px solid $border;
-    // background-color: red
   }
 
   &__tSO {
@@ -844,7 +721,6 @@
     color: $secondary-color;
     opacity: 0.8;
     text-wrap: nowrap;
-    // background-color: red
   }
 
   &__tdRBtbo {
@@ -856,7 +732,6 @@
     @include inter();
     font-size: 13px;
     color: $text-color;
-    // background-color: red
   }
 
   &__tdRBbo {
@@ -898,7 +773,6 @@
     flex-grow: 1;
     justify-content: end;
     align-items: start;
-    // background-color: red
   }
 
   &__tD-recom {
@@ -922,10 +796,8 @@
     @include display();
     font-size: 14px;
     color: $text-color;
-    // font-style: italic;
     font-weight: 300;
     gap: 7px;
-    // background-color: red;
   }
 
   &__tdIStx {
@@ -944,18 +816,12 @@
 
   &__tdWtx {
     color: #d4af37;
-    // font-weight: 400;
-    // padding: 3px 8px;
-    // border: 1px solid $dna-g;
     border-radius: 8px;
-    // opacity: 0.4;
     font-size: 14px;
-    // background-color: $war-bg;
     font-style: normal;
   }
   &__carbds {
     font-size: 13px;
-    // background-color: red;
   }
 
   &__cbotvi {
@@ -984,7 +850,6 @@
     gap: 10px;
     flex-wrap: wrap;
     width: 100%;
-    // background-color: red;
   }
 
   &__tosytop {
@@ -997,12 +862,9 @@
     @include display();
     @include inter();
     font-size: 12px;
-    // color: $dna-a;
     font-weight: 500;
     @include grayButtons();
     padding: 8px 10px;
-    // color: $dna-a;
-    // opacity: 0.6;
     border: 1px solid $dna-a;
     text-wrap: nowrap;
     flex-wrap: wrap;
@@ -1021,17 +883,13 @@
   &__sy-chart {
     @include display();
     position: relative;
-    // @include grayButtons();
-    // background-color: red;
     padding: 10px 0px 60px 0px;
-    // display: block;
     height: auto;
     max-height: fit-content;
     flex-direction: column;
     align-items: start;
     gap: 10px;
     width: 100%;
-    // background-color: red;
     flex-grow: 1;
     border: 1px solid $text-lightS;
     background-color: $dash-side;
@@ -1089,8 +947,6 @@
     gap: 4px;
     color: $secondary-color;
     font-size: 12px;
-    // padding: 0px 15px;
-    // border-right: 1px solid $border;
     margin-bottom: 6px;
     margin-right: 8px;
     word-break: break-all;
@@ -1135,9 +991,7 @@
     flex-direction: column;
     align-items: start;
     padding: 25px 0px;
-    // margin-top: 15px;
     gap: 10px;
-    // display: none;
     border: 1px solid $text-lightS;
     background-color: $dash-side;
     padding: 15px !important;
@@ -1163,11 +1017,7 @@
     flex-direction: column;
     align-items: start;
     gap: 5px;
-    // background-color: $bg-dark-blue;
     width: 100%;
-    // border-radius: 8px;
-    // overflow: hidden;
-    // display: none;
   }
 
   &__sy-progsbopl {
@@ -1184,12 +1034,9 @@
     @include display();
     flex-direction: column;
     align-items: start;
-    // background-color: $black;
     width: 100%;
     padding: 10px 0px 15px 0px;
     gap: 8px;
-    // display: none;
-    // border-bottom: 1px solid $text-lightS
   }
 
   &__sy-progs-intop {
@@ -1280,12 +1127,10 @@
     bottom: -70px;
     gap: 3px;
     border-radius: 8px;
-    // display: none;
   }
 
   &__sy-progs-inbuttons {
     @include display();
-    // @include grayButtons();
     width: 100%;
     padding: 5px;
     background-color: transparent !important;
@@ -1309,7 +1154,6 @@
     justify-content: space-between;
     background-color: $black;
     padding: 10px;
-    // border-radius: 8px;
     border: 1px solid $text-lightS;
   }
 
@@ -1319,7 +1163,6 @@
     justify-content: space-between;
     background-color: $black;
     padding: 10px;
-    // border-radius: 8px;
     border: 1px solid $text-lightS;
   }
 
@@ -1357,8 +1200,6 @@
     align-items: center;
     justify-content: space-between;
     font-size: 13px;
-    // text-transform: uppercase;
-    // letter-spacing: 1px;
     color: $text-color;
     margin-bottom: 10px;
     opacity: 0.8;
@@ -1407,7 +1248,6 @@
       border-radius: 50%;
       box-shadow: 0 0 10px $dna-a;
     }
-    // display: none;
   }
 
   &__sy-progs-intop {
@@ -1450,7 +1290,6 @@
     .dash-main__sy-progs-incurr {
       font-size: 11px;
       color: $secondary-color;
-      // opacity: 0.6;
     }
 
     .dash-main__sy-progs-intie {
@@ -1516,7 +1355,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 5px;
-    // opacity: 0.5; // Kutish rejimini xiraroq qilamiz
     .dash-main__sy-progs-wtst {
       font-size: 10px;
       letter-spacing: 1px;
@@ -1582,7 +1420,6 @@
       box-shadow: 0 0 10px rgba($dna-a, 0.5);
       animation: progress-glow 2s infinite alternate;
     }
-    // background-color: red;
   }
 
   @keyframes progress-glow {
@@ -1596,11 +1433,7 @@
 
   &__sy-progs-act {
     @include display();
-    // flex-direction: column;
-    // background-color: red;
-    // top: 0px;
     position: relative;
-    // align-items: end;
     justify-content: end;
     align-items: end;
     width: 100%;
@@ -1638,21 +1471,16 @@
         opacity: 0.8;
       }
     }
-    // background-color: red;
-    // padding: 0px 0px 8px 0px;
-    // height: 40px;
   }
 
   &__sy-progs-actbuttonsbox {
     @include grayButtons();
-    // background-color: red;
     @include display();
     flex-direction: column;
     padding: 8px;
     position: absolute;
     top: 20px;
     right: 0px;
-    // background-color: red/;
     z-index: 10;
     height: auto;
     max-height: fit-content;
@@ -1850,11 +1678,6 @@
         }
       }
     }
-  }
-
-  &__sy-left {
-    // background-color: blue;
-    // gap: 0px;
   }
 
   &__sy-centwr {
@@ -2078,15 +1901,6 @@
       font-size: 11px;
       font-weight: 300;
       gap: 5px;
-
-      // &:hover &-i-star{
-      //   display: none
-      //   // background-color: $dna-g;
-      // }
-
-      // &:hover &-i-starred{
-      //   display: block;
-      // }
     }
 
     &-tbotrbtn-i-star {
@@ -2102,7 +1916,6 @@
       opacity: 1;
       display: none;
       height: 19px;
-      // background-color: red;
     }
 
     &-not-starred {
