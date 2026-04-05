@@ -175,7 +175,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1125px) {
   .dashboard {
     // padding: 10px 4%;
     &__nav {
@@ -190,9 +190,6 @@
       // flex-wrap: wrap-reverse;
       gap: 10px;
     }
-    &__header-input {
-      display: none;
-    }
 
     &__sctt {
       display: none !important;
@@ -206,51 +203,41 @@
       width: 13px;
     }
 
-    &__pr {
-      // display: flex;
-      @include box();
-      // @include hover();
-      @include hoverCursor();
-      opacity: 0.8;
-      padding: 0px 3px 0px 6px;
-      padding: 0;
-      gap: 0px;
-      // color: $text-color;
-    }
+    // &__pr {
+    //   // display: flex;
+    //   @include box();
+    //   // @include hover();
+    //   @include hoverCursor();
+    //   opacity: 0.8;
+    //   padding: 0px 3px 0px 6px;
+    //   padding: 0;
+    //   gap: 0px;
+    //   // color: $text-color;
+    // }
 
     &__prarr {
       display: block;
     }
 
-    &__prav {
-      width: 30px;
-      padding: 0px 3px 0px 6px;
-      height: 100%;
-      border-radius: 0px;
-      border-bottom-left-radius: 7px;
-      border-top-left-radius: 7px;
-    }
+    // &__prav {
+    //   width: 30px;
+    //   padding: 0px 3px 0px 6px;
+    //   height: 100%;
+    //   border-radius: 0px;
+    //   border-bottom-left-radius: 7px;
+    //   border-top-left-radius: 7px;
+    // }
 
-    &__search {
-      display: flex;
-      @include box();
-      @include hover();
-      @include hoverCursor();
-      padding: 5px 5px 5px 6px;
-      color: $text-color;
-      // width: 30px;
-    }
+    // &__search {
+    //   display: flex;
+    //   @include box();
+    //   @include hover();
+    //   @include hoverCursor();
+    //   padding: 5px 5px 5px 6px;
+    //   color: $text-color;
+    //   // width: 30px;
 
-    &__search-o {
-      position: static;
-      // display: flex;
-      @include box();
-      @include hover();
-      @include hoverCursor();
-      padding: 7px;
-      color: $text-color;
-      opacity: 0.8;
-    }
+
 
     &__navbar-options {
       gap: 10px;
@@ -301,6 +288,26 @@
       box-shadow: 0px 0px 10px 0px $black;
       // box-shadow: 2px 8px 20px 3px $header;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard {
+    &__header-input {
+      display: none;
+    }
+
+    &__search-o {
+      position: static;
+      // display: flex;
+      @include box();
+      @include hover();
+      @include hoverCursor();
+      padding: 7px;
+      color: $text-color;
+      opacity: 0.8;
+    }
+    
   }
 }
 
