@@ -996,6 +996,7 @@
     background-color: $dash-side;
     padding: 15px !important;
     border-radius: 13px;
+    text-wrap: nowrap;
   }
 
   &__sy-progstit {
@@ -2068,6 +2069,7 @@
   .grayButtons:hover {
     background-color: $text-light;
     opacity: 0.8;
+    // background-color: red !important;
   }
   .purpleButtons:hover {
     background-color: #4c1d95;
