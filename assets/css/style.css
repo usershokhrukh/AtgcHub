@@ -2468,7 +2468,6 @@ p [role=button] {
   font-weight: 400;
   color: white;
   font-size: 30px;
-  opacity: 0.9;
 }
 .comparison__htitsp {
   font-family: "Inter";
@@ -2482,36 +2481,28 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   gap: 5px;
   border-radius: 6px;
   border: none;
   background-color: transparent;
-  font-family: "Inter";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
-  outline: none;
-  height: 100%;
-  max-height: 45px;
-  border-radius: 8px;
-  font-size: 12px;
-  gap: 8px;
-  border: 1px solid rgba(58, 66, 75, 0.7019607843);
-  background-color: rgba(34, 43, 51, 0.862745098);
-  color: rgb(205, 205, 205);
-  text-transform: capitalize;
-  opacity: 0.9;
   padding: 4px 5px;
-  font-size: 12px;
+  font-size: 13px;
   color: white;
+  height: 100%;
+}
+.comparison__htbtn-cs {
+  background-color: rgba(34, 43, 51, 0.862745098);
+  padding: 3px 5px;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
 }
 .comparison__htbt-i {
   position: relative;
   top: 1px;
   left: 1px;
-  width: 15px;
+  width: 25px;
+  padding: 4px 5px;
+  height: 100%;
 }
 .comparison__hbot {
   display: flex;
@@ -2525,7 +2516,7 @@ p [role=button] {
 }
 .comparison__htbxtxt {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(205, 205, 205);
   padding: 5px 15px 5px 15px;
   border-right: 1px solid rgba(112, 112, 112, 0.5725490196);
@@ -2573,7 +2564,8 @@ p [role=button] {
 }
 .comparison__ctbwitemslc {
   border: 1px solid #3f4852;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #3f4852;
+  background-color: rgba(75, 87, 103, 0.3725490196);
 }
 .comparison__ctbwicon {
   width: 17px;
