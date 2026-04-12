@@ -1,5 +1,6 @@
 .comparison {
   @include display();
+  position: relative;
   flex-direction: column;
   width: 100%;
   justify-content: start;
@@ -24,7 +25,13 @@
     width: 100%;
     justify-content: start;
     gap: 7px;
-    align-items: end;
+    // align-items: end;
+  }
+
+  &__htbot {
+    @include display();
+    text-wrap: nowrap;
+    gap: 8px;
   }
 
   &__htit {
@@ -40,11 +47,59 @@
 
   &__htitsp {
     @include inter();
+    @include display();
+    gap: 4px;
     position: relative;
-    top: -3px;
+    top: 3px;
     font-size: 20px;
     font-weight: 300;
     color: $secondary-color;
+  }
+
+  &__htittr {
+    position: relative;
+    top: 2px;
+    width: 18px;
+    box-shadow: 0px 0px 10px -3px #a371f7;
+    background-color: #a271f733;
+    border-radius: 50px;
+  }
+
+  .target-purple {
+    animation-name: targetPurple;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes targetPurple {
+    0% {
+      box-shadow: 0px 0px 0px 0px transparent;
+      background-color: transparent;
+    }
+    50% {
+      box-shadow: 0px 0px 10px -3px #a371f7;
+      background-color: #a271f733;
+    }
+    80% {
+      box-shadow: 0px 0px 15px -2px #a371f7;
+      background-color: #a271f738;
+    }
+    100% {
+      box-shadow: 0px 0px 15px -2px #a271f71c;
+      background-color: #a271f70a;
+    }
+  }
+
+  &__htitprim {
+    @include jet();
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: rgba(163, 113, 247, 0.15);
+    padding: 4px 6px;
+    border: 1px solid $text-lightS;
+    color: #a371f7;
+    font-weight: 500;
   }
 
   &__htbtn {
@@ -61,10 +116,10 @@
     height: 100%;
   }
 
-  &__htbtn-cs{
+  &__htbtn-cs {
     background-color: $dash-side;
     padding: 3px 5px;
-    border: 1px solid $text-lightS
+    border: 1px solid $text-lightS;
   }
 
   &__htbt-i {
@@ -127,9 +182,9 @@
   &__ctbwitems {
     @include hoverCursor();
     @include display();
-    padding: 7px 23px 9px 15px;
+    padding: 7px 23px 8px 15px;
     position: relative;
-    bottom: -1px;
+    bottom: -2px;
     @include inter();
     font-size: 13px;
     color: $text-color;
@@ -139,12 +194,21 @@
     height: 100%;
     // background-color: $main-color-bg;
     // background-color: red;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__ctbwam {
+    padding: 5px;
+    background-color: $text-lightS;
+    border-radius: 50px;
+    font-size: 10px;
   }
 
   &__ctbwitemslc {
-    border: 1px solid $blue-border-text;
-    border-bottom: 1px solid $blue-border-text;
-    background-color: $text-light;
+    border: 1px solid $blue-border-text !important;
+    border-bottom: 1px solid $main-color-bg !important;
+    // background-color: $text-light;
     // border-bottom: 1px solid $main-color-bg;
   }
 
@@ -204,6 +268,7 @@
     // display: none;
     // width: ;
     gap: 3px;
+    // opacity: 0.8 !important;
   }
   &__sidetbtn-i {
     position: relative;
@@ -214,21 +279,28 @@
   &__sideicon {
     position: absolute;
     top: 1px;
-    left: 1px;
-    width: 22px;
+    left: 2px;
+    width: 21px;
     padding: 3px;
     color: $secondary-color;
-    opacity: 0.7;
+    opacity: 0.8;
   }
+
 
   &__sideform {
     position: relative;
   }
 
   &__sideinput {
-    padding: 5px 4px 7px 25px;
+    padding: 5px 4px 7px 28px;
     // background-color: red;
     font-size: 14px;
+
+    &::placeholder{
+      color: $secondary-color;
+      opacity: 0.6;
+      font-size: 13px;
+    }
   }
 
   &__charts {
@@ -239,7 +311,7 @@
   }
 
   &__scompcards {
-    padding: 0px 2px;
+    // padding: 0px 2px;
     width: 100%;
   }
   &__scpcitems {
@@ -250,8 +322,9 @@
     max-width: 100%;
     // background-color: red;
     text-wrap: nowrap;
-    padding: 2px 0px;
+    padding: 10px 13px;
     overflow: auto;
+    border-radius: 6px 0px 0px 6px;
 
     /* --- Global Scrollbar Design --- */
 
@@ -282,4 +355,21 @@
       background: transparent;
     }
   }
+
+  .scpcitemsslc {
+    border-right: 3px solid #a371f7;
+  }
+
+
+  &__line {
+    position: absolute;
+    top: 43px;
+    left: 25px;
+    width: 11px;
+    height: 265px;
+    // background-color: red;
+    border: 1px solid $text-lightS;
+    border-right: 1px solid transparent;
+  }
 }
+
