@@ -36,6 +36,7 @@ body {
   /* Scroll to'xtaganda "vaxshiy" effekt berish uchun */
   scroll-snap-type: y proximity;
   touch-action: manipulation;
+  // background-color: red;
 }
 
 
@@ -70,13 +71,16 @@ p [role="button"] {
 }
 
 .main {
-  display: grid;
-  align-items: start;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto 1fr;
+  @include display();
+  flex-direction: column;
+  // display: grid;
+  // align-items: start;
+  // grid-template-columns: auto 1fr;
+  // grid-template-rows: auto auto auto auto;
   // min-height: 500px;
   grid-row: 2/3;
   grid-column: 1/2;
+  justify-content: start;
   height: 100%;
 }
 

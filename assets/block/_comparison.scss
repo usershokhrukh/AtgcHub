@@ -1,0 +1,274 @@
+.comparison {
+  @include display();
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+  // background-color: red;
+  padding: 22px 35px;
+
+  &__head {
+    @include display();
+    width: 100%;
+    // background: red;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__htop {
+    @include display();
+    width: 100%;
+  }
+  &__httbox {
+    @include display();
+    width: 100%;
+    justify-content: start;
+    gap: 7px;
+    align-items: end;
+  }
+
+  &__htit {
+    @include inter();
+    @include hoverLink();
+    position: relative;
+    left: -7px;
+    font-weight: 400;
+    color: $text-color;
+    font-size: 30px;
+    opacity: 0.9;
+  }
+
+  &__htitsp {
+    @include inter();
+    position: relative;
+    top: -3px;
+    font-size: 20px;
+    font-weight: 300;
+    color: $secondary-color;
+  }
+
+  &__htbtn {
+    @include display();
+    gap: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: transparent;
+    @include grayButtons();
+    padding: 4px 5px;
+    font-size: 12px;
+    color: $text-color;
+  }
+
+  &__htbt-i {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 15px;
+  }
+
+  &__hbot {
+    @include display();
+    // align-items: start;
+    // gap: 10px;
+  }
+
+  &__hbotbxes {
+    @include display();
+    // gap: 20px;
+  }
+
+  &__htbxtxt {
+    @include inter();
+    font-size: 14px;
+    color: $secondary-color;
+    // font-weight: 300;
+    // letter-spacing: 0px;
+    padding: 5px 15px 5px 15px;
+    border-right: 1px solid $border;
+  }
+  &__htbxtxtsp {
+    @include inter();
+    // font-size: 14px;
+    color: $text-color;
+    font-weight: 400;
+    // letter-spacing: 0px;
+  }
+
+  &__center {
+    @include display();
+    // background-color: red;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 28px 0px 0px 0px;
+  }
+
+  &__centabs {
+    width: 100%;
+  }
+
+  &__ctboxw {
+    @include display();
+    justify-content: start;
+    width: 100%;
+    border-bottom: 1px solid $blue-border-text;
+  }
+
+  &__ctbwitems {
+    @include hoverCursor();
+    @include display();
+    padding: 7px 23px 9px 15px;
+    position: relative;
+    bottom: -1px;
+    @include inter();
+    font-size: 13px;
+    color: $text-color;
+    opacity: 0.8;
+    border-radius: 5px 5px 0px 0px;
+    gap: 7px;
+    height: 100%;
+    // background-color: $main-color-bg;
+    // background-color: red;
+  }
+
+  &__ctbwitemslc {
+    border: 1px solid $blue-border-text;
+    border-bottom: 1px solid transparent;
+    // border-bottom: 1px solid $main-color-bg;
+  }
+
+  &__ctbwicon {
+    width: 17px;
+  }
+
+  &__cenactions {
+    width: 100%;
+    // background-color: red;
+    padding: 15px 0px 12px 0px;
+    border-bottom: 1px solid $blue-border-text;
+  }
+
+  &__cactbox {
+    width: 100%;
+  }
+
+  &__cactbicn {
+    @include hoverCursor();
+    width: 28px;
+    padding: 4px;
+    background-color: $text-lightS;
+    color: $secondary-color;
+    opacity: 0.7;
+    border-radius: 8px;
+  }
+
+  &__bot {
+    @include display();
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    // gap: 20px;
+  }
+
+  &__side {
+    @include display();
+    flex-direction: column;
+    padding: 18px 20px 18px 0px;
+    border-right: 1px solid $blue-border-text;
+    min-height: 400px;
+    justify-content: start;
+    align-items: start;
+    gap: 18px;
+    max-width: 300px;
+  }
+
+  &__sidetop {
+    @include display();
+    gap: 10px;
+  }
+
+  &__sidetbtn {
+    @include greenButtons();
+    padding: 5px 7px;
+    // display: none;
+    // width: ;
+    gap: 3px;
+  }
+  &__sidetbtn-i {
+    position: relative;
+    top: 1px;
+    width: 13px;
+  }
+
+  &__sideicon {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    padding: 3px;
+    color: $secondary-color;
+    opacity: 0.7;
+  }
+
+  &__sideform {
+    position: relative;
+  }
+
+  &__sideinput {
+    padding: 5px 4px 7px 25px;
+    // background-color: red;
+    font-size: 14px;
+  }
+
+  &__charts {
+    @include display();
+    // background-color: red;
+    flex-grow: 1;
+    padding: 18px 10px;
+  }
+
+  &__scompcards {
+    padding: 0px 2px;
+    width: 100%;
+  }
+  &__scpcitems {
+    @include inter();
+    font-size: 14px;
+    color: $text-color;
+    opacity: 0.8;
+    max-width: 100%;
+    // background-color: red;
+    text-wrap: nowrap;
+    padding: 2px 0px;
+    overflow: auto;
+
+    /* --- Global Scrollbar Design --- */
+
+    // Scrollbar yo'lakchasi (Track)
+    &::-webkit-scrollbar {
+      width: 10px; // Vertikal scroll kengligi
+      height: 3px; // Gorizontal scroll balandligi
+    }
+
+    // Scrollbarning harakatlanuvchi qismi (Thumb)
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-border-text; // GitHub'ning neytral to'q rangi
+      border-radius: 10px; // Yumaloq shakl
+      // border: 2px solid #0d1117; // Thumb atrofida bo'shliq yaratish (Asosiy fon rangi bilan bir xil)
+
+      &:hover {
+        background-color: #484f58; // Sichqoncha ustiga kelganda biroz ochroq rang
+      }
+    }
+
+    // Scrollbarning orqa foni (Track)
+    &::-webkit-scrollbar-track {
+      background: transparent; // Orqa fon shaffof bo'lgani ma'qul
+    }
+
+    // Gorizontal va Vertikal scroll kesishgan burchak
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+}
