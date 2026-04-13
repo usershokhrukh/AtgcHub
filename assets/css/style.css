@@ -2920,6 +2920,7 @@ p [role=button] {
 .comparison__sidehead {
   display: none;
 }
+
 @media (max-width: 1125px) {
   .comparison {
     padding: 0px;
