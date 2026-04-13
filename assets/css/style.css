@@ -2491,7 +2491,6 @@ p [role=button] {
   flex-grow: 1;
   justify-content: start;
   gap: 7px;
-  flex-wrap: wrap;
 }
 .comparison__htbot {
   display: flex;
@@ -2678,7 +2677,7 @@ p [role=button] {
   height: 40px;
   overflow: auto;
   overflow-y: hidden;
-  width: 90vw;
+  width: calc(100vw - 20px);
 }
 .comparison__ctboxw::-webkit-scrollbar {
   width: 10px;
@@ -2961,9 +2960,47 @@ p [role=button] {
   }
 }
 @media (max-width: 500px) {
+  .comparison__htop {
+    flex-direction: column;
+    align-items: start;
+  }
+  .comparison__httbox {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(28, 35, 43, 0.9764705882);
+    border-radius: 6px;
+  }
+  .comparison__htitsp {
+    position: static;
+  }
+  .comparison__htbtn {
+    height: auto;
+  }
+  .comparison__htbtn-cs {
+    order: 1;
+  }
+  .comparison__htbot {
+    width: 100%;
+    overflow: auto;
+  }
+  .comparison__htitprim {
+    font-size: 8px !important;
+    padding: 4px;
+    letter-spacing: 0px;
+  }
+  .comparison__htittr {
+    position: relative;
+    top: 2px;
+    width: 14px;
+  }
   .comparison__htit {
     position: static;
     font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10px;
+    flex-grow: 1;
   }
 }
 .linear-chart-bg {
