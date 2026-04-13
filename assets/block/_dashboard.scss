@@ -24,13 +24,14 @@
   &__nav {
     @include display();
     width: 100%;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 20px;
   }
 
   &__nav-left {
     @include display();
-    gap: 10%;
+    // gap: 10%;
+    // width: 100px ;
   }
 
   &__title {
@@ -40,7 +41,7 @@
 
   &__navbar-options {
     @include display();
-    flex-grow: 0.5;
+    flex-grow: 1;
     justify-content: end;
     gap: 20px;
   }
@@ -168,6 +169,7 @@
 
   &__br {
     display: none;
+    width: 33px;
   }
 
   &__menu {
@@ -189,18 +191,21 @@
 
 @media (max-width: 1125px) {
   .dashboard {
-    // padding: 10px 4%;
+    padding: 15px 20px 15px 20px;
     &__nav {
       // flex-wrap: wrap;
-      justify-content: end;
+      justify-content: space-between;
       align-items: end;
+      gap: 5px !important;
     }
 
     &__nav-left {
-      flex-grow: 1;
+      // flex-grow: 1;
       justify-content: start;
       // flex-wrap: wrap-reverse;
       gap: 10px;
+      // display: none;
+      // background-color: red;
     }
 
     &__sctt {
@@ -233,10 +238,13 @@
 
     &__navbar-options {
       gap: 10px;
+      max-width: fit-content;
     }
 
     &__title {
-      font-size: 100%;
+      // @include display();
+      font-size: 13px;
+      // display: none;
     }
 
     &__set,
@@ -289,7 +297,6 @@
       display: none;
     }
 
-
     &__search-o-desk {
       display: none !important;
     }
@@ -300,16 +307,3 @@
   }
 }
 
-@media (max-width: 320px) {
-  .dashboard {
-    &__nav-left {
-      flex-direction: column-reverse;
-      align-items: start;
-      // background-color: red;
-    }
-
-    &__menu {
-      top: 80px;
-    }
-  }
-}

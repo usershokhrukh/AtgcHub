@@ -19,12 +19,19 @@
   &__htop {
     @include display();
     width: 100%;
+    // background-color: red;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
   }
   &__httbox {
     @include display();
-    width: 100%;
+    // width: 100%;
+    flex-grow: 1;
     justify-content: start;
     gap: 7px;
+    // background-color: blue;
+    flex-wrap: wrap;
     // align-items: end;
   }
 
@@ -32,6 +39,9 @@
     @include display();
     text-wrap: nowrap;
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: end;
+    flex-grow: 1;
   }
 
   &__htit {
@@ -54,15 +64,17 @@
     font-size: 20px;
     font-weight: 300;
     color: $secondary-color;
+    margin-right: 5px;
   }
 
   &__htittr {
     position: relative;
-    top: 2px;
-    width: 18px;
+    top: 0px;
+    width: 16px;
     box-shadow: 0px 0px 10px -3px #a371f7;
     background-color: #a271f733;
     border-radius: 50px;
+    opacity: 0.6;
   }
 
   .target-purple {
@@ -135,28 +147,56 @@
     @include display();
     // align-items: start;
     // gap: 10px;
+    // background-color: red;
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
   }
 
   &__hbotbxes {
     @include display();
-    // gap: 20px;
+    gap: 2px;
+    flex-wrap: wrap;
+    // background-color: red;
+    width: 100%;
+    justify-content: start;
   }
 
   &__htbxtxt {
     @include inter();
-    font-size: 13px;
+    @include hoverCursor();
+    @include display();
+    font-size: 12px;
     color: $secondary-color;
-    // font-weight: 300;
-    // letter-spacing: 0px;
-    padding: 5px 15px 5px 15px;
-    border-right: 1px solid $border;
+    padding: 5px 10px 5px 10px;
+    border-radius: 6px;
+    font-weight: 300;
+    gap: 5px;
+    max-width: 150px;
+    white-space: nowrap;
   }
+  &__htbtxtmain {
+    border: 1px solid $blue-border-text;
+    margin-right: 5px;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 0px 5px -1px $text-lightS;
+  }
+
   &__htbxtxtsp {
-    @include inter();
-    // font-size: 14px;
+    display: inline-block; // Yoki block
+    vertical-align: middle;
+    font-weight: 500;
     color: $text-color;
-    font-weight: 400;
-    // letter-spacing: 0px;
+
+    // ELLIPSIS UCHUN STANDART 3 TALIK:
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // Kenglikni piksellarda yoki foizda beramiz
+    // width: 60px;
+    min-width: 0; // Flex ichida ishlashi uchun qo'shimcha sug'urta
   }
 
   &__center {
@@ -175,8 +215,38 @@
   &__ctboxw {
     @include display();
     justify-content: start;
-    width: 100%;
     border-bottom: 1px solid $blue-border-text;
+    height: 40px;
+    overflow: auto;
+    overflow-y: hidden;
+    width: 90vw;
+
+    &::-webkit-scrollbar {
+      width: 10px; // Vertikal scroll kengligi
+      height: 3px; // Gorizontal scroll balandligi
+    }
+
+    // Scrollbarning harakatlanuvchi qismi (Thumb)
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-border-text; // GitHub'ning neytral to'q rangi
+      border-radius: 10px; // Yumaloq shakl
+      // border: 2px solid #0d1117; // Thumb atrofida bo'shliq yaratish (Asosiy fon rangi bilan bir xil)
+
+      &:hover {
+        background-color: #484f58; // Sichqoncha ustiga kelganda biroz ochroq rang
+      }
+    }
+
+    // Scrollbarning orqa foni (Track)
+    &::-webkit-scrollbar-track {
+      background: transparent; // Orqa fon shaffof bo'lgani ma'qul
+    }
+
+    // Gorizontal va Vertikal scroll kesishgan burchak
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+    // background-color: red;
   }
 
   &__ctbwitems {
@@ -196,6 +266,8 @@
     // background-color: red;
     background-color: transparent;
     border: none;
+    white-space: nowrap;
+    min-width: fit-content;
   }
 
   &__ctbwam {
@@ -210,6 +282,7 @@
     border-bottom: 1px solid $main-color-bg !important;
     // background-color: $text-light;
     // border-bottom: 1px solid $main-color-bg;
+    order: -1;
   }
 
   &__ctbwicon {
@@ -286,7 +359,6 @@
     opacity: 0.8;
   }
 
-
   &__sideform {
     position: relative;
   }
@@ -296,7 +368,7 @@
     // background-color: red;
     font-size: 14px;
 
-    &::placeholder{
+    &::placeholder {
       color: $secondary-color;
       opacity: 0.6;
       font-size: 13px;
@@ -360,7 +432,6 @@
     border-right: 3px solid #a371f7;
   }
 
-
   &__line {
     position: absolute;
     top: 43px;
@@ -371,5 +442,96 @@
     border: 1px solid $text-lightS;
     border-right: 1px solid transparent;
   }
+
+  &__sidehead {
+    @include display();
+    // background-color: blue;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid $text-lightS;
+    padding: 20px 15px;
+  }
+
+  &__sidehtit {
+    @include inter();
+    font-size: 14px;
+    color: $text-color;
+    opacity: 0.8;
+    font-weight: 800;
+  }
+
+  &__sidehext {
+    @include hoverCursor();
+    width: 35px;
+    color: $text-color;
+    opacity: 0.8;
+    padding: 8px;
+    border-radius: 8px;
+  }
 }
 
+@media (max-width: 1125px) {
+  .comparison {
+    padding: 15px 10px;
+    &__htit {
+      font-size: 16px;
+    }
+
+    &__htitprim {
+      font-size: 9px;
+    }
+
+    &__htitsp {
+      font-size: 14px;
+    }
+
+    &__htitr {
+      width: 14px;
+    }
+
+    &__side {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: 100vh;
+      z-index: 10;
+      padding: 0px;
+      background-color: $main-color-bg;
+      backdrop-filter: blur(10px);
+      border-radius: 0px 15px 15px 0px;
+    }
+
+    &__sidetbtn {
+      padding: 5px 9px;
+    }
+
+    &__sidetop {
+      padding: 10px 15px;
+    }
+
+    &__scompcards {
+      padding: 10px 20px 10px 15px;
+    }
+
+    &__htbtn {
+      padding: 2px 3px;
+      font-size: 12px;
+    }
+
+    &__htbt-i {
+      width: 23px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .comparison {
+    &__htit {
+      position: static;
+      font-size: 13px;
+    }
+  }
+}

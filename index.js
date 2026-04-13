@@ -9,3 +9,13 @@ function updateLinearChart(a, t, g, c) {
   document.querySelector(".g-label").innerText = `G: ${g}%`;
 }
 updateLinearChart(35, 25, 20, 20);
+
+const activetab = document.querySelector(".comparison__ctbwitemslc");
+console.log(activetab);
+
+activetab.scrollIntoView({
+  behavior: 'smooth', // Yumshoq surilish
+  block: 'nearest',   // Eng yaqin joyga
+  inline: 'center'
+})
+
