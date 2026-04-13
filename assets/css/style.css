@@ -234,7 +234,6 @@ p [role=button] {
 }
 .dashboard__br {
   display: none;
-  width: 33px;
 }
 .dashboard__menu {
   display: none;
@@ -2674,10 +2673,12 @@ p [role=button] {
   justify-content: center;
   justify-content: start;
   border-bottom: 1px solid #3f4852;
-  height: 40px;
+  height: 45px;
   overflow: auto;
   overflow-y: hidden;
-  width: calc(100vw - 20px);
+  width: calc(100vw - 70px);
+  padding: 0px 5px;
+  flex-wrap: wrap;
 }
 .comparison__ctboxw::-webkit-scrollbar {
   width: 10px;
@@ -2914,19 +2915,33 @@ p [role=button] {
   padding: 8px;
   border-radius: 8px;
 }
-
+.comparison__sidehead {
+  display: none;
+}
 @media (max-width: 1125px) {
   .comparison {
-    padding: 15px 10px;
+    padding: 0px;
   }
   .comparison__htit {
     font-size: 16px;
+  }
+  .comparison__sidehead {
+    display: flex;
+  }
+  .comparison__side {
+    box-shadow: 2px 8px 20px -3px rgb(13, 12, 12);
+  }
+  .comparison__head, .comparison__cenactions {
+    padding: 15px 10px;
   }
   .comparison__htitprim {
     font-size: 9px;
   }
   .comparison__htitsp {
     font-size: 14px;
+  }
+  .comparison__ctboxw {
+    width: 100%;
   }
   .comparison__htitr {
     width: 14px;
@@ -2963,6 +2978,10 @@ p [role=button] {
   .comparison__htop {
     flex-direction: column;
     align-items: start;
+  }
+  .comparison__hbotbxes {
+    flex-direction: column;
+    gap: 0px;
   }
   .comparison__httbox {
     width: 100%;
@@ -3001,6 +3020,19 @@ p [role=button] {
     text-overflow: ellipsis;
     width: 10px;
     flex-grow: 1;
+  }
+  .comparison__htbxtxt {
+    width: 100% !important;
+    flex-grow: 1;
+    max-width: none;
+    justify-content: space-between;
+    border-radius: 0px;
+    border-bottom: 1px solid rgba(58, 66, 75, 0.7019607843);
+  }
+  .comparison__htbtxtmain {
+    border: none;
+    margin-right: 0px;
+    border-bottom: 1px solid rgba(58, 66, 75, 0.7019607843);
   }
 }
 .linear-chart-bg {
