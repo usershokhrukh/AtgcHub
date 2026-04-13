@@ -31,7 +31,7 @@
     justify-content: start;
     gap: 7px;
     // background-color: blue;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // align-items: end;
   }
 
@@ -52,7 +52,6 @@
     font-weight: 400;
     color: $text-color;
     font-size: 30px;
-    // opacity: 0.9;
   }
 
   &__htitsp {
@@ -210,6 +209,7 @@
 
   &__centabs {
     width: 100%;
+    // background-color: red
   }
 
   &__ctboxw {
@@ -219,7 +219,7 @@
     height: 40px;
     overflow: auto;
     overflow-y: hidden;
-    width: 90vw;
+    width: calc(100vw - 20px);
 
     &::-webkit-scrollbar {
       width: 10px; // Vertikal scroll kengligi
@@ -529,9 +529,61 @@
 
 @media (max-width: 500px) {
   .comparison {
+
+    &__htop{
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__httbox{
+      width: 100%;
+      padding: 14px;
+      background-color: $main-color-bg;
+      border-radius: 6px;
+    }
+
+    &__htitsp{
+      position: static;
+    }
+
+    &__htbtn{
+      height: auto;
+    }
+
+    &__htbtn-cs{
+      order: 1;
+    }
+
+    &__htbot{
+      width: 100%;
+      overflow: auto;
+      // justify-content: space-between;
+    }
+
+    &__htitprim{
+      font-size: 8px !important;
+      padding: 4px;
+      letter-spacing: 0px;
+    }
+
+    &__htittr{
+      position: relative;
+      top:2px;
+      width: 14px;
+    }
     &__htit {
       position: static;
       font-size: 13px;
+
+      // opacity: 0.9;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // max-width: 100%;
+      // width: auto;
+      width: 10px;
+      flex-grow: 1;
     }
   }
 }
