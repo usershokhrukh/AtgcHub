@@ -29,6 +29,10 @@ body {
   touch-action: manipulation;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 button,
 a,
 input,
@@ -2676,9 +2680,7 @@ p [role=button] {
   height: 45px;
   overflow: auto;
   overflow-y: hidden;
-  width: calc(100vw - 70px);
   padding: 0px 5px;
-  flex-wrap: wrap;
 }
 .comparison__ctboxw::-webkit-scrollbar {
   width: 10px;
@@ -2941,7 +2943,14 @@ p [role=button] {
     font-size: 14px;
   }
   .comparison__ctboxw {
-    width: 100%;
+    overflow: auto;
+    overflow-y: hidden;
+    flex-grow: 1;
+    min-width: 100%;
+    width: 0px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    justify-content: start;
   }
   .comparison__htitr {
     width: 14px;

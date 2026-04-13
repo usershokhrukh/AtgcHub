@@ -219,9 +219,9 @@
     height: 45px;
     overflow: auto;
     overflow-y: hidden;
-    width: calc(100vw - 70px);
+    // width: calc(100vw - 70px);
     padding: 0px 5px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // padding: 22px 35px;
 
     &::-webkit-scrollbar {
@@ -516,8 +516,16 @@
     }
 
     &__ctboxw {
-      width: 100%;
-      // background-color: red;
+      // width: 100%;
+      overflow: auto;
+      overflow-y: hidden;
+      flex-grow: 1;
+      min-width: 100%;
+      width: 0px;
+      // min-width: calc(100vw);
+      padding: 0px 10px;
+      box-sizing: border-box;
+      justify-content: start;
     }
 
     &__htitr {
