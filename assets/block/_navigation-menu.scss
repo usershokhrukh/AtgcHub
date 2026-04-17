@@ -16,7 +16,7 @@
   background-color: $bg-dark-blue;
   // border-bottom: 1px solid $text-lightS;
   border-bottom: 1px solid $blue-border-text;
-  height: auto;
+  // height: 120px;
   position: relative;
 
   &__boxes {
@@ -85,6 +85,7 @@
     overflow-y: auto;
     padding: 0px 0px;
     font-size: 13px;
+    font-weight: 300;
   }
 
   &__cards-t::-webkit-scrollbar {

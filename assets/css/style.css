@@ -71,6 +71,7 @@ p [role=button] {
   grid-column: 1/2;
   justify-content: start;
   height: 100%;
+  min-height: 100vh;
 }
 
 @media (max-width: 500px) {
@@ -92,7 +93,6 @@ p [role=button] {
   position: sticky;
   grid-row: 1/2;
   grid-column: 1/3;
-  height: auto;
   z-index: 3;
 }
 .dashboard__nav {
@@ -343,7 +343,6 @@ p [role=button] {
   width: 100%;
   background-color: rgba(12, 15, 23, 0.5176470588);
   border-bottom: 1px solid #3f4852;
-  height: auto;
   position: relative;
 }
 .navigation-menu__boxes {
@@ -405,6 +404,7 @@ p [role=button] {
   overflow-y: auto;
   padding: 0px 0px;
   font-size: 13px;
+  font-weight: 300;
 }
 .navigation-menu__cards-t::-webkit-scrollbar {
   display: none;
@@ -1102,7 +1102,6 @@ p [role=button] {
   flex-wrap: wrap;
   justify-content: end;
   gap: 8px;
-  height: 100%;
 }
 .main-part__scrto {
   display: flex;
@@ -1117,6 +1116,7 @@ p [role=button] {
   justify-content: end;
   gap: 8px;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 .main-part__sct {
   padding: 5px 12px;
@@ -1144,6 +1144,9 @@ p [role=button] {
 .main-part__sct svg {
   color: white;
   opacity: 1;
+}
+.main-part__sct {
+  white-space: nowrap;
 }
 .main-part__scon {
   background-color: #4c1d95;
@@ -1203,10 +1206,10 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
-  align-items: start;
+  justify-content: end;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   padding: 0px 0px 15px 0px;
   width: 100%;
   border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
@@ -1218,27 +1221,50 @@ p [role=button] {
   justify-content: center;
   gap: 3px;
   word-wrap: nowrap;
-  overflow-x: auto;
-  justify-content: space-between;
-}
-.main-part__scr::-webkit-scrollbar {
-  display: none;
+  justify-content: start;
+  flex-grow: 1;
+  min-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 .main-part__scrl {
   font-family: "Inter";
-  font-size: 12px;
+}
+@media (hover: hover) {
+  .main-part__scrl:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(46, 85, 226);
+  }
+}
+.main-part__scrl:active {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(46, 85, 226);
+}
+.main-part__scrl {
+  font-size: 17px;
   color: white;
-  word-wrap: nowrap;
+  justify-content: start;
 }
 .main-part__scrl:active {
   color: rgb(46, 85, 226);
 }
-.main-part__scrs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  color: white;
+.main-part__scrl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 10px;
+  flex-grow: 1;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.main-part__scrlsl {
+  font-size: 30px;
+  color: rgb(205, 205, 205);
+  opacity: 0.6;
 }
 .main-part__lsi {
   font-weight: 600;
@@ -1499,6 +1525,16 @@ p [role=button] {
     right: 10px;
     z-index: 2;
     backdrop-filter: blur(5px);
+  }
+  .main-part__scrl {
+    overflow: hidden;
+    width: 10px;
+    flex-grow: 1;
+    font-size: 13px;
+  }
+  .main-part__scr {
+    min-width: 0px !important;
+    flex-grow: 1;
   }
   .main-part__fti {
     width: 100% !important;
@@ -2200,9 +2236,7 @@ p [role=button] {
   justify-content: start;
   flex-grow: 1;
   min-height: 300px;
-  height: 100%;
   width: 100%;
-  height: 100%;
   background-color: rgba(12, 15, 23, 0.5176470588);
 }
 
@@ -2494,6 +2528,20 @@ p [role=button] {
   flex-grow: 1;
   justify-content: start;
   gap: 7px;
+}
+.comparison__htitbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  justify-content: space-between;
+}
+.comparison__htitsl {
+  position: relative;
+  left: -7px;
+  font-size: 40px;
+  color: rgb(205, 205, 205);
+  opacity: 0.6;
 }
 .comparison__htbot {
   display: flex;
@@ -2928,6 +2976,9 @@ p [role=button] {
   .comparison__htit {
     font-size: 16px;
   }
+  .comparison__htitsl {
+    font-size: 23px;
+  }
   .comparison__sidehead {
     display: flex;
   }
@@ -3022,6 +3073,17 @@ p [role=button] {
     top: 2px;
     width: 14px;
   }
+  .comparison__htitbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    justify-content: start;
+  }
+  .comparison__htitsl {
+    position: static;
+    font-size: 24px;
+  }
   .comparison__htit {
     position: static;
     font-size: 13px;
@@ -3030,6 +3092,8 @@ p [role=button] {
     text-overflow: ellipsis;
     width: 10px;
     flex-grow: 1;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
   .comparison__htbxtxt {
     width: 100% !important;
