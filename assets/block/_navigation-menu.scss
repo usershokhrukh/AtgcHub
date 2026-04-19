@@ -1,10 +1,13 @@
 .navigation-menu {
   @include display();
+  position: relative;
   // position: fixed;
-  align-items: start;
+  // align-items: start;
   padding: 2px 5px;
   // width: 12vw;
   width: 100%;
+  flex-direction: column;
+  justify-content: start;
   // background-color: $sidebar-dark;
   // background-color: #1117205e;
   // background-color: #0d1117b1;
@@ -14,23 +17,30 @@
   // background-color: #0e101673;
   // background-color: #0d0e1c84;
   background-color: $bg-dark-blue;
+  // background-color: #161b22;
   // border-bottom: 1px solid $text-lightS;
-  border-bottom: 1px solid $blue-border-text;
+  // border-bottom: 1px solid $blue-border-text;
   // height: 120px;
   position: relative;
 
   &__boxes {
     @include display();
+    position: relative;
+    z-index: 1;
     // flex-direction: column;
     align-items: start;
     justify-content: start;
     gap: 10px;
     width: 100%;
-    padding: 2px 0px;
+    // padding: 2px 0px;
     flex-wrap: nowrap;
+    // background-color: red;
+    padding: 0px 10px;
   }
   &__cards-w {
-    padding: 3px 5px;
+    // position: relative;
+    // top: 0.5px;
+    padding: 8px 0px;
     border-bottom: 1px solid transparent;
     &:active {
       // border-bottom: 1px solid $dna-g;
@@ -39,7 +49,49 @@
     // flex: 1 1  auto;
     min-width: fit-content;
     // max-width: fit-content;
+    // height: 40px;
   }
+
+  &__lines-or:nth-child(1) {
+    background-color: $active-line;
+  }
+  &__cards-w:nth-child(1) {
+    // position: relative;
+    // top: 1px;
+    width: 118px !important;
+    border-bottom: 2px solid $active-line;
+    // background-color: red;
+  }
+  &__cards-w:nth-child(2) {
+    // position: relative;
+    // top: 1px;
+    width: 140px !important;
+    // border-bottom: 2px solid $dna-g;
+    // background-color: red;
+  }
+  &__cards-w:nth-child(3) {
+    // position: relative;
+    // top: 1px;
+    width: 152px !important;
+    // border-bottom: 2px solid $dna-g;
+    // background-color: red;
+  }
+  &__cards-w:nth-child(4) {
+    // position: relative;
+    // top: 1px;
+    width: 95px !important;
+    // border-bottom: 2px solid $dna-g;
+    // background-color: red;
+  }
+  &__cards-w:nth-child(5) {
+    // position: relative;
+    // top: 1px;
+    width: 101px !important;
+    // border-bottom: 2px solid $dna-g;
+    // background-color: red;
+  }
+
+  // grid-template-columns: 118px 140px 152px 95px 101px;
 
   @media (hover: hover) {
     &__cards:hover {
@@ -52,6 +104,7 @@
   &__cards {
     @include display();
     @include hoverCursor();
+    position: relative;
     // @include box();
     // @include hover();
     // @include hoverNavCards();
@@ -69,6 +122,7 @@
       transition: all 0.1s ease-in-out;
       opacity: 1;
     }
+    height: 35px;
   }
 
   &__cards-i {
@@ -94,8 +148,9 @@
 
   &__cards-mor {
     position: relative;
-    top: 5px;
+    top: 10px;
     padding: 6px 10px;
+    // margin-bottom: ;
     // width: 400px;
     &::before {
       position: absolute;
@@ -117,15 +172,45 @@
 
   &__boxes-wr {
     @include display();
+    position: relative;
+    top: 1.3px;
     // flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 10px;
+    gap: 6px;
     // width: 100%;
-    padding: 2px 0px;
+    // padding: 2px 0px;
     flex-wrap: wrap;
     width: fit-content;
+    // height: 42.02px;
     // background-color: red;
+    // border-bottom: 1px solid $blue-border-text ;
+  }
+
+  &__line-w {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    // height: 1px;
+    z-index: 0;
+    background-color: $blue-border-text;
+    display: grid;
+    grid-template-columns: 118px 140px 152px 95px 101px;
+    padding: 0px 15px;
+    overflow: auto;
+    gap: 6px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__lines-or {
+    // position: absolute;
+    width: 100%;
+    height: 1px;
+    // padding: 10px 0px;
+    // background-color: $dna-g;
   }
 }
 
@@ -134,9 +219,11 @@
     // background-color: red;
     // display: none !important;
     &__boxes-wr {
+      position: relative;
+      top: 1px;
       flex-wrap: wrap;
       white-space: nowrap;
-      height: 45px;
+      height: 52px;
       overflow: hidden;
       // background-color: red;
     }
@@ -157,17 +244,22 @@
   .navigation-menu {
     width: 100%;
     min-height: 0px;
-    padding: 0% 5px;
+    padding: 0px 5px;
+    // background-color: red;
 
     &__boxes {
       flex-direction: row;
       justify-content: start;
       gap: 3px;
+      // height: 30px;
+      padding: 0px;
+      // background-color: red;
     }
 
     &__cards {
       width: auto;
       padding: 5px 10px;
+      // background-color: red;
     }
 
     &__cards-t {
@@ -176,6 +268,18 @@
 
     &__cards-i {
       width: 20px !important;
+    }
+
+    &__boxes-wr {
+      top: -1px;
+    }
+
+    &__cards-mor {
+      top: 7px;
+    }
+
+    &__line-w {
+      padding: 0px 5px;
     }
   }
 }

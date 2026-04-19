@@ -27,7 +27,7 @@
   &__httbox {
     @include display();
     // width: 100%;
-    flex-grow: 1;
+    // flex-grow: 1;
     justify-content: start;
     gap: 7px;
     // background-color: blue;
@@ -35,26 +35,27 @@
     // align-items: end;
   }
 
-  &__htitbox{
+  &__htitbox {
     @include display();
     // background-color: red
     gap: 3px;
     justify-content: space-between;
   }
 
-  &__htitsl{
+  &__htitsl {
     position: relative;
     left: -7px;
     font-size: 40px;
     // background-color: red;
     color: $secondary-color;
     opacity: 0.6;
+    // background-color: red
   }
 
   &__htbot {
     @include display();
     text-wrap: nowrap;
-    gap: 8px;
+    gap: 4px;
     flex-wrap: wrap;
     justify-content: end;
     flex-grow: 1;
@@ -67,8 +68,8 @@
     left: -7px;
     font-weight: 400;
     color: $text-color;
+    // color: #f0f6fc;
     font-size: 30px;
-    // background-color: red
   }
 
   &__htitsp {
@@ -91,6 +92,7 @@
     background-color: #a271f733;
     border-radius: 50px;
     opacity: 0.6;
+    // background-color: red !important;
   }
 
   .target-purple {
@@ -120,7 +122,11 @@
 
   &__htitprim {
     @include jet();
+    @include display();
+    position: relative;
+    top: 0px;
     font-size: 11px;
+    height: 30px;
     letter-spacing: 1px;
     border-radius: 6px;
     background-color: rgba(163, 113, 247, 0.15);
@@ -128,6 +134,8 @@
     border: 1px solid $text-lightS;
     color: #a371f7;
     font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 0 10px -6px rgba(247, 129, 102, 0.4);
   }
 
   &__htbtn {
@@ -135,19 +143,22 @@
     @include hoverCursor();
     gap: 5px;
     border-radius: 6px;
+    height: 30px;
+    width: 30px;
     border: none;
     background-color: transparent;
     // @include grayButtons();
-    padding: 4px 5px;
-    font-size: 13px;
+    // padding: 4px 7px;
+    font-size: 12px;
     color: $text-color;
-    height: 100%;
   }
 
   &__htbtn-cs {
-    background-color: $dash-side;
-    padding: 3px 5px;
+    background-color: $feed-items;
+    padding: 3px 8px 3px 1px;
+    // padding: 0px;
     border: 1px solid $text-lightS;
+    width: auto !important;
   }
 
   &__htbt-i {
@@ -184,12 +195,14 @@
     @include display();
     font-size: 12px;
     color: $secondary-color;
+    // color: #8b949e;
     padding: 5px 10px 5px 10px;
     border-radius: 6px;
-    font-weight: 300;
+    font-weight: 400;
     gap: 5px;
     max-width: 150px;
     white-space: nowrap;
+    opacity: 1;
   }
   &__htbtxtmain {
     border: 1px solid $blue-border-text;
@@ -197,6 +210,8 @@
     font-size: 13px;
     background-color: rgba(255, 255, 255, 0.03);
     box-shadow: 0px 0px 5px -1px $text-lightS;
+    color: $text-color;
+    // font-weight: 500
   }
 
   &__htbxtxtsp {
@@ -204,6 +219,8 @@
     vertical-align: middle;
     font-weight: 500;
     color: $text-color;
+    // opacity: 0.8;
+    opacity: 1;
 
     // ELLIPSIS UCHUN STANDART 3 TALIK:
     white-space: nowrap;
@@ -235,11 +252,13 @@
     border-bottom: 1px solid $blue-border-text;
     height: 45px;
     overflow: auto;
+    align-items: end;
     overflow-y: hidden;
     // width: calc(100vw - 70px);
     padding: 0px 5px;
     // flex-wrap: wrap;
     // padding: 22px 35px;
+    // background-color: red;
 
     &::-webkit-scrollbar {
       width: 10px; // Vertikal scroll kengligi
@@ -274,11 +293,12 @@
     @include display();
     padding: 7px 23px 8px 15px;
     position: relative;
-    bottom: -2px;
+    // top: 5px;
+    // bottom: -6px;
     @include inter();
     font-size: 13px;
     color: $text-color;
-    opacity: 0.8;
+    // opacity: 0.8;
     border-radius: 5px 5px 0px 0px;
     gap: 7px;
     height: 100%;
@@ -288,6 +308,7 @@
     border: none;
     white-space: nowrap;
     min-width: fit-content;
+    // background-color: red;
   }
 
   &__ctbwam {
@@ -295,11 +316,23 @@
     background-color: $text-lightS;
     border-radius: 50px;
     font-size: 10px;
+
+    // @include display();
+    width: 25px;
+    height: 30px;
+    font-size: 9px;
+    font-weight: 500;
+    height: 20px;
+    padding: 4px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: start;
   }
 
   &__ctbwitemslc {
     border: 1px solid $blue-border-text !important;
-    border-bottom: 1px solid $main-color-bg !important;
+    border-bottom: none !important;
     // background-color: $text-light;
     // border-bottom: 1px solid $main-color-bg;
     order: -1;
@@ -326,7 +359,8 @@
     padding: 4px;
     background-color: $text-lightS;
     color: $secondary-color;
-    opacity: 0.7;
+    // opacity: 0.7;
+    // background-color: red;
     border-radius: 8px;
   }
 
@@ -379,6 +413,7 @@
     padding: 3px;
     color: $secondary-color;
     opacity: 0.8;
+    // background-color: red;
   }
 
   &__sideform {
@@ -419,7 +454,7 @@
     padding: 10px 13px;
     overflow: auto;
     border-radius: 6px 0px 0px 6px;
-
+    // background-color: red;
     /* --- Global Scrollbar Design --- */
 
     // Scrollbar yo'lakchasi (Track)
@@ -483,6 +518,7 @@
     color: $text-color;
     opacity: 0.8;
     font-weight: 800;
+    // background-color: red
   }
 
   &__sidehext {
@@ -497,6 +533,115 @@
   &__sidehead {
     display: none;
   }
+
+  &__htbtn-hactf {
+    font-size: 12px;
+    // width: 30px !important;
+    // padding: 0px;
+    padding: 0px !important;
+    gap: 0px;
+  }
+
+  &__hact-i {
+    //   @include hoverCursor();
+    @include display();
+    //   position: relative;
+    //   // top: 2px;
+    //   // left: 1px;
+    width: 26px;
+    height: 26px;
+    //   color: $text-color;
+    //   // opacity: 0.8;
+    //   // background-color: $dash-side;
+    //   // border: 1px solid $blue-border-text;
+    //   background-color: $dash-side;
+    padding: 6px !important;
+    //   border: 1px solid $text-lightS;
+    //   border-radius: 6px;
+    opacity: 1 !important;
+  }
+
+  &__htopwr {
+    @include display();
+    // background-color: red;
+    flex-grow: 1;
+    justify-content: start;
+    gap: 10px;
+    // flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__htbtn-arb {
+    @include display();
+    width: 34px;
+    padding: 5px 8px;
+    // background-color: red;
+    // margin-left: 10px;
+    border-left: 1px solid $blue-border-text;
+    border-radius: 0px 5px 5px 0px;
+    height: 100%;
+  }
+
+  &__htbtn-arbwr {
+    height: 100%;
+  }
+
+  &__h-actspbo {
+    @include display();
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    flex-grow: 1;
+    padding: 3px 8px 3px 5px;
+    // gap: 4px;
+  }
+
+  &__h-ctbwam {
+    // @include display();
+    width: 25px;
+    font-size: 9px;
+    font-weight: 500;
+    height: 20px;
+    padding: 4px 2px 3px 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: start;
+    background-color: $feed-items;
+    border-radius: 50px;
+    // opacity: ;
+  }
+
+  &__h-actspbo-txt {
+    @include display();
+    gap: 3px;
+  }
+
+  &__htbtn-more{
+    display: none;
+    position: static !important;
+    width: auto !important;
+    border-left: 1px solid $blue-border-text !important;
+    border-radius: 0px 6px 6px 0px;
+    padding: 5px 5px 5px 5px !important;
+    & svg{
+      position: relative;
+      top: 1px;
+      width: 15px !important;
+    }
+  }
+
+  &__htbwrbox{
+    @include display();
+    gap: 4px;
+  }
+
+  &__hbtxt-match{
+    color: #3fb950 !important;
+  }
+
+  &__hbtxt-snp{
+    color: #d29922;
+  }
 }
 
 @media (max-width: 1125px) {
@@ -507,7 +652,7 @@
       font-size: 16px;
     }
 
-    &__htitsl{
+    &__htitsl {
       font-size: 23px;
     }
 
@@ -597,10 +742,30 @@
     }
 
     &__httbox {
+      // flex-grow: 1;
       width: 100%;
       padding: 14px;
       background-color: $main-color-bg;
       border-radius: 6px;
+    }
+
+    &__htopwr {
+      width: 100%;
+      flex-direction: column;
+      align-items: end;
+      justify-content: start;
+      border-radius: 6px;
+      padding: 14px 14px 4px 14px;
+      background-color: $main-color-bg;
+    }
+
+    &__h-actspbo-txt {
+      display: none;
+    }
+
+    &__h-actspbo {
+      padding: 0px;
+      border-radius: 5px;
     }
 
     &__htitsp {
@@ -608,23 +773,117 @@
     }
 
     &__htbtn {
-      height: auto;
+      order: 2;
+      // height: auto;
+      // width: auto;
+      // padding: 5px !important;
+      margin-right: 4px;
+      & svg {
+        position: relative;
+        left: 0px;
+        // background-color: red;
+      }
+      font-size: 14px;
+      color: $text-color;
+      // padding: 8px !important;
+      height: 32px !important;
+      width: auto;
+      // height: auto !important;
+    }
+
+    &__htbt-i{
+      width: 27px;
     }
 
     &__htbtn-cs {
-      order: 1;
+      order: 0 !important;
+      // background-color: $header;
+      // background-color: rgba(137, 87, 229, 0.1);
+      margin-left: 0px !important;
+      // padding: 10px 0px !; 
+      padding: 5px !important;
+      // height: auto;
+      border: 1px solid rgba(240, 246, 252, 0.1) !important;
+      // border: 1px solid red !important;
+      opacity: 1;
+      background-color: $bg-light-gray;
     }
 
+    &__htbwrbox{
+      // background-color: red;
+      flex-grow: 1;
+      justify-content: start;
+      flex-wrap: wrap;
+      height: 32px;
+      overflow: hidden;
+      gap: 0px;
+      &::-webkit-scrollbar {
+        width: 10px; // Vertikal scroll kengligi
+        height: 3px; // Gorizontal scroll balandligi
+      }
+
+      // Scrollbarning harakatlanuvchi qismi (Thumb)
+      &::-webkit-scrollbar-thumb {
+        background-color: $blue-border-text; // GitHub'ning neytral to'q rangi
+        border-radius: 10px; // Yumaloq shakl
+        // border: 2px solid #0d1117; // Thumb atrofida bo'shliq yaratish (Asosiy fon rangi bilan bir xil)
+
+        &:hover {
+          background-color: #484f58; // Sichqoncha ustiga kelganda biroz ochroq rang
+        }
+      }
+
+      // Scrollbarning orqa foni (Track)
+      &::-webkit-scrollbar-track {
+        background: transparent; // Orqa fon shaffof bo'lgani ma'qul
+      }
+
+      // Gorizontal va Vertikal scroll kesishgan burchak
+      &::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+    }
     &__htbot {
+      justify-content: start;
+      flex-wrap: nowrap;
+      // overflow: hidden;
+      padding: 0px 0px !important;
+      // background-color: red;
+      gap: 0px;
+      // height: 30px;
       width: 100%;
-      overflow: auto;
+      // background-color: red;
+      // flex-grow: 1;
+      // overflow: auto;
       // justify-content: space-between;
+
+    
     }
 
     &__htitprim {
       font-size: 8px !important;
       padding: 4px;
       letter-spacing: 0px;
+      height: 23px;
+    }
+
+    &__hact-i {
+      height: auto;
+      width: 32px;
+      padding: 8px !important;
+      // order: 2;
+    }
+
+    &__htbtn-arb {
+      display: none;
+    }
+
+    &__htbtn-hactf {
+      order: 1 !important;
+      // background-color: red;
+      padding: 0px !important;
+      width: auto;
+      // width: 30px !important;
     }
 
     &__htittr {
@@ -633,14 +892,14 @@
       width: 14px;
     }
 
-    &__htitbox{
+    &__htitbox {
       @include display();
       // background-color: red;
       flex-grow: 1;
       justify-content: start;
     }
 
-    &__htitsl{
+    &__htitsl {
       position: static;
       font-size: 24px;
     }
@@ -674,6 +933,15 @@
       border: none;
       margin-right: 0px;
       border-bottom: 1px solid $text-lightS;
+    }
+  }
+}
+
+
+@media (max-width: 307px) {
+  .comparison{
+    &__htbtn-more{
+      display: flex;
     }
   }
 }
