@@ -10,6 +10,7 @@
   // background-color: #0f112184;
   // background-color: #0d121c84;
   background-color: $bg-dark-blue;
+  // background-color: #161b22;
   // border-bottom: 2px solid #3d454ed4;
 
   // background-color: ;
@@ -293,6 +294,7 @@
 
 @media (max-width: 500px) {
   .dashboard {
+    padding: 10px 20px 10px 20px;
     &__header-input {
       display: none;
     }

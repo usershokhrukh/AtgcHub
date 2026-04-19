@@ -47,6 +47,7 @@
     opacity: 0.8;
     color: $text-color;
     border-radius: 8px;
+    // background-color: red;
   }
 
   &__wrap-form {
@@ -125,6 +126,7 @@
     left: -1px;
     width: 12px;
     opacity: 0.7;
+    // background-color: red ;
   }
 
   &__txt-stat-dot {
@@ -221,7 +223,7 @@
     grid-row: 2/5;
     height: 100%;
     background-color: $border;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   &__chart-svg {
@@ -471,19 +473,20 @@
 
   &__chart-nucs-a {
     color: $dna-a;
-    opacity: 0.6;
+    // opacity: 0.6;
+    // background-color: red;
   }
   &__chart-nucs-t {
     color: $dna-t;
-    opacity: 0.6;
+    // opacity: 0.6;
   }
   &__chart-nucs-g {
     color: $dna-g;
-    opacity: 0.6;
+    // opacity: 0.6;
   }
   &__chart-nucs-c {
     color: $dna-c;
-    opacity: 0.6;
+    // opacity: 0.6;
   }
 
   &__sc {
@@ -594,6 +597,7 @@
     font-size: 30px;
     color: $secondary-color;
     opacity: 0.6;
+    // background-color: red;
   }
 
   &__lsi {
@@ -613,6 +617,7 @@
     color: $text-color;
     border: 1px solid $text-lightS;
     opacity: 0.8;
+    // background-color: red;
   }
 
   &__wft {
