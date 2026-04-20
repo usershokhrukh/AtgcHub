@@ -47,7 +47,6 @@
     opacity: 0.8;
     color: $text-color;
     border-radius: 8px;
-    // background-color: red;
   }
 
   &__wrap-form {
@@ -126,7 +125,6 @@
     left: -1px;
     width: 12px;
     opacity: 0.7;
-    // background-color: red ;
   }
 
   &__txt-stat-dot {
@@ -177,7 +175,6 @@
       text-align: center;
       transform: translate(-50%, -50%);
     }
-    // SCSS da scrollbar dizayni
     &::-webkit-scrollbar {
       @include hoverCursor();
       width: 6px; // Skrollbarni ingichka qilamiz
@@ -207,7 +204,6 @@
       }
     }
 
-    // Firefox uchun (u hozircha faqat shu ikkitasini qo'llaydi)
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
   }
@@ -473,20 +469,15 @@
 
   &__chart-nucs-a {
     color: $dna-a;
-    // opacity: 0.6;
-    // background-color: red;
   }
   &__chart-nucs-t {
     color: $dna-t;
-    // opacity: 0.6;
   }
   &__chart-nucs-g {
     color: $dna-g;
-    // opacity: 0.6;
   }
   &__chart-nucs-c {
     color: $dna-c;
-    // opacity: 0.6;
   }
 
   &__sc {
@@ -494,8 +485,6 @@
     flex-wrap: wrap;
     justify-content: end;
     gap: 8px;
-    // height: 100%;
-    // background-color: red
   }
   &__scrto {
     @include display();
@@ -540,44 +529,27 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    // height: 100px;
     padding: 0px 0px 15px 0px;
     width: 100%;
     border-bottom: 1px solid $text-light;
     margin-bottom: 15px;
-    // flex-direction: column;
-    // background-color: red
   }
 
   &__scr {
     @include display();
     gap: 3px;
     word-wrap: nowrap;
-    // overflow-x: auto;
-    // width: 100%;
-    // max-width: fit-content;
-    // background-color: red;
     justify-content: start;
-    // &::-webkit-scrollbar {
-    //   display: none;
-    // }
-    // background-color: red;
     flex-grow: 1;
-    // width: 100%;
     min-width: 300px;
-    // max-width: 300px;
-    // background-color: red;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     flex-shrink: 1
-    // background-color: red
   }
   &__scrl {
-    // @include display();
     @include inter();
     @include hoverLink();
-    // display: inline;
     font-size: 17px;
     color: white;
     justify-content: start;
@@ -590,14 +562,12 @@
     width: 10px;
     flex-grow: 1;
     max-width: fit-content;
-    // background-color: blue;
   }
 
   &__scrlsl {
     font-size: 30px;
     color: $secondary-color;
     opacity: 0.6;
-    // background-color: red;
   }
 
   &__lsi {
@@ -617,7 +587,6 @@
     color: $text-color;
     border: 1px solid $text-lightS;
     opacity: 0.8;
-    // background-color: red;
   }
 
   &__wft {
@@ -846,9 +815,7 @@
     }
 
     &__scrl {
-      // white-space: nowrap;
       overflow: hidden;
-      // text-overflow: ellipsis;
       width: 10px;
       flex-grow: 1;
       font-size: 13px;
@@ -856,8 +823,6 @@
 
     &__scr{
       min-width: 0px !important;
-      // background-color: red;
-      // width: 10px !important;
       flex-grow: 1;
     }
     &__fti {

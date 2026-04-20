@@ -14,30 +14,17 @@ li {
 }
 
 body {
-  // display: flex;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   align-items: start;
-  // flex-direction: column;
-  // min-height: 100vh;
-  // background-color: #0f172a;
-  // background-color: rgb(20, 24, 40);
-  // background-color: #111827;
-  // background-color: #0b0f1a;
-  // background-color: #252b38;
-  // background-color: #222834;
-  // background-color: #131920f1;
-  // background-color: #161b22;
   background-color: $main-color-bg;
-  // background-color: #0d1117;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth; /* Silliq scroll uchun */
   min-height: 100vh;
   /* Scroll to'xtaganda "vaxshiy" effekt berish uchun */
   scroll-snap-type: y proximity;
   touch-action: manipulation;
-  // background-color: red;
 }
 
 html {
@@ -77,11 +64,6 @@ p [role="button"] {
 .main {
   @include display();
   flex-direction: column;
-  // display: grid;
-  // align-items: start;
-  // grid-template-columns: auto 1fr;
-  // grid-template-rows: auto auto auto auto;
-  // min-height: 500px;
   grid-row: 2/3;
   grid-column: 1/2;
   justify-content: start;
