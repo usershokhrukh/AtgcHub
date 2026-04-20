@@ -101,7 +101,6 @@
   @include hoverCursor();
   @include buttonShadow();
   outline: none;
-  // padding: 10px;
   height: 100%;
   max-height: 45px;
   border-radius: 8px;
@@ -133,7 +132,6 @@
 }
 
 @mixin maxOverflow($px) {
-  // width: 100%;
   width: $px;
   max-width: $px !important;
   overflow: auto;

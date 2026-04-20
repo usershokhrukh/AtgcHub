@@ -1,58 +1,39 @@
 .main-t {
   width: 100%;
   height: auto;
-  // background-color: rgb(63, 49, 49);
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto;
   gap: 10px;
   padding: 10px 0px 20px 0px;
-  // min-width: 1000px;
-  // display: none;
   &__left {
     @include display();
-    // @include standard-box-borders();
     align-items: start;
     justify-content: start;
     flex-direction: column;
     grid-column: 1/5;
     grid-row: 2/3;
-    // height: 100%;
     background-color: $black;
-    // min-height: 350px;
-    // max-height: 350px;
     border-radius: 8px;
     opacity: 0.8;
-    // max-width: 1700px;
     width: 100%;
     margin-bottom: 5%;
     transition: all 0.3s ease-in-out;
-    // max-width: 1100px;;
   }
 
   &__right {
-    // @include display();
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto auto;
-    // flex-direction: column;
-    // align-items: start;
-    // justify-content: start;
     align-items: start;
-    // justify-content: space-between;
     grid-column: 1/5;
     grid-row: 1/2;
     min-height: 70%;
     height: auto;
-    // background-color: red;
     gap: 30px;
-    // width: 90%;
     border-top: 1px solid $text-light;
     padding: 10px 0px;
-    // max-width: 1300px;
-    // margin-right: 305px;
     justify-content: end;
-    // margin-left: auto
     flex-grow: 1;
     width: 100%;
   }
@@ -69,7 +50,6 @@
   &__right-act {
     grid-column: 2/3;
     grid-row: 2/3;
-    // background-color: red;
   }
   &__right-nuc {
     grid-column: 1/2;
@@ -93,7 +73,6 @@
     justify-content: start;
     font-size: 12px;
     color: $secondary-color;
-    // background-color: red;
   }
 
   &__right-binsp {
@@ -102,7 +81,6 @@
 
   &__right-l {
     width: 100%;
-    // flex-grow: 1;
   }
 
   &__right-boxes-t {
@@ -110,7 +88,6 @@
     font-size: 13px;
     color: $secondary-color;
     padding: 10px 10px 0px 10px;
-    // background-color: red
   }
 
   &__right-boxes-a {
@@ -122,25 +99,8 @@
   }
 
   &__right-a-txt {
-    // @include inter();
-    // @include display();
-    // justify-content: center;
-    // gap: 10px;
-    // @include hoverCursor();
-    // @include standard-box-borders();
-    // // @include hoverNavCards();
-    // font-size: 14px;
-    // // background-color: $text-color;
-    // color: $text-color;
-    // background-color: $header;
-    // // border-bottom: 1px solid $text-color;
     padding: 15px 5px;
 
-    // &:active {
-    //   background-color: #238636;
-    //   border: 1px solid rgb(28, 177, 28);
-    //   cursor: pointer;
-    // }
     @include grayButtons();
   }
 
@@ -178,29 +138,24 @@
     height: 30px;
     font-size: 20px;
     color: $text-color;
-    // background-color: red;
   }
 
   &__right-nucs-a {
-    // background-color: blue !important;
     border-bottom: 2px solid $dna-a;
     color: $dna-a;
     flex-grow: 2;
   }
   &__right-nucs-t {
-    // background-color: blue !important;
     border-bottom: 2px solid $dna-t;
     color: $dna-t;
     flex-grow: 1;
   }
   &__right-nucs-g {
-    // background-color: blue !important;
     border-bottom: 2px solid $dna-g;
     color: $dna-g;
     flex-grow: 1;
   }
   &__right-nucs-c {
-    // background-color: blue !important;
     border-bottom: 2px solid $dna-c;
     color: $dna-c;
     flex-grow: 3;
@@ -228,7 +183,6 @@
     border-radius: 8px;
     border: 1px solid green;
     box-shadow: 0 0 10px rgba(35, 134, 54, 0.3);
-    // background-color: red
   }
 
   &__right-meta-given {
@@ -237,7 +191,6 @@
     opacity: 0.3;
     font-size: 13px;
     padding: 3px 5px;
-    // background-color: red;
     background-color: $border;
     margin-left: 10px;
     border-radius: 3px
@@ -264,9 +217,7 @@
   &__left-top {
     @include display();
     justify-content: start;
-    // background-color: red;
     width: 100%;
-    // border-bottom: 1px solid $darkest-gray;
     border-bottom: 1px solid $text-light;
     padding: 5px;
     gap: 13px;
@@ -276,11 +227,8 @@
     @include inter();
     font-size: 12px;
     padding: 5px 8px;
-    // border: 1px solid $darkest-gray;
-    // color: $darkest-gray;
     color: $text-color;
     border-radius: 6px;
-    // background-color: rgba(128, 128, 128, 0.091);
     background-color: $main-color-bg;
     opacity: 0.8;
     &:active {
@@ -289,14 +237,12 @@
       color: white;
       cursor: pointer;
     }
-    // background-color: red;
   }
 
   &__terminal {
     @include jet();
     flex-grow: 1;
     width: 100%;
-    // max-height: 305px;
     overflow: auto;
     overflow-x: hidden;
     background-color: #0d1117;
@@ -306,7 +252,6 @@
     color: #c9d1d9;
     transition: all 0.3s ease-in-out;
     max-height: 700px;
-    // font-family: "JetBrains Mono", monospace;
     /* Scrollbar dizayni */
     &::-webkit-scrollbar {
       width: 8px;
@@ -342,7 +287,6 @@
     max-width: 200px;
     overflow: auto;
     overflow-y: hidden;
-    // ... mavjud kodlaringiz ...
     overflow-x: auto; // Faqat eniga scroll paydo bo'ladi
     white-space: nowrap; // Matn keyingi qatorga o'tib ketmasligi uchun
     padding-bottom: 8px; // Scrollbar matnga yopishib qolmasligi uchun
@@ -380,8 +324,6 @@
     float: left;
     margin-right: 10px;
     font-size: 12px;
-    // position: relative;
-    // top: 4px;
   }
 
   &__input {
@@ -393,7 +335,6 @@
     &:hover {
       cursor: text;
     }
-    // background-color: red;
   }
 
   &__input:empty::before {
@@ -428,12 +369,10 @@
   &__history {
     color: #e6edf3 !important;
     font-size: 12px;
-    // background-color: red;
   }
 
   &__header {
     position: relative;
-    // background: #2d3748;
     padding: 8px 15px;
     display: flex;
     align-items: center;
@@ -462,7 +401,6 @@
     font-size: 11px;
     margin-left: 10px;
     gap: 4px;
-    // background-color: red;
   }
   
   &__terminal-lv {
@@ -482,7 +420,6 @@
     font-size: 11px;
     color: $link;
     max-width: 100px;
-    // background-color: red;
   }
 }
 @media (max-width: 1125px) {
@@ -551,7 +488,6 @@
     &__left-top-tabs {
       font-size: 11px;
       padding: 5px;
-      // background-color: red;
     }
 
     &__left-top {
@@ -560,14 +496,12 @@
 
     &__terminal {
       font-size: 12px;
-      // background-color: red;
     }
   }
 }
 
 @media (max-width: 500px) {
   .main-t {
-    // background-color: red;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     &__terminal {
@@ -626,7 +560,6 @@
     &__left{
       grid-row: 2/3;
       grid-column: 1/2;
-      // background-color: blue;
     }
   }
 }
