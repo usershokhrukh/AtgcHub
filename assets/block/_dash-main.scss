@@ -2071,11 +2071,12 @@
 
   .grayButtons:hover {
     background-color: $text-light;
-    opacity: 0.8;
+    opacity: 1;
+    cursor: pointer;
     // background-color: red !important;
   }
   .purpleButtons:hover {
-    background-color: #4c1d95;
+    background-color: #5420a1;
     opacity: 1;
   }
   .blueButtons:hover {
@@ -2091,21 +2092,22 @@
 
 .grayButtons:active {
   opacity: 1;
-  background-color: $text-light;
+  background-color: $activeGrayButtons;
 }
 
 .greenButtons:active {
+  background-color: #36b33abb !important;
   opacity: 1;
 }
 
 .grayButtons,
 .greenButtons,
 .purpleButtons {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .purpleButtons:active {
-  background-color: #5c26ad;
+  background-color: $purple;
   opacity: 1;
 }
 

@@ -26,7 +26,7 @@
   }
   &:active {
     text-decoration: underline;
-    cursor:pointer;
+    cursor: pointer;
     color: $link;
   }
 }
@@ -141,5 +141,28 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@mixin grayButtonsHover() {
+  opacity: 0.9 !important;
+
+  &:active {
+    opacity: 1 !important;
+    background-color: $text-light !important;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $text-light !important;
+      opacity: 0.8 !important;
+      cursor: pointer;
+    }
+
+    &:active{
+      background-color: $text-light !important;
+      opacity: 1 !important;
+      cursor: pointer;
+    }
   }
 }
