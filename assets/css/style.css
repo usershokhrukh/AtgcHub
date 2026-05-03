@@ -2715,6 +2715,9 @@ p [role=button] {
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   width: auto !important;
 }
+.comparison__cbrgai-cs {
+  box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
+}
 .comparison__htbt-i {
   position: relative;
   top: 1px;
@@ -2914,13 +2917,174 @@ p [role=button] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 18px 20px 18px 0px;
+  padding: 18px 20px 210px 0px;
   border-right: 1px solid #3f4852;
   min-height: 400px;
   justify-content: start;
   align-items: start;
   gap: 18px;
   max-width: 300px;
+  height: 100%;
+  max-height: 500px;
+  position: relative;
+}
+.comparison__sidebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+  height: 100%;
+  justify-content: start;
+  border-bottom: 1px solid #3f4852;
+  padding: 0px 0px 10px 0px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.comparison__side-terminal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 20px;
+  flex-direction: column;
+  width: calc(100% - 20px);
+  align-items: start;
+  justify-content: start;
+  padding: 0px 0px 10px 0px;
+  background-color: rgba(34, 43, 51, 0.862745098);
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  max-height: 200px;
+  overflow: auto;
+  border-radius: 10px 3.5px 3.4px 10px;
+}
+.comparison__side-terminal::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.comparison__side-terminal {
+  /* Scrollbar yo'lakchasi (Track) */
+}
+.comparison__side-terminal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.096);
+  border-radius: 10px;
+}
+.comparison__side-terminal {
+  /* Harakatlanuvchi qismi (Thumb) */
+}
+.comparison__side-terminal::-webkit-scrollbar-thumb {
+  background: rgba(112, 112, 112, 0.5725490196);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.comparison__side-terminal::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(205, 205, 205);
+}
+.comparison__term-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 13px;
+  color: white;
+  gap: 5px;
+  align-items: start;
+  white-space: nowrap;
+  max-width: calc(100% - 15px);
+  justify-content: start;
+  overflow: auto;
+  margin-left: 13px;
+  margin-top: 4px;
+  width: 100%;
+}
+.comparison__term-main::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.comparison__term-main {
+  /* Scrollbar yo'lakchasi (Track) */
+}
+.comparison__term-main::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+.comparison__term-main {
+  /* Harakatlanuvchi qismi (Thumb) */
+}
+.comparison__term-main::-webkit-scrollbar-thumb {
+  background: rgba(58, 66, 75, 0.7019607843);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  /* Hover bo'lganda neon effekt (Bio-style) */
+}
+.comparison__term-main::-webkit-scrollbar-thumb:hover {
+  background: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+}
+.comparison__term-tit {
+  font-family: "Inter";
+  font-size: 12px;
+  color: rgb(205, 205, 205);
+  background-color: rgba(34, 43, 51, 0.862745098);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  z-index: 3;
+  box-shadow: 0px -5px 10px 10px rgba(34, 43, 51, 0.862745098);
+  backdrop-filter: blur(10px);
+  height: 35px;
+}
+.comparison__term-st {
+  font-family: "JetBrains Mono";
+  color: rgb(205, 205, 205);
+  opacity: 0.6;
+  font-size: 11px;
+}
+.comparison__term-wr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 15px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+  padding: 10px 25px 10px 10px;
+}
+.comparison__term-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0px;
+  align-items: start;
+  padding: 0px 0px 0px 10px;
+  border-left: 1px solid rgba(58, 66, 75, 0.7019607843);
+  width: 100%;
+}
+.comparison__term-status {
+  font-family: "JetBrains Mono";
+  color: rgb(205, 205, 205);
+  font-size: 10px;
+}
+.comparison__term-st-pr-success {
+  color: #4caf50;
+}
+.comparison__term-st-pr-process {
+  color: #2196f3;
+}
+.comparison__term-st-pr-reject {
+  color: #f44336;
 }
 .comparison__sidetop {
   display: flex;
@@ -2989,15 +3153,42 @@ p [role=button] {
   opacity: 0.6;
   font-size: 13px;
 }
-.comparison__charts {
+.comparison__scompcards {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
-  padding: 18px 10px;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+  gap: 10px;
+  height: auto;
+  padding: 0px 10px 0px 0px;
+  justify-content: start;
+}
+.comparison__scompcards::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 .comparison__scompcards {
-  width: 100%;
+  /* Scrollbar yo'lakchasi (Track) */
+}
+.comparison__scompcards::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.096);
+  border-radius: 10px;
+}
+.comparison__scompcards {
+  /* Harakatlanuvchi qismi (Thumb) */
+}
+.comparison__scompcards::-webkit-scrollbar-thumb {
+  background: rgba(112, 112, 112, 0.5725490196);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.comparison__scompcards::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(205, 205, 205);
 }
 .comparison__scpcitems {
   font-family: "Inter";
@@ -3007,7 +3198,6 @@ p [role=button] {
   max-width: 100%;
   text-wrap: nowrap;
   padding: 10px 13px;
-  overflow: auto;
   border-radius: 6px 0px 0px 6px;
   /* --- Global Scrollbar Design --- */
 }
@@ -3027,6 +3217,12 @@ p [role=button] {
 }
 .comparison__scpcitems::-webkit-scrollbar-corner {
   background: transparent;
+}
+.comparison__scpitems-txt {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .comparison .scpcitemsslc {
   border-right: 3px solid #a371f7;
@@ -3271,6 +3467,9 @@ p [role=button] {
   width: 15px;
   color: #a371f7;
 }
+.comparison__cbrgai-e {
+  color: white;
+}
 .comparison__cbrgai-pthbut {
   font-family: "Inter";
   display: flex;
@@ -3303,6 +3502,30 @@ p [role=button] {
   letter-spacing: -0.2px;
   border-radius: 6px;
 }
+.comparison__charts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 18px 0px 18px 10px;
+  justify-content: start;
+  height: 100%;
+  align-items: start;
+}
+.comparison__charts-main {
+  background-color: red;
+  height: 100%;
+  min-width: 60%;
+  flex-grow: 1;
+  height: 80vh;
+}
+.comparison__charts-aifeed {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 40%;
+  background-color: blue;
+  max-width: 340px;
+}
 
 @media (max-width: 1125px) {
   .comparison {
@@ -3319,6 +3542,12 @@ p [role=button] {
   }
   .comparison__side {
     box-shadow: 2px 8px 20px -3px rgb(13, 12, 12);
+    max-height: none;
+    padding: 18px 0px 10px 0px;
+  }
+  .comparison__side-terminal {
+    position: static;
+    width: 100%;
   }
   .comparison__head, .comparison__cenactions {
     padding: 15px 10px;
@@ -3346,9 +3575,9 @@ p [role=button] {
     position: fixed;
     top: 0px;
     left: 0px;
+    min-height: 100vh;
     height: 100vh;
     z-index: 10;
-    padding: 0px;
     background-color: rgba(28, 35, 43, 0.9764705882);
     backdrop-filter: blur(10px);
     border-radius: 0px 15px 15px 0px;

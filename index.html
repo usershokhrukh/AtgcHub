@@ -2402,7 +2402,7 @@
           </div>
         </aside>
       </section>
-      <section class="comparison ">
+      <section class="comparison">
         <div class="comparison__head">
           <div class="comparison__htop">
             <!-- <div class="comparison__htopwr"> -->
@@ -2483,20 +2483,6 @@
                     </svg>
                   </span>
                   Compare select
-                </button>
-                <button class="grayButtons comparison__htbtn">
-                  <span>
-                    <svg
-                      class="comparison__htbt-i"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"
-                      ></path>
-                    </svg>
-                  </span>
                 </button>
                 <button class="grayButtons comparison__htbtn">
                   <span>
@@ -2636,7 +2622,7 @@
               >
                 <span>
                   <svg
-                  class="comparison__cbrgai-i comparison__cbrgai-pth"
+                    class="comparison__cbrgai-i comparison__cbrgai-pth"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -2649,7 +2635,15 @@
                 Publish to Hub
               </button>
               <button
-                class="comparison__cbrgai grayButtons grayButtons comparison__htbtn comparison__htbtn-cs"
+                class="comparison__cbrgai  grayButtons comparison__htbtn comparison__htbtn-cs comparison__cbrgai-cs"
+              >
+                <span>
+                  <svg class="comparison__cbrgai-i comparison__cbrgai-e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
+                </span>
+                <span class="comparison__cbrgai-txt"> Export </span>
+              </button>
+              <button
+                class="comparison__cbrgai  grayButtons comparison__htbtn comparison__htbtn-cs comparison__cbrgai-cs"
               >
                 <span>
                   <svg
@@ -2749,64 +2743,148 @@
         </div>
         <div class="comparison__bot">
           <div class="comparison__side">
-            <div class="comparison__sidehead">
-              <p class="comparison__sidehtit">Filter</p>
-              <span
-                ><svg
-                  class="comparison__sidehext grayButtons"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                  ></path>
-                </svg>
-              </span>
-            </div>
-            <div class="comparison__sidetop">
-              <form class="dash-side__repoform comparison__sideform">
-                <span class="comparison__sideicon">
-                  <svg
-                    class="comparison__sideicon"
+            <div class="comparison__sidebox">
+              <div class="comparison__sidehead">
+                <p class="comparison__sidehtit">Filter</p>
+                <span
+                  ><svg
+                    class="comparison__sidehext grayButtons"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path
-                      d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                      d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
                     ></path>
                   </svg>
                 </span>
-                <input
-                  placeholder="Filter comparing..."
-                  class="dash-side__reposr comparison__sideinput"
-                  type="text"
-                />
-              </form>
-              <button class="comparison__sidetbtn greenButtons">
-                <span>
-                  <svg
-                    class="comparison__sidetbtn-i"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M13.0001 10.9999L22.0002 10.9997L22.0002 12.9997L13.0001 12.9999L13.0001 21.9998L11.0001 21.9998L11.0001 12.9999L2.00004 13.0001L2 11.0001L11.0001 10.9999L11 2.00025L13 2.00024L13.0001 10.9999Z"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
+              </div>
+              <div class="comparison__sidetop">
+                <form class="dash-side__repoform comparison__sideform">
+                  <span class="comparison__sideicon">
+                    <svg
+                      class="comparison__sideicon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <input
+                    placeholder="Filter comparing..."
+                    class="dash-side__reposr comparison__sideinput"
+                    type="text"
+                  />
+                </form>
+                <button class="comparison__sidetbtn greenButtons">
+                  <span>
+                    <svg
+                      class="comparison__sidetbtn-i"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M13.0001 10.9999L22.0002 10.9997L22.0002 12.9997L13.0001 12.9999L13.0001 21.9998L11.0001 21.9998L11.0001 12.9999L2.00004 13.0001L2 11.0001L11.0001 10.9999L11 2.00025L13 2.00024L13.0001 10.9999Z"
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="comparison__scompcards">
+                <div class="comparison__scpcitems grayButtons scpcitemsslc">
+                  <p class="comparison__scpitems-txt">usershokhrukh/Human_genome.v1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, explicabo!</p>
+                </div>
+              </div>
             </div>
-            <div class="comparison__scompcards">
-              <div class="comparison__scpcitems grayButtons scpcitemsslc">
-                <p>usershokhrukh/Human_genome.v1</p>
+            <div class="comparison__side-terminal">
+              <h2 class="comparison__term-tit">Process Log</h2>
+              <div class="comparison__term-wr">
+                <div class="comparison__term-box">
+                  <p class="comparison__term-status">
+                    <span class="comparison__term-st-time">[14:05:22]</span>
+                    <span
+                      class="comparison__term-st-pr comparison__term-st-pr-success"
+                    >
+                      Success
+                    </span>
+                  </p>
+                  <p class="comparison__term-main">
+                    <span class="comparison__term-st"
+                      >[Step
+                      <span class="comparison__term-stnum">1</span>]</span
+                    ><span class="comparison__term-txt"
+                      >Loading sequences... Lorem ipsum dolor</span
+                    >
+                  </p>
+                </div>
+                <div class="comparison__term-box">
+                  <p class="comparison__term-status">
+                    <span class="comparison__term-st-time">[10:11:22]</span>
+                    <span
+                      class="comparison__term-st-pr comparison__term-st-pr-process"
+                    >
+                      Processing
+                    </span>
+                  </p>
+                  <p class="comparison__term-main">
+                    <span class="comparison__term-st"
+                      >[Step
+                      <span class="comparison__term-stnum">2</span>]</span
+                    ><span class="comparison__term-txt"
+                      >Started analyzing...</span
+                    >
+                  </p>
+                </div>
+                <div class="comparison__term-box">
+                  <p class="comparison__term-status">
+                    <span class="comparison__term-st-time">[17:54:29]</span>
+                    <span
+                      class="comparison__term-st-pr comparison__term-st-pr-reject"
+                    >
+                      Rejected
+                    </span>
+                  </p>
+                  <p class="comparison__term-main">
+                    <span class="comparison__term-st"
+                      >[Step
+                      <span class="comparison__term-stnum">3</span>]</span
+                    ><span class="comparison__term-txt"
+                      >Searching chromosome</span
+                    >
+                  </p>
+                </div>
+                <div class="comparison__term-box">
+                  <p class="comparison__term-status">
+                    <span class="comparison__term-st-time">[17:54:29]</span>
+                    <span
+                      class="comparison__term-st-pr comparison__term-st-pr-reject"
+                    >
+                      Rejected
+                    </span>
+                  </p>
+                  <p class="comparison__term-main">
+                    <span class="comparison__term-st"
+                      >[Step
+                      <span class="comparison__term-stnum">3</span>]</span
+                    ><span class="comparison__term-txt"
+                      >Searching chromosome</span
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div class="comparison__charts">
-            <h2>charts</h2>
+            <div class="comparison__charts-main">
+              <h2>charts</h2>
+            </div>
+            <div class="comparison__charts-aifeed">
+              <h2>aifeed</h2>
+            </div>
           </div>
         </div>
       </section>
