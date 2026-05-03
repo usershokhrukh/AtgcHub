@@ -146,7 +146,7 @@
     width: auto !important;
   }
 
-  &__cbrgai-cs{
+  &__cbrgai-cs {
     @include buttonShadow();
   }
 
@@ -371,8 +371,7 @@
     justify-content: start;
     border-bottom: 1px solid $blue-border-text;
     padding: 0px 0px 10px 0px;
-    max-height: fit-content
-
+    max-height: fit-content;
   }
 
   &__side-terminal {
@@ -478,7 +477,6 @@
     backdrop-filter: blur(10px);
     // background-color: red;
     height: 35px;
-    
   }
 
   &__term-st {
@@ -639,7 +637,7 @@
     }
   }
 
-  &__scpitems-txt{
+  &__scpitems-txt {
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -893,7 +891,7 @@
     color: #a371f7;
   }
 
-  &__cbrgai-e{
+  &__cbrgai-e {
     color: $text-color;
   }
 
@@ -905,18 +903,18 @@
     border-radius: 6px;
   }
 
-
   &__charts {
     @include display();
+    position: relative;
     flex-grow: 1;
-    padding: 18px 0px 18px 10px;
+    padding: 0px 0px 18px 10px;
     justify-content: start;
     height: 100%;
     align-items: start;
   }
 
-  &__charts-main{
-    background-color: red;
+  &__charts-main {
+    // background-color: red;
     height: 100%;
     min-width: 60%;
     flex-grow: 1;
@@ -924,11 +922,339 @@
   }
 
   &__charts-aifeed {
-    height: fit-content;
+    @include display();
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    // gap: 5px;
+    height: 550px;
     width: 40%;
-    background-color: blue;
+    background-color: $bg-dark-blue;
     max-width: 340px;
+    // padding: 20px 0px;
+    padding: 0px;
+    border-left: 1px solid $blue-border-text;
+    border-right: 1px solid $blue-border-text;
+    max-height: 550px
   }
+
+  &__chaf-top {
+    @include display();
+    position: relative;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 10px;
+    backdrop-filter: blur(10px);
+    // z-index: 0;
+    border-bottom: 1px solid $text-lightS;
+    gap: 5px;
+    background-color: $feed-items
+  }
+
+  &__chaf-top-rs {
+    @include inter();
+    color: $secondary-color;
+    font-size: 13px;
+  }
+
+  &__chaf-m {
+    position: relative;
+    top: -1px;
+    padding: 15px;
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 12px;
+    width: 100%;
+    // border-top: 1px solid $blue-border-text;
+    flex-grow: 1;
+    max-height: 400px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px; // Vertikal scroll kengligi
+      height: 6px; // Gorizontal scroll balandligi (General Chart uchun)
+    }
+
+    /* Scrollbar yo'lakchasi (Track) */
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.096);
+      border-radius: 10px;
+    }
+
+    /* Harakatlanuvchi qismi (Thumb) */
+    &::-webkit-scrollbar-thumb {
+      background: $border; // Default holatda ko'rinmasroq
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  &__chaf-m-ai {
+    @include display();
+    align-items: start;
+    gap: 8px;
+    justify-content: start;
+    width: 100%;
+    // background-color: red
+  }
+
+  &__chaf-m-user {
+    @include display();
+    // background-color: red;
+    width: 100%;
+    justify-content: end;
+    gap: 8px;
+    align-items: start;
+  }
+
+  &__chaf-muser-txt {
+    @include inter();
+    font-size: 13.5px;
+    color: $text-color;
+    padding: 10px;
+    background-color: $dash-side;
+    max-width: 200px;
+    font-weight: 300;
+    border: 1px solid $text-lightS;
+  }
+
+  // &__chaf-mai-txt {
+  //   border-radius: 0px 4px 4px 4px;
+  //   @include inter();
+  //   font-size: 13px;
+  //   color: $text-color;
+  //   padding: 12px;
+  //   background-color: rgba(255, 255, 255, 0.03); // Juda shaffof fon
+  //   max-width: 100%; // Kenglikni to'ldirsin
+  //   font-weight: 400;
+  //   border-left: 2px solid $blue-border-text; // AI belgi chizig'i
+  //   border-radius: 4px; // Chat effektini yo'qotish uchun
+  // }
+
+  &__chaf-mai-tbo{
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+    border-left: 1px solid $blue-border-text;
+    padding: 8px;
+    border-radius: 3px
+  }
+
+  &__chaf-maitbo-con{
+    @include inter();
+    font-size: 11px;
+    color: $secondary-color;
+    // opacity: 0.7;
+    font-weight: 300
+  }
+
+  &__chaf-mai-bot{
+    @include display();
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &__chaf-mai-txt{
+    @include inter();
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 400;
+  }
+
+  &__chaf-muser-txt {
+    border-radius: 4px 0px 4px 4px;
+  }
+
+  &__chaf-form {
+    @include display();
+    margin-top: 20px;
+    width: calc(100% - 20px);
+    padding: 6px 5px;
+    border: 1px solid $text-lightS;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__chaf-input {
+    @include inter();
+    font-size: 13px;
+    outline: none;
+    // padding: 6px 5px;
+    flex-grow: 1;
+    // border-radius: 8px;
+    background-color: transparent;
+    // border: 1px solid $text-lightS;
+    color: $text-color;
+    border: none;
+  }
+
+  &__chaf-fsps {
+    width: 25px;
+    color: $text-color;
+    padding: 4px;
+    @include hoverCursor();
+    opacity: 0.9;
+    @media (hover:hover) {
+      &:hover{
+        color: $secondary-color;
+      } 
+    }
+
+    &:active{
+      color: $text-color;
+      opacity: 1;
+    }
+  }
+
+  &__chaf-bar {
+    @include display();
+    justify-content: start;
+    width: 100%;
+    height: 2px;
+    background-color: $blue-border-text;
+    opacity: 0.8;
+  }
+
+  &__chaf-line {
+    width: 37%;
+    height: 100%;
+    background-color: $dna-g;
+  }
+
+  &__chaf-risk-y {
+    background-color: $dna-g;
+    color: $dna-g;
+  }
+
+  &__chaf-head{
+    @include display();
+    position: relative;
+    justify-content: start;
+    width: 100%;
+    padding: 0px 10px;
+    // gap: 10px;
+    border-bottom: 1px solid $blue-border-text;
+    height: 37px;
+    // margin-bottom: 10px;
+    background-color: $feed-items
+  }
+
+  &__chaftab-side{
+    @include display();
+    position: absolute;
+    right: 5px;
+    top: 4px;
+  }
+
+  &__chafside-i{
+    // width: 27px;
+  }
+
+  &__charts-tab {
+    @include inter();
+    @include display();
+    position: relative;
+    top: 0px;
+    font-size: 12px;
+    padding: 10px 8px;
+    background-color: transparent;
+    border: none;
+    color: $secondary-color;
+    border-bottom: 3px solid transparent;
+    height: 38px !important;
+    opacity: 0.5 !important;
+    border-top: 1px solid $blue-border-text;
+    gap: 5px;
+    @media (hover: hover) {
+      &:hover{
+        @include hoverCursor();
+        color: $text-color;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &__charts-tab-act{
+    border-bottom: 3px solid $purple !important;
+    opacity: 0.9 !important;
+    background-color: $header;
+    color: $text-color
+  }
+
+  &__chaf-mtbo-g{
+    color: $dna-a
+  }
+
+  &__chaf-mtbo-csp{
+    @include display();
+    justify-content: end;
+    width: 100%;
+    // background-color: red;
+  }
+
+  &__chaf-maitbo-copy{
+    width: 18px;
+    color: $border;
+
+    @media (hover: hover) {
+      &:hover{
+        @include hoverCursor();
+        color: $secondary-color;
+      }
+    }
+
+    &:active{
+        @include hoverCursor();
+        color: $secondary-color;
+      }
+  }
+
+  &__chaft-top{
+    width: 100%;
+    @include display();
+    justify-content: space-between;
+  }
+
+  &__chaf-top-txt{
+    @include inter();
+    font-size: 12px;
+    color: $text-color;
+    padding: 3px 8px;
+    border: 1px solid $dna-g;
+    border-radius: 8px;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent !important;
+  }
+
+  &__chaf-tab-i{
+    width: 14px;
+    color: $secondary-color;
+    opacity: 0.7;
+  }
+
+  &__chafai-pilot{
+    @include display();
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+
+
+
+
+
+
 }
 
 @media (max-width: 1125px) {
