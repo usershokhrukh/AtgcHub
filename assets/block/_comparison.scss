@@ -935,7 +935,7 @@
     padding: 0px;
     border-left: 1px solid $blue-border-text;
     border-right: 1px solid $blue-border-text;
-    max-height: 550px
+    max-height: 550px;
   }
 
   &__chaf-top {
@@ -949,7 +949,7 @@
     // z-index: 0;
     border-bottom: 1px solid $text-lightS;
     gap: 5px;
-    background-color: $feed-items
+    background-color: $feed-items;
   }
 
   &__chaf-top-rs {
@@ -1040,30 +1040,30 @@
   //   border-radius: 4px; // Chat effektini yo'qotish uchun
   // }
 
-  &__chaf-mai-tbo{
+  &__chaf-mai-tbo {
     @include display();
     flex-direction: column;
     align-items: start;
     gap: 4px;
     border-left: 1px solid $blue-border-text;
     padding: 8px;
-    border-radius: 3px
+    border-radius: 3px;
   }
 
-  &__chaf-maitbo-con{
+  &__chaf-maitbo-con {
     @include inter();
     font-size: 11px;
     color: $secondary-color;
     // opacity: 0.7;
-    font-weight: 300
+    font-weight: 300;
   }
 
-  &__chaf-mai-bot{
+  &__chaf-mai-bot {
     @include display();
     flex-wrap: wrap;
     gap: 5px;
   }
-  &__chaf-mai-txt{
+  &__chaf-mai-txt {
     @include inter();
     font-size: 14px;
     color: $text-color;
@@ -1078,7 +1078,7 @@
     @include display();
     margin-top: 20px;
     width: calc(100% - 20px);
-    padding: 6px 5px;
+    padding: 0px 5px 0px 0px;
     border: 1px solid $text-lightS;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -1088,13 +1088,12 @@
     @include inter();
     font-size: 13px;
     outline: none;
-    // padding: 6px 5px;
     flex-grow: 1;
-    // border-radius: 8px;
     background-color: transparent;
-    // border: 1px solid $text-lightS;
     color: $text-color;
     border: none;
+    height: auto;
+    padding: 10px 5px;
   }
 
   &__chaf-fsps {
@@ -1103,13 +1102,13 @@
     padding: 4px;
     @include hoverCursor();
     opacity: 0.9;
-    @media (hover:hover) {
-      &:hover{
+    @media (hover: hover) {
+      &:hover {
         color: $secondary-color;
-      } 
+      }
     }
 
-    &:active{
+    &:active {
       color: $text-color;
       opacity: 1;
     }
@@ -1135,7 +1134,7 @@
     color: $dna-g;
   }
 
-  &__chaf-head{
+  &__chaf-head {
     @include display();
     position: relative;
     justify-content: start;
@@ -1145,17 +1144,17 @@
     border-bottom: 1px solid $blue-border-text;
     height: 37px;
     // margin-bottom: 10px;
-    background-color: $feed-items
+    background-color: $feed-items;
   }
 
-  &__chaftab-side{
+  &__chaftab-side {
     @include display();
     position: absolute;
     right: 5px;
     top: 4px;
   }
 
-  &__chafside-i{
+  &__chafside-i {
     // width: 27px;
   }
 
@@ -1175,7 +1174,7 @@
     border-top: 1px solid $blue-border-text;
     gap: 5px;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @include hoverCursor();
         color: $text-color;
         opacity: 1 !important;
@@ -1183,48 +1182,48 @@
     }
   }
 
-  &__charts-tab-act{
+  &__charts-tab-act {
     border-bottom: 3px solid $purple !important;
     opacity: 0.9 !important;
     background-color: $header;
-    color: $text-color
+    color: $text-color;
   }
 
-  &__chaf-mtbo-g{
-    color: $dna-a
+  &__chaf-mtbo-g {
+    color: $dna-a;
   }
 
-  &__chaf-mtbo-csp{
+  &__chaf-mtbo-csp {
     @include display();
     justify-content: end;
     width: 100%;
     // background-color: red;
   }
 
-  &__chaf-maitbo-copy{
+  &__chaf-maitbo-copy {
     width: 18px;
     color: $border;
 
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @include hoverCursor();
         color: $secondary-color;
       }
     }
 
-    &:active{
-        @include hoverCursor();
-        color: $secondary-color;
-      }
+    &:active {
+      @include hoverCursor();
+      color: $secondary-color;
+    }
   }
 
-  &__chaft-top{
+  &__chaft-top {
     width: 100%;
     @include display();
     justify-content: space-between;
   }
 
-  &__chaf-top-txt{
+  &__chaf-top-txt {
     @include inter();
     font-size: 12px;
     color: $text-color;
@@ -1236,25 +1235,142 @@
     background-color: transparent !important;
   }
 
-  &__chaf-tab-i{
+  &__chaf-tab-i {
     width: 14px;
     color: $secondary-color;
     opacity: 0.7;
   }
 
-  &__chafai-pilot{
+  &__chafai-pilot {
     @include display();
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
   }
 
+  &__chaf-feed {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    // background-color: red;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px 10px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px; // Vertikal scroll kengligi
+      height: 6px; // Gorizontal scroll balandligi (General Chart uchun)
+    }
 
+    /* Scrollbar yo'lakchasi (Track) */
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.096);
+      border-radius: 10px;
+    }
 
+    /* Harakatlanuvchi qismi (Thumb) */
+    &::-webkit-scrollbar-thumb {
+      background: $border; // Default holatda ko'rinmasroq
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+      transition: background 0.3s ease;
 
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
 
+  &__chaffe-item {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding: 0px 0px 30px 0px;
+    border-bottom: 1px solid $text-light;
+    // border-left: 1px solid $blue-border-text
+  }
 
+  &__feed-user {
+    @include display();
+    justify-content: start;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
 
+  &__feed-meta {
+    @include display();
+    justify-content: start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__feed-username,
+  &__feed-specialty,
+  &__feed-time,
+  &__feed-ctxtsp {
+    @include inter();
+    font-size: 12px;
+    color: $secondary-color;
+    font-weight: 300;
+  }
+
+  &__feed-user-img {
+    border-radius: 50px;
+  }
+
+  &__feed-username {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__feed-ctxtsp {
+    padding: 1px 6px;
+    background-color: $text-lightS;
+    border: 1px solid $text-lightS;
+    border-radius: 8px;
+    font-weight: 400;
+  }
+
+  &__feed-ctxt {
+    @include inter();
+    font-size: 13px;
+    color: $text-color;
+    font-weight: 300;
+    opacity: 0.9;
+    padding: 4px 7px;
+    background-color: $bg-dark-blue;
+    border: 1px solid $text-lightS;
+    border-radius: 8px;
+  }
+
+  &__feed-content {
+    width: 100%;
+    @include display();
+    justify-content: start;
+  }
+
+  &__feed-actions {
+    @include display();
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 4px;
+
+    & button {
+      padding: 4px 8px;
+      border: 1px solid $text-lightS;
+      border-radius: 8px;
+      background-color: $main-color-bg;
+      color: $secondary-color;
+      font-weight: 300;
+      font-size: 12px;
+    }
+  }
 }
 
 @media (max-width: 1125px) {

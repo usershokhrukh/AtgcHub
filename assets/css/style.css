@@ -3662,7 +3662,7 @@ p [role=button] {
   justify-content: center;
   margin-top: 20px;
   width: calc(100% - 20px);
-  padding: 6px 5px;
+  padding: 0px 5px 0px 0px;
   border: 1px solid rgba(58, 66, 75, 0.7019607843);
   border-radius: 8px;
   margin-bottom: 10px;
@@ -3675,6 +3675,8 @@ p [role=button] {
   background-color: transparent;
   color: white;
   border: none;
+  height: auto;
+  padding: 10px 5px;
 }
 .comparison__chaf-fsps {
   width: 25px;
@@ -3816,6 +3818,127 @@ p [role=button] {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
+}
+.comparison__chaf-feed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px 10px;
+  overflow: auto;
+}
+.comparison__chaf-feed::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.comparison__chaf-feed {
+  /* Scrollbar yo'lakchasi (Track) */
+}
+.comparison__chaf-feed::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.096);
+  border-radius: 10px;
+}
+.comparison__chaf-feed {
+  /* Harakatlanuvchi qismi (Thumb) */
+}
+.comparison__chaf-feed::-webkit-scrollbar-thumb {
+  background: rgba(112, 112, 112, 0.5725490196);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.comparison__chaf-feed::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(205, 205, 205);
+}
+.comparison__chaffe-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding: 0px 0px 30px 0px;
+  border-bottom: 1px solid rgba(75, 87, 103, 0.3725490196);
+}
+.comparison__feed-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.comparison__feed-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.comparison__feed-username, .comparison__feed-specialty, .comparison__feed-time, .comparison__feed-ctxtsp {
+  font-family: "Inter";
+  font-size: 12px;
+  color: rgb(205, 205, 205);
+  font-weight: 300;
+}
+.comparison__feed-user-img {
+  border-radius: 50px;
+}
+.comparison__feed-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.comparison__feed-ctxtsp {
+  padding: 1px 6px;
+  background-color: rgba(58, 66, 75, 0.7019607843);
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  border-radius: 8px;
+  font-weight: 400;
+}
+.comparison__feed-ctxt {
+  font-family: "Inter";
+  font-size: 13px;
+  color: white;
+  font-weight: 300;
+  opacity: 0.9;
+  padding: 4px 7px;
+  background-color: #161b22;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  border-radius: 8px;
+}
+.comparison__feed-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+}
+.comparison__feed-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 4px;
+}
+.comparison__feed-actions button {
+  padding: 4px 8px;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  border-radius: 8px;
+  background-color: rgba(28, 35, 43, 0.9764705882);
+  color: rgb(205, 205, 205);
+  font-weight: 300;
+  font-size: 12px;
 }
 
 @media (max-width: 1125px) {
