@@ -968,7 +968,6 @@
     justify-content: start;
     gap: 12px;
     width: 100%;
-    // border-top: 1px solid $blue-border-text;
     flex-grow: 1;
     max-height: 400px;
     overflow: auto;
@@ -1004,12 +1003,10 @@
     gap: 8px;
     justify-content: start;
     width: 100%;
-    // background-color: red
   }
 
   &__chaf-m-user {
     @include display();
-    // background-color: red;
     width: 100%;
     justify-content: end;
     gap: 8px;
@@ -1027,18 +1024,6 @@
     border: 1px solid $text-lightS;
   }
 
-  // &__chaf-mai-txt {
-  //   border-radius: 0px 4px 4px 4px;
-  //   @include inter();
-  //   font-size: 13px;
-  //   color: $text-color;
-  //   padding: 12px;
-  //   background-color: rgba(255, 255, 255, 0.03); // Juda shaffof fon
-  //   max-width: 100%; // Kenglikni to'ldirsin
-  //   font-weight: 400;
-  //   border-left: 2px solid $blue-border-text; // AI belgi chizig'i
-  //   border-radius: 4px; // Chat effektini yo'qotish uchun
-  // }
 
   &__chaf-mai-tbo {
     @include display();
@@ -1054,7 +1039,6 @@
     @include inter();
     font-size: 11px;
     color: $secondary-color;
-    // opacity: 0.7;
     font-weight: 300;
   }
 
@@ -1140,10 +1124,8 @@
     justify-content: start;
     width: 100%;
     padding: 0px 10px;
-    // gap: 10px;
     border-bottom: 1px solid $blue-border-text;
     height: 37px;
-    // margin-bottom: 10px;
     background-color: $feed-items;
   }
 
@@ -1152,10 +1134,6 @@
     position: absolute;
     right: 5px;
     top: 4px;
-  }
-
-  &__chafside-i {
-    // width: 27px;
   }
 
   &__charts-tab {
@@ -1197,7 +1175,6 @@
     @include display();
     justify-content: end;
     width: 100%;
-    // background-color: red;
   }
 
   &__chaf-maitbo-copy {
@@ -1254,7 +1231,6 @@
     align-items: start;
     justify-content: start;
     gap: 30px;
-    // background-color: red;
     flex-grow: 1;
     width: 100%;
     padding: 20px 10px;
@@ -1291,7 +1267,6 @@
     gap: 10px;
     padding: 0px 0px 30px 0px;
     border-bottom: 1px solid $text-light;
-    // border-left: 1px solid $blue-border-text
   }
 
   &__feed-user {
