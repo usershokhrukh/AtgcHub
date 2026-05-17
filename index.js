@@ -128,3 +128,95 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.fillRect(x, 0, 1, height);
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("minimapCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+
+  // Yuqori tiniqlik (Retina ekranlar uchun ham)
+  const width = canvas.width;
+  const height = canvas.height;
+  ctx.clearRect(0, 0, width, height);
+
+  // Yumaloq blok chizish
+  function drawRoundRect(x, y, w, h, r) {
+    if (w < 2 * r) r = w / 2;
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // 1. DYNAMIC SYNTENY BLOCKS (3 millionlik genom masshtabi)
+  // v1 va v2 dagi real koordinatalar (ekran eni 1200px ga moslangan)
+  const blocks = [
+    { v1X: 10,  v1W: 200, v2X: 10,  v2W: 200, type: 'normal' },
+    { v1X: 230, v1W: 300, v2X: 230, v2W: 300, type: 'normal' },
+    { v1X: 550, v1W: 350, v2X: 550, v2W: 350, type: 'inversion' }, // <--- Buralish zonasi
+    { v1X: 920, v1W: 260, v2X: 920, v2W: 260, type: 'normal' }
+  ];
+
+  // Bloklarni nafis kulrangda chizamiz
+  ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+  blocks.forEach(b => {
+    drawRoundRect(b.v1X, 6, b.v1W, 3, 1.5);  // Tepa zanjir
+    drawRoundRect(b.v2X, 35, b.v2W, 3, 1.5); // Pastki zanjir
+  });
+
+  // 2. NAFIS BEZIER IPLARI (Faqat bloklar orasida chiziladi!)
+  ctx.lineWidth = 0.5; // Chiziqlarni o'ta ingichka qildik!
+
+  blocks.forEach(b => {
+    // Har bir blok ichida 25 tadan nozik ip o'tkazamiz
+    const linesCount = 25;
+    
+    for (let i = 0; i <= linesCount; i++) {
+      const tPercent = i / linesCount;
+      
+      // Tepa va pastki nuqtalarni aniqlash
+      const startX = b.v1X + (b.v1W * tPercent);
+      // Agar inversiya bo'lsa, chiziq yo'nalishini teskari qilamiz (X hosil bo'ladi)
+      const endX = b.type === 'inversion' 
+        ? b.v2X + (b.v2W * (1 - tPercent)) 
+        : b.v2X + (b.v2W * tPercent);
+
+      ctx.beginPath();
+      ctx.moveTo(startX, 9);
+
+      // Silliq egri chiziq nazorat nuqtalari
+      const cp1X = startX + (endX - startX) * 0.2;
+      const cp1Y = 16;
+      const cp2X = startX + (endX - startX) * 0.8;
+      const cp2Y = 28;
+
+      ctx.bezierCurveTo(cp1X, cp1Y, cp2X, cp2Y, endX, 34);
+
+      // Chiziqlar o'ta xira va nafis bo'lishi uchun shaffoflikni minimal qildik (0.04)
+      ctx.strokeStyle = `rgba(255, 255, 255, 0.04)`;
+      ctx.stroke();
+    }
+  });
+});
