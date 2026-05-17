@@ -343,6 +343,13 @@
     @include display();
     width: 100%;
     justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__bot-l {
+    @include display();
+    width: 100%;
     align-items: start;
   }
 
@@ -914,11 +921,16 @@
   }
 
   &__charts-main {
+    @include display();
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
     // background-color: red;
     height: 100%;
     min-width: 60%;
     flex-grow: 1;
-    height: 80vh;
+    // height: 60vh;
+    padding: 10px;
   }
 
   &__charts-aifeed {
@@ -1023,7 +1035,6 @@
     font-weight: 300;
     border: 1px solid $text-lightS;
   }
-
 
   &__chaf-mai-tbo {
     @include display();
@@ -1345,6 +1356,115 @@
       font-weight: 300;
       font-size: 12px;
     }
+  }
+
+  &__charts-heatmap {
+    @include display();
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  &__charts-heattit {
+    @include inter();
+    font-size: 12px;
+    color: $secondary-color;
+    // width: 100%;
+    padding: 10px;
+  }
+
+  &__charts-heat {
+    @include display();
+    position: relative;
+    flex-grow: 1;
+    // width: 100%;
+    height: 16px;
+    // border: 1px solid $text-lightS;
+    // background-color: red;
+    max-width: 1200px;
+
+
+    // filter: blur(4px);
+
+
+
+
+
+
+
+    #heatmapCanvas {
+    width: 100%; // Ekran o'lchamiga qarab cho'ziladi
+    height: 100%;
+    display: block;
+
+    // filter: blur(3px) brightness(1.8) saturate(1.6); 
+    transform: scale(1.02); // Blur chekkalari ochilib qolmasligi uchun biroz kengaytiramiz
+    mix-blend-mode: screen;
+    transform: scaleY(0.9) scaleX(0.997);
+  }
+
+  // Tiniq to'r qatlami endi alohida div bo'ldi, blur elementlarni to'smaydi
+  // .heatmap-grid-overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-image: 
+  //     linear-gradient(to right, #121318 1px, transparent 1px),
+  //     linear-gradient(to bottom, #121318 1px, transparent 1px);
+  //   background-size: 8px 8px; // Mayda 2 qavatli kubiklar o'lchami
+  //   pointer-events: none;
+  //   z-index: 2;
+  //   opacity: 0.3;
+  // }
+
+
+
+
+  }
+
+  &__chbot {
+    // background-color: red;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__charts-hsp {
+    @include display();
+    height: 100%;
+    flex-grow: 1;
+  }
+
+  &__chhsp-low {
+    background-color: #1b1c24 !important;
+  }
+
+  &__chhsp-med {
+    background-color: #543126 !important;
+  }
+
+  &__chhsp-high {
+    background-color: #8c3b2b !important;
+  }
+
+  &__chhsp-crit {
+    background: #b62b1b !important;
+    box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.5) !important;
+  }
+
+  &__charts-hswr {
+    @include display();
+    flex-grow: 1;
+    height: 8px;
+    filter: blur(14px) brightness(1.4) saturate(1.4);
+    transform: scaleY(0.35) scaleX(0.96);
+    mix-blend-mode: screen;
   }
 }
 
