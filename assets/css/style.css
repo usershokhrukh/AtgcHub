@@ -3964,6 +3964,16 @@ p [role=button] {
   max-width: 1300px;
   margin: auto;
 }
+.comparison__charts-minimap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
 .comparison__charts-heattit {
   font-family: "Inter";
   font-size: 12px;
@@ -3976,7 +3986,7 @@ p [role=button] {
   justify-content: center;
   position: relative;
   flex-grow: 1;
-  height: 16px;
+  height: 8px;
   max-width: 1200px;
 }
 .comparison__charts-heat #heatmapCanvas {
@@ -3994,35 +4004,46 @@ p [role=button] {
   align-items: center;
   justify-content: start;
 }
-.comparison__charts-hsp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.comparison .comparison__charts-mini {
+  position: relative;
+  flex-grow: 1;
+  height: 44px;
+  background-color: rgba(28, 35, 43, 0.9764705882);
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  border-radius: 4px;
+  max-width: 1200px;
+  overflow: hidden;
+}
+.comparison .comparison__charts-mini #minimapCanvas {
+  width: 100%;
   height: 100%;
-  flex-grow: 1;
+  display: block;
 }
-.comparison__chhsp-low {
-  background-color: #1b1c24 !important;
+.comparison .comparison__charts-mini .minimap-lens {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 42%;
+  width: 22%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  cursor: grab;
+  z-index: 5;
 }
-.comparison__chhsp-med {
-  background-color: #543126 !important;
+.comparison .comparison__charts-mini .minimap-lens:active {
+  cursor: grabbing;
 }
-.comparison__chhsp-high {
-  background-color: #8c3b2b !important;
-}
-.comparison__chhsp-crit {
-  background: #b62b1b !important;
-  box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.5) !important;
-}
-.comparison__charts-hswr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  height: 8px;
-  filter: blur(14px) brightness(1.4) saturate(1.4);
-  transform: scaleY(0.35) scaleX(0.96);
-  mix-blend-mode: screen;
+.comparison .comparison__charts-mini .minimap-marker-star {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 6;
 }
 
 @media (max-width: 1125px) {
@@ -4079,6 +4100,15 @@ p [role=button] {
     background-color: rgba(28, 35, 43, 0.9764705882);
     backdrop-filter: blur(10px);
     border-radius: 0px 15px 15px 0px;
+  }
+  .comparison__charts-aifeed {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 9;
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: -2px 8px 20px -3px rgb(13, 12, 12);
   }
   .comparison__sidetbtn {
     padding: 5px 9px;
