@@ -2875,7 +2875,59 @@
               </div>
             </div>
             <div class="comparison__charts">
-              <div class="comparison__charts-main"></div>
+              <div class="comparison__charts-main">
+                <div class="comparison__general-chart">
+                  <div class="comparison__genl-regbo">
+                    <h2 class="comparison__genlrbo-txt">
+                      Region 1:Chr1:100M-200M
+                    </h2>
+                    <h2 class="comparison__genlrbo-txt">
+                      Region 2:Chr7:50M-60M
+                    </h2>
+                  </div>
+                  <div class="comparison__genl-refbo">
+                    <div class="comparison__genl-refbo-top">
+                      <h2 class="comparison__grebto-invers">INVERSION</h2>
+                    </div>
+                    <div class="comparison__grebto-main">
+                      <p class="comparison__greb-leftxt">v1 Reference</p>
+                      <div class="comparison__grebto-m-right">
+                        <div class="comparison__grebto-mrt-block">
+                          <p class="comparison__grebto-mbl-txt">Chr1:120M</p>
+                          <div class="comparison__grebto-mbl-bot">
+                            <span class="comparison__grebto-mbl-sp"></span>
+                            <span class="comparison__grebto-mbl-snp"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comparison__greb-vlinebo"></div>
+                    <div class="comparison__grebbo-main">
+                      <p class="comparison__greb-leftxt">v2 User Genome</p>
+                      <div class="comparison__grebbo-m-right">
+                        <div class="comparison__grebbo-mrt-block">
+                          <div class="comparison__grebbo-mbl-bot">
+                            <span class="comparison__grebbo-mbl-sp"></span>
+                            <span class="comparison__grebbo-mbl-snp"></span>
+                          </div>
+                          <p class="comparison__grebbo-mbl-txt">Chr1:120M</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comparison__charts-heatmap">
+                    <h2 class="comparison__charts-heattit">Heatmap</h2>
+                    <div class="comparison__charts-heat">
+                      <canvas
+                        id="heatmapCanvas"
+                        width="1300"
+                        height="16"
+                      ></canvas>
+                      <div class="heatmap-grid-overlay"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="comparison__charts-aifeed">
                 <div class="comparison__chaf-head">
                   <button
@@ -3113,13 +3165,13 @@
             </div>
           </div>
           <div class="comparison__chbot">
-            <div class="comparison__charts-heatmap">
+            <!-- <div class="comparison__charts-heatmap">
               <h2 class="comparison__charts-heattit">Heatmap</h2>
               <div class="comparison__charts-heat">
                 <canvas id="heatmapCanvas" width="1200" height="16"></canvas>
                 <div class="heatmap-grid-overlay"></div>
               </div>
-            </div>
+            </div> -->
             <div class="comparison__charts-minimap">
               <h2 class="comparison__charts-heattit">Minimap</h2>
               <div class="comparison__charts-mini">
