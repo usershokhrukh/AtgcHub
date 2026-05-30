@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: none;
+  // user-select: none;
 }
 
 a {
@@ -37,7 +37,7 @@ input,
 div,
 p [role="button"] {
   -webkit-tap-highlight-color: transparent !important; /* Mobil brauzerlar uchun */
-  -webkit-user-select: none; /* Matnni tasodifan belgilab olmaslik uchun */
+  // -webkit-user-select: none; /* Matnni tasodifan belgilab olmaslik uchun */
   outline: none !important; /* Fokus bo'lgandagi chiziqni yo'qotadi */
 }
 
