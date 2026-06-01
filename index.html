@@ -2735,7 +2735,7 @@
         </div>
         <div class="comparison__bot">
           <div class="comparison__bot-l">
-            <div class="comparison__side">
+            <div class="comparison__side none">
               <div class="comparison__sidebox">
                 <div class="comparison__sidehead">
                   <p class="comparison__sidehtit">Filter</p>
@@ -2884,32 +2884,635 @@
                     </div>
 
                     <div class="comparison__main-svg-wrapper">
-                      <svg
-                        viewBox="0 0 1300 160"
-                        preserveAspectRatio="none"
+                      <!-- <svg
                         class="synteny-svg-canvas"
+                        width="100%"
+                        height="160"
+                        style="overflow: visible"
                       >
-                        <g id="svg-region-1">
-                          <text
-                            x="50"
-                            y="25"
-                            class="comparison__reg-txt"
-                            fill="currentColor"
-                          >
-                            Region 1: Chr1:120M - 130M
-                          </text>
+                        <foreignObject x="0%" y="0" width="30%" height="40">
+                          <div class="comparison__reg-box">
+                            <p class="comparison__reg-txt">
+                              Region 1: Chr1:120M - 130M
+                            </p>
+                          </div>
+                        </foreignObject>
+
+                        <foreignObject x="60%" y="0" width="30%" height="40">
+                          <div class="comparison__reg-box">
+                            <p class="comparison__reg-txt">
+                              Region 2: Chr7:50M - 60M
+                            </p>
+                          </div>
+                        </foreignObject>
+
+                        <g class="svg-v1-chromosomes">
+                          <g class="svg-r-line">
+                            <rect
+                              class="comparison__r-line"
+                              x="0%"
+                              y="58"
+                              width="100%"
+                              height="2"
+                              fill="currentColor"
+                              rx="4"
+                            />
+                          </g>
+                          <g class="r1-v1-group">
+                            <rect
+                              x="0%"
+                              y="54"
+                              width="55%"
+                              height="11"
+                              fill="currentColor"
+                              rx="4"
+                              class="comparison__r-chr-lines"
+                            />
+                            <foreignObject
+                              x="0%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:120M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="10%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-center">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:125M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="20%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:130M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
+                          <g class="r2-v1-group">
+                            <rect
+                              x="60%"
+                              y="54"
+                              width="30%"
+                              height="11"
+                              fill="currentColor"
+                              class="comparison__r-chr-lines"
+                              rx="4"
+                            />
+
+                            <foreignObject
+                              x="60%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:50M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="80%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:60M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
+                        </g>
+                        <g class="svg-v1-chromosomes">
+                          <g class="svg-r-line">
+                            <rect
+                              class="comparison__r-line"
+                              x="0%"
+                              y="84%"
+                              width="100%"
+                              height="2"
+                              fill="currentColor"
+                              rx="4"
+                            />
+                          </g>
+                          <g class="r1-v1-group">
+                            <rect
+                              x="0%"
+                              y="82%"
+                              width="50%"
+                              height="11"
+                              fill="currentColor"
+                              rx="4"
+                              class="comparison__r-chr-lines"
+                            />
+                            <foreignObject
+                              x="0%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:120M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="10%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-center">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:125M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="20%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:130M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
+                          <g class="r2-v1-group">
+                            <rect
+                              x="60%"
+                              y="82%"
+                              width="30%"
+                              height="11"
+                              fill="currentColor"
+                              class="comparison__r-chr-lines"
+                              rx="4"
+                            />
+
+                            <foreignObject
+                              x="60%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:50M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="80%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:60M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
+                        </g>
+                        <g class="svg-inversion-header-group">
+                          <rect
+                            x="12%"
+                            y="60"
+                            width="10%"
+                            height="20"
+                            fill="#1E2640"
+                            stroke="#3F51B5"
+                            stroke-width="1.5"
+                            rx="2"
+                          />
+
+                          <line
+                            x1="17%"
+                            y1="60"
+                            x2="17%"
+                            y2="52"
+                            stroke="#3F51B5"
+                            stroke-width="1.5"
+                          />
+
+                          <foreignObject x="7%" y="15" width="20%" height="38">
+                            <div class="inversion-meta-box">
+                              <span class="inv-meta-title">INVERSION</span>
+                              <span class="inv-meta-sub">Monospace</span>
+                            </div>
+                          </foreignObject>
+                        </g>
+                      </svg> -->
+
+                      <svg
+                        class="synteny-svg-canvas"
+                        width="100%"
+                        height="160"
+                        style="overflow: visible"
+                      >
+                        <foreignObject x="0%" y="0" width="30%" height="40">
+                          <div class="comparison__reg-box">
+                            <p class="comparison__reg-txt">
+                              Region 1: Chr1:120M - 130M
+                            </p>
+                          </div>
+                        </foreignObject>
+
+                        <foreignObject x="60%" y="0" width="30%" height="40">
+                          <div class="comparison__reg-box">
+                            <p class="comparison__reg-txt">
+                              Region 2: Chr7:50M - 60M
+                            </p>
+                          </div>
+                        </foreignObject>
+
+                        <g class="svg-v1-chromosomes">
+                          <g class="svg-r-line">
+                            <rect
+                              class="comparison__r-line"
+                              x="0%"
+                              y="58"
+                              width="100%"
+                              height="2"
+                              fill="currentColor"
+                              rx="4"
+                            />
+                          </g>
+
+                          <g class="r1-v1-group">
+                            <rect
+                              x="0%"
+                              y="54"
+                              width="11.7%"
+                              height="11"
+                              fill="currentColor"
+                              rx="4"
+                              class="comparison__r-chr-lines"
+                            />
+
+                            <rect
+                              x="22.3%"
+                              y="54"
+                              width="30%"
+                              height="11"
+                              fill="currentColor"
+                              rx="4"
+                              class="comparison__r-chr-lines"
+                            />
+
+                            <foreignObject
+                              x="0%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:120M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="23%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-center">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:125M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="33%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:130M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
+
+                          <g class="r2-v1-group">
+                            <rect
+                              x="60%"
+                              y="54"
+                              width="40%"
+                              height="11"
+                              fill="currentColor"
+                              class="comparison__r-chr-lines"
+                              rx="4"
+                            />
+                            <foreignObject
+                              x="60%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:50M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="80%"
+                              y="30"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:60M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
                         </g>
 
-                        <g id="svg-region-2">
-                          <text
-                            x="700"
-                            y="25"
-                            class="comparison__reg-txt"
-                            fill="currentColor"
-                          >
-                            Region 2: Chr7:50M - 60M
-                          </text>
+                        <g class="svg-v1-chromosomes">
+                          <g class="svg-r-line">
+                            <rect
+                              class="comparison__r-line"
+                              x="0%"
+                              y="84%"
+                              width="100%"
+                              height="2"
+                              fill="currentColor"
+                              rx="4"
+                            />
+                          </g>
+                          <g class="r1-v1-group">
+                            <rect
+                              x="0%"
+                              y="82%"
+                              width="30%"
+                              height="11"
+                              fill="currentColor"
+                              rx="4"
+                              class="comparison__r-chr-lines"
+                            />
+
+                            <foreignObject
+                              x="0%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:120M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="23%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-center">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:125M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <!-- <foreignObject
+                              x="20%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr1:130M</span
+                                >
+                              </div>
+                            </foreignObject> -->
+                          </g>
+                          <g class="r2-v1-group">
+                            <rect
+                              x="45%"
+                              y="82%"
+                              width="55%"
+                              height="11"
+                              fill="currentColor"
+                              class="comparison__r-chr-lines"
+                              rx="4"
+                            />
+                            <foreignObject
+                              x="60%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-start">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:50M</span
+                                >
+                              </div>
+                            </foreignObject>
+                            <foreignObject
+                              x="80%"
+                              y="89%"
+                              width="10%"
+                              height="18"
+                            >
+                              <div class="chr-tick-box text-end">
+                                <span class="comparison__chr-tick-txt"
+                                  >Chr7:60M</span
+                                >
+                              </div>
+                            </foreignObject>
+                          </g>
                         </g>
+
+                        <g class="svg-inversion-header-group">
+                          <rect
+                            x="12%"
+                            y="50"
+                            width="10%"
+                            height="17"
+                            fill="#1E2640"
+                            stroke="#3F51B5"
+                            stroke-width="1.5"
+                            rx="2"
+                          />
+
+                          <line
+                            x1="17%"
+                            y1="50"
+                            x2="17%"
+                            y2="42"
+                            stroke="#3F51B5"
+                            stroke-width="1.5"
+                          />
+
+                          <foreignObject x="7%" y="5" width="20%" height="38">
+                            <div class="inversion-meta-box">
+                              <span class="inv-meta-title">INVERSION</span>
+                              <span class="inv-meta-sub">Monospace</span>
+                            </div>
+                          </foreignObject>
+                        </g>
+                        <defs>
+                          <pattern
+                            id="deletion-pattern"
+                            width="10"
+                            height="10"
+                            patternTransform="rotate(45 0 0)"
+                            patternUnits="userSpaceOnUse"
+                          >
+                            <line
+                              x1="0"
+                              y1="0"
+                              x2="0"
+                              y2="10"
+                              stroke="#E53E3E"
+                              stroke-width="3"
+                            />
+                          </pattern>
+                        </defs>
+                        <rect
+                          class="comparison__del-rect"
+                          data-info="large"
+                          x="30%"
+                          y="82%"
+                          width="15%"
+                          height="11"
+                          fill="url(#deletion-pattern)"
+                          rx="2"
+                        />
+
+                        <g class="svg-deletion-header-group">
+                          <foreignObject
+                            x="32%"
+                            y="78%"
+                            width="20%"
+                            height="80px"
+                          >
+                            <div class="deletion-meta-box">
+                              <span class="del-meta-title"
+                                >LARGE DELETION (2.1Mbp)!
+                              </span>
+                            </div>
+                          </foreignObject>
+                        </g>
+                        <g class="comparison__svg-snp-line-groups">
+                          <rect
+                            class="comparison__snp-line"
+                            x="48%"
+                            y="18%"
+                            width="5px"
+                            height="28"
+                            rx="3"
+                            fill="#73db77"
+                            stroke="#161b22"
+                            stroke-width="2"
+                          />
+                        </g>
+
+                        <!-- <g
+                          class="comparison__vertical-connections"
+                          opacity="0.4"
+                        >
+                          <line
+                            x1="1%"
+                            y1="27%"
+                            x2="1%"
+                            y2="81%"
+                            stroke="#70707092"
+                            stroke-width="2"
+                          />
+
+                          <line
+                            x1="24%"
+                            y1="27%"
+                            x2="24%"
+                            y2="81%"
+                            stroke="#70707092"
+                            stroke-width="2"
+                          />
+
+                          <line
+                            x1="61%"
+                            y1="27%"
+                            x2="61%"
+                            y2="81%"
+                            stroke="#70707092"
+                            stroke-width="2"
+                          />
+
+                          <line
+                            x1="81%"
+                            y1="27%"
+                            x2="81%"
+                            y2="81%"
+                            stroke="#70707092"
+                            stroke-width="2"
+                          />
+                          <line
+                            x1="30%"
+                            y1="27%"
+                            x2="30%"
+                            y2="81%"
+                            stroke="#f44336"
+                            stroke-width="2"
+                          />
+                          <line
+                            x1="45%"
+                            y1="27%"
+                            x2="45%"
+                            y2="81%"
+                            stroke="#f44336"
+                            stroke-width="2"
+                          />
+                          <line
+                            x1="12%"
+                            y1="27%"
+                            x2="22%"
+                            y2="81%"
+                            stroke="#f44336"
+                            stroke-width="2"
+                          />
+                          <line
+                            x1="22%"
+                            y1="27%"
+                            x2="12%"
+                            y2="81%"
+                            stroke="#f44336"
+                            stroke-width="2"
+                          />
+                        </g> -->
                       </svg>
                     </div>
                   </div>
@@ -2926,7 +3529,7 @@
                   </div>
                 </div>
               </div>
-              <div class="comparison__charts-aifeed">
+              <div class="comparison__charts-aifeed none">
                 <div class="comparison__chaf-head">
                   <button
                     class="comparison__charts-tab comparison__charts-tab-act"
