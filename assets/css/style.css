@@ -3512,7 +3512,6 @@ p [role=button] {
   justify-content: center;
   position: relative;
   flex-grow: 1;
-  padding: 0px 0px 18px 10px;
   justify-content: start;
   height: 100%;
   align-items: start;
@@ -3527,7 +3526,7 @@ p [role=button] {
   height: 100%;
   min-width: 60%;
   flex-grow: 1;
-  padding: 10px 40px 10px 10px;
+  gap: 30px;
 }
 .comparison__charts-aifeed {
   display: flex;
@@ -4053,6 +4052,7 @@ p [role=button] {
   width: 100%;
   max-width: 1900px;
   align-items: start;
+  padding: 10px 40px 10px 10px;
 }
 .comparison__main-synteny {
   display: grid;
@@ -4273,6 +4273,32 @@ p [role=button] {
     fill: #8cf590;
     rx: 4px;
   }
+}
+.comparison__charts-tol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: end;
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-bottom: 1px solid rgba(58, 66, 75, 0.7019607843);
+}
+.comparison__charts-tokens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.comparison__ctoke-circ {
+  width: 12px;
+}
+.comparison__ctoke-txt {
+  font-family: "Inter";
+  font-size: 13px;
+  color: rgb(205, 205, 205);
+}
+.comparison__ctoke-circ-inv {
+  color: #112d8b;
 }
 
 @media (max-width: 1125px) {
