@@ -4278,10 +4278,17 @@ p [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: end;
+  justify-content: space-between;
   width: 100%;
   padding: 10px 40px 10px 10px;
   border-bottom: 1px solid rgba(58, 66, 75, 0.7019607843);
+  gap: 10px;
+}
+.comparison__charts-tokb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .comparison__charts-tokens {
   display: flex;
@@ -4290,15 +4297,22 @@ p [role=button] {
   gap: 5px;
 }
 .comparison__ctoke-circ {
-  width: 12px;
+  width: 10px;
 }
 .comparison__ctoke-txt {
   font-family: "Inter";
   font-size: 13px;
   color: rgb(205, 205, 205);
+  font-weight: 300;
 }
 .comparison__ctoke-circ-inv {
-  color: #112d8b;
+  color: #1138b9;
+}
+.comparison__ctoke-circ-del {
+  color: #f44336;
+}
+.comparison__ctoke-circ-snp {
+  color: #4caf50;
 }
 
 @media (max-width: 1125px) {

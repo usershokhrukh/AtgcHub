@@ -1744,31 +1744,45 @@
 
   &__charts-tol {
     @include display();
-    justify-content: end;
+    justify-content: space-between;
     width: 100%;
     // background-color: red;
     padding: 10px 40px 10px 10px;
-    border-bottom: 1px solid $text-lightS
+    border-bottom: 1px solid $text-lightS;
+    gap: 10px;
+  }
+
+  &__charts-tokb{
+    @include display();
+    gap: 10px;
   }
 
   &__charts-tokens {
     @include display();
     gap: 5px;
-
   }
 
   &__ctoke-circ {
-    width: 12px;
+    width: 10px;
   }
 
   &__ctoke-txt{
    @include inter();
    font-size: 13px;
    color: $secondary-color;
+   font-weight: 300;
   }
 
   &__ctoke-circ-inv {
     color: $inv;
+  }
+
+  &__ctoke-circ-del {
+    color: $dna-t
+  }
+
+  &__ctoke-circ-snp {
+    color: $dna-a
   }
 }
 
