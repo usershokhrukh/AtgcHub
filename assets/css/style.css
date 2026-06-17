@@ -3367,6 +3367,7 @@ p [role=button] {
   flex-grow: 1;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 15px;
 }
 .comparison__ccprctxt {
   display: flex;
@@ -3451,6 +3452,49 @@ p [role=button] {
   display: none;
   color: rgb(205, 205, 205);
   opacity: 0.7;
+}
+.comparison__ccprczoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.comparison__ccprczmsp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 1px rgba(22, 22, 22, 0.74);
+  outline: none;
+  height: 100%;
+  max-height: 45px;
+  border-radius: 8px;
+  font-size: 12px;
+  gap: 8px;
+  border: 1px solid rgba(58, 66, 75, 0.7019607843);
+  background-color: rgba(34, 43, 51, 0.862745098);
+  color: rgb(205, 205, 205);
+  text-transform: capitalize;
+  opacity: 0.9;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: rgba(95, 119, 150, 0.1333333333);
+  opacity: 1;
+}
+.comparison__ccprczmsp svg {
+  color: white;
+  width: 13px;
+}
+.comparison__ccprczmtxt {
+  font-family: "Inter";
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  width: 35px;
 }
 .comparison__centbrg {
   display: flex;
@@ -4624,7 +4668,7 @@ p [role=button] {
 }
 @media (max-width: 500px) {
   .comparison__cactprcbo {
-    gap: 4px;
+    gap: 14px;
   }
   .comparison__cbrgai-txt {
     display: none;
