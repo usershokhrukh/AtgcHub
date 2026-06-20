@@ -42,13 +42,20 @@
 
 #bar-a {
   padding: 0px !important;
+  flex-grow: 0.35;
 }
 #bar-c {
   padding: 0px !important;
+  flex-grow: 0.2;
 }
 
 #bar-t{
   padding: 0px 0px 0px 5px !important; 
+  flex-grow: 0.25
+}
+
+#bar-g{
+  flex-grow: 0.2
 }
 
 .nuc-labels {

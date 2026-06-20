@@ -2815,8 +2815,7 @@
                 <div class="comparison__scompcards">
                   <div class="comparison__scpcitems grayButtons scpcitemsslc">
                     <p class="comparison__scpitems-txt">
-                      usershokhrukh/Human_genome.v1 Lorem ipsum dolor sit amet
-                      consectetur, adipisicing elit. Voluptate, explicabo!
+                      usershokhrukh/Human_genome.v1
                     </p>
                   </div>
                 </div>
@@ -2943,17 +2942,14 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="comparison__charts-actb">
-                    <div class="comparison__chactb-zm"></div>
-                  </div>
                 </div>
+
                 <div class="comparison__general-chart">
                   <div class="comparison__main-synteny">
                     <div class="comparison__main-labels">
                       <h2 class="comparison__label-v1">v1 Reference</h2>
                       <h2 class="comparison__label-v2">v2 User Genome</h2>
                     </div>
-
                     <div class="comparison__main-svg-wrapper">
                       <svg
                         class="synteny-svg-canvas"
@@ -3089,24 +3085,23 @@
                         <g class="svg-v1-chromosomes">
                           <g class="svg-r-line">
                             <rect
-                              class="comparison__r-line"
                               x="0%"
-                              y="84%"
+                              y="83.5%"
                               width="100%"
                               height="2"
                               fill="currentColor"
                               rx="4"
+                              class="comparison__r-line comparison__r-ch-lines-y-rline"
                             />
                           </g>
                           <g class="r1-v1-group">
                             <rect
                               x="0%"
-                              y="82%"
                               width="30%"
                               height="11"
                               fill="currentColor"
                               rx="4"
-                              class="comparison__r-chr-lines"
+                              class="comparison__r-chr-lines comparison__r-ch-lines-y"
                             />
 
                             <foreignObject
@@ -3114,6 +3109,7 @@
                               y="89%"
                               width="10%"
                               height="18"
+                              class="comparison__r-ch-lines-y-chrtxt"
                             >
                               <div class="chr-tick-box text-start">
                                 <span class="comparison__chr-tick-txt"
@@ -3126,6 +3122,7 @@
                               y="89%"
                               width="10%"
                               height="18"
+                              class="comparison__r-ch-lines-y-chrtxt"
                             >
                               <div class="chr-tick-box text-center">
                                 <span class="comparison__chr-tick-txt"
@@ -3153,7 +3150,7 @@
                               width="55%"
                               height="11"
                               fill="currentColor"
-                              class="comparison__r-chr-lines"
+                              class="comparison__r-chr-lines comparison__r-ch-lines-y"
                               rx="4"
                             />
                             <foreignObject
@@ -3161,6 +3158,7 @@
                               y="89%"
                               width="10%"
                               height="18"
+                              class="comparison__r-ch-lines-y-chrtxt"
                             >
                               <div class="chr-tick-box text-start">
                                 <span class="comparison__chr-tick-txt"
@@ -3173,6 +3171,7 @@
                               y="89%"
                               width="10%"
                               height="18"
+                              class="comparison__r-ch-lines-y-chrtxt"
                             >
                               <div class="chr-tick-box text-end">
                                 <span class="comparison__chr-tick-txt"
@@ -3230,7 +3229,6 @@
                           </pattern>
                         </defs>
                         <rect
-                          class="comparison__del-rect"
                           data-info="large"
                           x="30%"
                           y="82%"
@@ -3238,6 +3236,7 @@
                           height="11"
                           fill="url(#deletion-pattern)"
                           rx="2"
+                          class="comparison__del-rect comparison__r-ch-lines-y"
                         />
 
                         <g class="svg-deletion-header-group">
@@ -3246,6 +3245,7 @@
                             y="78%"
                             width="20%"
                             height="80px"
+                            class="comparison__r-ch-lines-y-del-rect"
                           >
                             <div class="deletion-meta-box">
                               <span class="del-meta-title"
@@ -3258,7 +3258,7 @@
                           <rect
                             class="comparison__snp-line"
                             x="48%"
-                            y="18%"
+                            y="46"
                             width="5px"
                             height="28"
                             rx="3"
@@ -3340,6 +3340,14 @@
                             stroke-width="2"
                           />
                         </g> -->
+                        <foreignObject
+                          class="comparison__line-box"
+                          x="0%"
+                          width="100%"
+                          y="67"
+                          height="178px"
+                        >
+                        </foreignObject>
                       </svg>
                     </div>
                   </div>
@@ -3352,6 +3360,209 @@
                         height="16"
                       ></canvas>
                       <div class="heatmap-grid-overlay"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div id="graph-tooltip" class="custom-tooltip  ">
+                  <div class="tooltip-header">
+                    <span class="variant-type" id="tt-type">SNP</span>
+                    <span class="status-badge pathogenic" id="tt-status"
+                      >Pathogenic</span
+                    >
+                  </div>
+
+                  <div class="tooltip-body">
+                    <div class="info-row">
+                      <span class="label">Location:</span>
+                      <span class="value" id="tt-location">Chr7:58M - 60M</span>
+                    </div>
+                    <div class="info-row" id="tt-change-row">
+                      <span class="label">Mutation:</span>
+                      <span class="value" id="tt-change">A ➔ G</span>
+                    </div>
+                    <div class="info-row" id="tt-size-row">
+                      <span class="label">Size:</span>
+                      <span class="value" id="tt-size">2.1 Mbp</span>
+                    </div>
+                  </div>
+
+                  <div class="tooltip-footer" id="tt-footer">
+                    Confidence: 94% • Insulin yetishmovchiligi xavfi.
+                  </div>
+                </div>
+                <div class="custom-tooltip inversion-mode ">
+                  <div class="tooltip-header">
+                    <span class="variant-type">Inversion</span>
+                    <span class="status-badge stable">V1 ➔ V2 Loop</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div>
+                      <span class="label">Region:</span>
+                      <span class="value">Chr1:120M - 123M</span>
+                    </div>
+                    <div>
+                      <span class="label">Size:</span>
+                      <span class="value">3.0 Mbp</span>
+                    </div>
+                    <div>
+                      <span class="label">Orientation:</span>
+                      <span class="value">Reversed (3'➔5')</span>
+                    </div>
+                  </div>
+                  <div class="tooltip-footer">
+                    Struktura almashinuvi aniqlandi.
+                  </div>
+                </div>
+                <div class="custom-tooltip deletion-mode ">
+                  <div class="tooltip-header">
+                    <span class="variant-type">Large Deletion</span>
+                    <span class="status-badge pathogenic">High Risk</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div>
+                      <span class="label">Location:</span>
+                      <span class="value">Chr1:125M</span>
+                    </div>
+                    <div>
+                      <span class="label">Lost Size:</span>
+                      <span class="value">2.1 Mbp</span>
+                    </div>
+                  </div>
+                  <div class="tooltip-footer-warn">
+                    Ushbu mutatsiya ko'pincha insulin garmoni yetishmovchiligi
+                    bilan bog'lanadi.
+                  </div>
+                </div>
+                <div class="custom-tooltip heatmap-mode  ">
+                  <div class="tooltip-header">
+                    <span class="variant-type">Density Cluster</span>
+                    <span class="status-badge info-badge">Cluster #4</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div>
+                      <span class="label">Position:</span>
+                      <span class="value">Chr7:50M - 55M</span>
+                    </div>
+                    <div>
+                      <span class="label">Mutations:</span>
+                      <span class="value">14 variants / Kbp</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="graph-tooltip"
+                  class="custom-tooltip hidden"
+                >
+                  <div class="tooltip-header">
+                    <span class="variant-type" id="tt-type">SNP</span>
+                    <span class="status-badge pathogenic" id="tt-badge"
+                      >Pathogenic</span
+                    >
+                  </div>
+
+                  <div class="tooltip-body" id="tt-body">
+                    <div class="info-row" id="row-1">
+                      <span class="label" id="label-1">Location:</span>
+                      <span class="value" id="value-1">Chr7:58M - 60M</span>
+                    </div>
+                    <div class="info-row" id="row-2">
+                      <span class="label" id="label-2">Mutation:</span>
+                      <span class="value" id="value-2">A ➔ G</span>
+                    </div>
+                    <div class="info-row" id="row-3">
+                      <span class="label" id="label-3">Size:</span>
+                      <span class="value" id="value-3">2.1 Mbp</span>
+                    </div>
+                  </div>
+
+                  <div class="tooltip-footer" id="tt-footer">
+                    Confidence: 94% • Insulin yetishmovchiligi xavfi.
+                  </div>
+                </div> -->
+
+                <div id="tooltip-snp" class="custom-tooltip snp-mode ">
+                  <div class="tooltip-header">
+                    <span class="variant-type">SNP</span>
+                    <span class="status-badge pathogenic">Pathogenic</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div class="info-row">
+                      <span class="label">Location:</span>
+                      <span class="value" id="snp-location"
+                        >Chr7:58M - 60M</span
+                      >
+                    </div>
+                    <div class="info-row">
+                      <span class="label">Mutation:</span>
+                      <span class="value" id="snp-mutation">A ➔ G</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="tooltip-deletion"
+                  class="custom-tooltip deletion-mode"
+                >
+                  <div class="tooltip-header">
+                    <span class="variant-type">Large Deletion</span>
+                    <span class="status-badge pathogenic">High Risk</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div class="info-row">
+                      <span class="label">Location:</span>
+                      <span class="value" id="del-location">Chr1:125M</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="label">Lost Size:</span>
+                      <span class="value" id="del-size">2.1 Mbp</span>
+                    </div>
+                  </div>
+                  <div class="tooltip-footer">
+                    Ushbu mutatsiya insulin yetishmovchiligi bilan bog'lanadi.
+                  </div>
+                </div>
+                <div
+                  id="tooltip-inversion"
+                  class="custom-tooltip inversion-mode"
+                >
+                  <div class="tooltip-header">
+                    <span class="variant-type">Inversion</span>
+                    <span class="status-badge stable">V1 ➔ V2 Loop</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div class="info-row">
+                      <span class="label">Region:</span>
+                      <span class="value" id="inv-region"
+                        >Chr1:120M - 123M</span
+                      >
+                    </div>
+                    <div class="info-row">
+                      <span class="label">Size:</span>
+                      <span class="value" id="inv-size">3.0 Mbp</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="label">Orientation:</span>
+                      <span class="value" id="inv-orient">Reversed</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="tooltip-heatmap"
+                  class="custom-tooltip heatmap-mode"
+                >
+                  <div class="tooltip-header">
+                    <span class="variant-type">Density Cluster</span>
+                    <span class="status-badge info-badge">Cluster #4</span>
+                  </div>
+                  <div class="tooltip-body">
+                    <div class="info-row">
+                      <span class="label">Position:</span>
+                      <span class="value" id="hm-position">Chr7:50M - 55M</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="label">Mutations:</span>
+                      <span class="value" id="hm-density"
+                        >14 variants / Kbp</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -3578,7 +3789,7 @@
                   </div>
                 </div>
               </div>
-              <span class="comparison__chaftab-side none">
+              <span class="comparison__chaftab-side">
                 <svg
                   class="comparison__cactbicn grayButtons comparison__chafside-i"
                   xmlns="http://www.w3.org/2000/svg"
